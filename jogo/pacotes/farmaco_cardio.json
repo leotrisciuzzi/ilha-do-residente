@@ -1,0 +1,2485 @@
+{
+ "cor": [
+  240,
+  120,
+  140
+ ],
+ "descricao": "Drogas que mudam a história da doença cardíaca, com dose, interação e aplicação clínica",
+ "formato": 1,
+ "gerador": "farmaco_cardio",
+ "id": "farmaco_cardio",
+ "materia": "Farmacologia cardiovascular",
+ "modulos": [
+  {
+   "aula": [
+    {
+     "fonte": "ESC 2026; AHA/ACC/HFSA 2022",
+     "ideia": "Quando o débito cai, o corpo ativa o simpático e o sistema renina-angiotensina-aldosterona para manter a pressão. No curto prazo isso salva, mas no longo prazo remodela, fibrosa e mata o coração.",
+     "na_prova": "A banca pergunta por que o betabloqueador ajuda um coração fraco: porque bloqueia a ativação simpática que o remodela, e não porque aumenta a força de contração.",
+     "pontos": [
+      "A angiotensina II contrai vasos, retém sódio e provoca hipertrofia e fibrose.",
+      "A aldosterona retém sódio, perde potássio e fibrosa o miocárdio; a noradrenalina acelera, lesa o miócito e causa arritmias.",
+      "Os peptídeos natriuréticos são o contrapeso, e a neprilisina os degrada, então bloqueá-la aumenta a proteção."
+     ],
+     "titulo": "O coração que adoece ativa o que o piora"
+    },
+    {
+     "fonte": "ESC 2026; AHA/ACC/HFSA 2022",
+     "ideia": "Algumas drogas reduzem morte e internação; outras só aliviam sintomas. Na prova, a pergunta sobre mortalidade quase nunca tem o diurético como resposta.",
+     "na_prova": "A banca lista drogas e pergunta qual reduz mortalidade na fração reduzida. Procure um dos quatro pilares.",
+     "pontos": [
+      "Mudam a história natural o bloqueio neuro-hormonal, com betabloqueador, IECA, BRA ou sacubitril-valsartana e antagonista mineralocorticoide, e o inibidor de SGLT2.",
+      "Aliviam sem reduzir mortalidade o diurético de alça, a digoxina, que reduz internação, e o nitrato isolado.",
+      "Mesmo assim, o paciente congesto não melhora sem diurético, então ele continua necessário."
+     ],
+     "titulo": "Melhorar sintoma não é mudar prognóstico"
+    }
+   ],
+   "id": "neuro",
+   "nivel": 1,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "Furosemida"
+      ],
+      [
+       "B",
+       "Dapagliflozina"
+      ],
+      [
+       "C",
+       "Sacubitril-valsartana"
+      ],
+      [
+       "D",
+       "Carvedilol"
+      ],
+      [
+       "E",
+       "Espironolactona"
+      ]
+     ],
+     "coment": "O diurético de alça trata a congestão (sintoma) e é indispensável no paciente úmido, mas nunca mostrou redução de mortalidade. As outras quatro são pilares que reduzem morte e internação.",
+     "enunciado": "Na insuficiência cardíaca com fração de ejeção reduzida, qual droga alivia a congestão mas NÃO reduz mortalidade?",
+     "gab": "A",
+     "id": "fc-neuro-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "bloquear o canal If do nó sinusal"
+      ],
+      [
+       "B",
+       "bloquear o receptor de aldosterona"
+      ],
+      [
+       "C",
+       "inibir o cotransportador SGLT2 no túbulo proximal"
+      ],
+      [
+       "D",
+       "estimular a guanilato ciclase solúvel"
+      ],
+      [
+       "E",
+       "inibir a neprilisina, aumentando os peptídeos natriuréticos"
+      ]
+     ],
+     "coment": "Neprilisina degrada BNP e outros peptídeos vasoativos. Inibida, sobra mais efeito natriurético e vasodilatador. Como ela também degrada angiotensina II, o sacubitril precisa vir junto de um BRA.",
+     "enunciado": "O mecanismo pelo qual o sacubitril acrescenta benefício à valsartana é:",
+     "gab": "E",
+     "id": "fc-neuro-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "benefício apenas em fibrilação atrial"
+      ],
+      [
+       "B",
+       "redução de morte súbita"
+      ],
+      [
+       "C",
+       "redução de internação por IC sem redução de mortalidade"
+      ],
+      [
+       "D",
+       "redução de mortalidade total semelhante à do IECA"
+      ],
+      [
+       "E",
+       "aumento de internação por IC"
+      ]
+     ],
+     "coment": "A digoxina melhora sintoma e reduz hospitalização, sem mexer na mortalidade total. Fica como opção para sintomático apesar da terapia otimizada ou para controle de frequência na FA.",
+     "enunciado": "A digoxina, no estudo DIG, mostrou na IC com FE reduzida:",
+     "gab": "C",
+     "id": "fc-neuro-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "inibe a liberação de renina"
+      ],
+      [
+       "B",
+       "aumenta a excreção renal de sódio"
+      ],
+      [
+       "C",
+       "melhora a perfusão coronariana"
+      ],
+      [
+       "D",
+       "causa toxicidade direta ao miócito, remodelamento e arritmias"
+      ],
+      [
+       "E",
+       "reduz a frequência cardíaca de repouso"
+      ]
+     ],
+     "coment": "Noradrenalina em excesso por longo prazo mata miócitos, promove remodelamento e arritmia ventricular. Por isso o betabloqueador, que no início parece paradoxal (reduz inotropismo), aumenta a sobrevida.",
+     "enunciado": "A ativação crônica do sistema simpático na IC é deletéria principalmente porque:",
+     "gab": "D",
+     "id": "fc-neuro-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "vasodilatação periférica"
+      ],
+      [
+       "B",
+       "aumento da excreção de potássio benéfica ao miocárdio"
+      ],
+      [
+       "C",
+       "retenção de sódio e fibrose miocárdica"
+      ],
+      [
+       "D",
+       "inibição do simpático"
+      ],
+      [
+       "E",
+       "aumento do BNP circulante"
+      ]
+     ],
+     "coment": "Aldosterona retém Na⁺ e água e estimula fibrose cardíaca e vascular — e 'escapa' do bloqueio com IECA. Espironolactona/eplerenona reduziram mortalidade (RALES, EMPHASIS-HF).",
+     "enunciado": "O efeito da aldosterona que justifica o uso de antagonistas mineralocorticoides na IC é:",
+     "gab": "C",
+     "id": "fc-neuro-5"
+    }
+   ],
+   "titulo": "Por que algumas drogas mudam a história da doença"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "ESC 2026; AHA/ACC/HFSA 2022",
+     "ideia": "Na insuficiência cardíaca com fração reduzida, só alguns betabloqueadores provaram reduzir mortalidade. Eles começam em dose baixa e sobem devagar, porque no início podem piorar a congestão.",
+     "na_prova": "Pegadinha: tartarato de metoprolol na insuficiência cardíaca. A forma com prova de benefício é o succinato.",
+     "pontos": [
+      "Os que reduzem mortalidade são carvedilol, bisoprolol e succinato de metoprolol; o tartarato não serve, e o nebivolol tem prova no idoso.",
+      "A dose dobra a cada 2 a 4 semanas, como o carvedilol de 3,125 mg até 25 mg duas vezes ao dia.",
+      "Inicia-se com o paciente compensado, e na descompensação sem choque mantém-se a dose."
+     ],
+     "titulo": "Quais betabloqueadores e por quê"
+    },
+    {
+     "fonte": "ESC 2026; AHA/ACC/HFSA 2022; Goodman & Gilman, 14ª ed.",
+     "ideia": "Os efeitos do betabloqueador vêm do bloqueio que ele causa: frequência baixa, condução lenta e, nos não seletivos, broncoespasmo. O DPOC não contraindica, desde que se prefira um cardiosseletivo.",
+     "na_prova": "A banca dá DPOC com insuficiência cardíaca e quer bisoprolol ou metoprolol, e não a suspensão do betabloqueador.",
+     "pontos": [
+      "Os efeitos incluem bradicardia, bloqueio atrioventricular, fadiga, hipotensão e mascaramento de hipoglicemia.",
+      "Contraindicam bloqueio de segundo ou terceiro grau sem marca-passo, bradicardia sintomática, choque e asma grave descontrolada.",
+      "Suspender de repente na doença coronariana causa rebote isquêmico, e o carvedilol baixa mais a pressão por bloquear alfa-1."
+     ],
+     "titulo": "Efeitos e contraindicações"
+    }
+   ],
+   "id": "bb",
+   "nivel": 1,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "Bisoprolol"
+      ],
+      [
+       "B",
+       "Succinato de metoprolol"
+      ],
+      [
+       "C",
+       "Atenolol"
+      ],
+      [
+       "D",
+       "Carvedilol"
+      ],
+      [
+       "E",
+       "Nebivolol em idosos"
+      ]
+     ],
+     "coment": "Atenolol (e propranolol, tartarato de metoprolol) não têm evidência na ICFEr. Os 'betabloqueadores da IC' são carvedilol, bisoprolol e succinato de metoprolol; nebivolol no idoso.",
+     "enunciado": "Qual betabloqueador NÃO deve ser usado para reduzir mortalidade na IC com FE reduzida?",
+     "gab": "C",
+     "id": "fc-bb-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "carvedilol em dose máxima desde o início"
+      ],
+      [
+       "B",
+       "não usar betabloqueador por causa da DPOC"
+      ],
+      [
+       "C",
+       "propranolol, por ser lipossolúvel"
+      ],
+      [
+       "D",
+       "bisoprolol, cardiosseletivo"
+      ],
+      [
+       "E",
+       "atenolol, por ser cardiosseletivo"
+      ]
+     ],
+     "coment": "DPOC não contraindica betabloqueador; prefira um cardiosseletivo com evidência na IC (bisoprolol ou succinato de metoprolol). Atenolol é seletivo, mas sem evidência na IC.",
+     "enunciado": "Paciente com ICFEr e DPOC estável precisa de betabloqueador. A melhor escolha é:",
+     "gab": "D",
+     "id": "fc-bb-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "50 mg 2 vezes ao dia"
+      ],
+      [
+       "B",
+       "25 mg 2 vezes ao dia"
+      ],
+      [
+       "C",
+       "3,125 mg 2 vezes ao dia"
+      ],
+      [
+       "D",
+       "6,25 mg 2 vezes ao dia"
+      ],
+      [
+       "E",
+       "100 mg 1 vez ao dia"
+      ]
+     ],
+     "coment": "Começa com 3,125 mg 2×/dia e dobra a cada 2–4 semanas até 25 mg 2×/dia (50 mg 2×/dia só acima de 85 kg). A titulação até a dose-alvo (ou máxima tolerada) é o que dá o benefício.",
+     "enunciado": "A dose-alvo de carvedilol na ICFEr para um paciente de 70 kg é:",
+     "gab": "B",
+     "id": "fc-bb-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "suspender até a alta"
+      ],
+      [
+       "B",
+       "reduzir à metade obrigatoriamente"
+      ],
+      [
+       "C",
+       "trocar por dobutamina"
+      ],
+      [
+       "D",
+       "manter a dose"
+      ],
+      [
+       "E",
+       "trocar por atenolol"
+      ]
+     ],
+     "coment": "Na descompensação sem choque ou baixo débito importante, mantém-se o betabloqueador: suspender aumenta mortalidade e atrasa a retitulação. Reduza/suspenda só em perfil frio com hipoperfusão ou bradiarritmia.",
+     "enunciado": "Paciente com ICFEr em uso de bisoprolol 10 mg internado por congestão, quente e úmido, PA 118/70, FC 84. Quanto ao betabloqueador:",
+     "gab": "D",
+     "id": "fc-bb-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "BAV de 2º grau Mobitz II sem marca-passo"
+      ],
+      [
+       "B",
+       "DPOC estável"
+      ],
+      [
+       "C",
+       "idade acima de 80 anos"
+      ],
+      [
+       "D",
+       "doença arterial periférica leve"
+      ],
+      [
+       "E",
+       "diabetes em uso de insulina"
+      ]
+     ],
+     "coment": "Bloqueio de alto grau sem marca-passo pode evoluir para BAVT. DPOC, diabetes, DAOP e idade não contraindicam — exigem só cautela e titulação lenta.",
+     "enunciado": "Contraindicação absoluta ao início de betabloqueador:",
+     "gab": "A",
+     "id": "fc-bb-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "tosse seca persistente"
+      ],
+      [
+       "B",
+       "edema de membros inferiores"
+      ],
+      [
+       "C",
+       "hiperglicemia grave por bloqueio de insulina"
+      ],
+      [
+       "D",
+       "hipercalemia por retenção renal"
+      ],
+      [
+       "E",
+       "mascarar os sintomas adrenérgicos da hipoglicemia (tremor, taquicardia)"
+      ]
+     ],
+     "coment": "O betabloqueio esconde tremor, palpitação e ansiedade da hipoglicemia (a sudorese, colinérgica, persiste). Cardiosseletivos têm menos esse efeito.",
+     "enunciado": "Diabético em insulina inicia propranolol. O efeito adverso de que deve ser alertado é:",
+     "gab": "E",
+     "id": "fc-bb-6"
+    }
+   ],
+   "titulo": "Betabloqueadores"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "ESC 2026; AHA/ACC/HFSA 2022; Goodman & Gilman, 14ª ed.",
+     "ideia": "IECA e BRA bloqueiam a angiotensina II por caminhos diferentes. O IECA também impede a degradação da bradicinina, e por isso causa tosse seca e angioedema.",
+     "na_prova": "A banca dá tosse seca com enalapril e quer a troca por BRA. Se houver angioedema, a conduta é suspender a classe.",
+     "pontos": [
+      "O IECA impede a conversão de angiotensina I em II, e a tosse seca aparece em 5 a 20% dos pacientes.",
+      "O BRA bloqueia o receptor AT1 com o mesmo benefício e sem tosse, e a losartana ainda é levemente uricosúrica.",
+      "A creatinina pode subir até cerca de 30% e isso é esperado; acima disso ou com potássio acima de 5,5, reduz-se a dose e investiga-se."
+     ],
+     "titulo": "Bloqueio do sistema renina-angiotensina"
+    },
+    {
+     "fonte": "ESC 2026; AHA/ACC/HFSA 2022; PARADIGM-HF 2014",
+     "ideia": "O sacubitril bloqueia a neprilisina e aumenta os peptídeos natriuréticos, enquanto a valsartana bloqueia a angiotensina. Juntos, reduziram mais a mortalidade do que o enalapril.",
+     "na_prova": "A banca pergunta o intervalo na troca de enalapril por sacubitril-valsartana: 36 horas. E lembra que IECA com BRA juntos nunca se faz.",
+     "pontos": [
+      "No estudo PARADIGM-HF, a combinação reduziu mortalidade em relação ao enalapril na fração reduzida sintomática.",
+      "A dose vai de 24/26 mg duas vezes ao dia até o alvo de 97/103 mg duas vezes ao dia.",
+      "É preciso esperar 36 horas sem IECA antes de iniciar, pelo risco de angioedema; vindo de BRA não precisa de pausa."
+     ],
+     "titulo": "Sacubitril-valsartana"
+    }
+   ],
+   "id": "sraa",
+   "nivel": 1,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "trocar por um BRA, como losartana"
+      ],
+      [
+       "B",
+       "suspender o bloqueio do SRAA"
+      ],
+      [
+       "C",
+       "associar codeína e manter o enalapril"
+      ],
+      [
+       "D",
+       "trocar por captopril"
+      ],
+      [
+       "E",
+       "associar losartana ao enalapril"
+      ]
+     ],
+     "coment": "A tosse vem da bradicinina, efeito de classe dos IECA (trocar por outro IECA não resolve). BRA não acumula bradicinina. IECA + BRA juntos aumentam hipercalemia e LRA sem benefício.",
+     "enunciado": "Paciente em enalapril desenvolve tosse seca incômoda. A melhor conduta é:",
+     "gab": "A",
+     "id": "fc-sraa-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "iniciar os dois juntos por 1 semana"
+      ],
+      [
+       "B",
+       "suspender o enalapril e aguardar 36 horas antes da 1ª dose"
+      ],
+      [
+       "C",
+       "reduzir o enalapril à metade e associar"
+      ],
+      [
+       "D",
+       "trocar imediatamente na mesma tomada"
+      ],
+      [
+       "E",
+       "aguardar 7 dias sem medicação"
+      ]
+     ],
+     "coment": "IECA + inibidor de neprilisina aumentam muito o risco de angioedema (ambos elevam bradicinina). A janela de 36 h é obrigatória. Vindo de BRA, pode trocar direto.",
+     "enunciado": "Ao trocar enalapril por sacubitril-valsartana, deve-se:",
+     "gab": "B",
+     "id": "fc-sraa-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "trocar por losartana"
+      ],
+      [
+       "B",
+       "manter o enalapril e reavaliar"
+      ],
+      [
+       "C",
+       "suspender o enalapril por lesão renal"
+      ],
+      [
+       "D",
+       "reduzir a dose à metade"
+      ],
+      [
+       "E",
+       "solicitar arteriografia renal"
+      ]
+     ],
+     "coment": "Alta de 17% (até ~30% é esperado) por queda da pressão de filtração: o efeito protetor de longo prazo persiste. Investigar só acima de 30% ou com K⁺ > 5,5.",
+     "enunciado": "Duas semanas após iniciar enalapril, a creatinina passou de 1,2 para 1,4 mg/dL e o K⁺ é 4,8. A conduta é:",
+     "gab": "B",
+     "id": "fc-sraa-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "efeito esperado, sem necessidade de investigação"
+      ],
+      [
+       "B",
+       "glomerulonefrite membranosa"
+      ],
+      [
+       "C",
+       "nefrite intersticial por IECA"
+      ],
+      [
+       "D",
+       "síndrome nefrótica por captopril"
+      ],
+      [
+       "E",
+       "estenose bilateral de artéria renal"
+      ]
+     ],
+     "coment": "Rins dependentes de angiotensina II para manter a filtração (estenose bilateral ou em rim único) perdem função com IECA/BRA. Aumento > 30% → suspender e investigar.",
+     "enunciado": "Hipertenso inicia captopril e a creatinina sobe de 1,0 para 2,1 mg/dL em uma semana. Hipótese a investigar:",
+     "gab": "E",
+     "id": "fc-sraa-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "trocar por enalapril"
+      ],
+      [
+       "B",
+       "suspender qualquer anti-hipertensivo"
+      ],
+      [
+       "C",
+       "associar hidroclorotiazida e manter"
+      ],
+      [
+       "D",
+       "manter a losartana, segura no 1º trimestre"
+      ],
+      [
+       "E",
+       "suspender a losartana e trocar por metildopa ou nifedipina"
+      ]
+     ],
+     "coment": "IECA e BRA são contraindicados na gestação (fetotoxicidade renal: oligoâmnio, insuficiência renal, malformações). Na gestação: metildopa, nifedipina, hidralazina (labetalol fora do Brasil).",
+     "enunciado": "Mulher de 28 anos, hipertensa em losartana, descobre gestação de 7 semanas. A conduta é:",
+     "gab": "E",
+     "id": "fc-sraa-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "fibrilação atrial"
+      ],
+      [
+       "B",
+       "história de angioedema"
+      ],
+      [
+       "C",
+       "idade acima de 75 anos"
+      ],
+      [
+       "D",
+       "diabetes tipo 2"
+      ],
+      [
+       "E",
+       "uso de betabloqueador"
+      ]
+     ],
+     "coment": "Angioedema prévio (com IECA ou não) contraindica ARNI e IECA. FA, diabetes, idade e betabloqueador não impedem o uso.",
+     "enunciado": "Contraindicação ao sacubitril-valsartana:",
+     "gab": "B",
+     "id": "fc-sraa-6"
+    }
+   ],
+   "titulo": "IECA, BRA e sacubitril-valsartana"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "ESC 2026; AHA/ACC/HFSA 2022; FINEARTS-HF 2024",
+     "ideia": "Bloquear a aldosterona reduz a fibrose do coração e a retenção de sódio. Na fração reduzida isso diminui a mortalidade, e a ESC 2026 colocou essa classe na base do tratamento em qualquer fração.",
+     "na_prova": "A banca dá pós-infarto com fração de 35% e diabetes e quer eplerenona, além dos demais pilares.",
+     "pontos": [
+      "Espironolactona e eplerenona reduziram mortalidade nos estudos RALES, EMPHASIS-HF e EPHESUS, este após infarto.",
+      "A espironolactona começa com 12,5 a 25 mg/dia, e a eplerenona com 25 mg/dia.",
+      "A finerenona reduziu eventos com fração de 40% ou mais no estudo FINEARTS-HF."
+     ],
+     "titulo": "Antagonistas mineralocorticoides"
+    },
+    {
+     "fonte": "ESC 2026; AHA/ACC/HFSA 2022; Goodman & Gilman, 14ª ed.",
+     "ideia": "O antagonista mineralocorticoide retém potássio, então o risco é a hipercalemia, sobretudo com rim fraco ou outros remédios que retêm potássio. Por isso ele exige critério para começar e exames depois.",
+     "na_prova": "A banca dá ginecomastia com espironolactona e quer a troca por eplerenona, que é seletiva.",
+     "pontos": [
+      "Inicia-se só com potássio de 5,0 ou menos e filtração acima de 30 mL/min, com exames em 1 e 4 semanas.",
+      "Com potássio de 5,5 a 6,0 reduz-se a dose à metade, e acima de 6,0 suspende-se.",
+      "A espironolactona é antiandrogênica e causa ginecomastia, que melhora com a troca por eplerenona."
+     ],
+     "titulo": "Segurança: potássio e rim"
+    }
+   ],
+   "id": "arm",
+   "nivel": 1,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "reduzir para 6,25 mg/dia"
+      ],
+      [
+       "B",
+       "suspender o antagonista mineralocorticoide definitivamente"
+      ],
+      [
+       "C",
+       "trocar por eplerenona"
+      ],
+      [
+       "D",
+       "associar tamoxifeno"
+      ],
+      [
+       "E",
+       "trocar por hidroclorotiazida"
+      ]
+     ],
+     "coment": "A ginecomastia vem do efeito antiandrogênico da espironolactona. Eplerenona é seletiva e mantém o benefício de mortalidade.",
+     "enunciado": "Homem com ICFEr em espironolactona refere ginecomastia dolorosa. A conduta é:",
+     "gab": "C",
+     "id": "fc-arm-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "FE > 40% e sem uso de IECA"
+      ],
+      [
+       "B",
+       "K⁺ ≤ 5,0 mEq/L e TFG > 30 mL/min"
+      ],
+      [
+       "C",
+       "K⁺ ≥ 5,5 mEq/L para evitar hipocalemia"
+      ],
+      [
+       "D",
+       "creatinina normal e sódio > 135"
+      ],
+      [
+       "E",
+       "K⁺ ≤ 6,0 mEq/L e qualquer TFG"
+      ]
+     ],
+     "coment": "O risco principal é hipercalemia, que aumenta com TFG baixa e uso de IECA/ARNI. Com K⁺ > 5,0 ou TFG ≤ 30, não iniciar.",
+     "enunciado": "Para iniciar espironolactona na ICFEr, o paciente deve ter:",
+     "gab": "B",
+     "id": "fc-arm-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "dobrar a dose do diurético tiazídico"
+      ],
+      [
+       "B",
+       "manter a dose"
+      ],
+      [
+       "C",
+       "suspender também o IECA e o betabloqueador"
+      ],
+      [
+       "D",
+       "iniciar gluconato de cálcio"
+      ],
+      [
+       "E",
+       "reduzir a espironolactona à metade e repetir o K⁺"
+      ]
+     ],
+     "coment": "Faixa 5,5–6,0: reduzir à metade e reavaliar (e revisar dieta, AINE, suplementos). Acima de 6,0: suspender. Sem alteração eletrocardiográfica, não é emergência.",
+     "enunciado": "Paciente com ICFEr em espironolactona 25 mg tem K⁺ de 5,8 mEq/L sem alterações no ECG. A conduta é:",
+     "gab": "E",
+     "id": "fc-arm-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "qualquer infarto, por 30 dias"
+      ],
+      [
+       "B",
+       "FE normal e hipertensão leve"
+      ],
+      [
+       "C",
+       "K⁺ > 5,5 mEq/L"
+      ],
+      [
+       "D",
+       "não há indicação no pós-IAM"
+      ],
+      [
+       "E",
+       "FE ≤ 40% com sinais de IC ou diabetes"
+      ]
+     ],
+     "coment": "EPHESUS: eplerenona reduziu mortalidade em pós-IAM com FE ≤ 40% e IC ou diabetes, já em uso de IECA e betabloqueador.",
+     "enunciado": "No pós-IAM, a eplerenona está indicada quando:",
+     "gab": "E",
+     "id": "fc-arm-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "ser um diurético de alça com ação na alça de Henle"
+      ],
+      [
+       "B",
+       "ser contraindicada na DRC"
+      ],
+      [
+       "C",
+       "ser não esteroidal, com menos efeitos hormonais, e ter evidência na DRC do diabético e na IC com FE ≥ 40%"
+      ],
+      [
+       "D",
+       "agir bloqueando o canal de sódio epitelial (ENaC)"
+      ],
+      [
+       "E",
+       "não causar hipercalemia"
+      ]
+     ],
+     "coment": "Antagonista mineralocorticoide não esteroidal: sem ginecomastia, mas ainda com risco de hipercalemia. FIDELIO/FIGARO (DRC + DM2) e FINEARTS-HF (IC com FE ≥ 40%).",
+     "enunciado": "A finerenona difere da espironolactona por:",
+     "gab": "C",
+     "id": "fc-arm-5"
+    }
+   ],
+   "titulo": "Antagonistas mineralocorticoides"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "ESC 2026; AHA/ACC/HFSA 2022; DAPA-HF, EMPEROR, DELIVER",
+     "ideia": "Os inibidores de SGLT2 fazem o rim perder glicose e sódio, e com isso reduzem morte cardiovascular e internação por insuficiência cardíaca, com ou sem diabetes. Eles servem em qualquer fração de ejeção.",
+     "na_prova": "Pegadinha: suspender o inibidor de SGLT2 porque a filtração caiu um pouco no começo. Essa queda é hemodinâmica e esperada.",
+     "pontos": [
+      "Dapagliflozina ou empagliflozina 10 mg/dia mostraram benefício na fração reduzida e na preservada.",
+      "Também protegem o rim e podem começar com filtração de 20 a 25 mL/min ou mais.",
+      "Uma queda inicial de 10 a 20% na filtração é esperada e não deve levar à suspensão; não há titulação de dose."
+     ],
+     "titulo": "O quarto pilar"
+    },
+    {
+     "fonte": "ESC 2026; AHA/ACC/HFSA 2022; SELECT 2023; STEP-HFpEF 2023",
+     "ideia": "O principal risco grave do inibidor de SGLT2 é a cetoacidose com glicose normal, que engana o diagnóstico. Os análogos de GLP-1 são outra classe, que protege o coração por perda de peso e controle metabólico.",
+     "na_prova": "A banca dá diabético em dapagliflozina no pós-operatório com acidose e glicemia de 180 e quer cetoacidose euglicêmica.",
+     "pontos": [
+      "Os efeitos incluem infecção genital por fungo, desidratação e cetoacidose euglicêmica.",
+      "Por isso o remédio é suspenso 3 dias antes de cirurgia e em doença aguda ou jejum.",
+      "Semaglutida e liraglutida reduzem eventos cardiovasculares, e na fração preservada com obesidade melhoram sintomas."
+     ],
+     "titulo": "Efeitos adversos e análogos de GLP-1"
+    }
+   ],
+   "id": "sglt2",
+   "nivel": 1,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "causa hipoglicemia grave em não diabéticos"
+      ],
+      [
+       "B",
+       "só serve para proteção renal"
+      ],
+      [
+       "C",
+       "só deve ser usada se a glicemia estiver alta"
+      ],
+      [
+       "D",
+       "deve ser iniciada apenas após IECA na dose máxima"
+      ],
+      [
+       "E",
+       "reduz morte cardiovascular e internação por IC também em quem não tem diabetes"
+      ]
+     ],
+     "coment": "No DAPA-HF, ~55% não eram diabéticos e o benefício foi igual. O efeito na IC independe da glicemia (natriurese, efeitos metabólicos e renais).",
+     "enunciado": "Paciente sem diabetes, com ICFEr, pergunta se a dapagliflozina 'é remédio de diabetes'. A resposta correta é:",
+     "gab": "E",
+     "id": "fc-sglt2-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "dobrar a dose no pré-operatório"
+      ],
+      [
+       "B",
+       "trocar por insulina NPH por 3 meses"
+      ],
+      [
+       "C",
+       "manter até a manhã da cirurgia"
+      ],
+      [
+       "D",
+       "suspender 3 dias antes pelo risco de cetoacidose euglicêmica"
+      ],
+      [
+       "E",
+       "suspender só se a glicemia estiver > 250"
+      ]
+     ],
+     "coment": "Jejum, estresse cirúrgico e redução de insulina favorecem cetoacidose com glicemia normal ou pouco alta. Suspender 3 dias antes (empagliflozina/dapagliflozina) e retomar quando comer normalmente.",
+     "enunciado": "Paciente em empagliflozina será submetido a colecistectomia eletiva. A orientação é:",
+     "gab": "D",
+     "id": "fc-sglt2-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "manter: queda inicial hemodinâmica e esperada"
+      ],
+      [
+       "B",
+       "reduzir para 5 mg/dia"
+      ],
+      [
+       "C",
+       "solicitar biópsia renal"
+      ],
+      [
+       "D",
+       "trocar por pioglitazona"
+      ],
+      [
+       "E",
+       "suspender por nefrotoxicidade"
+      ]
+     ],
+     "coment": "O iSGLT2 restaura o feedback tubuloglomerular e reduz a hiperfiltração: cai a TFG no início e preserva a função no longo prazo.",
+     "enunciado": "Após iniciar dapagliflozina, a TFG caiu de 48 para 43 mL/min. A conduta é:",
+     "gab": "A",
+     "id": "fc-sglt2-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "infecção genital micótica"
+      ],
+      [
+       "B",
+       "hipoglicemia grave em monoterapia"
+      ],
+      [
+       "C",
+       "tosse seca"
+      ],
+      [
+       "D",
+       "hipercalemia"
+      ],
+      [
+       "E",
+       "bradicardia"
+      ]
+     ],
+     "coment": "A glicosúria favorece candidíase genital. Hipoglicemia é rara sem insulina ou sulfonilureia.",
+     "enunciado": "Efeito adverso mais comum dos iSGLT2:",
+     "gab": "A",
+     "id": "fc-sglt2-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "aGLP-1 com benefício cardiovascular (ex.: semaglutida) ou iSGLT2"
+      ],
+      [
+       "B",
+       "insulina NPH ao deitar"
+      ],
+      [
+       "C",
+       "sulfonilureia (glibenclamida)"
+      ],
+      [
+       "D",
+       "acarbose"
+      ],
+      [
+       "E",
+       "pioglitazona"
+      ]
+     ],
+     "coment": "Na doença aterosclerótica estabelecida, escolhe-se por benefício cardiovascular, não só pela glicemia: aGLP-1 (também ajuda o peso) ou iSGLT2.",
+     "enunciado": "Diabético com IAM prévio, IMC 34, HbA1c 7,8% em metformina. Para reduzir eventos cardiovasculares, a melhor associação é:",
+     "gab": "A",
+     "id": "fc-sglt2-5"
+    }
+   ],
+   "titulo": "iSGLT2 (e aGLP-1) no coração"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "ESC 2026; AHA/ACC/HFSA 2022",
+     "ideia": "A diretriz atual prefere iniciar os quatro pilares em poucas semanas, em doses baixas, em vez de levar um de cada vez à dose máxima. Cada pilar age por um mecanismo diferente, e o benefício se soma cedo.",
+     "na_prova": "A banca dá paciente com pressão de 95 e pergunta o que iniciar primeiro: inibidor de SGLT2 ou antagonista mineralocorticoide.",
+     "pontos": [
+      "Os pilares são betabloqueador, sacubitril-valsartana ou IECA ou BRA, antagonista mineralocorticoide e inibidor de SGLT2.",
+      "Com pressão baixa, começa-se pelos que menos baixam a pressão, como inibidor de SGLT2 e antagonista mineralocorticoide.",
+      "O diurético de alça fica na menor dose que mantenha o paciente sem congestão."
+     ],
+     "titulo": "Começar rápido, todos juntos"
+    },
+    {
+     "fonte": "ESC 2026; AHA/ACC/HFSA 2022; SHIFT 2010; VICTORIA 2020",
+     "ideia": "Algumas drogas entram em situações específicas, depois de otimizar os pilares. Cada uma tem um critério que a banca adora cobrar.",
+     "na_prova": "A banca dá fibrilação atrial com frequência alta e pede ivabradina: errado, porque ela só funciona em ritmo sinusal.",
+     "pontos": [
+      "A ivabradina serve em ritmo sinusal com frequência de 70 ou mais apesar do betabloqueador e fração de 35% ou menos.",
+      "Hidralazina com nitrato serve para negros em classe III ou IV, ou para quem não tolera o bloqueio da angiotensina.",
+      "Verapamil, diltiazem, glitazonas, AINE e antiarrítmicos de classe I devem ser evitados na fração reduzida."
+     ],
+     "titulo": "Além dos quatro pilares"
+    }
+   ],
+   "id": "icfer",
+   "nivel": 2,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "digoxina como primeira escolha obrigatória"
+      ],
+      [
+       "B",
+       "diltiazem"
+      ],
+      [
+       "C",
+       "dronedarona"
+      ],
+      [
+       "D",
+       "anlodipino"
+      ],
+      [
+       "E",
+       "ivabradina"
+      ]
+     ],
+     "coment": "Critérios da ivabradina: ritmo sinusal, FC ≥ 70 apesar do betabloqueador na dose máxima tolerada, FE ≤ 35%. Diltiazem e dronedarona pioram a ICFEr.",
+     "enunciado": "Paciente com FE 30%, NYHA II, em ritmo sinusal, FC 82 bpm com bisoprolol 10 mg, sacubitril-valsartana, espironolactona e dapagliflozina. Para reduzir internação, pode-se associar:",
+     "gab": "E",
+     "id": "fc-icfer-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "DPOC"
+      ],
+      [
+       "B",
+       "ritmo sinusal com FC de 80 bpm"
+      ],
+      [
+       "C",
+       "insuficiência renal leve"
+      ],
+      [
+       "D",
+       "diabetes"
+      ],
+      [
+       "E",
+       "fibrilação atrial"
+      ]
+     ],
+     "coment": "A ivabradina bloqueia a corrente If do NÓ SINUSAL; na FA não há nó sinusal comandando — não reduz a frequência.",
+     "enunciado": "A ivabradina NÃO tem efeito em paciente com ICFEr e:",
+     "gab": "E",
+     "id": "fc-icfer-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "minoxidil"
+      ],
+      [
+       "B",
+       "hidralazina + dinitrato de isossorbida"
+      ],
+      [
+       "C",
+       "clonidina"
+      ],
+      [
+       "D",
+       "doxazosina"
+      ],
+      [
+       "E",
+       "nifedipina"
+      ]
+     ],
+     "coment": "A-HeFT: em negros autodeclarados sintomáticos apesar da terapia, hidralazina + nitrato reduziu mortalidade. Também é a alternativa a quem não tolera bloqueio do SRAA.",
+     "enunciado": "Homem negro, FE 25%, NYHA III apesar de terapia otimizada com os 4 pilares. Acréscimo com redução de mortalidade nesse grupo:",
+     "gab": "B",
+     "id": "fc-icfer-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "levotiroxina"
+      ],
+      [
+       "B",
+       "AAS por coronariopatia"
+      ],
+      [
+       "C",
+       "diltiazem prescrito para hipertensão"
+      ],
+      [
+       "D",
+       "anlodipino"
+      ],
+      [
+       "E",
+       "atorvastatina"
+      ]
+     ],
+     "coment": "Bloqueador de canal de cálcio não di-hidropiridínico (verapamil, diltiazem) é inotrópico negativo e aumenta eventos na ICFEr. Anlodipino é neutro e pode ficar para controle pressórico.",
+     "enunciado": "Medicação a ser suspensa num paciente com ICFEr recém-diagnosticada:",
+     "gab": "C",
+     "id": "fc-icfer-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "iSGLT2 e antagonista mineralocorticoide, que pouco baixam a pressão"
+      ],
+      [
+       "B",
+       "verapamil para reduzir a FC"
+      ],
+      [
+       "C",
+       "nitrato e hidralazina"
+      ],
+      [
+       "D",
+       "sacubitril-valsartana na dose máxima"
+      ],
+      [
+       "E",
+       "nada, até a PA passar de 110"
+      ]
+     ],
+     "coment": "PA baixa assintomática não impede o tratamento. iSGLT2 e ARM têm pouco efeito pressórico; depois entram betabloqueador e ARNI em doses baixas.",
+     "enunciado": "Paciente com ICFEr e PA 92/60 mmHg assintomático, K⁺ 4,3, TFG 55, sem nenhum dos 4 pilares. Uma estratégia razoável é começar por:",
+     "gab": "A",
+     "id": "fc-icfer-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "uso concomitante de nitrato de longa ação"
+      ],
+      [
+       "B",
+       "FE acima de 50%"
+      ],
+      [
+       "C",
+       "IC aguda em choque cardiogênico"
+      ],
+      [
+       "D",
+       "uso de sildenafila"
+      ],
+      [
+       "E",
+       "piora recente com internação ou diurético IV, apesar da terapia otimizada"
+      ]
+     ],
+     "coment": "VICTORIA: pacientes com evento recente de piora e FE < 45%. Não associar a nitrato nem a inibidor de PDE-5 (hipotensão).",
+     "enunciado": "O vericiguat está indicado na ICFEr quando há:",
+     "gab": "E",
+     "id": "fc-icfer-6"
+    }
+   ],
+   "titulo": "ICFEr: os 4 pilares na prática"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "ESC 2026; AHA/ACC/HFSA 2022; FINEARTS-HF 2024",
+     "ideia": "Na fração preservada, o inibidor de SGLT2 é a classe com melhor evidência para reduzir internação. A ESC 2026 passou a tratar tudo abaixo de 50% como fração reduzida e incluiu o antagonista mineralocorticoide em qualquer fração.",
+     "na_prova": "A banca pergunta a droga com melhor evidência na fração preservada: inibidor de SGLT2. Na obesidade, entra também o análogo de GLP-1.",
+     "pontos": [
+      "Empagliflozina e dapagliflozina reduziram internação também com fração acima de 40%.",
+      "A finerenona reduziu eventos com fração de 40% ou mais, e a espironolactona teve benefício limitado no estudo TOPCAT.",
+      "Na fração de 41 a 49%, usa-se o arsenal da fração reduzida, que a ESC 2026 agora recomenda por igual."
+     ],
+     "titulo": "Fração preservada e intermediária"
+    },
+    {
+     "fonte": "ESC 2026; AHA/ACC/HFSA 2022; TRED-HF 2019",
+     "ideia": "Algumas cardiomiopatias têm tratamento específico, e às vezes o tratamento habitual piora o quadro. Reconhecer a doença evita esse erro.",
+     "na_prova": "A banca dá hipertrófica obstrutiva com sopro que aumenta e pergunta o que evitar: nitrato e diurético em excesso, que pioram a obstrução.",
+     "pontos": [
+      "Na hipertrófica obstrutiva, betabloqueador ou verapamil são primeira linha, e vasodilatador e nitrato devem ser evitados.",
+      "O mavacamten, inibidor de miosina, entra se os sintomas persistirem, e o tafamidis reduz mortalidade na amiloidose por transtirretina.",
+      "Na fração de ejeção recuperada, a terapia não deve ser suspensa, porque a retirada causa recaída."
+     ],
+     "titulo": "Cardiomiopatias com tratamento próprio"
+    }
+   ],
+   "id": "icfep",
+   "nivel": 2,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "hidralazina + nitrato"
+      ],
+      [
+       "B",
+       "iSGLT2"
+      ],
+      [
+       "C",
+       "ivabradina"
+      ],
+      [
+       "D",
+       "digoxina"
+      ],
+      [
+       "E",
+       "verapamil"
+      ]
+     ],
+     "coment": "DELIVER e EMPEROR-Preserved: iSGLT2 reduziram morte CV/internação com FE > 40%. Ivabradina e hidralazina-nitrato têm evidência só na FE reduzida.",
+     "enunciado": "Idosa com IC e FE de 58%, congestão leve, já em furosemida. Classe que reduz internação nesse cenário:",
+     "gab": "B",
+     "id": "fc-icfep-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "hidratação adequada"
+      ],
+      [
+       "B",
+       "verapamil"
+      ],
+      [
+       "C",
+       "nitrato e diurético em altas doses"
+      ],
+      [
+       "D",
+       "disopiramida"
+      ],
+      [
+       "E",
+       "betabloqueador"
+      ]
+     ],
+     "coment": "Menos pré-carga e vasodilatação aumentam o gradiente na via de saída e podem causar síncope. Betabloqueador e verapamil reduzem o gradiente.",
+     "enunciado": "Na cardiomiopatia hipertrófica obstrutiva sintomática, deve-se evitar:",
+     "gab": "C",
+     "id": "fc-icfep-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "sacubitril-valsartana"
+      ],
+      [
+       "B",
+       "ivabradina"
+      ],
+      [
+       "C",
+       "tafamidis"
+      ],
+      [
+       "D",
+       "digoxina em dose plena"
+      ],
+      [
+       "E",
+       "nifedipina"
+      ]
+     ],
+     "coment": "O tafamidis estabiliza a transtirretina e reduz depósito (ATTR-ACT). Na amiloidose, digoxina e bloqueadores de cálcio são mal tolerados.",
+     "enunciado": "Paciente com IC por amiloidose cardíaca por transtirretina. Droga que reduz mortalidade:",
+     "gab": "C",
+     "id": "fc-icfep-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "suspender só o betabloqueador"
+      ],
+      [
+       "B",
+       "manter a terapia, pois a retirada leva à recaída em boa parte dos casos"
+      ],
+      [
+       "C",
+       "suspender todos, pois houve cura"
+      ],
+      [
+       "D",
+       "manter apenas a digoxina"
+      ],
+      [
+       "E",
+       "trocar tudo por diurético"
+      ]
+     ],
+     "coment": "No TRED-HF, ~40% recaíram em 6 meses após retirada. A FE 'recuperada' não é cura.",
+     "enunciado": "Paciente com ICFEr cuja FE subiu de 28% para 52% após 1 ano de terapia otimizada pergunta se pode parar os remédios. A orientação é:",
+     "gab": "B",
+     "id": "fc-icfep-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "apenas FE ≤ 35%"
+      ],
+      [
+       "B",
+       "IC com FE ≥ 40%"
+      ],
+      [
+       "C",
+       "hipertensão resistente sem IC"
+      ],
+      [
+       "D",
+       "estenose aórtica grave"
+      ],
+      [
+       "E",
+       "pós-IAM agudo nas primeiras 24 h"
+      ]
+     ],
+     "coment": "Primeiro antagonista mineralocorticoide com resultado positivo robusto na FE levemente reduzida/preservada (redução de piora de IC e morte CV).",
+     "enunciado": "A finerenona, no estudo FINEARTS-HF, mostrou benefício em:",
+     "gab": "B",
+     "id": "fc-icfep-5"
+    }
+   ],
+   "titulo": "FE levemente reduzida, preservada e cardiomiopatias"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "ACC/AHA 2025 e ESC 2023 (síndromes coronarianas agudas)",
+     "ideia": "O AAS bloqueia de forma irreversível a produção de tromboxano pela plaqueta, e os inibidores de P2Y12 bloqueiam outro receptor de ativação. Juntos, eles previnem a trombose do stent e o novo infarto.",
+     "na_prova": "A banca dá síndrome coronariana em paciente com AVC prévio e quer evitar o prasugrel.",
+     "pontos": [
+      "O AAS tem ataque de 150 a 300 mg mastigado na síndrome coronariana e manutenção de 75 a 100 mg/dia.",
+      "O clopidogrel é pró-droga dependente do CYP2C19, o ticagrelor é reversível e causa dispneia, e o prasugrel é o mais potente.",
+      "O prasugrel é contraindicado após AVC ou ataque isquêmico, e o ticagrelor após hemorragia intracraniana."
+     ],
+     "titulo": "Os antiplaquetários"
+    },
+    {
+     "fonte": "ACC/AHA 2025 e ESC 2023 (síndromes coronarianas agudas); ESC 2024 (fibrilação atrial)",
+     "ideia": "Depois de uma síndrome coronariana, a dupla antiagregação dura 12 meses, preferindo os inibidores de P2Y12 mais potentes. Em quem sangra muito, encurta-se o tempo e segue-se com um só antiplaquetário.",
+     "na_prova": "A banca dá fibrilação atrial com stent recente e quer anticoagulante com clopidogrel, evitando a terapia tripla prolongada.",
+     "pontos": [
+      "A dupla antiagregação na síndrome coronariana dura 12 meses, com ticagrelor ou prasugrel preferidos ao clopidogrel.",
+      "Com alto risco de sangramento, encurta-se para 1 a 3 meses; após trombolítico, o inibidor de P2Y12 é o clopidogrel.",
+      "Quem precisa de anticoagulante e tem stent recebe anticoagulante com clopidogrel, e o AAS fica só por poucos dias."
+     ],
+     "titulo": "Dupla antiagregação"
+    }
+   ],
+   "id": "antiplaq",
+   "nivel": 2,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "dipiridamol"
+      ],
+      [
+       "B",
+       "clopidogrel em todos"
+      ],
+      [
+       "C",
+       "cilostazol"
+      ],
+      [
+       "D",
+       "nenhum: só AAS"
+      ],
+      [
+       "E",
+       "ticagrelor ou prasugrel"
+      ]
+     ],
+     "coment": "Ticagrelor (PLATO) e prasugrel (TRITON, ISAR-REACT 5) reduziram eventos isquêmicos em relação ao clopidogrel na SCA tratada com angioplastia.",
+     "enunciado": "Paciente com SCA sem supra, 58 anos, sem AVC prévio, vai para angioplastia. Inibidor de P2Y12 preferido pelas diretrizes atuais:",
+     "gab": "E",
+     "id": "fc-antiplaq-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "infarto com supra de ST"
+      ],
+      [
+       "B",
+       "idade de 60 anos"
+      ],
+      [
+       "C",
+       "diabetes"
+      ],
+      [
+       "D",
+       "doença renal leve"
+      ],
+      [
+       "E",
+       "AVC ou AIT prévio"
+      ]
+     ],
+     "coment": "No TRITON-TIMI 38, quem tinha AVC/AIT prévio teve dano líquido (mais hemorragia intracraniana). Evitar também ≥ 75 anos e < 60 kg.",
+     "enunciado": "O prasugrel é contraindicado em paciente com:",
+     "gab": "E",
+     "id": "fc-antiplaq-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "cangrelor"
+      ],
+      [
+       "B",
+       "ticagrelor"
+      ],
+      [
+       "C",
+       "nenhum"
+      ],
+      [
+       "D",
+       "prasugrel"
+      ],
+      [
+       "E",
+       "clopidogrel"
+      ]
+     ],
+     "coment": "Os estudos de fibrinólise usaram clopidogrel (CLARITY, COMMIT): ataque 300 mg (≤ 75 anos) ou 75 mg sem ataque (> 75 anos).",
+     "enunciado": "IAMCSST tratado com trombolítico (alteplase). O inibidor de P2Y12 associado ao AAS é:",
+     "gab": "E",
+     "id": "fc-antiplaq-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "dispneia"
+      ],
+      [
+       "B",
+       "ginecomastia"
+      ],
+      [
+       "C",
+       "tosse por bradicinina"
+      ],
+      [
+       "D",
+       "hipercalemia"
+      ],
+      [
+       "E",
+       "neutropenia grave"
+      ]
+     ],
+     "coment": "A dispneia (adenosina) aparece em ~15% e costuma ser leve e transitória. Também pode causar pausas ventriculares e aumento de ácido úrico.",
+     "enunciado": "Efeito adverso típico do ticagrelor que não indica suspensão se leve:",
+     "gab": "A",
+     "id": "fc-antiplaq-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "suspender a apixabana e usar AAS + clopidogrel"
+      ],
+      [
+       "B",
+       "varfarina + AAS + prasugrel"
+      ],
+      [
+       "C",
+       "apixabana isolada"
+      ],
+      [
+       "D",
+       "apixabana + clopidogrel, sem AAS após a fase inicial"
+      ],
+      [
+       "E",
+       "apixabana + AAS + ticagrelor por 12 meses"
+      ]
+     ],
+     "coment": "Terapia tripla prolongada sangra muito. Recomenda-se anticoagulante (DOAC preferido) + clopidogrel, com AAS só peri-procedimento (até ~1 semana).",
+     "enunciado": "Paciente com FA (em apixabana) faz angioplastia eletiva com stent. Esquema antitrombótico recomendado após a alta:",
+     "gab": "D",
+     "id": "fc-antiplaq-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "é pró-droga ativada pelo CYP2C19, com variantes de baixa função"
+      ],
+      [
+       "B",
+       "é eliminado pelo rim em minutos"
+      ],
+      [
+       "C",
+       "liga-se de forma reversível ao receptor"
+      ],
+      [
+       "D",
+       "bloqueia a COX-1 de forma reversível"
+      ],
+      [
+       "E",
+       "é inativado pelo suco gástrico"
+      ]
+     ],
+     "coment": "Portadores de alelos de perda de função do CYP2C19 geram menos metabólito ativo. Ticagrelor não depende dessa ativação.",
+     "enunciado": "Por que o clopidogrel pode ter efeito reduzido em alguns pacientes?",
+     "gab": "A",
+     "id": "fc-antiplaq-6"
+    }
+   ],
+   "titulo": "Antiplaquetários"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "Diretriz Brasileira de Dislipidemias 2025",
+     "ideia": "A estatina bloqueia a produção de colesterol no fígado, que então aumenta seus receptores e retira LDL do sangue. A intensidade da estatina é escolhida pela meta de LDL de cada paciente.",
+     "na_prova": "A banca dá infarto prévio e LDL de 90 em estatina moderada e quer intensificar, porque a meta mínima é abaixo de 50.",
+     "pontos": [
+      "A alta intensidade, com atorvastatina de 40 a 80 mg ou rosuvastatina de 20 a 40 mg, reduz o LDL em cerca de 50%.",
+      "Pela diretriz brasileira de 2025, a meta é LDL abaixo de 70 no alto risco, abaixo de 50 no muito alto e abaixo de 40 no extremo.",
+      "Mialgia é comum; CK acima de 10 vezes o normal ou transaminases acima de 3 vezes pedem suspensão."
+     ],
+     "titulo": "Estatina primeiro, na intensidade certa"
+    },
+    {
+     "fonte": "Diretriz Brasileira de Dislipidemias 2025; ESC/EAS 2025",
+     "ideia": "Quando a estatina sozinha não basta, somam-se drogas que agem em outros pontos. Cada uma tem uma redução de LDL esperada.",
+     "na_prova": "A banca dá miopatia em paciente que começou claritromicina com sinvastatina e quer a interação pelo CYP3A4.",
+     "pontos": [
+      "A ezetimiba bloqueia a absorção intestinal e reduz cerca de 20 a 25% a mais.",
+      "Os inibidores de PCSK9 reduzem cerca de 60%, e a inclisirana é aplicada a cada 6 meses.",
+      "Sinvastatina com claritromicina, itraconazol, amiodarona ou diltiazem aumenta o risco de miopatia, porque todos usam o CYP3A4."
+     ],
+     "titulo": "Somar quando não chega à meta"
+    }
+   ],
+   "id": "lipides",
+   "nivel": 2,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "manter, pois LDL < 100 é suficiente"
+      ],
+      [
+       "B",
+       "associar ezetimiba"
+      ],
+      [
+       "C",
+       "trocar por sinvastatina 40 mg"
+      ],
+      [
+       "D",
+       "reduzir para atorvastatina 40 mg"
+      ],
+      [
+       "E",
+       "associar genfibrozila"
+      ]
+     ],
+     "coment": "Muito alto risco: LDL < 50 mg/dL (SBC 2025; ESC < 55). Já em estatina de alta intensidade, soma-se ezetimiba; se ainda fora da meta, iPCSK9.",
+     "enunciado": "Paciente com IAM há 2 meses, em atorvastatina 80 mg, LDL 78 mg/dL. Pela meta de muito alto risco, a próxima conduta é:",
+     "gab": "B",
+     "id": "fc-lipides-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "Pravastatina 40 mg"
+      ],
+      [
+       "B",
+       "Sinvastatina 20 mg"
+      ],
+      [
+       "C",
+       "Atorvastatina 10 mg"
+      ],
+      [
+       "D",
+       "Rosuvastatina 20 mg"
+      ],
+      [
+       "E",
+       "Rosuvastatina 5 mg"
+      ]
+     ],
+     "coment": "Alta intensidade = atorvastatina 40–80 ou rosuvastatina 20–40 mg. As outras são moderadas.",
+     "enunciado": "Qual destas é estatina de ALTA intensidade?",
+     "gab": "D",
+     "id": "fc-lipides-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "deficiência de vitamina D induzida"
+      ],
+      [
+       "B",
+       "nefrotoxicidade direta da claritromicina"
+      ],
+      [
+       "C",
+       "alergia cruzada entre macrolídeo e estatina"
+      ],
+      [
+       "D",
+       "hipotireoidismo agudo"
+      ],
+      [
+       "E",
+       "inibição do CYP3A4 elevando a sinvastatina → rabdomiólise"
+      ]
+     ],
+     "coment": "Claritromicina é forte inibidora do CYP3A4 e eleva muito sinvastatina/lovastatina. Suspender a estatina durante o curso do antibiótico ou usar rosuvastatina/pravastatina.",
+     "enunciado": "Paciente em sinvastatina 40 mg recebe claritromicina por pneumonia e evolui com mialgia intensa e urina escura. O mecanismo é:",
+     "gab": "E",
+     "id": "fc-lipides-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "manter, pois elevação de transaminase é sempre irrelevante"
+      ],
+      [
+       "B",
+       "suspender a estatina e reavaliar"
+      ],
+      [
+       "C",
+       "associar fibrato"
+      ],
+      [
+       "D",
+       "trocar por niacina em dose alta"
+      ],
+      [
+       "E",
+       "dobrar a dose"
+      ]
+     ],
+     "coment": "Elevações < 3× são comuns e não exigem suspensão; > 3× persistente → suspender e investigar, reintroduzindo depois em dose menor ou outra estatina.",
+     "enunciado": "Paciente com transaminases 4 vezes acima do normal após iniciar estatina. A conduta é:",
+     "gab": "B",
+     "id": "fc-lipides-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "ativa PPAR-alfa"
+      ],
+      [
+       "B",
+       "inibe a absorção intestinal de colesterol (NPC1L1)"
+      ],
+      [
+       "C",
+       "sequestra ácidos biliares no intestino"
+      ],
+      [
+       "D",
+       "anticorpo contra PCSK9"
+      ],
+      [
+       "E",
+       "inibe a HMG-CoA redutase"
+      ]
+     ],
+     "coment": "Bloqueia a proteína NPC1L1 da borda em escova: menos colesterol absorvido → mais receptores de LDL. Soma ~20–25% à estatina.",
+     "enunciado": "Mecanismo da ezetimiba:",
+     "gab": "B",
+     "id": "fc-lipides-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "estatina de baixa intensidade isolada"
+      ],
+      [
+       "B",
+       "apenas ezetimiba"
+      ],
+      [
+       "C",
+       "iPCSK9"
+      ],
+      [
+       "D",
+       "aguardar e repetir em 1 ano"
+      ],
+      [
+       "E",
+       "reduzir triglicerídeos (fibrato, dieta, controle glicêmico/álcool) pelo risco de pancreatite"
+      ]
+     ],
+     "coment": "Acima de 500 (sobretudo > 1.000) o risco de pancreatite aguda manda: fibrato + dieta muito pobre em gordura, suspender álcool e controlar o diabetes.",
+     "enunciado": "Paciente com triglicerídeos de 1.100 mg/dL. A prioridade terapêutica é:",
+     "gab": "E",
+     "id": "fc-lipides-6"
+    }
+   ],
+   "titulo": "Hipolipemiantes"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "ESC 2024 (fibrilação atrial); Goodman & Gilman, 14ª ed.",
+     "ideia": "A varfarina bloqueia a reciclagem da vitamina K e reduz os fatores de coagulação II, VII, IX e X. Ela continua obrigatória em situações em que os anticoagulantes diretos falharam.",
+     "na_prova": "A banca dá prótese mecânica e pergunta por que não usar anticoagulante direto: porque ele foi inferior e é contraindicado nessa situação.",
+     "pontos": [
+      "O alvo de INR é de 2 a 3, e pode ser mais alto em prótese mecânica mitral.",
+      "Ela é a escolha em prótese valvar mecânica e em estenose mitral moderada a grave com fibrilação atrial.",
+      "Amiodarona, fluconazol, metronidazol e sulfametoxazol com trimetoprim aumentam o INR, e rifampicina e carbamazepina reduzem."
+     ],
+     "titulo": "Varfarina"
+    },
+    {
+     "fonte": "ESC 2024 (fibrilação atrial); EHRA 2021",
+     "ideia": "Na fibrilação atrial sem valvopatia importante, os anticoagulantes diretos são preferidos à varfarina. A dose é plena, e só se reduz quando o paciente preenche um critério formal.",
+     "na_prova": "Pegadinha: reduzir a dose da apixabana só pela idade. Ela exige 2 dos 3 critérios.",
+     "pontos": [
+      "A ESC 2024 anticoagula com CHA2DS2-VA de 2 ou mais e considera com 1.",
+      "A apixabana cai para 2,5 mg duas vezes ao dia com 2 de 3 critérios: 80 anos ou mais, peso de 60 kg ou menos e creatinina de 1,5 ou mais.",
+      "A dabigatrana é contraindicada com depuração abaixo de 30 e é revertida pelo idarucizumabe."
+     ],
+     "titulo": "Anticoagulantes diretos na fibrilação atrial"
+    }
+   ],
+   "id": "anticoag",
+   "nivel": 2,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "varfarina"
+      ],
+      [
+       "B",
+       "dabigatrana"
+      ],
+      [
+       "C",
+       "edoxabana"
+      ],
+      [
+       "D",
+       "rivaroxabana"
+      ],
+      [
+       "E",
+       "apixabana"
+      ]
+     ],
+     "coment": "No RE-ALIGN, dabigatrana em prótese mecânica teve mais trombose e sangramento. DOACs são contraindicados em prótese mecânica e não recomendados na estenose mitral moderada/grave.",
+     "enunciado": "Paciente com prótese mecânica mitral e FA. O anticoagulante indicado é:",
+     "gab": "A",
+     "id": "fc-anticoag-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "2,5 mg 2 vezes ao dia (idade ≥ 80 e peso ≤ 60 kg)"
+      ],
+      [
+       "B",
+       "10 mg 2 vezes ao dia"
+      ],
+      [
+       "C",
+       "contraindicada pela idade"
+      ],
+      [
+       "D",
+       "5 mg 2 vezes ao dia"
+      ],
+      [
+       "E",
+       "2,5 mg 1 vez ao dia"
+      ]
+     ],
+     "coment": "Reduz-se a apixabana com 2 dos 3 critérios (idade ≥ 80, peso ≤ 60 kg, creatinina ≥ 1,5). Ela tem dois. Subdose sem critério aumenta AVC — erro frequente.",
+     "enunciado": "Mulher de 82 anos, 58 kg, creatinina 1,1 mg/dL, com FA. A dose de apixabana é:",
+     "gab": "A",
+     "id": "fc-anticoag-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "necessidade de dobrar a varfarina"
+      ],
+      [
+       "B",
+       "nenhuma interação"
+      ],
+      [
+       "C",
+       "queda do INR"
+      ],
+      [
+       "D",
+       "aumento do INR, exigindo redução da dose de varfarina"
+      ],
+      [
+       "E",
+       "hipercalemia"
+      ]
+     ],
+     "coment": "A amiodarona inibe o metabolismo da varfarina (CYP2C9): o INR sobe em semanas. Reduzir a varfarina (≈ 25–50%) e monitorar.",
+     "enunciado": "Paciente em varfarina inicia amiodarona. Espera-se:",
+     "gab": "D",
+     "id": "fc-anticoag-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "idarucizumabe"
+      ],
+      [
+       "B",
+       "protamina"
+      ],
+      [
+       "C",
+       "vitamina K"
+      ],
+      [
+       "D",
+       "andexanet alfa"
+      ],
+      [
+       "E",
+       "ácido tranexâmico isolado"
+      ]
+     ],
+     "coment": "Idarucizumabe é anticorpo que neutraliza a dabigatrana em minutos. Andexanet reverte anti-Xa (apixabana/rivaroxabana); vitamina K e protamina não servem para DOAC.",
+     "enunciado": "Paciente em dabigatrana com hemorragia intracraniana. O reversor específico é:",
+     "gab": "A",
+     "id": "fc-anticoag-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "insuficiência cardíaca"
+      ],
+      [
+       "B",
+       "diabetes"
+      ],
+      [
+       "C",
+       "idade ≥ 75 anos"
+      ],
+      [
+       "D",
+       "AVC prévio"
+      ],
+      [
+       "E",
+       "sexo feminino"
+      ]
+     ],
+     "coment": "O 'Sc' (sex category) saiu: o risco atribuído ao sexo feminino dependia de outros fatores. Anticoagular com ≥ 2; considerar com 1.",
+     "enunciado": "Pelo escore CHA2DS2-VA (ESC 2024), o item que deixou de pontuar foi:",
+     "gab": "E",
+     "id": "fc-anticoag-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "o clearance de creatinina é < 30 mL/min"
+      ],
+      [
+       "B",
+       "há hipertensão controlada"
+      ],
+      [
+       "C",
+       "o peso é de 90 kg"
+      ],
+      [
+       "D",
+       "o INR basal é normal"
+      ],
+      [
+       "E",
+       "o paciente tem 70 anos"
+      ]
+     ],
+     "coment": "É ~80% eliminada pelo rim: com ClCr < 30 acumula e sangra. Apixabana é a que menos depende do rim.",
+     "enunciado": "A dabigatrana está contraindicada quando:",
+     "gab": "A",
+     "id": "fc-anticoag-6"
+    }
+   ],
+   "titulo": "Anticoagulantes orais"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "AHA/ACC 2025; Diretriz Brasileira de Hipertensão 2025",
+     "ideia": "As diretrizes de 2025 baixaram a meta para menos de 130 por 80 na maioria dos adultos. Para chegar lá, começa-se com duas drogas no estágio 2, de preferência em um só comprimido.",
+     "na_prova": "A banca dá hipertenso em três drogas sem controle e quer espironolactona como quarta, além de rastrear hiperaldosteronismo.",
+     "pontos": [
+      "A primeira linha é IECA ou BRA, diurético tiazídico, como clortalidona ou indapamida, e bloqueador de canal de cálcio.",
+      "A hipertensão resistente usa três drogas em dose plena, incluindo diurético, e a quarta droga é a espironolactona.",
+      "Na resistente, rastreia-se hiperaldosteronismo primário mesmo com potássio normal."
+     ],
+     "titulo": "Hipertensão: regras de 2025"
+    },
+    {
+     "fonte": "Diretriz Brasileira de Hipertensão 2025",
+     "ideia": "A droga certa depende das outras doenças do paciente. Algumas comorbidades pedem uma classe, e outras contraindicam.",
+     "na_prova": "A banca dá gestante hipertensa em enalapril e quer a troca imediata, porque o IECA é teratogênico.",
+     "pontos": [
+      "Diabetes com albuminúria ou doença renal pede IECA ou BRA, e a gota pede losartana em vez de tiazídico.",
+      "Na gestação, usa-se metildopa, nifedipino ou hidralazina, e nunca IECA ou BRA.",
+      "O tiazídico causa hipocalemia, hiponatremia, hiperuricemia e hiperglicemia, e a clonidina causa rebote se suspensa."
+     ],
+     "titulo": "Escolha por comorbidade"
+    }
+   ],
+   "id": "has",
+   "nivel": 3,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "duas drogas de 1ª linha, preferencialmente em comprimido único"
+      ],
+      [
+       "B",
+       "monoterapia com betabloqueador"
+      ],
+      [
+       "C",
+       "clonidina"
+      ],
+      [
+       "D",
+       "monoterapia com diurético de alça"
+      ],
+      [
+       "E",
+       "apenas mudança de estilo de vida por 6 meses"
+      ]
+     ],
+     "coment": "No estágio 2 a combinação inicial (ex.: IECA/BRA + BCC ou tiazídico) controla mais rápido e melhora a adesão.",
+     "enunciado": "Hipertenso estágio 2 (PA 158/98) recém-diagnosticado, sem comorbidades. Pela diretriz atual, iniciar com:",
+     "gab": "A",
+     "id": "fc-has-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "clortalidona"
+      ],
+      [
+       "B",
+       "AAS em dose baixa"
+      ],
+      [
+       "C",
+       "hidroclorotiazida"
+      ],
+      [
+       "D",
+       "losartana"
+      ],
+      [
+       "E",
+       "furosemida"
+      ]
+     ],
+     "coment": "Tiazídicos e alça aumentam o ácido úrico e precipitam crises. Losartana tem leve efeito uricosúrico.",
+     "enunciado": "Hipertenso com gota recorrente. Anti-hipertensivo mais adequado:",
+     "gab": "D",
+     "id": "fc-has-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "reduzir o anlodipino e associar IECA ou BRA"
+      ],
+      [
+       "B",
+       "trocar por nifedipina de liberação rápida"
+      ],
+      [
+       "C",
+       "associar furosemida"
+      ],
+      [
+       "D",
+       "suspender todo tratamento"
+      ],
+      [
+       "E",
+       "investigar TVP bilateral de rotina"
+      ]
+     ],
+     "coment": "O edema é por vasodilatação arteriolar sem dilatação venosa (aumento da pressão capilar), pouco responsivo a diurético. IECA/BRA dilatam a vênula e reduzem o edema.",
+     "enunciado": "Hipertenso em anlodipino 10 mg com edema maleolar bilateral. A melhor estratégia é:",
+     "gab": "A",
+     "id": "fc-has-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "espironolactona"
+      ],
+      [
+       "B",
+       "atenolol"
+      ],
+      [
+       "C",
+       "clonidina"
+      ],
+      [
+       "D",
+       "doxazosina"
+      ],
+      [
+       "E",
+       "hidralazina"
+      ]
+     ],
+     "coment": "PATHWAY-2: espironolactona foi a mais eficaz como 4ª droga. Rastrear hiperaldosteronismo primário (relação aldosterona/renina) — a diretriz 2025 recomenda mesmo com K⁺ normal.",
+     "enunciado": "Hipertensão resistente com K⁺ normal, já em IECA, anlodipino e clortalidona em doses plenas. A 4ª droga é:",
+     "gab": "A",
+     "id": "fc-has-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "acidose metabólica hiperclorêmica"
+      ],
+      [
+       "B",
+       "hipocalcemia e hipermagnesemia"
+      ],
+      [
+       "C",
+       "hipocalemia e hiperuricemia"
+      ],
+      [
+       "D",
+       "hipercalemia e hipouricemia"
+      ],
+      [
+       "E",
+       "hipernatremia e hipoglicemia"
+      ]
+     ],
+     "coment": "Tiazídicos: hipoK, hipoNa, hipoMg, hiperuricemia, hiperglicemia, hipercalcemia (reduzem calciúria) e alcalose metabólica.",
+     "enunciado": "Efeito metabólico esperado dos diuréticos tiazídicos:",
+     "gab": "C",
+     "id": "fc-has-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "aliscireno"
+      ],
+      [
+       "B",
+       "espironolactona"
+      ],
+      [
+       "C",
+       "enalapril"
+      ],
+      [
+       "D",
+       "losartana"
+      ],
+      [
+       "E",
+       "metildopa ou nifedipina"
+      ]
+     ],
+     "coment": "Bloqueio do SRAA é fetotóxico no 2º/3º trimestre. Espironolactona tem efeito antiandrogênico no feto masculino.",
+     "enunciado": "Gestante de 26 semanas com hipertensão crônica. Opção segura:",
+     "gab": "E",
+     "id": "fc-has-6"
+    }
+   ],
+   "titulo": "Anti-hipertensivos: escolha por perfil"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "ACC/AHA 2025 e ESC 2023 (síndromes coronarianas agudas); REDUCE-AMI 2024; REBOOT 2025",
+     "ideia": "Depois do infarto, cada remédio previne um tipo de evento: nova trombose, progressão da aterosclerose ou remodelamento do coração. A alta já sai com o pacote completo.",
+     "na_prova": "A banca dá infarto com fração de 60% e pergunta sobre betabloqueador de rotina: os estudos REDUCE-AMI e REBOOT não mostraram benefício.",
+     "pontos": [
+      "AAS para sempre, inibidor de P2Y12 por 12 meses e estatina de alta intensidade com meta de LDL abaixo de 50.",
+      "IECA ou BRA entram com fração de 40% ou menos, hipertensão, diabetes ou doença renal; eplerenona com fração baixa e IC ou diabetes.",
+      "O betabloqueador tem benefício claro com fração reduzida, e com fração de 50% ou mais não mostrou benefício nos estudos de 2024 e 2025."
+     ],
+     "titulo": "O pacote da alta após infarto"
+    },
+    {
+     "fonte": "ACC/AHA 2025 e ESC 2023 (síndromes coronarianas agudas); CLEAR SYNERGY 2025",
+     "ideia": "Além do pacote principal, algumas medidas reduzem eventos e outras exigem cuidado. A colchicina, por exemplo, ajudou na doença crônica, mas não logo após o infarto.",
+     "na_prova": "A banca dá paciente com angina que usou tadalafila e quer contraindicar o nitrato, pelo risco de hipotensão grave.",
+     "pontos": [
+      "A colchicina reduziu eventos na doença coronariana crônica, mas foi neutra logo após o infarto no estudo CLEAR SYNERGY.",
+      "Vacina anual contra influenza, parar de fumar e reabilitação cardíaca reduzem eventos.",
+      "O nitrato sublingual alivia a angina, mas nunca pode ser associado a sildenafila ou tadalafila."
+     ],
+     "titulo": "Complementos após o infarto"
+    }
+   ],
+   "id": "posiam",
+   "nivel": 3,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "deve ser trocado por ivabradina"
+      ],
+      [
+       "B",
+       "ensaios recentes não mostraram benefício com FE preservada sem outra indicação"
+      ],
+      [
+       "C",
+       "deve ser usado só nas primeiras 24 h"
+      ],
+      [
+       "D",
+       "obrigatório por toda a vida"
+      ],
+      [
+       "E",
+       "contraindicado após IAM inferior"
+      ]
+     ],
+     "coment": "REDUCE-AMI e REBOOT: sem redução de morte ou reinfarto com FE ≥ 50%. Com FE reduzida, angina, arritmia ou hipertensão, o betabloqueador continua indicado.",
+     "enunciado": "Homem de 60 anos com IAM inferior tratado com angioplastia, FE 60%, sem angina, arritmia ou hipertensão. Sobre o betabloqueador na alta:",
+     "gab": "B",
+     "id": "fc-posiam-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "eplerenona"
+      ],
+      [
+       "B",
+       "dronedarona"
+      ],
+      [
+       "C",
+       "hidroclorotiazida"
+      ],
+      [
+       "D",
+       "nifedipina"
+      ],
+      [
+       "E",
+       "digoxina"
+      ]
+     ],
+     "coment": "EPHESUS: eplerenona no pós-IAM com FE ≤ 40% e IC ou diabetes reduziu mortalidade.",
+     "enunciado": "Após IAM com FE 35% e diabetes, já em AAS, ticagrelor, atorvastatina, betabloqueador e IECA, pode-se acrescentar para reduzir mortalidade:",
+     "gab": "A",
+     "id": "fc-posiam-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "alta intensidade (atorvastatina 40–80 mg ou rosuvastatina 20–40 mg)"
+      ],
+      [
+       "B",
+       "sinvastatina 10 mg"
+      ],
+      [
+       "C",
+       "só se LDL > 190"
+      ],
+      [
+       "D",
+       "nenhuma se o LDL já estiver < 100"
+      ],
+      [
+       "E",
+       "pravastatina 20 mg"
+      ]
+     ],
+     "coment": "Todo paciente com SCA recebe estatina de alta intensidade, de preferência na internação; depois ajusta-se pela meta.",
+     "enunciado": "Estatina recomendada na alta de uma SCA, independentemente do LDL basal:",
+     "gab": "A",
+     "id": "fc-posiam-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "a associação é contraindicada pelo risco de hipotensão grave"
+      ],
+      [
+       "B",
+       "trocar o nitrato por sildenafila"
+      ],
+      [
+       "C",
+       "pode usar sem restrição"
+      ],
+      [
+       "D",
+       "basta reduzir a dose do nitrato à metade"
+      ],
+      [
+       "E",
+       "pode usar se tomar 1 h depois do nitrato"
+      ]
+     ],
+     "coment": "Ambos aumentam o GMPc: vasodilatação somada, hipotensão grave, isquemia e morte. Contraindicação absoluta (também com vericiguat).",
+     "enunciado": "Paciente em uso de mononitrato de isossorbida pede sildenafila para disfunção erétil. A orientação correta:",
+     "gab": "A",
+     "id": "fc-posiam-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "reduz mortalidade total em 30%"
+      ],
+      [
+       "B",
+       "substitui a estatina"
+      ],
+      [
+       "C",
+       "é obrigatória em todo IAM"
+      ],
+      [
+       "D",
+       "foi neutra no infarto agudo (CLEAR SYNERGY) e seu uso é individualizado"
+      ],
+      [
+       "E",
+       "deve ser associada a claritromicina para potencializar"
+      ]
+     ],
+     "coment": "LoDoCo2 (DAC crônica) e COLCOT mostraram redução de eventos; CLEAR SYNERGY (7 mil pacientes pós-IAM) foi neutro. Cuidado com interações (CYP3A4/P-gp) e DRC.",
+     "enunciado": "Sobre a colchicina após infarto, é correto afirmar:",
+     "gab": "D",
+     "id": "fc-posiam-5"
+    }
+   ],
+   "titulo": "Prevenção secundária após o infarto"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "Goodman & Gilman, 14ª ed.",
+     "ideia": "As interações mais cobradas juntam remédios que somam o mesmo efeito ou que disputam a mesma enzima do fígado. Conhecer o mecanismo permite prever a complicação.",
+     "na_prova": "A banca dá idoso em enalapril e furosemida que toma ibuprofeno e desenvolve lesão renal: é a interação do triplo golpe.",
+     "pontos": [
+      "IECA ou BRA com diurético e AINE causam lesão renal aguda, e com espironolactona e suplemento de potássio causam hipercalemia.",
+      "A amiodarona aumenta o INR da varfarina e os níveis de digoxina e sinvastatina.",
+      "Verapamil ou diltiazem com betabloqueador somam efeito e causam bradicardia e bloqueio atrioventricular."
+     ],
+     "titulo": "Interações que caem"
+    },
+    {
+     "fonte": "Goodman & Gilman, 14ª ed.; ESC 2026; AHA/ACC/HFSA 2022",
+     "ideia": "Questões de farmacologia cardiovascular se resolvem com cinco perguntas, na ordem. Elas evitam escolher uma droga boa para a doença, mas errada para o paciente.",
+     "na_prova": "Para varfarina com INR alto sem sangramento, suspendem-se doses; com sangramento grave, dá-se vitamina K venosa e complexo protrombínico.",
+     "pontos": [
+      "Pergunte se a doença tem droga que muda prognóstico e se há contraindicação por potássio, rim, pressão ou gestação.",
+      "Confira a dose pela função renal, idade e peso, e procure interações.",
+      "Decida se o efeito adverso é esperado, como a creatinina que sobe até 30%, ou se é motivo para parar."
+     ],
+     "titulo": "Roteiro para a prova"
+    }
+   ],
+   "id": "casos",
+   "nivel": 3,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "AINE reduz a vasodilatação da arteríola aferente; IECA reduz a vasoconstrição da eferente; diurético reduz volume"
+      ],
+      [
+       "B",
+       "rabdomiólise induzida por enalapril"
+      ],
+      [
+       "C",
+       "obstrução ureteral pelo AINE"
+      ],
+      [
+       "D",
+       "glomerulonefrite por IECA"
+      ],
+      [
+       "E",
+       "nefrite intersticial pelo tiazídico"
+      ]
+     ],
+     "coment": "'Triple whammy': as prostaglandinas (bloqueadas pelo AINE) dilatam a aferente; a angiotensina II (bloqueada pelo IECA) contrai a eferente; com menos volume, a filtração despenca.",
+     "enunciado": "Idoso hipertenso em enalapril e hidroclorotiazida usa ibuprofeno por lombalgia e evolui com creatinina de 1,1 para 2,8 mg/dL. Mecanismo:",
+     "gab": "A",
+     "id": "fc-casos-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "uso concomitante de IECA"
+      ],
+      [
+       "B",
+       "hipercalemia"
+      ],
+      [
+       "C",
+       "hipocalemia induzida pelo diurético"
+      ],
+      [
+       "D",
+       "hipernatremia"
+      ],
+      [
+       "E",
+       "hipercalcemia por furosemida"
+      ]
+     ],
+     "coment": "A digoxina compete com o K⁺ na Na/K-ATPase: hipocalemia aumenta sua ligação e toxicidade. Também pesam DRC, idade e amiodarona/verapamil.",
+     "enunciado": "Paciente em digoxina inicia furosemida em dose alta e surge náusea, visão amarelada e taquicardia atrial com BAV. Fator precipitante mais provável:",
+     "gab": "C",
+     "id": "fc-casos-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "suspender apenas o antibiótico e aguardar"
+      ],
+      [
+       "B",
+       "bicarbonato oral"
+      ],
+      [
+       "C",
+       "furosemida oral"
+      ],
+      [
+       "D",
+       "aumentar a espironolactona"
+      ],
+      [
+       "E",
+       "gluconato de cálcio IV"
+      ]
+     ],
+     "coment": "ECG alterado: estabilizar a membrana com cálcio IV; depois insulina-glicose/β2, remoção (diurético, quelante, diálise) e suspender ARM, ARNI e trimetoprima (efeito tipo amilorida).",
+     "enunciado": "Paciente com ICFEr em sacubitril-valsartana, espironolactona e SMX-TMP para ITU apresenta K⁺ 6,4 com onda T apiculada. Primeira medida:",
+     "gab": "E",
+     "id": "fc-casos-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "trocar imediatamente por dabigatrana com dose de ataque"
+      ],
+      [
+       "B",
+       "transfundir plasma"
+      ],
+      [
+       "C",
+       "vitamina K IV + complexo protrombínico"
+      ],
+      [
+       "D",
+       "manter a dose"
+      ],
+      [
+       "E",
+       "suspender 1–2 doses e reajustar, com vitamina K oral se alto risco de sangramento"
+      ]
+     ],
+     "coment": "INR 4,5–10 sem sangramento: suspender doses e reavaliar; vitamina K oral em dose baixa conforme risco. Reversão IV com CCP é para sangramento grave.",
+     "enunciado": "Paciente em varfarina (FA) com INR 6,5 sem sangramento. A conduta é:",
+     "gab": "E",
+     "id": "fc-casos-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "pantoprazol"
+      ],
+      [
+       "B",
+       "esomeprazol em dose dobrada"
+      ],
+      [
+       "C",
+       "omeprazol"
+      ],
+      [
+       "D",
+       "nenhum IBP pode ser usado"
+      ],
+      [
+       "E",
+       "lansoprazol com cimetidina"
+      ]
+     ],
+     "coment": "Omeprazol/esomeprazol inibem o CYP2C19 e reduzem a ativação do clopidogrel; pantoprazol interage pouco. Gastroproteção é indicada em quem tem risco de sangramento.",
+     "enunciado": "Paciente em clopidogrel precisa de IBP por gastrite. O IBP preferido é:",
+     "gab": "A",
+     "id": "fc-casos-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "hipertensão de rebote"
+      ],
+      [
+       "B",
+       "hiperglicemia"
+      ],
+      [
+       "C",
+       "hipercalemia"
+      ],
+      [
+       "D",
+       "bradicardia grave e bloqueio AV"
+      ],
+      [
+       "E",
+       "tosse"
+      ]
+     ],
+     "coment": "Ambos deprimem o nó sinusal e o nó AV (e o inotropismo). Com di-hidropiridínicos (anlodipino) não há esse problema.",
+     "enunciado": "Hipertenso em atenolol começa verapamil para taquicardia. Risco principal da associação:",
+     "gab": "D",
+     "id": "fc-casos-6"
+    }
+   ],
+   "titulo": "Casos e armadilhas"
+  }
+ ],
+ "niveis": {
+  "1": "Fundamentos (alvos e classes que mudam prognóstico)",
+  "2": "Por doença (IC, coronária, lípides, anticoagulação)",
+  "3": "Clínica e casos (herói)"
+ },
+ "ordem": 3,
+ "prefixo": "fc",
+ "roteiro": [
+  12,
+  1
+ ],
+ "sabor": 6,
+ "titulo": "Farmacologia Cardiovascular",
+ "treino_pilulas": [
+  [
+   9,
+   1
+  ],
+  [
+   5,
+   1
+  ]
+ ],
+ "versao": 1
+}

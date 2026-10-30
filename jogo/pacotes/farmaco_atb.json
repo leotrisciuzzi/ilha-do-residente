@@ -1,0 +1,2430 @@
+{
+ "cor": [
+  120,
+  200,
+  160
+ ],
+ "descricao": "Escolher, dosar, durar e evitar dano: da síndrome ao antibiótico certo",
+ "formato": 1,
+ "gerador": "farmaco_atb",
+ "id": "farmaco_atb",
+ "materia": "Antibióticos",
+ "modulos": [
+  {
+   "aula": [
+    {
+     "fonte": "Surviving Sepsis 2021; Sanford Guide; Goodman & Gilman, 14ª ed.",
+     "ideia": "A escolha do antibiótico começa por quatro perguntas: é infecção bacteriana, onde ela está, qual o risco de resistência e qual a gravidade. As respostas definem o espectro necessário.",
+     "na_prova": "A banca dá abscesso grande tratado só com antibiótico e quer a drenagem, que é a medida principal.",
+     "pontos": [
+      "O tratamento empírico cobre os germes prováveis, e as culturas são colhidas antes, sem atrasar o antibiótico no paciente grave.",
+      "Quando a cultura chega, estreita-se o espectro, o que se chama descalonar.",
+      "Controlar o foco, como drenar abscesso ou retirar cateter, vale tanto quanto a droga."
+     ],
+     "titulo": "Antes de prescrever"
+    },
+    {
+     "fonte": "Sanford Guide; Goodman & Gilman, 14ª ed.",
+     "ideia": "Alguns antibióticos matam conforme o tempo acima da concentração mínima, e outros conforme o pico. Isso define se a dose é fracionada ou única, e os cursos curtos venceram em muitas infecções.",
+     "na_prova": "A banca pergunta como dar aminoglicosídeo: em dose única diária, porque o efeito depende do pico e a toxicidade diminui.",
+     "pontos": [
+      "Betalactâmicos são tempo-dependentes e rendem mais com doses fracionadas ou infusão prolongada.",
+      "Aminoglicosídeos, quinolonas e daptomicina dependem do pico e vão bem em dose única diária.",
+      "Pneumonia comunitária leva 5 dias se estável, pielonefrite 5 a 7, bacteremia por Gram-negativo 7 e celulite 5 a 6."
+     ],
+     "titulo": "Farmacocinética, farmacodinâmica e duração"
+    }
+   ],
+   "id": "principios",
+   "nivel": 1,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "não colher culturas, pois o tratamento é empírico"
+      ],
+      [
+       "B",
+       "iniciar antifúngico antes das culturas"
+      ],
+      [
+       "C",
+       "colher só depois de 48 h de antibiótico"
+      ],
+      [
+       "D",
+       "colher hemoculturas antes do antibiótico, sem atrasá-lo além da 1ª hora"
+      ],
+      [
+       "E",
+       "aguardar o resultado das culturas para escolher o antibiótico"
+      ]
+     ],
+     "coment": "Culturas antes aumentam a chance de identificar o germe e permitem descalonar; mas no choque cada hora de atraso aumenta a mortalidade.",
+     "enunciado": "Paciente com choque séptico de foco abdominal. Sobre as culturas, o correto é:",
+     "gab": "D",
+     "id": "fa-principios-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "são concentração-dependentes e têm efeito pós-antibiótico, com menos nefrotoxicidade"
+      ],
+      [
+       "B",
+       "são bacteriostáticos"
+      ],
+      [
+       "C",
+       "têm meia-vida de 24 horas"
+      ],
+      [
+       "D",
+       "são tempo-dependentes"
+      ],
+      [
+       "E",
+       "não penetram no rim"
+      ]
+     ],
+     "coment": "Matam em proporção ao pico/CIM e mantêm efeito pós-antibiótico; a dose única diária reduz o acúmulo no córtex renal.",
+     "enunciado": "Os aminoglicosídeos são dados em dose única diária porque:",
+     "gab": "A",
+     "id": "fa-principios-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "pico de concentração sobre a CIM"
+      ],
+      [
+       "B",
+       "concentração no líquor"
+      ],
+      [
+       "C",
+       "área sob a curva sobre a CIM de forma exclusiva"
+      ],
+      [
+       "D",
+       "meia-vida de eliminação"
+      ],
+      [
+       "E",
+       "tempo em que a concentração livre fica acima da CIM"
+      ]
+     ],
+     "coment": "Betalactâmicos são tempo-dependentes: por isso doses a cada 4–8 h ou infusão prolongada de pipe-tazo/meropenem em pacientes graves.",
+     "enunciado": "Para um betalactâmico, o parâmetro que melhor prediz eficácia é:",
+     "gab": "E",
+     "id": "fa-principios-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "descalonar para amoxicilina oral e completar ~5 dias"
+      ],
+      [
+       "B",
+       "acrescentar vancomicina"
+      ],
+      [
+       "C",
+       "manter os dois por 14 dias"
+      ],
+      [
+       "D",
+       "ampliar para meropenem"
+      ],
+      [
+       "E",
+       "suspender todo antibiótico no 3º dia"
+      ]
+     ],
+     "coment": "Germe sensível e estabilidade clínica: estreitar e passar para via oral. PAC estável há 48–72 h: 5 dias no total bastam.",
+     "enunciado": "Após 3 dias de ceftriaxona + azitromicina para PAC, a hemocultura mostra pneumococo sensível à penicilina e o paciente está estável. A conduta é:",
+     "gab": "A",
+     "id": "fa-principios-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "até negativar a urocultura de controle"
+      ],
+      [
+       "B",
+       "21 dias"
+      ],
+      [
+       "C",
+       "3 dias"
+      ],
+      [
+       "D",
+       "14 dias obrigatoriamente"
+      ],
+      [
+       "E",
+       "7 dias"
+      ]
+     ],
+     "coment": "Ensaios e a diretriz IDSA 2025: 7 dias são não inferiores a 14 na bacteremia por Gram-negativo com controle de foco e melhora clínica.",
+     "enunciado": "Duração recomendada para bacteremia não complicada por Gram-negativo (ex.: E. coli de foco urinário) com boa resposta:",
+     "gab": "E",
+     "id": "fa-principios-5"
+    }
+   ],
+   "titulo": "Princípios da antibioticoterapia"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "Sanford Guide; Goodman & Gilman, 14ª ed.",
+     "ideia": "Os betalactâmicos impedem a bactéria de construir a parede celular. Por isso não agem em germes sem parede, como o Mycoplasma, nem nos atípicos que vivem dentro das células.",
+     "na_prova": "A banca pergunta por que a amoxicilina não trata pneumonia por Mycoplasma: porque ele não tem parede celular.",
+     "pontos": [
+      "A penicilina cobre estreptococos, sífilis e leptospirose; a amoxicilina cobre também enterococo e Listeria.",
+      "A oxacilina é a droga do Staphylococcus aureus sensível.",
+      "Os inibidores de betalactamase ampliam o espectro: amoxicilina-clavulanato pega anaeróbios, e piperacilina-tazobactam pega Pseudomonas."
+     ],
+     "titulo": "Betalactâmicos: mecanismo e espectro"
+    },
+    {
+     "fonte": "IDSA 2024 (Gram-negativos resistentes); MERINO 2018",
+     "ideia": "As bactérias resistem mudando o alvo ou produzindo enzimas que destroem o antibiótico. Cada mecanismo pede uma alternativa específica.",
+     "na_prova": "A banca dá bacteremia por Klebsiella com ESBL e quer carbapenêmico; no estudo MERINO, a piperacilina-tazobactam foi inferior.",
+     "pontos": [
+      "O MRSA tem a proteína-alvo alterada, e nenhum betalactâmico clássico funciona, exceto a ceftarolina.",
+      "As enterobactérias com ESBL destroem cefalosporinas até a quarta geração, e nas infecções graves usa-se carbapenêmico.",
+      "Enterobacter, Citrobacter e Serratia produzem AmpC induzível, e na infecção grave prefere-se cefepime ou carbapenêmico."
+     ],
+     "titulo": "Resistência aos betalactâmicos"
+    }
+   ],
+   "id": "betalact",
+   "nivel": 1,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "oxacilina (ou cefazolina)"
+      ],
+      [
+       "B",
+       "ceftriaxona"
+      ],
+      [
+       "C",
+       "azitromicina"
+      ],
+      [
+       "D",
+       "amoxicilina"
+      ],
+      [
+       "E",
+       "vancomicina"
+      ]
+     ],
+     "coment": "Para MSSA, betalactâmico antiestafilocócico é superior à vancomicina (menos mortalidade na bacteremia). Vancomicina só se MRSA ou alergia grave.",
+     "enunciado": "Antibiótico de escolha para infecção grave por S. aureus sensível à oxacilina (MSSA):",
+     "gab": "A",
+     "id": "fa-betalact-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "alteração do ribossomo 50S"
+      ],
+      [
+       "B",
+       "mutação da DNA girase"
+      ],
+      [
+       "C",
+       "bomba de efluxo"
+      ],
+      [
+       "D",
+       "produção de ESBL"
+      ],
+      [
+       "E",
+       "PBP2a com baixa afinidade (gene mecA)"
+      ]
+     ],
+     "coment": "O mecA codifica PBP2a, que continua construindo a parede mesmo com betalactâmico. Ceftarolina é a exceção: liga-se à PBP2a.",
+     "enunciado": "A resistência do MRSA aos betalactâmicos se deve a:",
+     "gab": "E",
+     "id": "fa-betalact-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "meropenem (carbapenêmico)"
+      ],
+      [
+       "B",
+       "ceftriaxona"
+      ],
+      [
+       "C",
+       "amoxicilina-clavulanato"
+      ],
+      [
+       "D",
+       "cefepime"
+      ],
+      [
+       "E",
+       "piperacilina-tazobactam"
+      ]
+     ],
+     "coment": "No MERINO, pipe-tazo teve mais mortalidade que meropenem em bacteremia por ESBL. Cefalosporinas até a 4ª geração são hidrolisadas.",
+     "enunciado": "Infecção grave por E. coli produtora de ESBL na corrente sanguínea. Antibiótico preferido:",
+     "gab": "A",
+     "id": "fa-betalact-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "Listeria monocytogenes"
+      ],
+      [
+       "B",
+       "Mycoplasma pneumoniae"
+      ],
+      [
+       "C",
+       "Enterococcus faecalis"
+      ],
+      [
+       "D",
+       "Streptococcus pyogenes"
+      ],
+      [
+       "E",
+       "Treponema pallidum"
+      ]
+     ],
+     "coment": "Mycoplasma não tem parede celular — alvo inexistente. Atípicos pedem macrolídeo, doxiciclina ou quinolona.",
+     "enunciado": "Germe que NÃO é coberto por nenhum betalactâmico:",
+     "gab": "B",
+     "id": "fa-betalact-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "enterobactérias produtoras de ESBL"
+      ],
+      [
+       "B",
+       "Mycoplasma e Legionella"
+      ],
+      [
+       "C",
+       "anaeróbios e produtores de betalactamase (H. influenzae, Moraxella, S. aureus sensível)"
+      ],
+      [
+       "D",
+       "Pseudomonas aeruginosa"
+      ],
+      [
+       "E",
+       "MRSA"
+      ]
+     ],
+     "coment": "O clavulanato inibe betalactamases de espectro estreito: útil em mordedura, sinusite/otite complicada, pneumonia aspirativa, PAC com comorbidade.",
+     "enunciado": "Acréscimo de espectro do amoxicilina-clavulanato em relação à amoxicilina:",
+     "gab": "C",
+     "id": "fa-betalact-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "ceftriaxona não penetra no plasma"
+      ],
+      [
+       "B",
+       "Enterobacter é Gram-positivo"
+      ],
+      [
+       "C",
+       "AmpC induzível pode surgir durante o tratamento e causar falha"
+      ],
+      [
+       "D",
+       "é bacteriostática"
+      ],
+      [
+       "E",
+       "causa nefrotoxicidade grave"
+      ]
+     ],
+     "coment": "Enterobacter, Citrobacter freundii e Klebsiella aerogenes desreprimem AmpC sob cefalosporina de 3ª geração. Preferir cefepime (estável à AmpC) ou carbapenêmico.",
+     "enunciado": "Infecção grave por Enterobacter cloacae. Por que evitar ceftriaxona mesmo se 'sensível' no antibiograma?",
+     "gab": "C",
+     "id": "fa-betalact-6"
+    }
+   ],
+   "titulo": "Penicilinas e o problema das betalactamases"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "Sanford Guide; Goodman & Gilman, 14ª ed.",
+     "ideia": "Cada geração de cefalosporina troca um pouco de cobertura de Gram-positivo por Gram-negativo. Nenhuma delas cobre enterococo nem Listeria, e isso cai muito.",
+     "na_prova": "A banca dá meningite em idoso tratada só com ceftriaxona e quer o erro: faltou ampicilina para Listeria.",
+     "pontos": [
+      "A primeira geração, como cefazolina e cefalexina, cobre Gram-positivos e é usada em pele e profilaxia cirúrgica.",
+      "A ceftriaxona cobre pneumococo, meningococo, enterobactérias e gonococo, mas não cobre Pseudomonas.",
+      "O cefepime cobre Pseudomonas e Gram-positivos, e a ceftarolina é a cefalosporina que cobre MRSA."
+     ],
+     "titulo": "Cefalosporinas: as gerações que importam"
+    },
+    {
+     "fonte": "Sanford Guide; Goodman & Gilman, 14ª ed.",
+     "ideia": "Os carbapenêmicos têm o espectro mais amplo entre os betalactâmicos e são reservados para germes resistentes. O ertapenem é a exceção que não cobre Pseudomonas.",
+     "na_prova": "A banca dá epiléptico em valproato que convulsiona após meropenem e quer a interação que derruba o valproato.",
+     "pontos": [
+      "Meropenem e imipenem cobrem ESBL, AmpC, Pseudomonas e anaeróbios.",
+      "Não cobrem MRSA, Enterococcus faecium, Stenotrophomonas nem atípicos.",
+      "Todos derrubam o nível de valproato e podem causar convulsão, e o imipenem baixa o limiar convulsivo."
+     ],
+     "titulo": "Carbapenêmicos"
+    }
+   ],
+   "id": "cefalo",
+   "nivel": 1,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "ciprofloxacino"
+      ],
+      [
+       "B",
+       "cefazolina"
+      ],
+      [
+       "C",
+       "meropenem"
+      ],
+      [
+       "D",
+       "vancomicina de rotina"
+      ],
+      [
+       "E",
+       "ceftriaxona"
+      ]
+     ],
+     "coment": "Cefazolina cobre pele (estafilo, estrepto), tem boa penetração e espectro estreito; dose 30–60 min antes da incisão, repetir em cirurgia longa ou sangramento grande.",
+     "enunciado": "Antibiótico de escolha para profilaxia em cirurgia limpa (ex.: herniorrafia com tela):",
+     "gab": "B",
+     "id": "fa-cefalo-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "gentamicina"
+      ],
+      [
+       "B",
+       "ampicilina, para cobrir Listeria"
+      ],
+      [
+       "C",
+       "azitromicina"
+      ],
+      [
+       "D",
+       "metronidazol"
+      ],
+      [
+       "E",
+       "fluconazol"
+      ]
+     ],
+     "coment": "Listeria é resistente a todas as cefalosporinas. Acima de 50 anos, imunossuprimidos, gestantes e etilistas: + ampicilina.",
+     "enunciado": "Meningite em paciente de 68 anos. Ao esquema com ceftriaxona + vancomicina deve-se associar:",
+     "gab": "B",
+     "id": "fa-cefalo-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "ototoxicidade"
+      ],
+      [
+       "B",
+       "prolongamento do QT pelo valproato"
+      ],
+      [
+       "C",
+       "hipercalemia"
+      ],
+      [
+       "D",
+       "queda acentuada do nível de valproato com crises convulsivas"
+      ],
+      [
+       "E",
+       "hipoglicemia"
+      ]
+     ],
+     "coment": "Carbapenêmicos reduzem o valproato sérico em 60–100% em poucos dias; a interação não se corrige aumentando a dose. Trocar o anticonvulsivante ou o antibiótico.",
+     "enunciado": "Paciente epiléptico em valproato internado com pielonefrite por ESBL inicia meropenem. Risco a monitorar:",
+     "gab": "D",
+     "id": "fa-cefalo-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "é bacteriostático"
+      ],
+      [
+       "B",
+       "não cobre E. coli"
+      ],
+      [
+       "C",
+       "não penetra no pulmão"
+      ],
+      [
+       "D",
+       "não cobre Pseudomonas nem Acinetobacter"
+      ],
+      [
+       "E",
+       "só existe por via oral"
+      ]
+     ],
+     "coment": "Ertapenem é ótimo para ESBL comunitária (1×/dia), mas germes hospitalares não fermentadores escapam.",
+     "enunciado": "Por que o ertapenem não serve para pneumonia associada à ventilação mecânica?",
+     "gab": "D",
+     "id": "fa-cefalo-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "aumenta o risco de convulsão"
+      ],
+      [
+       "B",
+       "provoca síndrome do bebê cinzento"
+      ],
+      [
+       "C",
+       "forma precipitados de ceftriaxona-cálcio em pulmão e rim"
+      ],
+      [
+       "D",
+       "inativa o cálcio"
+      ],
+      [
+       "E",
+       "causa hipocalcemia grave"
+      ]
+     ],
+     "coment": "Houve mortes neonatais por precipitação. Em adulto, a ceftriaxona também causa pseudolitíase biliar (lama) reversível.",
+     "enunciado": "Ceftriaxona é contraindicada em recém-nascido que recebe cálcio intravenoso porque:",
+     "gab": "C",
+     "id": "fa-cefalo-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "meningite bacteriana"
+      ],
+      [
+       "B",
+       "hipoglicemia por cefepime"
+      ],
+      [
+       "C",
+       "neurotoxicidade por cefepime acumulado"
+      ],
+      [
+       "D",
+       "síndrome serotoninérgica"
+      ],
+      [
+       "E",
+       "reação de Jarisch-Herxheimer"
+      ]
+     ],
+     "coment": "Cefepime acumula na disfunção renal e causa encefalopatia, mioclonia e até estado de mal não convulsivo. Ajustar dose pela função renal.",
+     "enunciado": "Paciente com DRC em hemodiálise recebendo cefepime em dose cheia evolui com confusão e mioclonias. A hipótese é:",
+     "gab": "C",
+     "id": "fa-cefalo-6"
+    }
+   ],
+   "titulo": "Cefalosporinas e carbapenêmicos"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "IDSA 2011 (MRSA); Sanford Guide; Goodman & Gilman, 14ª ed.",
+     "ideia": "As drogas anti-MRSA têm usos e toxicidades bem diferentes. Saber onde cada uma não funciona evita erros clássicos.",
+     "na_prova": "Pegadinha clássica: daptomicina para pneumonia por MRSA. Ela não funciona no pulmão.",
+     "pontos": [
+      "A vancomicina cobre MRSA e enterococo sensível, e por via oral trata Clostridioides difficile; infusão rápida causa rubor.",
+      "A linezolida cobre MRSA e VRE, mas causa plaquetopenia após cerca de 2 semanas e síndrome serotoninérgica com ISRS.",
+      "A daptomicina trata bacteremia e endocardite, mas é inativada pelo surfactante e não trata pneumonia."
+     ],
+     "titulo": "Vancomicina e companhia"
+    },
+    {
+     "fonte": "IDSA 2014 (pele e partes moles)",
+     "ideia": "Na pele, a pergunta é se a lesão tem pus. Lesão purulenta sugere Staphylococcus aureus e pede drenagem; lesão sem pus sugere estreptococo e pede betalactâmico.",
+     "na_prova": "A banca dá celulite sem pus e pergunta o antibiótico: cefalexina, e não sulfametoxazol-trimetoprim, que cobre mal estreptococo.",
+     "pontos": [
+      "No abscesso, drenar é o tratamento principal.",
+      "Antibiótico oral entra se a lesão for extensa ou houver sinais sistêmicos, com sulfametoxazol-trimetoprim, doxiciclina ou clindamicina.",
+      "Na celulite não purulenta, o germe é estreptococo e o tratamento é cefalexina ou amoxicilina."
+     ],
+     "titulo": "MRSA comunitário de pele"
+    }
+   ],
+   "id": "grampos",
+   "nivel": 1,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "trocar por oxacilina"
+      ],
+      [
+       "B",
+       "interromper, dar anti-histamínico e reiniciar em infusão mais lenta"
+      ],
+      [
+       "C",
+       "aumentar a velocidade para terminar logo"
+      ],
+      [
+       "D",
+       "administrar adrenalina IM de rotina"
+      ],
+      [
+       "E",
+       "contraindicar a vancomicina para sempre por anafilaxia"
+      ]
+     ],
+     "coment": "Reação à infusão por liberação direta de histamina (não IgE). Infundir em ≥ 1–2 h e pré-medicar com anti-histamínico.",
+     "enunciado": "Durante infusão rápida de vancomicina, o paciente apresenta rubor em face, pescoço e tronco, com prurido. A conduta é:",
+     "gab": "B",
+     "id": "fa-grampos-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "daptomicina"
+      ],
+      [
+       "B",
+       "ceftarolina"
+      ],
+      [
+       "C",
+       "vancomicina"
+      ],
+      [
+       "D",
+       "linezolida"
+      ],
+      [
+       "E",
+       "telavancina"
+      ]
+     ],
+     "coment": "A daptomicina é inativada pelo surfactante pulmonar (falhou nos estudos de pneumonia). Para pulmão: vancomicina ou linezolida.",
+     "enunciado": "Pneumonia por MRSA. Antibiótico que NÃO deve ser usado:",
+     "gab": "A",
+     "id": "fa-grampos-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "síndrome neuroléptica maligna"
+      ],
+      [
+       "B",
+       "colite por C. difficile"
+      ],
+      [
+       "C",
+       "meningite por MRSA"
+      ],
+      [
+       "D",
+       "abstinência de ISRS"
+      ],
+      [
+       "E",
+       "síndrome serotoninérgica (linezolida é inibidor fraco da MAO)"
+      ]
+     ],
+     "coment": "Linezolida inibe a MAO de forma reversível. Com ISRS/IRSN: hiperreflexia, clônus, hipertermia. Suspender e tratar suporte/ciproeptadina.",
+     "enunciado": "Paciente em sertralina recebe linezolida e evolui com agitação, tremor, hiperreflexia, febre e diarreia. O diagnóstico é:",
+     "gab": "E",
+     "id": "fa-grampos-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "observação"
+      ],
+      [
+       "B",
+       "vancomicina IV"
+      ],
+      [
+       "C",
+       "compressa morna isolada por 1 semana"
+      ],
+      [
+       "D",
+       "cefalexina por 14 dias sem drenagem"
+      ],
+      [
+       "E",
+       "incisão e drenagem"
+      ]
+     ],
+     "coment": "A drenagem resolve a maioria. Antibiótico oral anti-MRSA (SMX-TMP, doxiciclina, clindamicina) ajuda nos maiores, múltiplos ou com sinais sistêmicos.",
+     "enunciado": "Abscesso cutâneo de 4 cm, flutuante, em paciente hígido sem febre. O tratamento principal é:",
+     "gab": "E",
+     "id": "fa-grampos-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "dentes manchados"
+      ],
+      [
+       "B",
+       "tendinopatia"
+      ],
+      [
+       "C",
+       "ototoxicidade irreversível"
+      ],
+      [
+       "D",
+       "hipercalemia"
+      ],
+      [
+       "E",
+       "plaquetopenia/mielossupressão"
+      ]
+     ],
+     "coment": "Mielossupressão dose e tempo-dependente: hemograma semanal em cursos longos. Também neuropatia periférica/óptica e acidose lática.",
+     "enunciado": "Efeito adverso da linezolida que aparece com uso prolongado (> 2 semanas):",
+     "gab": "E",
+     "id": "fa-grampos-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "bacteremia por MRSA"
+      ],
+      [
+       "B",
+       "pneumonia por MRSA"
+      ],
+      [
+       "C",
+       "colite por Clostridioides difficile"
+      ],
+      [
+       "D",
+       "meningite pneumocócica"
+      ],
+      [
+       "E",
+       "celulite estreptocócica"
+      ]
+     ],
+     "coment": "Por via oral não é absorvida: age só no cólon. Por via IV não chega ao lúmen intestinal (inútil para C. difficile).",
+     "enunciado": "Vancomicina por via oral é usada para:",
+     "gab": "C",
+     "id": "fa-grampos-6"
+    }
+   ],
+   "titulo": "Anti-MRSA e outros Gram-positivos"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "Sanford Guide; Goodman & Gilman, 14ª ed.",
+     "ideia": "Cada classe fora dos betalactâmicos tem um nicho e uma toxicidade típica. A banca cobra muito a toxicidade, porque ela muda a escolha em idosos e cardiopatas.",
+     "na_prova": "A banca dá idoso em corticoide com dor no calcanhar após levofloxacino e quer tendinopatia por quinolona.",
+     "pontos": [
+      "Macrolídeos cobrem atípicos e prolongam o QT, e a claritromicina inibe o CYP3A4 e interage com estatina e colchicina.",
+      "Quinolonas causam QT longo, tendinopatia, aneurisma de aorta, disglicemia e delirium, e são queladas por cálcio e ferro.",
+      "Aminoglicosídeos causam lesão renal reversível e lesão de ouvido irreversível, e não agem em anaeróbios nem em abscesso."
+     ],
+     "titulo": "Espectro e toxicidade das outras classes"
+    },
+    {
+     "fonte": "Sanford Guide; Goodman & Gilman, 14ª ed.",
+     "ideia": "Doxiciclina, sulfametoxazol-trimetoprim e metronidazol cobrem germes que outras drogas não cobrem. Cada um tem uma armadilha que a prova adora.",
+     "na_prova": "A banca dá creatinina que sobe com sulfametoxazol-trimetoprim e quer o mecanismo: bloqueio da secreção tubular, sem queda real da filtração.",
+     "pontos": [
+      "A doxiciclina cobre atípicos, riquétsias, leptospirose e MRSA comunitário, e causa esofagite se tomada deitado.",
+      "O sulfametoxazol-trimetoprim cobre Pneumocystis e Nocardia, eleva o potássio e eleva a creatinina sem lesar o rim.",
+      "O metronidazol cobre anaeróbios abaixo do diafragma e aumenta o INR; a clindamicina cobre os de cima e suprime toxinas."
+     ],
+     "titulo": "Os coringas"
+    }
+   ],
+   "id": "outros",
+   "nivel": 1,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "gota induzida"
+      ],
+      [
+       "B",
+       "neuropatia por corticoide"
+      ],
+      [
+       "C",
+       "TVP"
+      ],
+      [
+       "D",
+       "fasceíte plantar por esforço"
+      ],
+      [
+       "E",
+       "tendinopatia/ruptura do tendão de Aquiles por quinolona"
+      ]
+     ],
+     "coment": "Risco maior > 60 anos, com corticoide, DRC e transplante. Suspender a quinolona. Quinolonas também se associam a aneurisma e dissecção de aorta.",
+     "enunciado": "Idoso em prednisona recebe levofloxacino e relata dor súbita no calcanhar. A complicação é:",
+     "gab": "E",
+     "id": "fa-outros-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "não tem relação com o aminoglicosídeo"
+      ],
+      [
+       "B",
+       "melhora com dose maior"
+      ],
+      [
+       "C",
+       "só ocorre com vancomicina"
+      ],
+      [
+       "D",
+       "é sempre reversível com a suspensão"
+      ],
+      [
+       "E",
+       "a ototoxicidade costuma ser irreversível"
+      ]
+     ],
+     "coment": "Lesão coclear/vestibular por aminoglicosídeo tende a ser permanente; a nefrotoxicidade é geralmente reversível. Monitorar nível e evitar cursos longos.",
+     "enunciado": "Paciente em gentamicina por 10 dias refere zumbido e perda auditiva. Sobre esse efeito:",
+     "gab": "E",
+     "id": "fa-outros-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "rabdomiólise"
+      ],
+      [
+       "B",
+       "trimetoprima bloqueia o canal ENaC no túbulo coletor (efeito tipo amilorida)"
+      ],
+      [
+       "C",
+       "hemólise induzida"
+      ],
+      [
+       "D",
+       "nefrite intersticial com acidose"
+      ],
+      [
+       "E",
+       "excesso de potássio na formulação"
+      ]
+     ],
+     "coment": "A trimetoprima, sobretudo em dose alta, reduz a secreção de K⁺ como a amilorida. Cuidado com IECA/BRA/espironolactona.",
+     "enunciado": "Paciente em SMX-TMP para pneumocistose evolui com K⁺ 6,1 mEq/L. Mecanismo:",
+     "gab": "B",
+     "id": "fa-outros-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "hipercalemia"
+      ],
+      [
+       "B",
+       "queda do INR"
+      ],
+      [
+       "C",
+       "nenhuma interação"
+      ],
+      [
+       "D",
+       "hipoglicemia"
+      ],
+      [
+       "E",
+       "aumento do INR (risco de sangramento)"
+      ]
+     ],
+     "coment": "Metronidazol inibe o CYP2C9 que metaboliza a S-varfarina. SMX-TMP, fluconazol e quinolonas também elevam o INR.",
+     "enunciado": "Paciente em varfarina inicia metronidazol para vaginose. Espera-se:",
+     "gab": "E",
+     "id": "fa-outros-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "ciprofloxacino"
+      ],
+      [
+       "B",
+       "ceftriaxona"
+      ],
+      [
+       "C",
+       "amoxicilina"
+      ],
+      [
+       "D",
+       "doxiciclina"
+      ],
+      [
+       "E",
+       "azitromicina"
+      ]
+     ],
+     "coment": "Doxiciclina é a droga de escolha para todas as idades nas riquetsioses graves (inclusive crianças, por curso curto). Iniciar já pela suspeita — atraso mata.",
+     "enunciado": "Febre maculosa (Rickettsia rickettsii) em adulto. O tratamento de escolha é:",
+     "gab": "D",
+     "id": "fa-outros-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "hipercalcemia"
+      ],
+      [
+       "B",
+       "aumento excessivo do nível de levofloxacino"
+      ],
+      [
+       "C",
+       "nefrotoxicidade do cálcio"
+      ],
+      [
+       "D",
+       "QT longo pelo ferro"
+      ],
+      [
+       "E",
+       "quelação com cátions reduzindo muito a absorção da quinolona"
+      ]
+     ],
+     "coment": "Cátions di e trivalentes (Ca, Fe, Mg, Al, Zn) quelam quinolonas e tetraciclinas. Separar por pelo menos 2 h antes ou 6 h depois.",
+     "enunciado": "Levofloxacino é prescrito com carbonato de cálcio e sulfato ferroso no mesmo horário. O problema é:",
+     "gab": "E",
+     "id": "fa-outros-6"
+    }
+   ],
+   "titulo": "Macrolídeos, quinolonas, aminoglicosídeos e outros"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "ATS/IDSA 2019; CAPE COD 2023",
+     "ideia": "O pneumococo é o principal germe em todos os cenários da pneumonia comunitária. O CURB-65 e a clínica decidem onde tratar, e o local define o esquema.",
+     "na_prova": "A banca dá pneumonia grave na UTI e pergunta sobre corticoide: a hidrocortisona reduziu mortalidade no estudo CAPE COD.",
+     "pontos": [
+      "No ambulatório sem comorbidade, usa-se amoxicilina, macrolídeo ou doxiciclina.",
+      "Na enfermaria, usa-se ceftriaxona com macrolídeo ou quinolona respiratória; na UTI, betalactâmico com macrolídeo.",
+      "A duração é de pelo menos 5 dias, com 48 a 72 horas de estabilidade, e a hidrocortisona reduziu mortalidade na pneumonia grave."
+     ],
+     "titulo": "Pneumonia comunitária: onde tratar e com quê"
+    },
+    {
+     "fonte": "IDSA/ATS 2016 (pneumonia hospitalar)",
+     "ideia": "Na pneumonia hospitalar e na associada à ventilação, os germes mudam para os hospitalares. Por isso o esquema cobre Pseudomonas e, com fator de risco, MRSA.",
+     "na_prova": "A banca dá pneumonia comunitária sem fator de risco e oferece cobertura de Pseudomonas: excesso de espectro, que só se justifica com fator de risco.",
+     "pontos": [
+      "Cobre-se Pseudomonas com piperacilina-tazobactam, cefepime ou meropenem.",
+      "Soma-se vancomicina ou linezolida se houve antibiótico venoso nos últimos 90 dias ou se o MRSA é comum no serviço.",
+      "Na aspiração ou abscesso, usa-se amoxicilina-clavulanato ou clindamicina, que cobrem anaeróbios da boca."
+     ],
+     "titulo": "Pneumonia hospitalar e situações especiais"
+    }
+   ],
+   "id": "pac",
+   "nivel": 2,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "amoxicilina + vancomicina"
+      ],
+      [
+       "B",
+       "amoxicilina"
+      ],
+      [
+       "C",
+       "ceftriaxona IM diária"
+      ],
+      [
+       "D",
+       "piperacilina-tazobactam"
+      ],
+      [
+       "E",
+       "levofloxacino"
+      ]
+     ],
+     "coment": "Hígido sem fator de risco: monoterapia com amoxicilina (ou macrolídeo/doxiciclina). Quinolona fica para quem tem comorbidade ou alergia.",
+     "enunciado": "PAC ambulatorial, 35 anos, sem comorbidades, sem antibiótico recente. Tratamento:",
+     "gab": "B",
+     "id": "fa-pac-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "amoxicilina isolada"
+      ],
+      [
+       "B",
+       "clindamicina isolada"
+      ],
+      [
+       "C",
+       "meropenem + vancomicina"
+      ],
+      [
+       "D",
+       "ciprofloxacino isolado"
+      ],
+      [
+       "E",
+       "ceftriaxona + azitromicina"
+      ]
+     ],
+     "coment": "Internação em enfermaria: betalactâmico + macrolídeo (ou quinolona respiratória isolada). Ampliar só com fator de risco documentado.",
+     "enunciado": "PAC em diabético de 70 anos internado em enfermaria, sem fator de risco para Pseudomonas. Esquema empírico:",
+     "gab": "E",
+     "id": "fa-pac-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "amoxicilina-clavulanato"
+      ],
+      [
+       "B",
+       "ceftriaxona + azitromicina"
+      ],
+      [
+       "C",
+       "meropenem (ou pipe-tazo/cefepime) + vancomicina"
+      ],
+      [
+       "D",
+       "ertapenem"
+      ],
+      [
+       "E",
+       "levofloxacino isolado"
+      ]
+     ],
+     "coment": "Hospitalar tardia com antibiótico prévio: cobrir Pseudomonas e MRSA, e descalonar pela cultura do aspirado traqueal.",
+     "enunciado": "Pneumonia associada à ventilação mecânica no 6º dia de UTI, após uso de ceftriaxona. Esquema empírico adequado:",
+     "gab": "C",
+     "id": "fa-pac-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "10 dias obrigatoriamente"
+      ],
+      [
+       "B",
+       "5 dias no total"
+      ],
+      [
+       "C",
+       "14 dias"
+      ],
+      [
+       "D",
+       "até normalizar a radiografia"
+      ],
+      [
+       "E",
+       "21 dias"
+      ]
+     ],
+     "coment": "Mínimo de 5 dias com estabilidade clínica. A radiografia demora semanas para normalizar — não guia a duração.",
+     "enunciado": "Duração do tratamento de PAC com boa resposta (afebril e estável há 48 h no 4º dia):",
+     "gab": "B",
+     "id": "fa-pac-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "vancomicina"
+      ],
+      [
+       "B",
+       "azitromicina isolada"
+      ],
+      [
+       "C",
+       "amoxicilina-clavulanato (ou clindamicina)"
+      ],
+      [
+       "D",
+       "ceftriaxona isolada"
+      ],
+      [
+       "E",
+       "fluconazol"
+      ]
+     ],
+     "coment": "Aspiração + cavitação/escarro pútrido = anaeróbios da boca. Amoxi-clavulanato ou clindamicina; drenagem raramente.",
+     "enunciado": "Etilista com rebaixamento e pneumonia em segmento posterior de lobo superior direito, escarro pútrido. Antibiótico:",
+     "gab": "C",
+     "id": "fa-pac-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "antifúngico empírico"
+      ],
+      [
+       "B",
+       "estatina em dose alta"
+      ],
+      [
+       "C",
+       "hidrocortisona em dose baixa"
+      ],
+      [
+       "D",
+       "imunoglobulina IV"
+      ],
+      [
+       "E",
+       "vitamina C IV"
+      ]
+     ],
+     "coment": "CAPE COD (2023): hidrocortisona 200 mg/dia por 4–8 dias reduziu mortalidade em PAC grave (excluídos choque séptico e influenza).",
+     "enunciado": "PAC grave em UTI, sem choque refratário. Adjuvante que reduziu mortalidade em ensaio recente:",
+     "gab": "C",
+     "id": "fa-pac-6"
+    }
+   ],
+   "titulo": "Pneumonias"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "IDSA 2025 (infecção urinária complicada); Sanford Guide; Goodman & Gilman, 14ª ed.",
+     "ideia": "A droga certa depende de onde a infecção está. Nitrofurantoína e fosfomicina só alcançam a bexiga, então não tratam pielonefrite nem infecção com bacteremia.",
+     "na_prova": "Pegadinha: nitrofurantoína para pielonefrite. Ela não atinge o rim nem o sangue.",
+     "pontos": [
+      "A cistite simples se trata com nitrofurantoína por 5 dias, fosfomicina em dose única ou sulfametoxazol-trimetoprim por 3 dias.",
+      "A quinolona não é primeira linha na cistite, para preservar a classe.",
+      "A pielonefrite usa quinolona por 5 a 7 dias no ambulatório, ou cefalosporina, piperacilina-tazobactam ou carbapenêmico se houver sepse."
+     ],
+     "titulo": "Cistite, pielonefrite e infecção complicada"
+    },
+    {
+     "fonte": "IDSA 2019 (bacteriúria assintomática)",
+     "ideia": "Bacteriúria sem sintomas quase nunca se trata, porque isso só seleciona resistência. As exceções são a gestante e quem vai fazer procedimento urológico com sangramento.",
+     "na_prova": "A banca dá idosa com sonda e urocultura positiva sem sintomas e quer não tratar.",
+     "pontos": [
+      "Na gestante, usam-se cefalexina, amoxicilina, nitrofurantoína fora do termo e fosfomicina.",
+      "Na gestante, evitam-se quinolona e sulfametoxazol-trimetoprim no primeiro trimestre e no termo.",
+      "Na cistite por ESBL, servem nitrofurantoína, fosfomicina ou sulfametoxazol-trimetoprim se sensível."
+     ],
+     "titulo": "Situações especiais na infecção urinária"
+    }
+   ],
+   "id": "itu",
+   "nivel": 2,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "amoxicilina por 3 dias"
+      ],
+      [
+       "B",
+       "nitrofurantoína por 5 dias"
+      ],
+      [
+       "C",
+       "ciprofloxacino por 14 dias"
+      ],
+      [
+       "D",
+       "ceftriaxona IM por 7 dias"
+      ],
+      [
+       "E",
+       "meropenem"
+      ]
+     ],
+     "coment": "Cistite não complicada: nitrofurantoína, fosfomicina dose única ou SMX-TMP. Quinolona reservada (efeitos adversos e resistência).",
+     "enunciado": "Mulher de 30 anos, não gestante, com disúria e polaciúria há 2 dias, sem febre. Melhor tratamento:",
+     "gab": "B",
+     "id": "fa-itu-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "nitrofurantoína por 7 dias"
+      ],
+      [
+       "B",
+       "ciprofloxacino por 7 dias"
+      ],
+      [
+       "C",
+       "amoxicilina por 3 dias"
+      ],
+      [
+       "D",
+       "azitromicina por 3 dias"
+      ],
+      [
+       "E",
+       "fosfomicina dose única"
+      ]
+     ],
+     "coment": "Nitrofurantoína e fosfomicina não atingem o parênquima renal. Quinolona (ou SMX-TMP/betalactâmico guiados por cultura) é a escolha.",
+     "enunciado": "Pielonefrite em mulher sem sepse, tratável em casa. Opção oral adequada:",
+     "gab": "B",
+     "id": "fa-itu-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "aguardar o 3º trimestre"
+      ],
+      [
+       "B",
+       "não tratar, pois é assintomática"
+      ],
+      [
+       "C",
+       "ciprofloxacino por 3 dias"
+      ],
+      [
+       "D",
+       "repetir em 6 meses"
+      ],
+      [
+       "E",
+       "tratar (ex.: cefalexina ou nitrofurantoína) e repetir urocultura"
+      ]
+     ],
+     "coment": "Na gestação, bacteriúria assintomática não tratada leva à pielonefrite e prematuridade. Quinolona deve ser evitada.",
+     "enunciado": "Gestante de 20 semanas com urocultura de rotina positiva (> 100 mil UFC/mL de E. coli), assintomática. Conduta:",
+     "gab": "E",
+     "id": "fa-itu-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "ceftriaxona por 7 dias"
+      ],
+      [
+       "B",
+       "sondagem vesical de alívio diária"
+      ],
+      [
+       "C",
+       "não tratar (bacteriúria assintomática)"
+      ],
+      [
+       "D",
+       "ciprofloxacino por 3 dias"
+      ],
+      [
+       "E",
+       "nitrofurantoína contínua"
+      ]
+     ],
+     "coment": "Bacteriúria é comum em idosos e não deve ser tratada: só seleciona resistência e causa C. difficile. Urina turva ou com odor não é sintoma.",
+     "enunciado": "Idosa institucionalizada, sem febre nem sintomas urinários, com urina turva e urocultura positiva. Conduta:",
+     "gab": "C",
+     "id": "fa-itu-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "3 dias"
+      ],
+      [
+       "B",
+       "10–14 dias (suspeita de prostatite bacteriana)"
+      ],
+      [
+       "C",
+       "5 dias como cistite simples"
+      ],
+      [
+       "D",
+       "6 semanas obrigatoriamente"
+      ],
+      [
+       "E",
+       "dose única"
+      ]
+     ],
+     "coment": "ITU febril em homem com suspeita de prostatite: 10–14 dias (IDSA 2025). Quinolonas e SMX-TMP penetram bem na próstata.",
+     "enunciado": "Homem de 58 anos com febre, disúria e próstata dolorosa ao toque. Duração do tratamento:",
+     "gab": "B",
+     "id": "fa-itu-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "meropenem"
+      ],
+      [
+       "B",
+       "nitrofurantoína"
+      ],
+      [
+       "C",
+       "fosfomicina oral"
+      ],
+      [
+       "D",
+       "amoxicilina-clavulanato"
+      ],
+      [
+       "E",
+       "ceftriaxona"
+      ]
+     ],
+     "coment": "Com sepse e ESBL provável, carbapenêmico. Descalonar quando o antibiograma permitir.",
+     "enunciado": "Urosepse em paciente com antibiótico recente e colonização prévia por ESBL. Empírico:",
+     "gab": "A",
+     "id": "fa-itu-6"
+    }
+   ],
+   "titulo": "Infecção urinária"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "Surviving Sepsis 2021",
+     "ideia": "No choque séptico, o antibiótico vem na primeira hora, cobrindo o foco provável. O espectro aumenta só se houver risco de germe hospitalar, MRSA ou fungo.",
+     "na_prova": "A banca pergunta o prazo do antibiótico no choque séptico: na primeira hora, após colher culturas sem atrasar.",
+     "pontos": [
+      "Com foco desconhecido e infecção comunitária em paciente hígido, a ceftriaxona costuma bastar.",
+      "Com risco hospitalar, usa-se antipseudomonas, e a vancomicina entra só com fator de risco para MRSA.",
+      "Na infecção abdominal comunitária, usa-se ceftriaxona com metronidazol, além de controlar o foco."
+     ],
+     "titulo": "Sepse: escolher pelo foco e pelo risco"
+    },
+    {
+     "fonte": "IDSA 2010; ASCO/IDSA 2018",
+     "ideia": "Neutropenia febril é emergência, porque a infecção avança rápido sem neutrófilos. O antibiótico antipseudomonas entra na primeira hora, antes de qualquer exame.",
+     "na_prova": "A banca dá neutropenia febril estável e oferece vancomicina de rotina: errado, ela só entra com indicação específica.",
+     "pontos": [
+      "Define-se por febre de 38,3 °C ou de 38 °C por 1 hora com neutrófilos abaixo de 500.",
+      "Usa-se cefepime, piperacilina-tazobactam ou meropenem, e a vancomicina não é rotina.",
+      "Febre que persiste por 4 a 7 dias apesar do antibiótico sugere fungo e pede tomografia de tórax e antifúngico."
+     ],
+     "titulo": "Neutropenia febril"
+    }
+   ],
+   "id": "sepse",
+   "nivel": 2,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "cefepime (ou pipe-tazo/meropenem) na 1ª hora"
+      ],
+      [
+       "B",
+       "aguardar culturas por 24 h"
+      ],
+      [
+       "C",
+       "amoxicilina oral"
+      ],
+      [
+       "D",
+       "vancomicina isolada"
+      ],
+      [
+       "E",
+       "ceftriaxona isolada"
+      ]
+     ],
+     "coment": "Neutropenia febril: cobertura antipseudomonas imediata. Ceftriaxona não cobre Pseudomonas.",
+     "enunciado": "Paciente em quimioterapia com febre de 38,6 °C e 200 neutrófilos/mm³, estável. Antibiótico inicial:",
+     "gab": "A",
+     "id": "fa-sepse-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "qualquer febre"
+      ],
+      [
+       "B",
+       "mucosite leve"
+      ],
+      [
+       "C",
+       "idade > 60 anos"
+      ],
+      [
+       "D",
+       "instabilidade hemodinâmica ou infecção de cateter/pele"
+      ],
+      [
+       "E",
+       "neutrófilos < 100"
+      ]
+     ],
+     "coment": "Rotina não reduz mortalidade e aumenta toxicidade. Indicações: choque, pneumonia, cateter, pele/partes moles, colonização por MRSA/VRE.",
+     "enunciado": "Na neutropenia febril, a vancomicina deve ser associada desde o início quando há:",
+     "gab": "D",
+     "id": "fa-sepse-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "amoxicilina isolada"
+      ],
+      [
+       "B",
+       "vancomicina isolada"
+      ],
+      [
+       "C",
+       "ceftriaxona + metronidazol"
+      ],
+      [
+       "D",
+       "fluconazol isolado"
+      ],
+      [
+       "E",
+       "azitromicina"
+      ]
+     ],
+     "coment": "Cobrir enterobactérias e anaeróbios. Pipe-tazo é alternativa; carbapenêmico se risco de ESBL. Duração curta (~4 dias) após controle do foco (STOP-IT).",
+     "enunciado": "Peritonite secundária comunitária por perfuração de cólon. Esquema adequado (após controle cirúrgico do foco):",
+     "gab": "C",
+     "id": "fa-sepse-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "levofloxacino isolado"
+      ],
+      [
+       "B",
+       "ceftriaxona"
+      ],
+      [
+       "C",
+       "meropenem (ou pipe-tazo) + vancomicina"
+      ],
+      [
+       "D",
+       "amoxicilina-clavulanato"
+      ],
+      [
+       "E",
+       "metronidazol isolado"
+      ]
+     ],
+     "coment": "Hospitalar + cateter: Gram-negativos resistentes e MRSA. Retirar/trocar o cateter e descalonar com as culturas.",
+     "enunciado": "Choque séptico de foco desconhecido em paciente internado há 15 dias, com cateter venoso central. Esquema empírico:",
+     "gab": "C",
+     "id": "fa-sepse-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "acrescentar azitromicina"
+      ],
+      [
+       "B",
+       "investigar fungo (TC de tórax, galactomanana) e considerar antifúngico"
+      ],
+      [
+       "C",
+       "dar alta com amoxicilina"
+      ],
+      [
+       "D",
+       "suspender todos os antibióticos"
+      ],
+      [
+       "E",
+       "trocar cefepime por ceftriaxona"
+      ]
+     ],
+     "coment": "Febre persistente após 4–7 dias em neutropenia prolongada: Aspergillus e Candida. Antifúngico empírico ou preemptivo.",
+     "enunciado": "Neutropenia febril que persiste no 5º dia de cefepime, sem foco. Próximo passo:",
+     "gab": "B",
+     "id": "fa-sepse-5"
+    }
+   ],
+   "titulo": "Sepse, neutropenia febril e empírico grave"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "IDSA 2014 (pele e partes moles)",
+     "ideia": "Na pele, a presença de pus aponta o estafilococo, e a ausência aponta o estreptococo. A fasciite necrosante é a exceção grave, que exige cirurgia imediata.",
+     "na_prova": "A banca dá dor desproporcional ao exame com bolhas e choque e quer cirurgia de urgência, não só antibiótico.",
+     "pontos": [
+      "Erisipela e celulite sem pus usam cefalexina, amoxicilina ou penicilina, e cefazolina venosa se houver sinais sistêmicos.",
+      "Abscesso pede drenagem, com antibiótico anti-MRSA se for extenso.",
+      "Na fasciite necrosante, faz-se cirurgia de urgência com amplo espectro, vancomicina e clindamicina, que inibe toxinas."
+     ],
+     "titulo": "Pele e partes moles"
+    },
+    {
+     "fonte": "IDSA 2014; IWGDF/IDSA 2023 (pé diabético)",
+     "ideia": "Infecções de osso e articulação precisam de drenagem ou biópsia e de tratamento longo. Mordeduras têm germes da boca que pedem amoxicilina-clavulanato.",
+     "na_prova": "A banca dá mordedura de gato na mão e quer amoxicilina-clavulanato, pelo risco de Pasteurella.",
+     "pontos": [
+      "A artrite séptica pede punção e drenagem, com oxacilina ou cefazolina, e ceftriaxona no jovem com suspeita de gonococo.",
+      "A osteomielite é guiada pela biópsia óssea e tratada por cerca de 6 semanas.",
+      "Mordedura de cão, gato ou humana usa amoxicilina-clavulanato, que cobre Pasteurella e anaeróbios."
+     ],
+     "titulo": "Osso, articulação, pé diabético e mordedura"
+    }
+   ],
+   "id": "pele",
+   "nivel": 2,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "ciprofloxacino"
+      ],
+      [
+       "B",
+       "cefalexina (ou amoxicilina)"
+      ],
+      [
+       "C",
+       "SMX-TMP isolado"
+      ],
+      [
+       "D",
+       "metronidazol"
+      ],
+      [
+       "E",
+       "azitromicina"
+      ]
+     ],
+     "coment": "Celulite não purulenta é estreptocócica: betalactâmico. SMX-TMP isolado cobre mal estreptococo.",
+     "enunciado": "Erisipela em perna, sem febre, sem porta purulenta. Antibiótico oral:",
+     "gab": "B",
+     "id": "fa-pele-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "pipe-tazo (ou meropenem) + vancomicina + clindamicina"
+      ],
+      [
+       "B",
+       "apenas analgesia e observação"
+      ],
+      [
+       "C",
+       "cefalexina oral"
+      ],
+      [
+       "D",
+       "doxiciclina"
+      ],
+      [
+       "E",
+       "ceftriaxona isolada"
+      ]
+     ],
+     "coment": "Fasciite necrosante: debridamento é o tratamento; antibiótico amplo + clindamicina para inibir toxinas do estrepto/clostrídio.",
+     "enunciado": "Dor intensa desproporcional em coxa, bolhas violáceas, crepitação e hipotensão. Além da cirurgia imediata:",
+     "gab": "A",
+     "id": "fa-pele-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "cefalexina isolada"
+      ],
+      [
+       "B",
+       "amoxicilina-clavulanato"
+      ],
+      [
+       "C",
+       "nenhum: mordedura de gato não infecta"
+      ],
+      [
+       "D",
+       "vancomicina"
+      ],
+      [
+       "E",
+       "azitromicina"
+      ]
+     ],
+     "coment": "Gato tem dentes finos que inoculam fundo; Pasteurella multocida é resistente a cefalexina e clindamicina isoladas. Amoxi-clav cobre.",
+     "enunciado": "Mordedura de gato na mão há 6 horas, com edema. Antibiótico:",
+     "gab": "B",
+     "id": "fa-pele-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "ceftriaxona isolada"
+      ],
+      [
+       "B",
+       "AINE e colchicina"
+      ],
+      [
+       "C",
+       "corticoide intra-articular"
+      ],
+      [
+       "D",
+       "drenagem/lavagem articular + oxacilina (ou cefazolina)"
+      ],
+      [
+       "E",
+       "azitromicina"
+      ]
+     ],
+     "coment": "Cocos em cachos = estafilococo. Drenar a articulação e betalactâmico antiestafilocócico; vancomicina se MRSA provável.",
+     "enunciado": "Monoartrite aguda de joelho com líquido purulento e Gram com cocos Gram-positivos em cachos, sem risco de MRSA. Tratamento:",
+     "gab": "D",
+     "id": "fa-pele-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "5 dias"
+      ],
+      [
+       "B",
+       "cerca de 6 semanas"
+      ],
+      [
+       "C",
+       "1 ano"
+      ],
+      [
+       "D",
+       "dose única"
+      ],
+      [
+       "E",
+       "10 dias"
+      ]
+     ],
+     "coment": "Osso infectado exige curso prolongado (~6 semanas); com amputação/ressecção completa do osso infectado, bem menos.",
+     "enunciado": "Duração usual do tratamento de osteomielite crônica de pé diabético sem ressecção cirúrgica completa:",
+     "gab": "B",
+     "id": "fa-pele-5"
+    }
+   ],
+   "titulo": "Pele, partes moles, osso e articulação"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "ESCMID 2016; IDSA 2004",
+     "ideia": "Na meningite, o antibiótico não pode esperar a tomografia. O esquema cobre pneumococo resistente e, em grupos de risco, Listeria, e a dexametasona reduz sequelas.",
+     "na_prova": "A banca dá meningite com tomografia pedida e quer o antibiótico e a dexametasona antes do exame, após colher hemocultura.",
+     "pontos": [
+      "O adulto recebe ceftriaxona 2 g de 12 em 12 horas com vancomicina.",
+      "Soma-se ampicilina se houver mais de 50 anos, imunossupressão, gestação ou etilismo, por causa da Listeria.",
+      "A dexametasona entra antes ou junto da primeira dose e reduz mortalidade e sequela na meningite pneumocócica."
+     ],
+     "titulo": "Meningite bacteriana"
+    },
+    {
+     "fonte": "ESC 2023 (endocardite); POET 2019",
+     "ideia": "A endocardite exige antibiótico bactericida por semanas, porque os germes ficam protegidos na vegetação. O diagnóstico depende de hemoculturas antes do antibiótico e de ecocardiograma.",
+     "na_prova": "A banca dá endocardite por Staphylococcus aureus em valva nativa e oferece gentamicina: ela não é mais usada nessa situação.",
+     "pontos": [
+      "Colhem-se 3 hemoculturas antes do antibiótico, e faz-se eco transesofágico se houver prótese ou Staphylococcus aureus.",
+      "O estreptococo viridans sensível usa penicilina cristalina ou ceftriaxona por 4 semanas.",
+      "O Enterococcus faecalis usa ampicilina com ceftriaxona, e a bacteremia por Staphylococcus aureus sempre pede eco."
+     ],
+     "titulo": "Endocardite"
+    }
+   ],
+   "id": "snc_endo",
+   "nivel": 2,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "meropenem + fluconazol"
+      ],
+      [
+       "B",
+       "penicilina cristalina isolada"
+      ],
+      [
+       "C",
+       "ceftriaxona + ampicilina isoladas"
+      ],
+      [
+       "D",
+       "aciclovir isolado"
+      ],
+      [
+       "E",
+       "ceftriaxona + vancomicina + dexametasona"
+      ]
+     ],
+     "coment": "Abaixo de 50 anos e imunocompetente não precisa de ampicilina. Vancomicina cobre pneumococo resistente; dexametasona antes/junto da 1ª dose.",
+     "enunciado": "Meningite bacteriana em adulto de 35 anos, imunocompetente. Esquema empírico:",
+     "gab": "E",
+     "id": "fa-snc_endo-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "aguardar a TC por 6 h para iniciar antibiótico"
+      ],
+      [
+       "B",
+       "punção sem TC imediatamente"
+      ],
+      [
+       "C",
+       "TC → punção → antibiótico"
+      ],
+      [
+       "D",
+       "hemoculturas → dexametasona + antibiótico → TC → punção"
+      ],
+      [
+       "E",
+       "antibiótico só após o resultado do líquor"
+      ]
+     ],
+     "coment": "Atrasar antibiótico por TC aumenta mortalidade. A esterilização do líquor demora horas; hemocultura e antígenos ainda ajudam.",
+     "enunciado": "Suspeita de meningite com indicação de TC antes da punção (déficit focal). A sequência correta:",
+     "gab": "D",
+     "id": "fa-snc_endo-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "oxacilina (ou cefazolina) por 4–6 semanas, sem gentamicina"
+      ],
+      [
+       "B",
+       "vancomicina + gentamicina por 2 semanas"
+      ],
+      [
+       "C",
+       "oxacilina + gentamicina por 6 semanas obrigatoriamente"
+      ],
+      [
+       "D",
+       "daptomicina oral"
+      ],
+      [
+       "E",
+       "ceftriaxona por 2 semanas"
+      ]
+     ],
+     "coment": "A gentamicina no MSSA de valva nativa só trouxe nefrotoxicidade. Betalactâmico antiestafilocócico é superior à vancomicina para MSSA.",
+     "enunciado": "Endocardite de valva nativa por S. aureus sensível à oxacilina. Esquema:",
+     "gab": "A",
+     "id": "fa-snc_endo-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "retirar o cateter, repetir hemoculturas e fazer ecocardiograma"
+      ],
+      [
+       "B",
+       "tratar por 5 dias"
+      ],
+      [
+       "C",
+       "considerar contaminação e não tratar"
+      ],
+      [
+       "D",
+       "solicitar apenas radiografia de tórax"
+      ],
+      [
+       "E",
+       "manter o cateter e trocar o curativo"
+      ]
+     ],
+     "coment": "S. aureus no sangue nunca é contaminante: remover o foco, hemocultura de controle (persistência = complicação), eco para excluir endocardite, ≥ 14 dias.",
+     "enunciado": "Bacteremia por S. aureus em paciente com cateter venoso. Conduta obrigatória além do antibiótico:",
+     "gab": "A",
+     "id": "fa-snc_endo-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "nada, apenas observação"
+      ],
+      [
+       "B",
+       "penicilina benzatina"
+      ],
+      [
+       "C",
+       "quimioprofilaxia com rifampicina (ou ceftriaxona dose única/ciprofloxacino)"
+      ],
+      [
+       "D",
+       "amoxicilina por 10 dias"
+      ],
+      [
+       "E",
+       "vacina BCG"
+      ]
+     ],
+     "coment": "Profilaxia para contatos domiciliares, creche e quem teve exposição a secreções (ex.: IOT sem máscara), de preferência em até 24 h.",
+     "enunciado": "Contatos íntimos de caso de doença meningocócica devem receber:",
+     "gab": "C",
+     "id": "fa-snc_endo-5"
+    }
+   ],
+   "titulo": "Meningite e endocardite"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "IDSA 2024 (Gram-negativos resistentes)",
+     "ideia": "Contra Gram-negativos resistentes, a escolha depende da enzima que a bactéria produz. As drogas novas cobrem enzimas específicas, e a polimixina fica como último recurso.",
+     "na_prova": "A banca dá enterobactéria produtora de NDM e quer ceftazidima-avibactam associada a aztreonam.",
+     "pontos": [
+      "Contra a carbapenemase KPC, usam-se ceftazidima-avibactam, meropenem-vaborbactam ou imipenem-relebactam.",
+      "Contra a metalo-betalactamase NDM, usa-se ceftazidima-avibactam com aztreonam, ou cefiderocol.",
+      "Contra Pseudomonas difícil de tratar, usam-se ceftolozana-tazobactam ou ceftazidima-avibactam."
+     ],
+     "titulo": "Gram-negativos multirresistentes"
+    },
+    {
+     "fonte": "IDSA/SHEA 2021",
+     "ideia": "O Clostridioides difficile cresce quando o antibiótico destrói a flora normal do intestino. O tratamento usa antibióticos que agem dentro do intestino, e por isso a vancomicina vai por via oral.",
+     "na_prova": "Pegadinha: vancomicina venosa para Clostridioides difficile. Ela não chega ao intestino; precisa ser oral.",
+     "pontos": [
+      "Diarreia de 3 ou mais episódios em 24 horas após antibiótico pede pesquisa de toxina, e o antibiótico desencadeante deve ser suspenso.",
+      "O primeiro episódio usa fidaxomicina, preferida por ter menos recorrência, ou vancomicina oral por 10 dias.",
+      "A forma fulminante usa vancomicina oral em dose alta com metronidazol venoso, e as recorrências múltiplas pedem transplante de microbiota."
+     ],
+     "titulo": "Clostridioides difficile"
+    }
+   ],
+   "id": "resist",
+   "nivel": 3,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "metronidazol oral como 1ª escolha"
+      ],
+      [
+       "B",
+       "fidaxomicina (ou vancomicina oral)"
+      ],
+      [
+       "C",
+       "vancomicina IV"
+      ],
+      [
+       "D",
+       "loperamida isolada"
+      ],
+      [
+       "E",
+       "ciprofloxacino"
+      ]
+     ],
+     "coment": "Fidaxomicina reduz recorrência; vancomicina oral é alternativa igual em cura. Vancomicina IV não chega ao cólon.",
+     "enunciado": "Primeiro episódio de colite por C. difficile não fulminante. Tratamento preferido pela diretriz IDSA/SHEA 2021:",
+     "gab": "B",
+     "id": "fa-resist-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "ceftazidima-avibactam (ou meropenem-vaborbactam)"
+      ],
+      [
+       "B",
+       "amoxicilina-clavulanato"
+      ],
+      [
+       "C",
+       "ertapenem"
+      ],
+      [
+       "D",
+       "ceftriaxona"
+      ],
+      [
+       "E",
+       "piperacilina-tazobactam"
+      ]
+     ],
+     "coment": "KPC hidrolisa carbapenêmicos. Os novos inibidores (avibactam, vaborbactam, relebactam) bloqueiam a KPC.",
+     "enunciado": "Klebsiella pneumoniae produtora de KPC em bacteremia. Opção preferida:",
+     "gab": "A",
+     "id": "fa-resist-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "ceftazidima-avibactam + aztreonam (ou cefiderocol)"
+      ],
+      [
+       "B",
+       "ceftriaxona + gentamicina"
+      ],
+      [
+       "C",
+       "ceftazidima-avibactam isolada"
+      ],
+      [
+       "D",
+       "vancomicina"
+      ],
+      [
+       "E",
+       "meropenem em dose dobrada"
+      ]
+     ],
+     "coment": "Metalo-betalactamases não são inibidas pelo avibactam, mas não hidrolisam aztreonam; o avibactam protege o aztreonam das outras betalactamases coexistentes.",
+     "enunciado": "Enterobactéria produtora de metalo-betalactamase (NDM) em infecção grave. Estratégia:",
+     "gab": "A",
+     "id": "fa-resist-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "vancomicina oral (e retal) em dose alta + metronidazol IV, avaliando cirurgia"
+      ],
+      [
+       "B",
+       "loperamida"
+      ],
+      [
+       "C",
+       "aguardar resolução espontânea"
+      ],
+      [
+       "D",
+       "fidaxomicina isolada"
+      ],
+      [
+       "E",
+       "metronidazol oral isolado"
+      ]
+     ],
+     "coment": "Forma fulminante: vancomicina enteral (por sonda e retal se íleo) + metronidazol IV; cirurgia (colectomia/ileostomia em alça) se não melhora.",
+     "enunciado": "Colite por C. difficile com íleo, hipotensão e megacólon. Tratamento:",
+     "gab": "A",
+     "id": "fa-resist-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "ciprofloxacino sem antibiograma"
+      ],
+      [
+       "B",
+       "internação obrigatória"
+      ],
+      [
+       "C",
+       "nitrofurantoína oral"
+      ],
+      [
+       "D",
+       "meropenem IV por 7 dias"
+      ],
+      [
+       "E",
+       "ceftriaxona"
+      ]
+     ],
+     "coment": "Cistite por ESBL não exige carbapenêmico: nitrofurantoína, fosfomicina ou SMX-TMP conforme sensibilidade.",
+     "enunciado": "Cistite em mulher com E. coli ESBL sensível a nitrofurantoína. Tratamento:",
+     "gab": "C",
+     "id": "fa-resist-5"
+    }
+   ],
+   "titulo": "Resistência e C. difficile"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "PCDT IST do Ministério da Saúde",
+     "ideia": "As infecções sexualmente transmissíveis seguem o protocolo do Ministério da Saúde. Na gestante com sífilis, só a penicilina trata o feto, e por isso a alérgica precisa ser dessensibilizada.",
+     "na_prova": "A banca dá gestante com sífilis e alergia à penicilina e quer dessensibilização, e não outro antibiótico.",
+     "pontos": [
+      "A sífilis recente usa penicilina benzatina 2,4 milhões UI em dose única, e a tardia usa 3 doses semanais.",
+      "A neurossífilis usa penicilina cristalina venosa por 14 dias.",
+      "A gonorreia usa ceftriaxona 500 mg intramuscular com azitromicina 1 g, e a clamídia usa azitromicina ou doxiciclina."
+     ],
+     "titulo": "Infecções sexualmente transmissíveis"
+    },
+    {
+     "fonte": "Sanford Guide; Goodman & Gilman, 14ª ed.",
+     "ideia": "Muitos antibióticos precisam de cuidado na gestação, na criança ou no rim fraco. Saber quais são seguros e quais ajustar evita toxicidade.",
+     "na_prova": "A banca dá renal crônico e pergunta qual antibiótico dispensa ajuste: ceftriaxona, que tem eliminação biliar.",
+     "pontos": [
+      "Penicilinas, cefalosporinas, azitromicina, clindamicina e fosfomicina são seguras na gestação.",
+      "Quinolonas, tetraciclinas e aminoglicosídeos são evitados na gestação, e tetraciclinas mancham dentes antes dos 8 anos.",
+      "Ceftriaxona, oxacilina, clindamicina, doxiciclina e azitromicina dispensam ajuste renal."
+     ],
+     "titulo": "Gestação, rim e criança"
+    }
+   ],
+   "id": "ist",
+   "nivel": 3,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "azitromicina 1 g dose única"
+      ],
+      [
+       "B",
+       "ceftriaxona 250 mg IM dose única"
+      ],
+      [
+       "C",
+       "penicilina benzatina 2,4 milhões UI IM, dose única"
+      ],
+      [
+       "D",
+       "penicilina benzatina 2,4 milhões UI semanal por 3 semanas"
+      ],
+      [
+       "E",
+       "penicilina cristalina IV por 14 dias"
+      ]
+     ],
+     "coment": "Sífilis recente (primária, secundária, latente < 1 ano): dose única de 2,4 milhões UI. Três doses para latente tardia ou de duração desconhecida.",
+     "enunciado": "Sífilis secundária em adulto não gestante. Tratamento:",
+     "gab": "C",
+     "id": "fa-ist-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "não tratar na gestação"
+      ],
+      [
+       "B",
+       "dessensibilização e tratamento com penicilina benzatina"
+      ],
+      [
+       "C",
+       "ceftriaxona e considerar tratada"
+      ],
+      [
+       "D",
+       "doxiciclina"
+      ],
+      [
+       "E",
+       "azitromicina"
+      ]
+     ],
+     "coment": "Nenhuma alternativa trata adequadamente o feto. Gestante tratada com outra droga = criança considerada exposta não tratada.",
+     "enunciado": "Gestante com sífilis e história de anafilaxia à penicilina. Conduta:",
+     "gab": "B",
+     "id": "fa-ist-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "amoxicilina 3 g VO dose única"
+      ],
+      [
+       "B",
+       "penicilina benzatina 2,4 milhões UI"
+      ],
+      [
+       "C",
+       "doxiciclina por 14 dias isolada"
+      ],
+      [
+       "D",
+       "ciprofloxacino 500 mg VO dose única"
+      ],
+      [
+       "E",
+       "ceftriaxona 500 mg IM + azitromicina 1 g VO, dose única"
+      ]
+     ],
+     "coment": "Ciprofloxacino saiu por resistência. A azitromicina cobre clamídia coexistente e retarda a resistência do gonococo.",
+     "enunciado": "Uretrite gonocócica não complicada. Esquema do Ministério da Saúde:",
+     "gab": "E",
+     "id": "fa-ist-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "ciprofloxacino"
+      ],
+      [
+       "B",
+       "fosfomicina"
+      ],
+      [
+       "C",
+       "amoxicilina"
+      ],
+      [
+       "D",
+       "cefalexina"
+      ],
+      [
+       "E",
+       "nitrofurantoína"
+      ]
+     ],
+     "coment": "Quinolonas são evitadas na gestação (dano à cartilagem em animais). As outras quatro são aceitas (nitrofurantoína evitada só perto do termo).",
+     "enunciado": "Gestante de 10 semanas com cistite. Antibiótico a EVITAR:",
+     "gab": "A",
+     "id": "fa-ist-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "gentamicina"
+      ],
+      [
+       "B",
+       "vancomicina"
+      ],
+      [
+       "C",
+       "ceftriaxona"
+      ],
+      [
+       "D",
+       "meropenem"
+      ],
+      [
+       "E",
+       "levofloxacino"
+      ]
+     ],
+     "coment": "Ceftriaxona tem eliminação biliar e renal dupla: dose habitual mesmo na DRC. As demais exigem ajuste (e nível sérico para vanco/aminoglicosídeo).",
+     "enunciado": "Paciente com ClCr de 20 mL/min. Antibiótico que NÃO precisa de ajuste de dose:",
+     "gab": "C",
+     "id": "fa-ist-5"
+    }
+   ],
+   "titulo": "IST, gestação e populações especiais"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "AAAAI/ACAAI 2022 (alergia a fármacos)",
+     "ideia": "Cerca de 10% das pessoas dizem ter alergia a penicilina, mas menos de 1% confirma. Rotular errado leva a antibióticos piores, então a alergia deve ser investigada.",
+     "na_prova": "A banca dá relato de rash há 20 anos com amoxicilina e quer considerar cefazolina na profilaxia, pela baixa reação cruzada.",
+     "pontos": [
+      "Reação leve e antiga permite testar e retirar o rótulo, e a ferramenta PEN-FAST abaixo de 3 indica baixo risco.",
+      "A reação cruzada com cefalosporinas é baixa e depende da cadeia lateral; com carbapenêmico, é menor que 1%.",
+      "Na anafilaxia verdadeira, evitam-se a droga e as de cadeia lateral parecida; em Stevens-Johnson, evita-se a classe inteira."
+     ],
+     "titulo": "Alergia a penicilina"
+    },
+    {
+     "fonte": "Sanford Guide; Goodman & Gilman, 14ª ed.",
+     "ideia": "As interações mais perigosas envolvem o CYP3A4 e a rifampicina. Uma inibe e a outra induz, com efeitos opostos nos remédios de uso contínuo.",
+     "na_prova": "A banca dá paciente em varfarina que começa metronidazol e sangra, e quer a interação que eleva o INR.",
+     "pontos": [
+      "Claritromicina com estatina causa rabdomiólise, e com colchicina causa intoxicação.",
+      "A rifampicina reduz anticoagulantes, anticoncepcionais, antirretrovirais e tacrolimo, porque induz as enzimas do fígado.",
+      "Metronidazol, sulfametoxazol-trimetoprim, quinolona e fluconazol aumentam o INR da varfarina."
+     ],
+     "titulo": "Interações e armadilhas"
+    }
+   ],
+   "id": "casos",
+   "nivel": 3,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "contraindicar qualquer betalactâmico"
+      ],
+      [
+       "B",
+       "usar vancomicina obrigatoriamente"
+      ],
+      [
+       "C",
+       "usar cefazolina (cadeia lateral distinta, risco muito baixo)"
+      ],
+      [
+       "D",
+       "fazer teste de provocação com penicilina antes da cirurgia de urgência"
+      ],
+      [
+       "E",
+       "dessensibilização obrigatória"
+      ]
+     ],
+     "coment": "Reação leve e remota tem risco mínimo; cefazolina não compartilha cadeia lateral com penicilinas. Trocar por vancomicina aumenta infecção de sítio cirúrgico.",
+     "enunciado": "Paciente relata 'alergia a penicilina' (rash leve na infância, há 30 anos) e precisa de cefazolina profilática. Conduta:",
+     "gab": "C",
+     "id": "fa-casos-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "hipercalemia"
+      ],
+      [
+       "B",
+       "rabdomiólise e toxicidade da colchicina por inibição do CYP3A4/P-gp"
+      ],
+      [
+       "C",
+       "sangramento"
+      ],
+      [
+       "D",
+       "nenhum risco relevante"
+      ],
+      [
+       "E",
+       "hipoglicemia"
+      ]
+     ],
+     "coment": "Claritromicina é forte inibidora: suspender sinvastatina e reduzir/suspender colchicina, ou usar azitromicina.",
+     "enunciado": "Paciente em sinvastatina e colchicina recebe claritromicina. Risco:",
+     "gab": "B",
+     "id": "fa-casos-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "dobrar a dose de etambutol"
+      ],
+      [
+       "B",
+       "a rifampicina reduz a eficácia do anticoncepcional: usar método adicional/alternativo"
+      ],
+      [
+       "C",
+       "a isoniazida potencializa o anticoncepcional"
+      ],
+      [
+       "D",
+       "suspender o RIPE"
+      ],
+      [
+       "E",
+       "nenhuma interação"
+      ]
+     ],
+     "coment": "Rifampicina induz CYP3A4 e glucuronidação: falha contraceptiva. DIU de cobre ou preservativo durante e até ~1 mês após.",
+     "enunciado": "Mulher em anticoncepcional oral e tratamento de tuberculose com RIPE. Orientação:",
+     "gab": "B",
+     "id": "fa-casos-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "nunca reexpor; usar alternativa (dapsona — se tolerar —, atovaquona ou pentamidina)"
+      ],
+      [
+       "B",
+       "reexpor em dose baixa"
+      ],
+      [
+       "C",
+       "não fazer profilaxia"
+      ],
+      [
+       "D",
+       "dessensibilizar com SMX-TMP"
+      ],
+      [
+       "E",
+       "usar SMX-TMP com corticoide"
+      ]
+     ],
+     "coment": "Reações cutâneas graves (SJS/NET, DRESS) contraindicam reexposição e dessensibilização.",
+     "enunciado": "Paciente com história de Stevens-Johnson por sulfametoxazol-trimetoprima precisa de profilaxia para Pneumocystis. Conduta:",
+     "gab": "A",
+     "id": "fa-casos-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "manter tudo igual"
+      ],
+      [
+       "B",
+       "trocar pipe-tazo por cefepime ou meropenem e monitorar o nível da vancomicina"
+      ],
+      [
+       "C",
+       "trocar vancomicina por oxacilina sem cultura"
+      ],
+      [
+       "D",
+       "dobrar a vancomicina"
+      ],
+      [
+       "E",
+       "acrescentar gentamicina"
+      ]
+     ],
+     "coment": "A combinação vanco + pipe-tazo se associa a mais lesão renal aguda. Monitorar AUC/vale da vancomicina e descalonar assim que possível.",
+     "enunciado": "Paciente em pipe-tazo + vancomicina tem creatinina subindo. Melhor ajuste mantendo cobertura semelhante:",
+     "gab": "B",
+     "id": "fa-casos-5"
+    }
+   ],
+   "titulo": "Casos, alergia e interações"
+  }
+ ],
+ "niveis": {
+  "1": "Fundamentos (classes, espectro e toxicidade)",
+  "2": "Por síndrome (PAC, ITU, sepse, pele, SNC e coração)",
+  "3": "Clínica e casos (herói)"
+ },
+ "ordem": 4,
+ "prefixo": "fa",
+ "roteiro": [
+  0,
+  0
+ ],
+ "sabor": 8,
+ "titulo": "Antibióticos",
+ "titulo_mundo": "Mundo dos Antibióticos",
+ "treino_pilulas": [
+  [
+   0,
+   1
+  ],
+  [
+   10,
+   1
+  ]
+ ],
+ "versao": 1
+}

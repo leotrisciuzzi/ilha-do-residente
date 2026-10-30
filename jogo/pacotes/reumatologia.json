@@ -1,0 +1,3125 @@
+{
+ "cor": [
+  250,
+  180,
+  90
+ ],
+ "descricao": "Do que mais cai ao que menos cai: lúpus, artrite reumatoide, vasculites, gota e o resto",
+ "formato": 1,
+ "gerador": "reumatologia",
+ "id": "reumatologia",
+ "materia": "Reumatologia",
+ "modulos": [
+  {
+   "aula": [
+    {
+     "fonte": "EULAR/ACR 2019 (classificação); EULAR 2023 e ACR 2025 (tratamento)",
+     "ideia": "No lúpus, o corpo produz anticorpos contra o próprio núcleo das células. Esses anticorpos se juntam aos antígenos, formam imunocomplexos e se depositam em pele, articulação, rim e serosas, consumindo o complemento.",
+     "na_prova": "A banca descreve mulher jovem com artrite, eritema malar, proteinúria e complemento baixo e pergunta o diagnóstico ou o exame de atividade. Leucocitose e complemento alto falam contra lúpus ativo.",
+     "pontos": [
+      "A paciente típica é mulher jovem, em idade fértil, com febre, artrite e lesões de pele que pioram com o sol.",
+      "O complemento cai na doença ativa porque é gasto pelos imunocomplexos, então C3 e C4 baixos indicam atividade.",
+      "A artrite do lúpus dói muito e deforma pouco: a deformidade, quando existe, é redutível (artropatia de Jaccoud) e não há erosão no raio X.",
+      "Citopenias são comuns e autoimunes: leucopenia, linfopenia, plaquetopenia e anemia hemolítica com Coombs direto positivo."
+     ],
+     "titulo": "Uma doença de imunocomplexos"
+    },
+    {
+     "fonte": "Aringer et al., EULAR/ACR 2019",
+     "ideia": "O FAN positivo é a porta de entrada: sem FAN igual ou maior que 1:80 em HEp-2, a classificação nem começa. Depois, somam-se pontos por domínio e são precisos 10 pontos, com pelo menos um item clínico.",
+     "na_prova": "A pegadinha é somar dois itens do mesmo domínio ou esquecer que o FAN é critério de entrada. Critério de classificação serve para pesquisa: o diagnóstico continua sendo clínico.",
+     "pontos": [
+      "Em cada domínio conta só o item de maior peso, então duas lesões de pele não somam entre si.",
+      "Os itens mais pesados são a nefrite classe III ou IV na biópsia (10 pontos) e a nefrite classe II ou V (8 pontos).",
+      "Anti-DNA de dupla hélice ou anti-Sm valem 6 pontos; C3 e C4 baixos juntos valem 4 e apenas um deles baixo vale 3.",
+      "Lúpus cutâneo agudo e pericardite aguda valem 6 cada; artrite também vale 6, e febre vale 2."
+     ],
+     "titulo": "Critérios EULAR/ACR 2019"
+    },
+    {
+     "fonte": "ICAP 2019; EULAR 2023",
+     "ideia": "O anti-DNA de dupla hélice acompanha a atividade e a nefrite; o anti-Sm é o mais específico de lúpus, mas aparece em poucos pacientes. Os outros anticorpos apontam manifestações ou situações especiais.",
+     "na_prova": "Questão clássica: hipertenso em uso de hidralazina com artrite, serosite e anti-histona positivo. A conduta é suspender a droga, e não iniciar imunossupressor.",
+     "pontos": [
+      "O anti-Ro (SSA) se liga a lúpus cutâneo subagudo, fotossensibilidade e lúpus neonatal com bloqueio cardíaco congênito.",
+      "O anti-P ribossomal se associa a psicose lúpica, e o anticorpo antifosfolípide se associa a trombose e perda gestacional.",
+      "O anti-histona é o marcador do lúpus induzido por drogas, como hidralazina, procainamida, isoniazida e anti-TNF.",
+      "O lúpus induzido costuma poupar rim e sistema nervoso e melhora quando a droga é suspensa."
+     ],
+     "titulo": "Cada anticorpo conta uma história"
+    }
+   ],
+   "id": "les1",
+   "nivel": 1,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "anti-Sm, que é o mais específico de lúpus"
+      ],
+      [
+       "B",
+       "fator reumatoide e anti-CCP"
+      ],
+      [
+       "C",
+       "anti-Ro com anti-La positivos"
+      ],
+      [
+       "D",
+       "anti-DNA de dupla hélice com C3 e C4 consumidos"
+      ],
+      [
+       "E",
+       "anti-histona em título alto"
+      ]
+     ],
+     "coment": "O anti-DNA de dupla hélice sobe com a atividade e se liga à nefrite; o complemento cai porque é consumido pelos imunocomplexos. O anti-Sm é específico, mas não oscila com a atividade.",
+     "enunciado": "Mulher de 24 anos com artrite de mãos, úlceras orais, proteinúria de 1,2 g/24 h e FAN 1:640. Qual exame indica atividade e se correlaciona com a nefrite?",
+     "gab": "D",
+     "id": "reu-les1-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "FAN igual ou maior que 1:80 em células HEp-2 em algum momento"
+      ],
+      [
+       "B",
+       "complemento baixo em duas dosagens"
+      ],
+      [
+       "C",
+       "anti-DNA positivo em dois exames"
+      ],
+      [
+       "D",
+       "pelo menos quatro critérios clínicos"
+      ],
+      [
+       "E",
+       "biópsia renal com nefrite"
+      ]
+     ],
+     "coment": "O FAN é a porta de entrada; sem ele, não se classifica. Depois somam-se 10 pontos, com ao menos um critério clínico, contando apenas o item de maior peso em cada domínio.",
+     "enunciado": "Pelos critérios EULAR/ACR 2019, qual é o requisito de entrada para classificar lúpus?",
+     "gab": "A",
+     "id": "reu-les1-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "manter a droga e associar hidroxicloroquina"
+      ],
+      [
+       "B",
+       "iniciar micofenolato e prednisona em dose alta"
+      ],
+      [
+       "C",
+       "suspender a hidralazina e observar a melhora"
+      ],
+      [
+       "D",
+       "iniciar ciclofosfamida venosa"
+      ],
+      [
+       "E",
+       "pedir biópsia renal antes de qualquer decisão"
+      ]
+     ],
+     "coment": "É lúpus induzido por droga: anti-histona positivo, sem rim e sem sistema nervoso. O tratamento é retirar a droga; sintomas persistentes podem pedir AINE ou corticoide por curto tempo.",
+     "enunciado": "Homem de 62 anos, hipertenso em uso de hidralazina há 2 anos, tem artralgia, pleurite e anti-histona positivo, sem alteração renal. A melhor conduta é:",
+     "gab": "C",
+     "id": "reu-les1-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "bloqueio atrioventricular congênito, com ecocardiograma fetal seriado"
+      ],
+      [
+       "B",
+       "hidropisia por parvovírus B19"
+      ],
+      [
+       "C",
+       "cardiopatia cianótica por transposição"
+      ],
+      [
+       "D",
+       "malformação de tubo neural"
+      ],
+      [
+       "E",
+       "trombose da veia umbilical"
+      ]
+     ],
+     "coment": "O anti-Ro atravessa a placenta e lesa o sistema de condução fetal. Faz-se vigilância da frequência e do intervalo PR fetal, em geral da 16ª à 26ª semana; a hidroxicloroquina reduz esse risco.",
+     "enunciado": "Gestante com lúpus e anti-Ro positivo. Qual complicação fetal deve ser rastreada?",
+     "gab": "A",
+     "id": "reu-les1-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "pesquisa de esquizócitos isolada"
+      ],
+      [
+       "B",
+       "teste de fragilidade osmótica"
+      ],
+      [
+       "C",
+       "Coombs direto positivo"
+      ],
+      [
+       "D",
+       "dosagem de G6PD"
+      ],
+      [
+       "E",
+       "eletroforese de hemoglobina com HbS"
+      ]
+     ],
+     "coment": "No lúpus a hemólise é autoimune, por anticorpos quentes: o Coombs direto prova o anticorpo ligado à hemácia. A anemia hemolítica autoimune vale 4 pontos no domínio hematológico.",
+     "enunciado": "Mulher com lúpus em atividade apresenta anemia com reticulócitos altos, bilirrubina indireta alta e haptoglobina baixa. Qual exame confirma o mecanismo?",
+     "gab": "C",
+     "id": "reu-les1-5"
+    }
+   ],
+   "titulo": "Lúpus: quem é e como se reconhece"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "EULAR 2023; ACR 2025",
+     "ideia": "A hidroxicloroquina é a base do tratamento porque reduz surtos, protege rim e vasos e aumenta a sobrevida. Por isso ela é indicada para quase todo paciente com lúpus e mantida mesmo em remissão.",
+     "na_prova": "A pegadinha é suspender a hidroxicloroquina na remissão ou na gestação. Ela deve ser mantida nas duas situações, porque sua retirada aumenta o risco de surto.",
+     "pontos": [
+      "A dose de manutenção fica em até 5 mg/kg/dia de peso real, para limitar o risco de lesão de retina.",
+      "O exame de retina é feito no início e anualmente a partir de 5 anos de uso, ou antes se houver fator de risco.",
+      "O corticoide é ponte: entra para controlar a atividade e deve cair para 5 mg/dia de prednisona ou menos.",
+      "Quando a doença não cede, entram poupadores de corticoide: metotrexato, micofenolato, azatioprina, belimumabe ou anifrolumabe."
+     ],
+     "titulo": "Hidroxicloroquina para todos"
+    },
+    {
+     "fonte": "KDIGO 2024; ACR 2024 (nefrite lúpica); EULAR 2023",
+     "ideia": "A nefrite é a manifestação grave mais frequente e a biópsia é que define o tratamento. As classes III e IV são proliferativas, inflamam o glomérulo e, por isso, recebem imunossupressão forte.",
+     "na_prova": "A classe V é membranosa e se apresenta como síndrome nefrótica. A classe II é mesangial e em geral não precisa de imunossupressão específica para o rim.",
+     "pontos": [
+      "Proteinúria persistente acima de 0,5 g/dia, hematúria dismórfica ou queda da função renal indicam biópsia.",
+      "A indução das classes III e IV usa corticoide com micofenolato ou ciclofosfamida venosa em dose baixa.",
+      "O ACR 2024 prefere terapia tripla, somando belimumabe ou um inibidor de calcineurina; a KDIGO 2024 aceita esquema duplo ou triplo.",
+      "Indução mais manutenção duram pelo menos 3 anos, sempre com hidroxicloroquina e bloqueio do sistema renina-angiotensina se houver proteinúria."
+     ],
+     "titulo": "Nefrite lúpica: biópsia e indução"
+    },
+    {
+     "fonte": "ACR 2020 (saúde reprodutiva); EULAR 2023",
+     "ideia": "A gestação vai bem quando começa com a doença inativa há pelo menos 6 meses. Por isso o planejamento envolve trocar remédios que lesam o feto antes da concepção.",
+     "na_prova": "A banca pergunta qual imunossupressor manter na gestante: azatioprina e hidroxicloroquina. Trocar micofenolato por azatioprina é a resposta clássica.",
+     "pontos": [
+      "Micofenolato, ciclofosfamida, metotrexato e inibidores da ECA são teratogênicos e devem ser trocados antes da gravidez.",
+      "Hidroxicloroquina, azatioprina, tacrolimo e prednisona em dose baixa são compatíveis com a gestação.",
+      "Toda gestante com lúpus recebe AAS em dose baixa a partir do fim do primeiro trimestre, para prevenir pré-eclâmpsia.",
+      "Nefrite ativa e pré-eclâmpsia se parecem: complemento baixo e anti-DNA alto favorecem nefrite."
+     ],
+     "titulo": "Lúpus e gravidez"
+    }
+   ],
+   "id": "les2",
+   "nivel": 1,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "rituximabe como primeira escolha isolada"
+      ],
+      [
+       "B",
+       "corticoide isolado em dose alta por 6 meses"
+      ],
+      [
+       "C",
+       "azatioprina com prednisona em dose baixa"
+      ],
+      [
+       "D",
+       "hidroxicloroquina isolada e observação"
+      ],
+      [
+       "E",
+       "corticoide com micofenolato, podendo somar belimumabe ou inibidor de calcineurina"
+      ]
+     ],
+     "coment": "Classe III ou IV pede corticoide com micofenolato ou ciclofosfamida em dose baixa. KDIGO 2024 e ACR 2024 incluem a terapia tripla com belimumabe ou inibidor de calcineurina (voclosporina, tacrolimo).",
+     "enunciado": "Mulher com lúpus tem proteinúria de 2,5 g/24 h e hematúria dismórfica; a biópsia mostra nefrite classe IV. Qual esquema de indução segue as diretrizes atuais?",
+     "gab": "E",
+     "id": "reu-les2-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "800 mg/dia para qualquer peso"
+      ],
+      [
+       "B",
+       "5 mg/kg/dia de peso real"
+      ],
+      [
+       "C",
+       "6,5 mg/kg/dia de peso ideal, sem limite de tempo"
+      ],
+      [
+       "D",
+       "10 mg/kg/dia de peso ideal"
+      ],
+      [
+       "E",
+       "200 mg uma vez por semana"
+      ]
+     ],
+     "coment": "EULAR 2023 e ACR 2025 usam até 5 mg/kg/dia de peso real. Doses maiores por pouco tempo podem ser usadas no início ou na gestação, mas a manutenção fica nesse teto.",
+     "enunciado": "Qual é a dose máxima de manutenção da hidroxicloroquina recomendada para limitar a toxicidade retiniana?",
+     "gab": "B",
+     "id": "reu-les2-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "manter 10 mg/dia indefinidamente para evitar surto"
+      ],
+      [
+       "B",
+       "suspender a hidroxicloroquina e manter o corticoide"
+      ],
+      [
+       "C",
+       "trocar o corticoide por ciclofosfamida"
+      ],
+      [
+       "D",
+       "reduzir para 5 mg/dia ou menos e tentar suspender"
+      ],
+      [
+       "E",
+       "subir para 20 mg/dia por segurança"
+      ]
+     ],
+     "coment": "O corticoide é ponte. A EULAR 2023 recomenda manutenção em até 5 mg/dia e retirada quando possível; o ACR 2025 pede chegar abaixo de 5 mg/dia em até 6 meses. A hidroxicloroquina continua.",
+     "enunciado": "Paciente com lúpus em remissão há 1 ano usa prednisona 10 mg/dia e hidroxicloroquina. Qual meta para o corticoide?",
+     "gab": "D",
+     "id": "reu-les2-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "manter o micofenolato, que é seguro"
+      ],
+      [
+       "B",
+       "trocar o micofenolato por azatioprina e engravidar após 6 meses de doença inativa"
+      ],
+      [
+       "C",
+       "suspender todos os remédios, inclusive a hidroxicloroquina"
+      ],
+      [
+       "D",
+       "trocar por metotrexato"
+      ],
+      [
+       "E",
+       "trocar por ciclofosfamida oral"
+      ]
+     ],
+     "coment": "Micofenolato é teratogênico. Troca-se por azatioprina, mantém-se a hidroxicloroquina e planeja-se a gestação com doença inativa, além de AAS em dose baixa durante a gravidez.",
+     "enunciado": "Mulher com lúpus em uso de micofenolato deseja engravidar. A conduta é:",
+     "gab": "B",
+     "id": "reu-les2-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "classe VI, esclerosante avançada"
+      ],
+      [
+       "B",
+       "classe III, proliferativa focal"
+      ],
+      [
+       "C",
+       "classe II, mesangial"
+      ],
+      [
+       "D",
+       "classe IV, proliferativa difusa"
+      ],
+      [
+       "E",
+       "classe V, membranosa"
+      ]
+     ],
+     "coment": "A classe V espessa a membrana basal e causa proteinúria nefrótica com pouco sedimento. As classes III e IV são proliferativas, com hematúria e queda de filtração.",
+     "enunciado": "Na nefrite lúpica, qual classe histológica se apresenta tipicamente como síndrome nefrótica isolada?",
+     "gab": "E",
+     "id": "reu-les2-5"
+    }
+   ],
+   "titulo": "Lúpus: nefrite, gestação e tratamento"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "ACR/EULAR 2010; EULAR 2025",
+     "ideia": "Na artrite reumatoide, a membrana sinovial inflamada cresce como um tecido invasivo (pannus) e destrói cartilagem e osso. Por isso o tratamento precisa começar cedo, antes de a erosão aparecer.",
+     "na_prova": "A banca compara com artrose: na artrose as interfalângicas distais são acometidas, a rigidez dura menos de 30 minutos e o raio X mostra osteófitos, e não erosões.",
+     "pontos": [
+      "O quadro típico é poliartrite simétrica de pequenas articulações das mãos e dos pés, com rigidez matinal acima de 1 hora.",
+      "Punhos, metacarpofalângicas e interfalângicas proximais são acometidas, enquanto as interfalângicas distais costumam ser poupadas.",
+      "No raio X, os primeiros sinais são osteopenia periarticular e erosões marginais, com redução simétrica do espaço articular.",
+      "A coluna cervical pode ter subluxação atlantoaxial, que precisa ser avaliada antes de intubar o paciente."
+     ],
+     "titulo": "Sinovite que corrói o osso"
+    },
+    {
+     "fonte": "Aletaha et al., ACR/EULAR 2010",
+     "ideia": "Os critérios de 2010 foram feitos para pegar a doença cedo. Eles exigem uma sinovite que nenhuma outra doença explique e somam pontos em quatro domínios: com 6 ou mais pontos de 10, classifica-se artrite reumatoide.",
+     "na_prova": "A questão costuma dar um caso e pedir a soma. Lembre que a sorologia pesa mais que a duração, e que erosão típica no raio X basta para classificar, mesmo sem somar pontos.",
+     "pontos": [
+      "Articulações: 1 grande vale 0, 2 a 10 grandes valem 1, 1 a 3 pequenas valem 2, 4 a 10 pequenas valem 3 e mais de 10 valem 5.",
+      "Sorologia: fator reumatoide e anti-CCP negativos valem 0, positivo baixo vale 2 e positivo alto, acima de 3 vezes o limite, vale 3.",
+      "Provas de fase aguda: PCR ou VHS alteradas valem 1 ponto.",
+      "Duração dos sintomas de 6 semanas ou mais vale 1 ponto."
+     ],
+     "titulo": "Critérios ACR/EULAR 2010"
+    },
+    {
+     "fonte": "ACR/EULAR 2010; EULAR 2025",
+     "ideia": "O anti-CCP é quase exclusivo da artrite reumatoide e prevê doença erosiva. O fator reumatoide é mais sensível e menos específico, porque aparece também em infecções crônicas, em hepatite C e em idosos.",
+     "na_prova": "Pergunta frequente: qual anticorpo é mais específico? O anti-CCP. Qual é o mais sensível? O fator reumatoide.",
+     "pontos": [
+      "Nódulos reumatoides, doença pulmonar intersticial e vasculite aparecem mais em pacientes soropositivos e tabagistas.",
+      "A síndrome de Felty junta artrite reumatoide, esplenomegalia e neutropenia, com risco de infecções.",
+      "A secura de olhos e boca indica Sjögren secundário, e a esclerite pode ameaçar a visão.",
+      "A principal causa de morte é cardiovascular, então controlar a inflamação também protege o coração."
+     ],
+     "titulo": "Anticorpos e manifestações fora da articulação"
+    }
+   ],
+   "id": "ar1",
+   "nivel": 1,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "10 pontos: classifica como artrite reumatoide"
+      ],
+      [
+       "B",
+       "8 pontos: classifica como artrite reumatoide"
+      ],
+      [
+       "C",
+       "4 pontos: provável artrose"
+      ],
+      [
+       "D",
+       "5 pontos: ainda não classifica"
+      ],
+      [
+       "E",
+       "6 pontos: no limite, sem a duração"
+      ]
+     ],
+     "coment": "Punhos e 6 metacarpofalângicas são 8 articulações pequenas: de 4 a 10 pequenas valem 3. Anti-CCP acima de 3 vezes o limite vale 3, PCR alterada vale 1 e duração de 6 semanas ou mais vale 1. Total de 8, acima de 6: classifica. O erro comum é contar mais de 10 articulações (5 pontos) e chegar a 10.",
+     "enunciado": "Mulher de 45 anos com dor e edema em punhos e 6 metacarpofalângicas há 8 semanas, rigidez matinal de 2 h, anti-CCP 5 vezes acima do limite e PCR elevada. Pelos critérios de 2010, a pontuação e a conclusão são:",
+     "gab": "B",
+     "id": "reu-ar1-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "anti-histona"
+      ],
+      [
+       "B",
+       "anti-DNA de dupla hélice"
+      ],
+      [
+       "C",
+       "FAN em padrão homogêneo"
+      ],
+      [
+       "D",
+       "anti-CCP (antipeptídeo citrulinado cíclico)"
+      ],
+      [
+       "E",
+       "fator reumatoide IgM"
+      ]
+     ],
+     "coment": "O anti-CCP tem especificidade em torno de 95% e marca pior prognóstico. O fator reumatoide é mais sensível, mas aparece em hepatite C, endocardite, Sjögren e idosos.",
+     "enunciado": "Qual anticorpo é mais específico para artrite reumatoide e se associa a doença erosiva?",
+     "gab": "D",
+     "id": "reu-ar1-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "dosar fator reumatoide antes da cirurgia"
+      ],
+      [
+       "B",
+       "suspender a hidroxicloroquina 1 mês antes"
+      ],
+      [
+       "C",
+       "fazer ecocardiograma para pericardite"
+      ],
+      [
+       "D",
+       "avaliar subluxação atlantoaxial com raio X dinâmico da coluna cervical"
+      ],
+      [
+       "E",
+       "dosar anti-CCP para estimar risco"
+      ]
+     ],
+     "coment": "A sinovite destrói o ligamento transverso e permite subluxação de C1 sobre C2. A hiperextensão na intubação pode comprimir a medula, por isso se avalia antes com radiografia em flexão e extensão.",
+     "enunciado": "Paciente com artrite reumatoide de longa data vai ser intubado para cirurgia eletiva e refere dor cervical. Qual cuidado é essencial?",
+     "gab": "D",
+     "id": "reu-ar1-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "síndrome de Caplan"
+      ],
+      [
+       "B",
+       "síndrome de Sjögren secundária"
+      ],
+      [
+       "C",
+       "doença de Still do adulto"
+      ],
+      [
+       "D",
+       "síndrome de Felty"
+      ],
+      [
+       "E",
+       "amiloidose secundária"
+      ]
+     ],
+     "coment": "Felty é a tríade artrite reumatoide, esplenomegalia e neutropenia. Caplan é a associação com nódulos pulmonares em trabalhadores expostos a poeira mineral.",
+     "enunciado": "Artrite reumatoide com esplenomegalia e neutropenia caracteriza:",
+     "gab": "D",
+     "id": "reu-ar1-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "redução assimétrica do espaço articular"
+      ],
+      [
+       "B",
+       "erosões marginais com osteopenia periarticular"
+      ],
+      [
+       "C",
+       "osteófitos em interfalângicas distais"
+      ],
+      [
+       "D",
+       "nódulos de Heberden"
+      ],
+      [
+       "E",
+       "esclerose subcondral com cistos"
+      ]
+     ],
+     "coment": "A artrite reumatoide erode a borda do osso que não é coberta por cartilagem e gera osteopenia em volta da articulação inflamada. Osteófitos e esclerose são marcas da artrose.",
+     "enunciado": "Qual achado radiográfico favorece artrite reumatoide em vez de osteoartrite nas mãos?",
+     "gab": "B",
+     "id": "reu-ar1-5"
+    }
+   ],
+   "titulo": "Artrite reumatoide: diagnóstico"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "EULAR 2025; ACR 2021",
+     "ideia": "Tratar cedo muda a história da artrite reumatoide, porque a janela de oportunidade fica nos primeiros meses. O metotrexato é a âncora: começa logo no diagnóstico e só não entra se houver contraindicação.",
+     "na_prova": "A banca pergunta a primeira droga de escolha: metotrexato, e não corticoide isolado nem biológico. AINE e corticoide aliviam sintomas, mas não impedem erosão.",
+     "pontos": [
+      "Se o metotrexato não puder ser usado, a alternativa é leflunomida ou sulfassalazina.",
+      "O corticoide pode entrar por curto prazo ao iniciar ou trocar a droga, mas deve ser reduzido e suspenso o mais rápido possível.",
+      "O ácido fólico semanal reduz efeitos adversos do metotrexato, como úlceras orais e alteração de enzimas hepáticas.",
+      "O metotrexato é teratogênico e deve ser suspenso de 1 a 3 meses antes de uma gestação planejada."
+     ],
+     "titulo": "Metotrexato desde o diagnóstico"
+    },
+    {
+     "fonte": "EULAR 2025",
+     "ideia": "A estratégia é treat-to-target: a meta é remissão, ou ao menos baixa atividade, medida por índices como DAS28, CDAI ou SDAI. Se a meta não chega, o tratamento sobe de degrau.",
+     "na_prova": "A pegadinha é manter a mesma droga por um ano sem atingir a meta. Outra é suspender tudo na remissão: o certo é manter e, no máximo, espaçar a dose.",
+     "pontos": [
+      "A atividade é reavaliada a cada 1 a 3 meses enquanto a doença está ativa.",
+      "Sem melhora em 3 meses ou sem atingir a meta em 6 meses, o esquema precisa ser trocado ou intensificado.",
+      "Se o metotrexato falha, a EULAR 2025 indica somar um biológico, sem exigir mais fatores de mau prognóstico.",
+      "Em remissão sustentada e sem corticoide, a EULAR 2025 prefere manter a droga, podendo reduzir a dose com cuidado."
+     ],
+     "titulo": "Tratar até o alvo"
+    },
+    {
+     "fonte": "EULAR 2025; ACR 2021; ORAL Surveillance (NEJM 2022)",
+     "ideia": "Os biológicos bloqueiam alvos da inflamação, como TNF, IL-6, linfócitos B e a coestimulação de linfócitos T. Como todos aumentam o risco de infecção, a triagem de tuberculose latente e hepatites vem antes.",
+     "na_prova": "Clássico: tuberculose latente descoberta antes do anti-TNF. Trata-se a infecção latente e o biológico pode começar depois de cerca de 1 mês de tratamento.",
+     "pontos": [
+      "Antes do biológico, pede-se PPD ou IGRA, sorologias de hepatite B, hepatite C e HIV, além de atualizar vacinas.",
+      "Vacinas de vírus vivo devem ser dadas antes de iniciar o biológico, e não durante o uso.",
+      "Os inibidores de JAK aumentaram eventos cardiovasculares, câncer e trombose no estudo ORAL Surveillance em pacientes de risco.",
+      "Por isso, em pacientes com mais de 65 anos, tabagistas ou com risco cardiovascular, o biológico costuma ser preferido."
+     ],
+     "titulo": "Biológicos e inibidores de JAK"
+    }
+   ],
+   "id": "ar2",
+   "nivel": 1,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "metotrexato, com corticoide por curto prazo como ponte"
+      ],
+      [
+       "B",
+       "AINE contínuo e reavaliação em 1 ano"
+      ],
+      [
+       "C",
+       "prednisona em dose baixa por tempo indeterminado"
+      ],
+      [
+       "D",
+       "anti-TNF em monoterapia como primeira linha"
+      ],
+      [
+       "E",
+       "inibidor de JAK como primeira escolha"
+      ]
+     ],
+     "coment": "O metotrexato é a âncora desde o diagnóstico. O corticoide pode ajudar no começo, mas deve ser retirado rapidamente. Biológico e inibidor de JAK ficam para a falha do metotrexato.",
+     "enunciado": "Mulher de 38 anos recebe diagnóstico de artrite reumatoide ativa e não tem contraindicações. Qual é o tratamento inicial?",
+     "gab": "A",
+     "id": "reu-ar2-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "manter o esquema por mais 1 ano"
+      ],
+      [
+       "B",
+       "associar um biológico, ou inibidor de JAK após avaliar riscos"
+      ],
+      [
+       "C",
+       "suspender o metotrexato e usar só corticoide"
+      ],
+      [
+       "D",
+       "aumentar o AINE para dose máxima"
+      ],
+      [
+       "E",
+       "trocar por hidroxicloroquina isolada"
+      ]
+     ],
+     "coment": "Sem atingir a meta em 6 meses, intensifica-se. A EULAR 2025 abandonou a exigência de fatores de mau prognóstico para somar biológico; o inibidor de JAK entra após pesar risco cardiovascular, de câncer e de trombose.",
+     "enunciado": "Paciente em metotrexato há 6 meses, com dose otimizada, segue com atividade moderada. Pela EULAR 2025, o próximo passo é:",
+     "gab": "B",
+     "id": "reu-ar2-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "trocar por corticoide em dose alta"
+      ],
+      [
+       "B",
+       "tratar a tuberculose latente e iniciar o biológico após cerca de 1 mês"
+      ],
+      [
+       "C",
+       "contraindicar biológico para sempre"
+      ],
+      [
+       "D",
+       "tratar com esquema completo de tuberculose ativa por 6 meses antes"
+      ],
+      [
+       "E",
+       "iniciar o anti-TNF e repetir o PPD em 1 ano"
+      ]
+     ],
+     "coment": "PPD reator com radiografia normal indica infecção latente. Trata-se a latente, por exemplo com isoniazida ou rifapentina com isoniazida, e o biológico pode começar depois do primeiro mês.",
+     "enunciado": "Antes de iniciar anti-TNF, o PPD vem com 12 mm e a radiografia de tórax é normal. A conduta é:",
+     "gab": "B",
+     "id": "reu-ar2-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "porque inibidores de JAK causam lúpus induzido"
+      ],
+      [
+       "B",
+       "porque inibidores de JAK são menos eficazes"
+      ],
+      [
+       "C",
+       "porque biológicos não aumentam infecção"
+      ],
+      [
+       "D",
+       "porque inibidores de JAK são injetáveis"
+      ],
+      [
+       "E",
+       "porque inibidores de JAK aumentaram eventos cardiovasculares, câncer e trombose em pacientes de risco"
+      ]
+     ],
+     "coment": "No ORAL Surveillance, o tofacitinibe teve mais eventos cardiovasculares maiores, câncer e trombose do que o anti-TNF em pacientes com 50 anos ou mais e fatores de risco. A eficácia é semelhante.",
+     "enunciado": "Homem de 68 anos, tabagista, com artrite reumatoide refratária ao metotrexato. Por que o biológico é preferido ao inibidor de JAK?",
+     "gab": "E",
+     "id": "reu-ar2-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "deve suspender só o metotrexato e dobrar o anti-TNF"
+      ],
+      [
+       "B",
+       "deve suspender tudo de uma vez"
+      ],
+      [
+       "C",
+       "deve trocar para corticoide"
+      ],
+      [
+       "D",
+       "prefere-se manter o tratamento, podendo reduzir a dose com cautela"
+      ],
+      [
+       "E",
+       "deve parar e reiniciar apenas em crise"
+      ]
+     ],
+     "coment": "A EULAR 2025 prefere continuar os DMARD na remissão sustentada; a redução de dose pode ser considerada. Suspender tudo aumenta muito a chance de recaída.",
+     "enunciado": "Paciente em remissão sustentada com metotrexato e anti-TNF, sem corticoide, pergunta se pode parar tudo. Pela EULAR 2025:",
+     "gab": "D",
+     "id": "reu-ar2-5"
+    }
+   ],
+   "titulo": "Artrite reumatoide: tratamento"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "EULAR 2025 (polimialgia e grandes vasos); EULAR 2023 (imagem); ACR 2021",
+     "ideia": "É a vasculite do idoso: inflama a aorta e seus ramos, principalmente a artéria temporal e as artérias que nutrem o olho. Por isso o grande risco é a cegueira, e o tratamento não espera a biópsia.",
+     "na_prova": "A banca pergunta a conduta diante de suspeita forte: iniciar corticoide imediatamente e só depois confirmar. Esperar a biópsia é o erro clássico.",
+     "pontos": [
+      "O quadro é pessoa com mais de 50 anos, cefaleia nova, claudicação da mandíbula, dor no couro cabeludo e VHS ou PCR altas.",
+      "A perda visual vem da neuropatia óptica isquêmica anterior arterítica e costuma ser irreversível.",
+      "O ultrassom com sinal do halo, incluindo as artérias axilares, é o primeiro exame; a biópsia de artéria temporal é alternativa.",
+      "Trata-se com prednisona 40 a 60 mg/dia, e com pulso de metilprednisolona quando já há sintoma visual."
+     ],
+     "titulo": "Arterite de células gigantes"
+    },
+    {
+     "fonte": "EULAR 2025; ACR 2021",
+     "ideia": "A arterite de células gigantes recai muito e o corticoide longo traz osteoporose, diabetes e infecção. Por isso entram poupadores de corticoide, e o principal deles bloqueia a interleucina 6.",
+     "na_prova": "Polimialgia com cefaleia nova ou sintoma visual é arterite de células gigantes até prova em contrário, e pede a dose alta de corticoide.",
+     "pontos": [
+      "O tocilizumabe reduz recaídas e dose acumulada de corticoide; a EULAR 2025 também cita o upadacitinibe.",
+      "A polimialgia reumática dá dor e rigidez nas cinturas escapular e pélvica em pessoa com mais de 50 anos e VHS alta.",
+      "Na polimialgia, a CK é normal e não há fraqueza verdadeira, o que a separa das miosites.",
+      "A resposta à prednisona em dose baixa, de 12,5 a 25 mg/dia, é rápida e dramática, e isso apoia o diagnóstico."
+     ],
+     "titulo": "Poupar corticoide e a polimialgia"
+    },
+    {
+     "fonte": "ACR/EULAR 2022 (classificação); EULAR 2025; ACR 2021",
+     "ideia": "É a vasculite de grandes vasos da mulher jovem. A inflamação estreita a aorta e seus ramos, então os pulsos somem e a pressão fica diferente entre os braços.",
+     "na_prova": "A palavra-chave é doença sem pulso em mulher jovem. Se a idade for acima de 50 anos, pense em arterite de células gigantes.",
+     "pontos": [
+      "A paciente típica tem menos de 40 anos e apresenta claudicação de membro superior, sopros e pulso fraco ou ausente.",
+      "Uma diferença de pressão sistólica acima de 10 mmHg entre os braços sugere estenose de subclávia.",
+      "Hipertensão pode surgir por estenose de artéria renal.",
+      "O tratamento usa corticoide com poupador, como metotrexato, tocilizumabe ou anti-TNF; revascularização é feita fora da fase ativa."
+     ],
+     "titulo": "Arterite de Takayasu"
+    }
+   ],
+   "id": "vgg",
+   "nivel": 1,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "iniciar corticoide em dose alta imediatamente e depois confirmar com ultrassom ou biópsia"
+      ],
+      [
+       "B",
+       "iniciar AINE e observar a resposta"
+      ],
+      [
+       "C",
+       "prescrever AAS isolado"
+      ],
+      [
+       "D",
+       "pedir ressonância de crânio e reavaliar em 2 semanas"
+      ],
+      [
+       "E",
+       "aguardar a biópsia de artéria temporal antes de tratar"
+      ]
+     ],
+     "coment": "Sintoma visual na arterite de células gigantes ameaça o olho de forma irreversível. O corticoide começa na hora, com pulso se houver perda visual; o ultrassom ou a biópsia continuam válidos por alguns dias.",
+     "enunciado": "Mulher de 72 anos com cefaleia temporal nova, claudicação de mandíbula e VHS de 98 mm/h relata turvação visual transitória. A conduta mais adequada é:",
+     "gab": "A",
+     "id": "reu-vgg-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "fibromialgia, com amitriptilina"
+      ],
+      [
+       "B",
+       "polimialgia reumática, com prednisona em dose baixa"
+      ],
+      [
+       "C",
+       "polimiosite, com corticoide em dose alta"
+      ],
+      [
+       "D",
+       "hipotireoidismo, com levotiroxina"
+      ],
+      [
+       "E",
+       "artrite reumatoide, com metotrexato isolado"
+      ]
+     ],
+     "coment": "Dor de cintura escapular e pélvica, VHS alta, CK normal e sem fraqueza: polimialgia reumática. A prednisona de 12,5 a 25 mg/dia costuma trazer melhora rápida.",
+     "enunciado": "Homem de 70 anos com dor e rigidez matinal em ombros e quadris há 2 meses, VHS 60 mm/h, CK normal e força preservada. O diagnóstico e o tratamento são:",
+     "gab": "B",
+     "id": "reu-vgg-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "poliarterite nodosa"
+      ],
+      [
+       "B",
+       "doença de Kawasaki"
+      ],
+      [
+       "C",
+       "arterite de células gigantes"
+      ],
+      [
+       "D",
+       "arterite de Takayasu"
+      ],
+      [
+       "E",
+       "granulomatose com poliangiite"
+      ]
+     ],
+     "coment": "Mulher jovem, estenose de subclávia com pulso fraco e diferença de pressão entre os braços: Takayasu, a doença sem pulso. A arterite de células gigantes acomete maiores de 50 anos.",
+     "enunciado": "Mulher de 26 anos com claudicação do braço esquerdo, pulso radial esquerdo fraco e pressão 30 mmHg menor no braço esquerdo. O diagnóstico mais provável é:",
+     "gab": "D",
+     "id": "reu-vgg-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "hidroxicloroquina"
+      ],
+      [
+       "B",
+       "azatioprina como primeira escolha"
+      ],
+      [
+       "C",
+       "ciclofosfamida oral contínua"
+      ],
+      [
+       "D",
+       "colchicina"
+      ],
+      [
+       "E",
+       "tocilizumabe, que bloqueia o receptor de IL-6"
+      ]
+     ],
+     "coment": "O tocilizumabe mostrou isso no estudo GiACTA e é o principal poupador de corticoide. A EULAR 2025 também admite o upadacitinibe, sobretudo em recaída ou risco de efeitos do corticoide.",
+     "enunciado": "Qual droga reduz recaídas e dose acumulada de corticoide na arterite de células gigantes?",
+     "gab": "E",
+     "id": "reu-vgg-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "arteriografia convencional"
+      ],
+      [
+       "B",
+       "cintilografia óssea"
+      ],
+      [
+       "C",
+       "eletroneuromiografia"
+      ],
+      [
+       "D",
+       "ultrassom das artérias temporais e axilares, buscando o sinal do halo"
+      ],
+      [
+       "E",
+       "tomografia de crânio sem contraste"
+      ]
+     ],
+     "coment": "O ultrassom é rápido, sem radiação e tem boa acurácia; o halo é o espessamento edemaciado da parede. Incluir as axilares aumenta a sensibilidade para a forma extracraniana.",
+     "enunciado": "Na suspeita de arterite de células gigantes, qual exame de imagem é o primeiro recomendado pela EULAR?",
+     "gab": "D",
+     "id": "reu-vgg-5"
+    }
+   ],
+   "titulo": "Vasculites de grandes vasos e polimialgia"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "ACR/EULAR 2022 (classificação); EULAR 2022 (tratamento)",
+     "ideia": "O ANCA ativa neutrófilos que destroem pequenos vasos de pulmão e rim. Por isso a apresentação temida é a síndrome pulmão-rim: hemorragia alveolar com glomerulonefrite rapidamente progressiva.",
+     "na_prova": "A banca dá sinusite crônica, nódulos cavitados e hematúria e quer granulomatose com poliangiite. Asma de início tardio com eosinofilia aponta para a forma eosinofílica.",
+     "pontos": [
+      "A granulomatose com poliangiite acomete vias aéreas superiores, com sinusite, nariz em sela e nódulos pulmonares cavitados, e tem c-ANCA anti-PR3.",
+      "A poliangiite microscópica acomete rim e pulmão sem granulomas e tem p-ANCA anti-MPO.",
+      "A granulomatose eosinofílica com poliangiite junta asma, eosinofilia e mononeurite múltipla, e só cerca de 40% têm ANCA.",
+      "A glomerulonefrite das vasculites ANCA é pauci-imune, ou seja, quase sem depósitos de imunoglobulina na biópsia."
+     ],
+     "titulo": "As três vasculites ANCA"
+    },
+    {
+     "fonte": "EULAR 2022; BSR 2025",
+     "ideia": "Doença que ameaça órgão pede indução forte e rápida, depois manutenção longa, porque a recaída é comum. A estratégia atual também tenta reduzir a dose total de corticoide.",
+     "na_prova": "Pegadinha: plasmaférese não é rotina para todos. Na hemorragia alveolar com anti-membrana basal, lembre da doença de Goodpasture, que tem tratamento parecido mas outro anticorpo.",
+     "pontos": [
+      "A indução usa corticoide em dose alta com rituximabe ou ciclofosfamida.",
+      "O avacopan, que bloqueia o receptor de C5a, ajuda a reduzir o corticoide na granulomatose com poliangiite e na poliangiite microscópica.",
+      "A plasmaférese pode ser considerada na glomerulonefrite grave, com creatinina acima de cerca de 3,4 mg/dL.",
+      "A manutenção preferida é rituximabe por 24 a 48 meses."
+     ],
+     "titulo": "Tratar a vasculite ANCA"
+    },
+    {
+     "fonte": "AHA 2024 (Kawasaki); ACR/VF 2021; EULAR 2022",
+     "ideia": "Cada vasculite tem uma pista de ouro: a idade, o tamanho do vaso e uma associação típica com infecção ou remédio. Reconhecer a pista resolve a maioria das questões.",
+     "na_prova": "Questão frequente: criança com púrpura palpável e plaquetas normais é vasculite por IgA. A complicação abdominal clássica é a intussuscepção, e a de longo prazo é a nefrite.",
+     "pontos": [
+      "A vasculite por IgA é da criança: púrpura palpável em pernas e nádegas com plaquetas normais, artralgia, dor abdominal e hematúria.",
+      "Kawasaki é febre de 5 dias ou mais em criança pequena com conjuntivite, mucosite, exantema, alterações de extremidades e linfonodo cervical.",
+      "Em Kawasaki, a imunoglobulina venosa de 2 g/kg com AAS previne aneurisma coronário; a AHA 2024 soma corticoide nos casos de alto risco.",
+      "A poliarterite nodosa poupa o pulmão, é ANCA negativa e se liga à hepatite B; a crioglobulinemia se liga à hepatite C."
+     ],
+     "titulo": "IgA, Kawasaki, poliarterite e outras"
+    }
+   ],
+   "id": "vpm",
+   "nivel": 1,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "anti-membrana basal glomerular"
+      ],
+      [
+       "B",
+       "p-ANCA contra mieloperoxidase"
+      ],
+      [
+       "C",
+       "crioglobulinas com fator reumatoide"
+      ],
+      [
+       "D",
+       "c-ANCA contra proteinase 3"
+      ],
+      [
+       "E",
+       "FAN com anti-DNA"
+      ]
+     ],
+     "coment": "Vias aéreas superiores, nódulos cavitados e glomerulonefrite formam a tríade da granulomatose com poliangiite, ligada ao c-ANCA anti-PR3.",
+     "enunciado": "Homem de 45 anos com sinusite crônica, deformidade em sela do nariz, nódulos pulmonares cavitados e hematúria dismórfica. Qual o anticorpo esperado?",
+     "gab": "D",
+     "id": "reu-vpm-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "poliarterite nodosa"
+      ],
+      [
+       "B",
+       "poliangiite microscópica"
+      ],
+      [
+       "C",
+       "síndrome hipereosinofílica idiopática"
+      ],
+      [
+       "D",
+       "aspergilose broncopulmonar alérgica"
+      ],
+      [
+       "E",
+       "granulomatose eosinofílica com poliangiite"
+      ]
+     ],
+     "coment": "Asma de início adulto, eosinofilia e neuropatia formam o trio da granulomatose eosinofílica com poliangiite. Só cerca de 40% têm ANCA, então ANCA negativo não exclui.",
+     "enunciado": "Mulher de 50 anos com asma iniciada há 3 anos, eosinofilia de 18% e mononeurite múltipla. O diagnóstico é:",
+     "gab": "E",
+     "id": "reu-vpm-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "meningococcemia, com antibiótico"
+      ],
+      [
+       "B",
+       "vasculite por IgA, com urina seriada para detectar nefrite"
+      ],
+      [
+       "C",
+       "leucemia aguda, com mielograma"
+      ],
+      [
+       "D",
+       "Kawasaki, com imunoglobulina"
+      ],
+      [
+       "E",
+       "púrpura trombocitopênica imune, com corticoide"
+      ]
+     ],
+     "coment": "Púrpura palpável com plaquetas normais em criança é vasculite por IgA (Henoch-Schönlein). O rim define o prognóstico, por isso se faz exame de urina e pressão por meses.",
+     "enunciado": "Menino de 6 anos com púrpura palpável em pernas e nádegas, dor abdominal em cólica, artralgia de tornozelos e plaquetas normais. O diagnóstico e o cuidado no seguimento são:",
+     "gab": "B",
+     "id": "reu-vpm-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "corticoide isolado sem imunoglobulina"
+      ],
+      [
+       "B",
+       "imunoglobulina venosa 2 g/kg em dose única com AAS"
+      ],
+      [
+       "C",
+       "AINE e observação"
+      ],
+      [
+       "D",
+       "AAS isolado em dose antiplaquetária"
+      ],
+      [
+       "E",
+       "antibiótico para escarlatina"
+      ]
+     ],
+     "coment": "Febre por 5 dias ou mais e os 5 critérios: Kawasaki. A imunoglobulina reduz o risco de aneurisma coronário; a AHA 2024 indica corticoide ou infliximabe a mais nos casos de alto risco.",
+     "enunciado": "Criança de 3 anos com febre há 6 dias, conjuntivite bilateral sem secreção, lábios fissurados, exantema, edema de mãos e linfonodo cervical de 2 cm. O tratamento é:",
+     "gab": "B",
+     "id": "reu-vpm-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "arterite de Takayasu"
+      ],
+      [
+       "B",
+       "granulomatose com poliangiite"
+      ],
+      [
+       "C",
+       "crioglobulinemia mista"
+      ],
+      [
+       "D",
+       "poliangiite microscópica"
+      ],
+      [
+       "E",
+       "poliarterite nodosa"
+      ]
+     ],
+     "coment": "A poliarterite nodosa acomete artérias de médio calibre, forma microaneurismas, poupa o pulmão, é ANCA negativa e tem associação clássica com hepatite B.",
+     "enunciado": "Homem com hepatite B, mononeurite múltipla, hipertensão nova, orquite e microaneurismas renais na angiografia, sem acometimento pulmonar e com ANCA negativo. O diagnóstico é:",
+     "gab": "E",
+     "id": "reu-vpm-5"
+    }
+   ],
+   "titulo": "Vasculites ANCA, IgA, Kawasaki e outras"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "ICAP 2019; EULAR/ACR 2019",
+     "ideia": "O FAN é um teste de triagem: quase todo paciente com lúpus tem FAN positivo, mas muitas pessoas saudáveis também têm. Por isso ele só tem valor quando há suspeita clínica de doença autoimune.",
+     "na_prova": "A banca dá FAN 1:160 em pessoa assintomática e pergunta a conduta: não tratar e não rotular, apenas orientar e reavaliar se surgirem sintomas.",
+     "pontos": [
+      "Cerca de 10 a 15% das pessoas saudáveis têm FAN positivo em título 1:80, e a frequência aumenta com a idade.",
+      "Um FAN negativo em células HEp-2 torna o lúpus muito improvável.",
+      "Títulos baixos, como 1:80, valem pouco sozinhos; títulos altos com quadro compatível aumentam a probabilidade.",
+      "O FAN não serve para acompanhar a atividade da doença, então não precisa ser repetido."
+     ],
+     "titulo": "FAN sensível, mas nada específico"
+    },
+    {
+     "fonte": "ICAP 2019",
+     "ideia": "O padrão de fluorescência mostra onde o anticorpo se liga dentro da célula. Isso ajuda a prever qual anticorpo específico pedir em seguida.",
+     "na_prova": "Pegadinha moderna: FAN em pontilhado fino denso isolado em pessoa saudável é, em geral, achado benigno e não deve levar a diagnóstico de lúpus.",
+     "pontos": [
+      "O padrão nuclear homogêneo sugere anti-DNA, anti-histona e antinucleossomo, típicos de lúpus e lúpus induzido.",
+      "O padrão nuclear pontilhado fino denso corresponde ao anti-DFS70 e, quando isolado, fala contra doença autoimune sistêmica.",
+      "O padrão centromérico corresponde ao anticentrômero, marcador da esclerose sistêmica limitada.",
+      "O padrão pontilhado grosso sugere anti-Sm e anti-U1RNP, e o padrão citoplasmático pode indicar anti-Jo-1."
+     ],
+     "titulo": "O padrão aponta o anticorpo"
+    },
+    {
+     "fonte": "ICAP 2019; EULAR/ACR 2017 (miopatias); ACR/EULAR 2013 (esclerose sistêmica)",
+     "ideia": "Os anticorpos específicos funcionam como etiquetas de doença. Saber a associação certa resolve boa parte das questões de reumatologia.",
+     "na_prova": "Associações mais cobradas: anticentrômero com esclerose limitada, anti-Scl-70 com difusa e pulmão, anti-histona com lúpus induzido e anti-CCP com artrite reumatoide.",
+     "pontos": [
+      "Anti-Ro e anti-La apontam Sjögren e lúpus neonatal; anti-U1RNP em título alto aponta doença mista do tecido conjuntivo.",
+      "Anti-Scl-70 aponta esclerose sistêmica difusa com doença intersticial; anti-RNA polimerase III aponta crise renal.",
+      "Anti-Jo-1 aponta síndrome antissintetase; anti-MDA5 aponta dermatomiosite com pneumopatia rapidamente progressiva.",
+      "Anti-TIF1-gama em adulto com dermatomiosite indica câncer associado, então a busca de neoplasia é obrigatória."
+     ],
+     "titulo": "Anticorpo e doença"
+    }
+   ],
+   "id": "fan",
+   "nivel": 1,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "iniciar hidroxicloroquina"
+      ],
+      [
+       "B",
+       "tranquilizar, não tratar e reavaliar apenas se surgirem sintomas"
+      ],
+      [
+       "C",
+       "repetir o FAN a cada mês"
+      ],
+      [
+       "D",
+       "iniciar prednisona em dose baixa"
+      ],
+      [
+       "E",
+       "pedir biópsia renal"
+      ]
+     ],
+     "coment": "Sem quadro clínico, FAN positivo não é doença. O padrão pontilhado fino denso, em geral anti-DFS70, é comum em saudáveis e fala contra doença autoimune sistêmica.",
+     "enunciado": "Mulher de 35 anos assintomática fez check-up e veio com FAN 1:160 em padrão nuclear pontilhado fino denso. A conduta é:",
+     "gab": "B",
+     "id": "reu-fan-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "anti-U1RNP"
+      ],
+      [
+       "B",
+       "anti-Jo-1"
+      ],
+      [
+       "C",
+       "anticentrômero"
+      ],
+      [
+       "D",
+       "anti-Ro"
+      ],
+      [
+       "E",
+       "anti-RNA polimerase III"
+      ]
+     ],
+     "coment": "O anti-RNA polimerase III marca a forma difusa com espessamento rápido de pele, crise renal e associação com câncer. O anticentrômero marca a forma limitada e a hipertensão pulmonar.",
+     "enunciado": "Qual autoanticorpo se associa a crise renal esclerodérmica na esclerose sistêmica difusa?",
+     "gab": "E",
+     "id": "reu-fan-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "anti-histona"
+      ],
+      [
+       "B",
+       "anti-SRP"
+      ],
+      [
+       "C",
+       "anti-MDA5"
+      ],
+      [
+       "D",
+       "anti-HMGCR"
+      ],
+      [
+       "E",
+       "anti-Mi-2"
+      ]
+     ],
+     "coment": "O anti-MDA5 caracteriza a dermatomiosite clinicamente amiopática com pneumopatia grave e úlceras na pele. O anti-Mi-2 se liga à forma clássica, com boa resposta.",
+     "enunciado": "Paciente com dermatomiosite, lesões cutâneas ulceradas e doença pulmonar intersticial rapidamente progressiva, com pouca fraqueza muscular. Qual anticorpo é o mais provável?",
+     "gab": "C",
+     "id": "reu-fan-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "complemento normal"
+      ],
+      [
+       "B",
+       "anti-DNA negativo"
+      ],
+      [
+       "C",
+       "fator reumatoide negativo"
+      ],
+      [
+       "D",
+       "anti-Sm negativo"
+      ],
+      [
+       "E",
+       "FAN negativo em células HEp-2"
+      ]
+     ],
+     "coment": "O FAN em HEp-2 tem sensibilidade acima de 95% no lúpus, então o resultado negativo afasta bem a doença. Anti-DNA e anti-Sm são específicos, mas pouco sensíveis.",
+     "enunciado": "Qual achado de laboratório é mais útil para descartar lúpus em paciente com artralgia vaga?",
+     "gab": "E",
+     "id": "reu-fan-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "artrite reumatoide"
+      ],
+      [
+       "B",
+       "lúpus eritematoso sistêmico isolado"
+      ],
+      [
+       "C",
+       "esclerose sistêmica limitada"
+      ],
+      [
+       "D",
+       "dermatomiosite clássica"
+      ],
+      [
+       "E",
+       "doença mista do tecido conjuntivo"
+      ]
+     ],
+     "coment": "A doença mista junta traços de lúpus, esclerose e miosite e é definida pelo anti-U1RNP em título alto. A hipertensão pulmonar é a principal causa de morte.",
+     "enunciado": "Mulher com Raynaud, mãos edemaciadas, artrite, miosite leve e anti-U1RNP em título muito alto. O diagnóstico é:",
+     "gab": "E",
+     "id": "reu-fan-5"
+    }
+   ],
+   "titulo": "FAN e autoanticorpos: pedir e interpretar"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "ACR 2020; EULAR 2016; ACR/EULAR 2023 (CPPD)",
+     "ideia": "Na gota, o ácido úrico acima do limite de solubilidade forma cristais de urato na articulação. Quando o sistema imune detecta esses cristais, dispara uma inflamação intensa e rápida.",
+     "na_prova": "Na pseudogota os cristais de pirofosfato são romboides e com birrefringência positiva fraca. A banca troca os dois para testar quem decorou.",
+     "pontos": [
+      "A crise típica é monoartrite noturna da primeira metatarsofalângica, a podagra, com dor máxima em menos de 24 horas.",
+      "Álcool, carne vermelha, frutose, diuréticos tiazídicos ou de alça, cirurgia e desidratação podem desencadear a crise.",
+      "O ácido úrico pode estar normal durante a crise, então ele não serve para excluir o diagnóstico.",
+      "O padrão-ouro é ver no líquido sinovial cristais em agulha, com birrefringência negativa forte na luz polarizada."
+     ],
+     "titulo": "O cristal que inflama"
+    },
+    {
+     "fonte": "ACR 2020",
+     "ideia": "Na crise, o objetivo é apagar a inflamação o quanto antes, e qualquer uma das três classes funciona. A escolha depende das doenças do paciente.",
+     "na_prova": "A pegadinha clássica é suspender o alopurinol durante a crise. O certo é mantê-lo e tratar a inflamação.",
+     "pontos": [
+      "A colchicina funciona melhor nas primeiras 24 horas e em dose baixa, o que dá a mesma eficácia com menos diarreia.",
+      "AINE em dose plena serve se não houver doença renal, úlcera ou risco cardiovascular importante.",
+      "Corticoide oral, intra-articular ou intramuscular é a opção para quem tem doença renal ou não tolera AINE.",
+      "Quem já usa alopurinol não deve suspendê-lo na crise, porque a oscilação do urato prolonga a inflamação."
+     ],
+     "titulo": "Tratar a crise"
+    },
+    {
+     "fonte": "ACR 2020; EULAR 2016",
+     "ideia": "Para curar a gota é preciso dissolver os cristais, e isso só acontece com o urato baixo por muito tempo. Por isso o tratamento hipouricemiante segue uma meta, o treat-to-target.",
+     "na_prova": "Interação clássica: alopurinol com azatioprina aumenta muito a toxicidade da azatioprina, porque o alopurinol bloqueia a enzima que a inativa.",
+     "pontos": [
+      "Indicações fortes são tofo, dano no raio X e duas ou mais crises por ano; hiperuricemia sem sintomas não se trata.",
+      "O alopurinol é a primeira escolha, inclusive na doença renal, começando com 100 mg/dia ou menos e subindo até a meta.",
+      "A meta é urato abaixo de 6 mg/dL, ou abaixo de 5 mg/dL quando há tofos, com profilaxia anti-inflamatória por 3 a 6 meses.",
+      "Antes do alopurinol, testa-se o HLA-B*5801 em descendentes do sudeste asiático e afrodescendentes, pelo risco de reação grave."
+     ],
+     "titulo": "Baixar o urato até a meta"
+    }
+   ],
+   "id": "gota",
+   "nivel": 1,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "raio X com condrocalcinose"
+      ],
+      [
+       "B",
+       "cristais em agulha com birrefringência negativa no líquido sinovial"
+      ],
+      [
+       "C",
+       "cristais romboides com birrefringência positiva"
+      ],
+      [
+       "D",
+       "ácido úrico sérico acima de 7 mg/dL"
+      ],
+      [
+       "E",
+       "fator reumatoide positivo"
+      ]
+     ],
+     "coment": "O padrão-ouro da gota é o cristal de urato no líquido sinovial. O ácido úrico pode estar normal na crise, e o cristal romboide de birrefringência positiva é da doença por pirofosfato.",
+     "enunciado": "Homem de 52 anos acorda com dor intensa, calor e rubor na primeira metatarsofalângica após um churrasco. Qual achado confirma o diagnóstico?",
+     "gab": "B",
+     "id": "reu-gota-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "dobrar a dose do alopurinol no mesmo dia"
+      ],
+      [
+       "B",
+       "suspender o alopurinol até a crise passar"
+      ],
+      [
+       "C",
+       "trocar o alopurinol por probenecida na crise"
+      ],
+      [
+       "D",
+       "manter o alopurinol e tratar a crise com colchicina, AINE ou corticoide"
+      ],
+      [
+       "E",
+       "suspender o alopurinol definitivamente"
+      ]
+     ],
+     "coment": "Interromper o hipouricemiante faz o urato oscilar e prolonga a crise. Mantém-se a dose e trata-se a inflamação; crises no começo do tratamento são esperadas e justificam profilaxia.",
+     "enunciado": "Paciente em alopurinol há 2 meses tem nova crise de gota. A conduta é:",
+     "gab": "D",
+     "id": "reu-gota-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "abaixo de 8 mg/dL"
+      ],
+      [
+       "B",
+       "apenas ausência de crises, sem meta de urato"
+      ],
+      [
+       "C",
+       "abaixo de 5 mg/dL, por causa dos tofos"
+      ],
+      [
+       "D",
+       "abaixo de 7 mg/dL"
+      ],
+      [
+       "E",
+       "abaixo de 3 mg/dL sempre"
+      ]
+     ],
+     "coment": "A meta geral é abaixo de 6 mg/dL; com tofos, a EULAR recomenda abaixo de 5 mg/dL para dissolver os cristais mais depressa.",
+     "enunciado": "Homem com gota tofácea e duas crises no último ano. Qual a meta de urato sérico?",
+     "gab": "C",
+     "id": "reu-gota-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "preferir probenecida, que não tem interação nem limitação renal"
+      ],
+      [
+       "B",
+       "usar alopurinol na dose plena sem ajuste"
+      ],
+      [
+       "C",
+       "usar colchicina em dose alta contínua"
+      ],
+      [
+       "D",
+       "evitar alopurinol ou reduzir muito a azatioprina, pois o alopurinol aumenta sua toxicidade"
+      ],
+      [
+       "E",
+       "iniciar febuxostat sem ajustar nada"
+      ]
+     ],
+     "coment": "Alopurinol e febuxostat inibem a xantina oxidase, que degrada a azatioprina, e causam mielotoxicidade grave. Ajusta-se ou troca-se a azatioprina antes de usar o hipouricemiante.",
+     "enunciado": "Paciente transplantado renal em uso de azatioprina desenvolve gota e precisa de hipouricemiante. Qual o cuidado?",
+     "gab": "D",
+     "id": "reu-gota-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "cocos Gram-positivos em cachos"
+      ],
+      [
+       "B",
+       "cristais de colesterol"
+      ],
+      [
+       "C",
+       "líquido não inflamatório com menos de 2.000 células"
+      ],
+      [
+       "D",
+       "cristais em agulha com birrefringência negativa forte"
+      ],
+      [
+       "E",
+       "cristais romboides com birrefringência positiva fraca"
+      ]
+     ],
+     "coment": "Idosa, joelho e condrocalcinose sugerem doença por deposição de pirofosfato de cálcio, a pseudogota, com cristais romboides de birrefringência positiva fraca.",
+     "enunciado": "Mulher de 78 anos com monoartrite aguda do joelho e calcificação linear na cartilagem no raio X. O líquido sinovial deve mostrar:",
+     "gab": "E",
+     "id": "reu-gota-5"
+    }
+   ],
+   "titulo": "Gota e doença por cristais"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "ASAS 2009 (classificação); ASAS-EULAR 2022",
+     "ideia": "As espondiloartrites inflamam as ênteses, que são os pontos onde tendões e ligamentos se prendem ao osso. Na coluna e nas sacroilíacas, essa inflamação gera uma dor que melhora com movimento e piora com repouso.",
+     "na_prova": "A banca contrasta com lombalgia mecânica, que piora no fim do dia e melhora com repouso. Dor que melhora com exercício em homem jovem é a pista de espondilite.",
+     "pontos": [
+      "A lombalgia inflamatória começa antes dos 40 anos, de forma insidiosa, e dura mais de 3 meses.",
+      "Ela melhora com exercício, não melhora com repouso e acorda o paciente na segunda metade da noite.",
+      "Fora da coluna aparecem entesite do calcanhar, dactilite, uveíte anterior aguda, psoríase e doença inflamatória intestinal.",
+      "O HLA-B27 é comum nessas doenças, mas sozinho não faz diagnóstico, porque muitas pessoas saudáveis também o têm."
+     ],
+     "titulo": "A dor nas costas que é inflamatória"
+    },
+    {
+     "fonte": "ASAS-EULAR 2022",
+     "ideia": "Na doença axial, exercício e AINE são a base, porque aliviam a dor e a rigidez. Os DMARD convencionais não agem na coluna, então a falha do AINE leva direto a um biológico.",
+     "na_prova": "Pegadinha: metotrexato para espondilite anquilosante axial. Não funciona; após falha do AINE, o passo é biológico. Corticoide sistêmico também não é usado na forma axial.",
+     "pontos": [
+      "O AINE é usado em dose plena; se dois AINE falharem em cerca de 4 semanas, a doença ativa pede biológico.",
+      "As opções são anti-TNF, inibidor de IL-17 ou, em casos selecionados, inibidor de JAK.",
+      "Metotrexato e sulfassalazina não funcionam na coluna; a sulfassalazina pode ser usada só na artrite periférica.",
+      "Com uveíte recorrente ou doença intestinal, prefere-se anticorpo anti-TNF; com psoríase extensa, prefere-se inibidor de IL-17."
+     ],
+     "titulo": "Tratar a forma axial"
+    },
+    {
+     "fonte": "CASPAR 2006; EULAR 2023 (artrite psoriásica); ASAS-EULAR 2022",
+     "ideia": "As espondiloartrites periféricas se distinguem pela pista que vem junto: pele, infecção recente ou intestino. A artrite costuma ser assimétrica e predominar nos membros inferiores.",
+     "na_prova": "A banca dá oligoartrite de joelho semanas após diarreia ou uretrite. O tratamento é AINE; antibiótico só entra se ainda houver infecção ativa por clamídia.",
+     "pontos": [
+      "A artrite psoriásica pode acometer interfalângicas distais, causar dactilite e lesões de unha, e às vezes surge antes da psoríase.",
+      "A artrite reativa aparece 1 a 4 semanas após uretrite por clamídia ou diarreia por Salmonella, Shigella, Yersinia ou Campylobacter.",
+      "Na artrite reativa podem surgir conjuntivite, uretrite, ceratodermia blenorrágica e balanite circinada.",
+      "Na doença intestinal, a artrite periférica acompanha a atividade do intestino, enquanto a doença axial evolui de forma independente."
+     ],
+     "titulo": "Psoriásica, reativa e enteropática"
+    }
+   ],
+   "id": "espa",
+   "nivel": 2,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "espondiloartrite axial, com uveíte anterior aguda"
+      ],
+      [
+       "B",
+       "lombalgia mecânica por sobrecarga"
+      ],
+      [
+       "C",
+       "fibromialgia"
+      ],
+      [
+       "D",
+       "hérnia de disco lombar"
+      ],
+      [
+       "E",
+       "artrite reumatoide"
+      ]
+     ],
+     "coment": "Lombalgia inflamatória em jovem e uveíte anterior aguda apontam espondiloartrite axial. A próxima etapa é imagem das sacroilíacas, por radiografia ou ressonância.",
+     "enunciado": "Homem de 26 anos com lombalgia há 8 meses, pior pela manhã, que acorda de madrugada e melhora com exercício. Teve um episódio de olho vermelho doloroso com fotofobia. O diagnóstico provável é:",
+     "gab": "A",
+     "id": "reu-espa-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "manter o AINE por mais 1 ano"
+      ],
+      [
+       "B",
+       "iniciar prednisona em dose alta"
+      ],
+      [
+       "C",
+       "iniciar metotrexato"
+      ],
+      [
+       "D",
+       "iniciar sulfassalazina para a coluna"
+      ],
+      [
+       "E",
+       "iniciar anti-TNF ou inibidor de IL-17"
+      ]
+     ],
+     "coment": "DMARD convencional não age na doença axial. Após falha do AINE, a ASAS-EULAR 2022 indica biológico, em geral anti-TNF ou inibidor de IL-17.",
+     "enunciado": "Paciente com espondilite anquilosante ativa apesar de dois AINE em dose plena por 4 semanas. O próximo passo é:",
+     "gab": "E",
+     "id": "reu-espa-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "abatacepte"
+      ],
+      [
+       "B",
+       "anticorpo monoclonal anti-TNF, como adalimumabe ou infliximabe"
+      ],
+      [
+       "C",
+       "inibidor de IL-17, como secuquinumabe"
+      ],
+      [
+       "D",
+       "etanercepte, por ser o mais barato"
+      ],
+      [
+       "E",
+       "rituximabe"
+      ]
+     ],
+     "coment": "Os anticorpos anti-TNF tratam o intestino e a coluna. O inibidor de IL-17 pode piorar a doença inflamatória intestinal, e o etanercepte não funciona no intestino nem na uveíte.",
+     "enunciado": "Paciente com espondiloartrite e doença de Crohn ativa vai iniciar biológico. Qual a melhor escolha?",
+     "gab": "B",
+     "id": "reu-espa-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "corticoide sistêmico em dose alta"
+      ],
+      [
+       "B",
+       "punção e drenagem cirúrgica"
+      ],
+      [
+       "C",
+       "antibiótico prolongado por 3 meses"
+      ],
+      [
+       "D",
+       "metotrexato imediato"
+      ],
+      [
+       "E",
+       "AINE, sem antibiótico para a artrite"
+      ]
+     ],
+     "coment": "É artrite reativa pós-entérica, estéril. Trata-se a inflamação com AINE; o antibiótico não muda a artrite pós-diarreia e só se trata uretrite por clamídia se ela estiver ativa.",
+     "enunciado": "Homem de 30 anos com artrite de joelho e tornozelo, conjuntivite e disúria 3 semanas após diarreia. O tratamento é:",
+     "gab": "E",
+     "id": "reu-espa-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "rigidez matinal acima de 1 hora"
+      ],
+      [
+       "B",
+       "poliartrite simétrica de metacarpofalângicas"
+      ],
+      [
+       "C",
+       "dactilite com acometimento de interfalângicas distais e lesões de unha"
+      ],
+      [
+       "D",
+       "nódulos subcutâneos em cotovelos"
+      ],
+      [
+       "E",
+       "anti-CCP em título alto"
+      ]
+     ],
+     "coment": "Dedo em salsicha, interfalângica distal e unha com pitting ou onicólise são marcas da artrite psoriásica, que entram nos critérios CASPAR.",
+     "enunciado": "Qual achado favorece artrite psoriásica em vez de artrite reumatoide?",
+     "gab": "C",
+     "id": "reu-espa-5"
+    }
+   ],
+   "titulo": "Espondiloartrites"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "ACR 2019; OARSI 2019",
+     "ideia": "A osteoartrite é falência da articulação inteira: a cartilagem se desgasta e o osso reage formando osteófitos. Por isso a dor é mecânica, piora com o uso e alivia com o repouso.",
+     "na_prova": "Pista de prova: osteoartrite em metacarpofalângicas de segundo e terceiro dedos sugere hemocromatose ou doença por pirofosfato, e merece investigação.",
+     "pontos": [
+      "Atinge pessoas acima de 50 anos, sobretudo joelhos, quadris, coluna e mãos.",
+      "A rigidez depois do repouso dura menos de 30 minutos, bem menos que na artrite reumatoide.",
+      "Nas mãos, acomete interfalângicas distais, com nódulos de Heberden, interfalângicas proximais, com nódulos de Bouchard, e a base do polegar.",
+      "As provas de inflamação são normais, e o líquido sinovial é não inflamatório, com menos de 2.000 células."
+     ],
+     "titulo": "Desgaste com dor mecânica"
+    },
+    {
+     "fonte": "ACR 2019 (atualizado em 2026); OARSI 2019",
+     "ideia": "O raio X mostra redução assimétrica do espaço articular, osteófitos, esclerose e cistos subcondrais. Como não há droga que reverta o desgaste, o tratamento busca aliviar a dor e manter a função.",
+     "na_prova": "A banca pergunta a medida inicial mais eficaz: exercício com perda de peso, e não condroitina nem infiltração de rotina.",
+     "pontos": [
+      "Exercício e perda de peso são as medidas mais eficazes e são recomendadas para todos.",
+      "O AINE tópico vem antes do oral no joelho e na mão, por ter menos efeito sistêmico.",
+      "O corticoide intra-articular alivia a crise de dor por algumas semanas.",
+      "Glucosamina, condroitina e opioide forte não são recomendados; a prótese entra quando a dor persiste e limita a vida."
+     ],
+     "titulo": "Raio X e tratamento"
+    }
+   ],
+   "id": "oa",
+   "nivel": 2,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "osteoartrite do joelho"
+      ],
+      [
+       "B",
+       "artrite séptica"
+      ],
+      [
+       "C",
+       "artrite reumatoide"
+      ],
+      [
+       "D",
+       "polimialgia reumática"
+      ],
+      [
+       "E",
+       "gota tofácea"
+      ]
+     ],
+     "coment": "Dor mecânica, rigidez curta, crepitação, idade acima de 50 anos e inflamação laboratorial ausente caracterizam a osteoartrite.",
+     "enunciado": "Mulher de 64 anos com dor no joelho que piora ao subir escadas e melhora com repouso, rigidez matinal de 10 minutos e crepitação. VHS e PCR normais. O diagnóstico é:",
+     "gab": "A",
+     "id": "reu-oa-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "glucosamina com condroitina"
+      ],
+      [
+       "B",
+       "infiltração mensal de corticoide"
+      ],
+      [
+       "C",
+       "ácido hialurônico intra-articular de rotina"
+      ],
+      [
+       "D",
+       "exercício físico com perda de peso"
+      ],
+      [
+       "E",
+       "opioide forte contínuo"
+      ]
+     ],
+     "coment": "Exercício e perda de peso têm a recomendação mais forte das diretrizes. Glucosamina e condroitina não são recomendadas, e o ácido hialurônico tem benefício duvidoso.",
+     "enunciado": "Qual é a medida mais eficaz e recomendada para todo paciente com osteoartrite de joelho e sobrepeso?",
+     "gab": "D",
+     "id": "reu-oa-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "nódulos de Bouchard"
+      ],
+      [
+       "B",
+       "nódulos de Heberden"
+      ],
+      [
+       "C",
+       "calcinose"
+      ],
+      [
+       "D",
+       "nódulos reumatoides"
+      ],
+      [
+       "E",
+       "tofos gotosos"
+      ]
+     ],
+     "coment": "Heberden fica nas interfalângicas distais; Bouchard, nas proximais. Os dois são osteófitos da osteoartrite.",
+     "enunciado": "Nódulos duros nas interfalângicas distais de paciente idosa correspondem a:",
+     "gab": "B",
+     "id": "reu-oa-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "corticoide oral prolongado"
+      ],
+      [
+       "B",
+       "cetorolaco contínuo"
+      ],
+      [
+       "C",
+       "naproxeno oral em dose plena"
+      ],
+      [
+       "D",
+       "AINE tópico, como diclofenaco gel"
+      ],
+      [
+       "E",
+       "codeína contínua como primeira linha"
+      ]
+     ],
+     "coment": "O AINE tópico alivia a dor do joelho com absorção sistêmica pequena, o que protege rim e estômago. O AINE oral seria arriscado nesse paciente.",
+     "enunciado": "Idoso com osteoartrite de joelho, doença renal crônica e úlcera prévia precisa de analgesia. A melhor opção inicial é:",
+     "gab": "D",
+     "id": "reu-oa-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "calcificação de partes moles em tufos"
+      ],
+      [
+       "B",
+       "redução assimétrica do espaço articular com osteófitos"
+      ],
+      [
+       "C",
+       "erosões marginais com osteopenia periarticular"
+      ],
+      [
+       "D",
+       "redução simétrica e difusa do espaço com erosões"
+      ],
+      [
+       "E",
+       "periostite em casca de cebola"
+      ]
+     ],
+     "coment": "Na osteoartrite o espaço diminui de forma assimétrica, no lado de maior carga, e surgem osteófitos, esclerose e cistos. Erosões marginais com osteopenia são da artrite reumatoide.",
+     "enunciado": "Qual achado radiográfico é típico de osteoartrite?",
+     "gab": "B",
+     "id": "reu-oa-5"
+    }
+   ],
+   "titulo": "Osteoartrite"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "Ross 2017 (artrite séptica); ACR 2020",
+     "ideia": "Uma articulação quente e inchada pode estar infectada, e a infecção destrói a cartilagem em poucos dias. Por isso a artrocentese é obrigatória: só o líquido diferencia infecção, cristal e outras causas.",
+     "na_prova": "A banca dá monoartrite febril e pergunta o primeiro passo: puncionar e mandar Gram, cultura, contagem de células e pesquisa de cristais antes do antibiótico.",
+     "pontos": [
+      "Líquido com menos de 2.000 leucócitos é não inflamatório, como na osteoartrite.",
+      "De 2.000 a 50.000 leucócitos, o líquido é inflamatório, como na gota ou na artrite reumatoide.",
+      "Acima de 50.000 leucócitos, com predomínio de neutrófilos, a infecção é provável até prova em contrário.",
+      "Achar cristais não exclui infecção, porque as duas coisas podem coexistir."
+     ],
+     "titulo": "Toda monoartrite aguda é punção"
+    },
+    {
+     "fonte": "Ross 2017; CDC 2021 (infecções sexualmente transmissíveis)",
+     "ideia": "O Staphylococcus aureus é o principal agente no adulto. Mas a idade e a história sexual mudam o suspeito, e isso muda o antibiótico empírico.",
+     "na_prova": "Pegadinha: infiltrar corticoide numa articulação quente sem afastar infecção. E a cultura do líquido no gonococo costuma ser negativa, então se pesquisam uretra, colo do útero e reto.",
+     "pontos": [
+      "O gonococo é a causa típica em adulto jovem sexualmente ativo, às vezes com tenossinovite, pústulas na pele e poliartralgia migratória.",
+      "Na criança pequena, Kingella kingae é importante; na anemia falciforme, Salmonella causa osteomielite.",
+      "O tratamento junta drenagem, por punções repetidas, artroscopia ou cirurgia, e antibiótico venoso guiado pelo Gram.",
+      "Na artrite gonocócica usa-se ceftriaxona 1 g por dia, e o quadril infectado da criança é urgência cirúrgica."
+     ],
+     "titulo": "Quem causa e como tratar"
+    }
+   ],
+   "id": "mono",
+   "nivel": 2,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "repouso, AINE e retorno em 1 semana"
+      ],
+      [
+       "B",
+       "infiltrar corticoide e reavaliar"
+      ],
+      [
+       "C",
+       "drenar a articulação e iniciar antibiótico venoso após colher culturas"
+      ],
+      [
+       "D",
+       "iniciar colchicina por suspeita de gota"
+      ],
+      [
+       "E",
+       "pedir ressonância antes de qualquer conduta"
+      ]
+     ],
+     "coment": "Mais de 50.000 leucócitos com neutrófilos é artrite séptica até prova em contrário. Drenagem e antibiótico venoso evitam a destruição da cartilagem.",
+     "enunciado": "Homem de 60 anos com joelho quente, febre de 38,8 °C e líquido sinovial turvo com 85.000 leucócitos, 92% de neutrófilos. A conduta é:",
+     "gab": "C",
+     "id": "reu-mono-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "gonococo, com ceftriaxona"
+      ],
+      [
+       "B",
+       "Borrelia, com doxiciclina"
+      ],
+      [
+       "C",
+       "Streptococcus pyogenes, com penicilina"
+      ],
+      [
+       "D",
+       "Staphylococcus aureus, com oxacilina"
+      ],
+      [
+       "E",
+       "parvovírus B19, com suporte"
+      ]
+     ],
+     "coment": "Tríade de poliartralgia migratória, tenossinovite e dermatite pustular indica infecção gonocócica disseminada. O tratamento é ceftriaxona 1 g por dia, com pesquisa de outras infecções sexuais.",
+     "enunciado": "Mulher de 22 anos com poliartralgia migratória, tenossinovite no dorso da mão e pústulas em extremidades. O agente mais provável e o tratamento são:",
+     "gab": "A",
+     "id": "reu-mono-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "15.000 leucócitos por mm³"
+      ],
+      [
+       "B",
+       "líquido claro e viscoso com 300 células"
+      ],
+      [
+       "C",
+       "pus franco com Gram positivo"
+      ],
+      [
+       "D",
+       "120.000 leucócitos por mm³"
+      ],
+      [
+       "E",
+       "800 leucócitos por mm³"
+      ]
+     ],
+     "coment": "Entre 2.000 e 50.000 leucócitos, o líquido é inflamatório, como em gota, pseudogota e artrite reumatoide. Acima de 50.000 favorece infecção; abaixo de 2.000 é não inflamatório.",
+     "enunciado": "Qual achado do líquido sinovial classifica a artrite como inflamatória, mas não típica de infecção?",
+     "gab": "A",
+     "id": "reu-mono-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "tratar só como crise de gota"
+      ],
+      [
+       "B",
+       "infiltrar corticoide no joelho"
+      ],
+      [
+       "C",
+       "colher Gram e cultura e tratar como possível infecção até o resultado"
+      ],
+      [
+       "D",
+       "iniciar alopurinol em dose alta"
+      ],
+      [
+       "E",
+       "dispensar a cultura, porque já há cristal"
+      ]
+     ],
+     "coment": "O cristal não exclui infecção: as duas podem coexistir. Com contagem tão alta, a cultura é obrigatória e a cobertura antibiótica é prudente até o resultado.",
+     "enunciado": "No paciente com gota conhecida e joelho quente, o líquido mostra cristais de urato e 70.000 leucócitos. A conduta é:",
+     "gab": "C",
+     "id": "reu-mono-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "radiografia e retorno ambulatorial"
+      ],
+      [
+       "B",
+       "corticoide oral"
+      ],
+      [
+       "C",
+       "punção e drenagem de urgência com antibiótico venoso"
+      ],
+      [
+       "D",
+       "tração cutânea por 2 semanas"
+      ],
+      [
+       "E",
+       "AINE e observação domiciliar"
+      ]
+     ],
+     "coment": "Artrite séptica do quadril na criança ameaça a cabeça do fêmur por isquemia. É urgência ortopédica, com drenagem e antibiótico venoso imediatos.",
+     "enunciado": "Criança de 3 anos com febre, recusa a andar e quadril em flexão e rotação externa, com derrame na ultrassonografia. A conduta é:",
+     "gab": "C",
+     "id": "reu-mono-5"
+    }
+   ],
+   "titulo": "Monoartrite aguda e artrite séptica"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "ACR/EULAR 2013; EULAR 2023",
+     "ideia": "Na esclerose sistêmica, a lesão começa nos pequenos vasos e evolui para fibrose de pele e órgãos. Por isso o Raynaud é quase sempre o primeiro sinal, anos antes do espessamento da pele.",
+     "na_prova": "Na forma limitada, a complicação tardia típica é a hipertensão pulmonar; na difusa, a doença intersticial e a crise renal aparecem mais cedo.",
+     "pontos": [
+      "A forma limitada endurece a pele distal a cotovelos e joelhos e a face, e se associa ao anticentrômero.",
+      "A forma difusa endurece também tronco e porções proximais dos membros, e se associa ao anti-Scl-70 e ao anti-RNA polimerase III.",
+      "A capilaroscopia mostra capilares dilatados e áreas sem capilares, o que separa o Raynaud secundário do primário.",
+      "Espessamento da pele dos dedos proximal às metacarpofalângicas basta para classificar pelos critérios de 2013."
+     ],
+     "titulo": "Vasos estreitos e pele que endurece"
+    },
+    {
+     "fonte": "EULAR 2023",
+     "ideia": "A crise renal esclerodérmica é uma emergência em que a pressão sobe de repente e o rim falha. O tratamento é inibidor da ECA, que reverte o espasmo vascular renal e salva o rim.",
+     "na_prova": "Pegadinha: tratar a crise renal com betabloqueador ou começar inibidor da ECA como prevenção. O inibidor da ECA é o tratamento da crise, mas não é usado preventivamente.",
+     "pontos": [
+      "A crise aparece com hipertensão acelerada, insuficiência renal aguda e anemia hemolítica microangiopática.",
+      "Corticoide acima de 15 mg/dia de prednisona aumenta o risco de crise renal, por isso é evitado.",
+      "O inibidor da ECA deve ser mantido mesmo se a creatinina subir no começo do tratamento.",
+      "A doença intersticial e a hipertensão pulmonar são as principais causas de morte; trata-se a intersticial com micofenolato, ciclofosfamida, rituximabe, nintedanibe ou tocilizumabe."
+     ],
+     "titulo": "Crise renal e pulmão"
+    }
+   ],
+   "id": "es",
+   "nivel": 2,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "uveíte anterior, com lâmpada de fenda"
+      ],
+      [
+       "B",
+       "nefrite lúpica, com biópsia renal"
+      ],
+      [
+       "C",
+       "crise renal esclerodérmica, com IECA preventivo"
+      ],
+      [
+       "D",
+       "hipertensão arterial pulmonar, com ecocardiograma e DLCO"
+      ],
+      [
+       "E",
+       "hepatite autoimune, com biópsia"
+      ]
+     ],
+     "coment": "É a forma limitada, antes chamada CREST, ligada ao anticentrômero. A hipertensão pulmonar surge tardiamente e é rastreada com ecocardiograma e difusão de monóxido de carbono.",
+     "enunciado": "Mulher de 48 anos com Raynaud há 10 anos, espessamento de pele só nos dedos e face, telangiectasias, calcinose e anticentrômero positivo. Qual complicação deve ser rastreada periodicamente?",
+     "gab": "D",
+     "id": "reu-es-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "pulso de metilprednisolona"
+      ],
+      [
+       "B",
+       "plasmaférese como primeira medida"
+      ],
+      [
+       "C",
+       "captopril, titulado até controlar a pressão, mantido mesmo se a creatinina subir"
+      ],
+      [
+       "D",
+       "betabloqueador venoso"
+      ],
+      [
+       "E",
+       "diurético de alça isolado"
+      ]
+     ],
+     "coment": "É crise renal esclerodérmica, precipitada pelo corticoide em dose alta. O inibidor da ECA reverte a vasoconstrição renal e é a base do tratamento.",
+     "enunciado": "Paciente com esclerose sistêmica difusa recente usa prednisona 30 mg/dia e apresenta pressão de 200/120 mmHg, creatinina subindo e esquizócitos no sangue. O tratamento é:",
+     "gab": "C",
+     "id": "reu-es-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "anticentrômero"
+      ],
+      [
+       "B",
+       "anti-Scl-70, contra a topoisomerase I"
+      ],
+      [
+       "C",
+       "anti-CCP"
+      ],
+      [
+       "D",
+       "anti-Ro"
+      ],
+      [
+       "E",
+       "anti-histona"
+      ]
+     ],
+     "coment": "O anti-Scl-70 marca a forma difusa e o maior risco de fibrose pulmonar. O anticentrômero marca a limitada.",
+     "enunciado": "Qual autoanticorpo se associa à forma difusa com doença pulmonar intersticial?",
+     "gab": "B",
+     "id": "reu-es-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "betabloqueador"
+      ],
+      [
+       "B",
+       "corticoide em dose alta"
+      ],
+      [
+       "C",
+       "metotrexato"
+      ],
+      [
+       "D",
+       "AAS isolado"
+      ],
+      [
+       "E",
+       "bloqueador de canal de cálcio di-hidropiridínico, como nifedipino"
+      ]
+     ],
+     "coment": "O nifedipino dilata as arteríolas digitais e reduz a frequência e a gravidade das crises. Betabloqueador piora o vasoespasmo.",
+     "enunciado": "Qual é o tratamento inicial do fenômeno de Raynaud secundário à esclerose sistêmica?",
+     "gab": "E",
+     "id": "reu-es-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "nintedanibe, isolado ou com micofenolato"
+      ],
+      [
+       "B",
+       "alopurinol"
+      ],
+      [
+       "C",
+       "anti-TNF"
+      ],
+      [
+       "D",
+       "colchicina"
+      ],
+      [
+       "E",
+       "hidroxicloroquina"
+      ]
+     ],
+     "coment": "A EULAR 2023 recomenda, para a doença intersticial, micofenolato, ciclofosfamida, rituximabe, nintedanibe e tocilizumabe. O nintedanibe é antifibrótico e reduz a perda de capacidade vital forçada.",
+     "enunciado": "Paciente com esclerose sistêmica e doença pulmonar intersticial progressiva. Qual droga tem recomendação da EULAR 2023?",
+     "gab": "A",
+     "id": "reu-es-5"
+    }
+   ],
+   "titulo": "Esclerose sistêmica"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "ACR/EULAR 2023 (classificação); EULAR 2019 (tratamento)",
+     "ideia": "Na síndrome antifosfolípide, anticorpos contra proteínas ligadas a fosfolípides ativam células e plaquetas e geram trombose. Paradoxalmente, no tubo de ensaio eles alongam o TTPa.",
+     "na_prova": "Pegadinha: TTPa alargado com trombose, e não sangramento. Outra: VDRL falso-positivo por causa da anticardiolipina.",
+     "pontos": [
+      "A clínica é trombose venosa ou arterial, ou morbidade na gestação.",
+      "Contam como morbidade gestacional a perda fetal após 10 semanas, três ou mais perdas precoces e parto antes de 34 semanas por pré-eclâmpsia grave ou insuficiência placentária.",
+      "Os anticorpos são o anticoagulante lúpico, a anticardiolipina e a anti-beta-2-glicoproteína I, em título moderado ou alto.",
+      "O exame precisa ser repetido e confirmado após pelo menos 12 semanas, porque infecções causam positividade passageira."
+     ],
+     "titulo": "Anticorpo que trombosa"
+    },
+    {
+     "fonte": "EULAR 2019; ACR/EULAR 2023",
+     "ideia": "Quem já trombosou precisa de anticoagulação longa, porque o risco de nova trombose é alto. A varfarina é a droga de escolha, e os anticoagulantes orais diretos falham nos casos de maior risco.",
+     "na_prova": "A síndrome catastrófica tem trombose em vários órgãos em dias. Trata-se com anticoagulação, corticoide e plasmaférese ou imunoglobulina.",
+     "pontos": [
+      "Na primeira trombose venosa não provocada, usa-se varfarina com INR entre 2 e 3 por tempo prolongado.",
+      "A rivaroxabana não deve ser usada no triplo positivo, porque houve mais tromboses nesse grupo.",
+      "Na gestante com perda gestacional prévia por síndrome antifosfolípide, usa-se AAS em dose baixa com heparina profilática.",
+      "Na gestante com trombose prévia, troca-se a varfarina, que é teratogênica, por heparina em dose terapêutica com AAS."
+     ],
+     "titulo": "Como anticoagular"
+    }
+   ],
+   "id": "saf",
+   "nivel": 2,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "fator VIII e fator IX"
+      ],
+      [
+       "B",
+       "dosagem de fibrinogênio isolada"
+      ],
+      [
+       "C",
+       "eletroforese de proteínas"
+      ],
+      [
+       "D",
+       "anticoagulante lúpico, anticardiolipina e anti-beta-2-glicoproteína I, repetidos após 12 semanas"
+      ],
+      [
+       "E",
+       "teste de Coombs direto"
+      ]
+     ],
+     "coment": "Trombose e perda fetal com TTPa que não corrige sugerem anticoagulante lúpico. O diagnóstico exige anticorpo persistente, confirmado após pelo menos 12 semanas.",
+     "enunciado": "Mulher de 30 anos com trombose venosa profunda espontânea, TTPa prolongado que não corrige com plasma normal e duas perdas fetais após 12 semanas. O exame indicado é:",
+     "gab": "D",
+     "id": "reu-saf-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "heparina por 6 semanas e suspensão"
+      ],
+      [
+       "B",
+       "rivaroxabana por 3 meses"
+      ],
+      [
+       "C",
+       "varfarina com INR entre 2 e 3, por tempo prolongado"
+      ],
+      [
+       "D",
+       "AAS isolado"
+      ],
+      [
+       "E",
+       "apixabana em dose baixa"
+      ]
+     ],
+     "coment": "Os anticoagulantes diretos tiveram mais tromboses no triplo positivo. A EULAR recomenda varfarina de longa duração com INR entre 2 e 3.",
+     "enunciado": "Paciente com síndrome antifosfolípide triplo positiva e primeira trombose venosa. A anticoagulação de escolha é:",
+     "gab": "C",
+     "id": "reu-saf-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "corticoide em dose alta"
+      ],
+      [
+       "B",
+       "varfarina durante toda a gestação"
+      ],
+      [
+       "C",
+       "AAS em dose baixa com heparina em dose profilática"
+      ],
+      [
+       "D",
+       "rivaroxabana a partir do segundo trimestre"
+      ],
+      [
+       "E",
+       "nenhum tratamento"
+      ]
+     ],
+     "coment": "Na forma obstétrica, AAS com heparina profilática melhora a taxa de nascidos vivos. A varfarina é teratogênica, sobretudo entre a 6ª e a 12ª semana.",
+     "enunciado": "Gestante com síndrome antifosfolípide obstétrica, sem trombose prévia. O tratamento na gestação é:",
+     "gab": "C",
+     "id": "reu-saf-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "porque o anticorpo interfere com o fosfolípide do teste, mas no corpo ativa endotélio e plaquetas"
+      ],
+      [
+       "B",
+       "porque há deficiência de vitamina K"
+      ],
+      [
+       "C",
+       "porque há excesso de heparina endógena"
+      ],
+      [
+       "D",
+       "porque o TTPa prolongado protege contra trombose"
+      ],
+      [
+       "E",
+       "porque falta fator VIII"
+      ]
+     ],
+     "coment": "No tubo de ensaio, o anticorpo ocupa o fosfolípide e atrasa a coagulação. No organismo, ativa células e a coagulação, o que causa trombose.",
+     "enunciado": "Por que o paciente com anticoagulante lúpico tem TTPa prolongado e, mesmo assim, trombosa?",
+     "gab": "A",
+     "id": "reu-saf-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "teste rápido para HIV"
+      ],
+      [
+       "B",
+       "anti-HCV"
+      ],
+      [
+       "C",
+       "PPD"
+      ],
+      [
+       "D",
+       "FTA-ABS"
+      ],
+      [
+       "E",
+       "VDRL, por causa da anticardiolipina"
+      ]
+     ],
+     "coment": "O VDRL usa cardiolipina como antígeno, então a anticardiolipina pode dar falso-positivo. O FTA-ABS, treponêmico, confirma se é sífilis de fato.",
+     "enunciado": "Qual achado de laboratório pode ser falso-positivo em paciente com síndrome antifosfolípide?",
+     "gab": "E",
+     "id": "reu-saf-5"
+    }
+   ],
+   "titulo": "Síndrome antifosfolípide"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "EULAR/ACR 2017 (classificação)",
+     "ideia": "Nas miopatias inflamatórias, o sistema imune ataca o músculo e a força cai primeiro nos músculos perto do tronco. Por isso o paciente tem dificuldade para levantar da cadeira, subir escada e pentear o cabelo.",
+     "na_prova": "A banca separa da polimialgia: na polimialgia há dor sem fraqueza e a CK é normal; na miosite há fraqueza com CK alta.",
+     "pontos": [
+      "A fraqueza é simétrica e proximal, com CK e aldolase elevadas e eletroneuromiografia com padrão miopático.",
+      "Na dermatomiosite, o heliótropo é a mancha violácea nas pálpebras, e as pápulas de Gottron ficam no dorso das articulações dos dedos.",
+      "A síndrome antissintetase junta anti-Jo-1, doença pulmonar intersticial, artrite, febre, Raynaud e mãos de mecânico.",
+      "A biópsia de músculo, guiada por ressonância, confirma o tipo e ajuda a afastar outras causas."
+     ],
+     "titulo": "Fraqueza proximal com CK alta"
+    },
+    {
+     "fonte": "EULAR/ACR 2017; ProDERM (imunoglobulina)",
+     "ideia": "A dermatomiosite do adulto pode ser um sinal de câncer escondido, como uma síndrome paraneoplásica. Por isso todo adulto com dermatomiosite faz rastreio de neoplasia, sobretudo nos primeiros anos.",
+     "na_prova": "Questão clássica: mulher de 55 anos com heliótropo, Gottron e fraqueza proximal. Além de tratar, a conduta inclui rastrear câncer, com atenção especial para ovário, pulmão e trato digestivo.",
+     "pontos": [
+      "O anti-TIF1-gama e o anti-NXP2 aumentam o risco de câncer associado.",
+      "A miopatia necrosante com anti-HMGCR aparece após uso de estatina e não melhora só com a suspensão do remédio.",
+      "A miosite por corpúsculos de inclusão afeta idosos, pega flexores dos dedos e quadríceps e responde mal ao corticoide.",
+      "O tratamento usa corticoide em dose alta com poupador, como metotrexato ou azatioprina, e imunoglobulina nos casos refratários."
+     ],
+     "titulo": "Câncer, estatina e tratamento"
+    }
+   ],
+   "id": "mio",
+   "nivel": 3,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "iniciar alopurinol"
+      ],
+      [
+       "B",
+       "fazer biópsia de artéria temporal"
+      ],
+      [
+       "C",
+       "pedir densitometria antes de tudo"
+      ],
+      [
+       "D",
+       "rastrear câncer associado"
+      ],
+      [
+       "E",
+       "dosar anti-CCP"
+      ]
+     ],
+     "coment": "É dermatomiosite com heliótropo e Gottron. No adulto, ela pode ser paraneoplásica, então o rastreio de neoplasia faz parte da abordagem.",
+     "enunciado": "Mulher de 55 anos com fraqueza para levantar da cadeira, manchas violáceas nas pálpebras, pápulas no dorso das mãos e CK de 4.000 U/L. Além do tratamento, é obrigatório:",
+     "gab": "D",
+     "id": "reu-mio-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "anti-SRP"
+      ],
+      [
+       "B",
+       "anti-CCP"
+      ],
+      [
+       "C",
+       "anti-Mi-2"
+      ],
+      [
+       "D",
+       "anti-Jo-1"
+      ],
+      [
+       "E",
+       "anticentrômero"
+      ]
+     ],
+     "coment": "Mãos de mecânico, pneumopatia, artrite e febre formam a síndrome antissintetase, cujo anticorpo mais comum é o anti-Jo-1.",
+     "enunciado": "Paciente com miosite, doença pulmonar intersticial, artrite, febre e fissuras na pele lateral dos dedos. Qual anticorpo?",
+     "gab": "D",
+     "id": "reu-mio-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "hipotireoidismo"
+      ],
+      [
+       "B",
+       "miosite por corpúsculos de inclusão"
+      ],
+      [
+       "C",
+       "miopatia tóxica simples por estatina"
+      ],
+      [
+       "D",
+       "miopatia necrosante imunomediada"
+      ],
+      [
+       "E",
+       "polimialgia reumática"
+      ]
+     ],
+     "coment": "Na miopatia tóxica, a CK cai após a suspensão. O anti-HMGCR indica doença autoimune que persiste e exige imunossupressão.",
+     "enunciado": "Homem de 66 anos em uso de atorvastatina há 3 anos tem fraqueza proximal, CK de 9.000 U/L e anti-HMGCR positivo, sem melhora após 6 semanas sem estatina. O diagnóstico é:",
+     "gab": "D",
+     "id": "reu-mio-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "polimialgia reumática"
+      ],
+      [
+       "B",
+       "dermatomiosite clássica"
+      ],
+      [
+       "C",
+       "miastenia gravis"
+      ],
+      [
+       "D",
+       "polimiosite responsiva"
+      ],
+      [
+       "E",
+       "miosite por corpúsculos de inclusão"
+      ]
+     ],
+     "coment": "A miosite por corpúsculos de inclusão é a miopatia do idoso, com padrão distal e assimétrico de flexores dos dedos e quadríceps, e resposta ruim à imunossupressão.",
+     "enunciado": "Idoso de 72 anos com fraqueza lenta dos flexores dos dedos e do quadríceps, assimétrica, sem resposta ao corticoide. O diagnóstico mais provável é:",
+     "gab": "E",
+     "id": "reu-mio-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "na polimiosite a VHS é sempre normal"
+      ],
+      [
+       "B",
+       "na polimialgia a CK é normal e não há fraqueza verdadeira"
+      ],
+      [
+       "C",
+       "na polimialgia a CK é muito alta"
+      ],
+      [
+       "D",
+       "na polimiosite não há fraqueza"
+      ],
+      [
+       "E",
+       "as duas acometem só as mãos"
+      ]
+     ],
+     "coment": "Na polimialgia, a dor e a rigidez limitam o movimento, mas a força está preservada e a CK é normal. Na polimiosite, há fraqueza real e CK elevada.",
+     "enunciado": "Qual achado separa polimialgia reumática de polimiosite?",
+     "gab": "B",
+     "id": "reu-mio-5"
+    }
+   ],
+   "titulo": "Miopatias inflamatórias"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "AHA 2015 (Jones revisado); OMS 2024",
+     "ideia": "A febre reumática aparece 2 a 3 semanas depois de uma faringite por estreptococo do grupo A. Os anticorpos contra a bactéria reconhecem por engano proteínas do coração, das articulações e do cérebro.",
+     "na_prova": "A banca testa que a coreia dispensa a prova de infecção estreptocócica recente, porque aparece tarde, quando o ASLO já pode ter caído.",
+     "pontos": [
+      "Afeta sobretudo crianças e adolescentes de 5 a 15 anos, e a única manifestação que deixa sequela é a cardite.",
+      "A artrite é migratória, de grandes articulações, e melhora de forma dramática com AAS ou AINE.",
+      "A cardite é uma pancardite, e a lesão mais comum é a insuficiência mitral.",
+      "A coreia de Sydenham pode surgir meses depois da infecção e, sozinha, basta para o diagnóstico."
+     ],
+     "titulo": "Uma reação cruzada depois da garganta"
+    },
+    {
+     "fonte": "AHA 2015; OMS 2024",
+     "ideia": "Os critérios exigem prova de infecção estreptocócica recente e mais dois critérios maiores, ou um maior e dois menores. Em países de risco moderado ou alto, como o Brasil, os critérios são mais amplos.",
+     "na_prova": "Pegadinha: usar artralgia como critério maior e menor ao mesmo tempo, ou usar o PR alargado quando a cardite já foi contada.",
+     "pontos": [
+      "Os maiores são cardite clínica ou vista no ecocardiograma, artrite, coreia, eritema marginado e nódulos subcutâneos.",
+      "Em população de risco moderado ou alto, monoartrite e poliartralgia também contam como critério maior.",
+      "Os menores são febre, VHS ou PCR elevadas, PR alargado no eletrocardiograma e artralgia, quando ela não foi usada como maior.",
+      "A recorrência em quem já teve febre reumática pode ser diagnosticada com três critérios menores."
+     ],
+     "titulo": "Critérios de Jones de 2015"
+    },
+    {
+     "fonte": "SBC/SBP 2009; OMS 2024; AHA 2015",
+     "ideia": "O tratamento do surto apaga a inflamação, mas o que muda a vida é a profilaxia secundária. Cada novo surto agride de novo as válvulas, então evitar a reinfecção é o objetivo central.",
+     "na_prova": "A pergunta clássica é a duração da profilaxia conforme a cardite. Cardite leve que regrediu vai até 25 anos ou 10 anos após o último surto.",
+     "pontos": [
+      "No surto, faz-se erradicação com penicilina benzatina, AAS ou naproxeno para a artrite e corticoide na cardite moderada ou grave.",
+      "A profilaxia secundária usa penicilina benzatina 1.200.000 UI a cada 3 ou 4 semanas.",
+      "Sem cardite, a profilaxia vai até 21 anos ou 5 anos após o último surto, o que durar mais.",
+      "Com lesão valvar residual moderada ou grave, vai até os 40 anos, ou por toda a vida."
+     ],
+     "titulo": "Tratar e prevenir"
+    }
+   ],
+   "id": "fr",
+   "nivel": 3,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "não pode ser feito sem cardite"
+      ],
+      [
+       "B",
+       "exige cultura de orofaringe positiva"
+      ],
+      [
+       "C",
+       "está estabelecido: um critério maior e dois menores, com infecção prévia"
+      ],
+      [
+       "D",
+       "é de artrite séptica"
+      ],
+      [
+       "E",
+       "exige coreia para ser confirmado"
+      ]
+     ],
+     "coment": "Artrite é critério maior; febre e VHS alta são menores. Com prova de infecção estreptocócica recente, um maior e dois menores bastam.",
+     "enunciado": "Menino de 10 anos com artrite migratória de joelhos e tornozelos, febre de 38,5 °C, VHS de 80 mm/h e ASLO elevado 3 semanas após dor de garganta. Pelos critérios de Jones, o diagnóstico:",
+     "gab": "C",
+     "id": "reu-fr-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "considerar febre reumática, porque a coreia isolada basta mesmo com ASLO normal"
+      ],
+      [
+       "B",
+       "diagnosticar tique e dar alta"
+      ],
+      [
+       "C",
+       "excluir febre reumática pelo ASLO normal"
+      ],
+      [
+       "D",
+       "pedir cultura de orofaringe positiva"
+      ],
+      [
+       "E",
+       "exigir dois critérios menores"
+      ]
+     ],
+     "coment": "A coreia de Sydenham aparece meses depois da infecção, quando o ASLO já caiu. Ela sozinha permite o diagnóstico, e o paciente precisa de profilaxia secundária.",
+     "enunciado": "Menina de 9 anos com movimentos involuntários, labilidade emocional e piora da escrita, sem febre e com ASLO normal. A conduta diagnóstica é:",
+     "gab": "A",
+     "id": "reu-fr-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "até 40 anos"
+      ],
+      [
+       "B",
+       "até 21 anos, que é mais do que 5 anos após o surto"
+      ],
+      [
+       "C",
+       "até 18 anos"
+      ],
+      [
+       "D",
+       "por toda a vida"
+      ],
+      [
+       "E",
+       "por 1 ano após o surto"
+      ]
+     ],
+     "coment": "Sem cardite, a profilaxia vai até 21 anos ou 5 anos após o último surto, o que for mais longo. Aos 14 anos, 5 anos dariam 19; vale 21.",
+     "enunciado": "Adolescente com febre reumática sem cardite, último surto aos 14 anos. Até quando vai a profilaxia secundária?",
+     "gab": "B",
+     "id": "reu-fr-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "azitromicina mensal"
+      ],
+      [
+       "B",
+       "AAS contínuo"
+      ],
+      [
+       "C",
+       "cefalexina diária só no inverno"
+      ],
+      [
+       "D",
+       "amoxicilina oral por 10 dias a cada surto"
+      ],
+      [
+       "E",
+       "penicilina benzatina 1.200.000 UI intramuscular a cada 3 ou 4 semanas"
+      ]
+     ],
+     "coment": "A penicilina benzatina é a primeira escolha, reforçada pela OMS em 2024. Alergia verdadeira leva a alternativas orais, como sulfadiazina ou eritromicina.",
+     "enunciado": "Qual a droga de escolha para a profilaxia secundária da febre reumática?",
+     "gab": "E",
+     "id": "reu-fr-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "estenose pulmonar"
+      ],
+      [
+       "B",
+       "estenose aórtica"
+      ],
+      [
+       "C",
+       "insuficiência mitral"
+      ],
+      [
+       "D",
+       "estenose mitral"
+      ],
+      [
+       "E",
+       "insuficiência tricúspide isolada"
+      ]
+     ],
+     "coment": "A valvulite aguda causa insuficiência mitral. A estenose mitral é sequela crônica, que aparece anos depois de surtos repetidos.",
+     "enunciado": "Na febre reumática, qual lesão valvar é a mais frequente na fase aguda?",
+     "gab": "C",
+     "id": "reu-fr-5"
+    }
+   ],
+   "titulo": "Febre reumática"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "ACR/EULAR 2016; EULAR 2019",
+     "ideia": "No Sjögren, linfócitos invadem as glândulas que produzem lágrima e saliva. Por isso a queixa central é secura nos olhos e na boca, e a ativação crônica dos linfócitos B aumenta o risco de linfoma.",
+     "na_prova": "A banca pede o marcador de risco de linfoma no Sjögren: aumento persistente de glândula, C4 baixo e crioglobulinemia.",
+     "pontos": [
+      "A paciente típica é mulher de 40 a 50 anos com olho seco, boca seca e aumento de parótidas.",
+      "O anti-Ro está presente na maioria e, com a biópsia de glândula salivar, pesa mais nos critérios de 2016.",
+      "Parótida aumentada de forma persistente, C4 baixo, crioglobulinas e púrpura alertam para linfoma, em geral do tipo MALT.",
+      "O tratamento da secura é sintomático, com lágrima artificial e pilocarpina; imunossupressão fica para doença sistêmica."
+     ],
+     "titulo": "Síndrome de Sjögren"
+    },
+    {
+     "fonte": "ACR/EULAR 2016 (Sjögren); EULAR 2016 (febres autoinflamatórias)",
+     "ideia": "Algumas doenças raras têm uma pista única que, uma vez reconhecida, resolve a questão. Vale guardar a associação entre a pista e o nome.",
+     "na_prova": "Pista de ouro da policondrite: orelha vermelha e dolorosa com lóbulo normal, porque o lóbulo não tem cartilagem.",
+     "pontos": [
+      "A doença mista do tecido conjuntivo junta traços de lúpus, esclerose e miosite, com anti-U1RNP em título alto.",
+      "A policondrite recidivante inflama cartilagens: orelha poupando o lóbulo, nariz em sela e traqueia.",
+      "A febre familiar do Mediterrâneo causa crises de febre com serosite de 1 a 3 dias, e a colchicina previne crises e amiloidose.",
+      "A amiloidose AA complica inflamações crônicas, como artrite reumatoide e febre do Mediterrâneo, e causa síndrome nefrótica."
+     ],
+     "titulo": "Doença mista e outras raridades"
+    }
+   ],
+   "id": "sjo",
+   "nivel": 3,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "xerostomia leve"
+      ],
+      [
+       "B",
+       "aumento persistente de parótida com C4 baixo e crioglobulinas"
+      ],
+      [
+       "C",
+       "anti-Ro em título alto isolado"
+      ],
+      [
+       "D",
+       "FAN em padrão pontilhado"
+      ],
+      [
+       "E",
+       "VHS discretamente elevada"
+      ]
+     ],
+     "coment": "O Sjögren tem risco aumentado de linfoma MALT. Aumento glandular persistente, C4 baixo, crioglobulinemia e púrpura são os sinais de alerta.",
+     "enunciado": "Mulher de 46 anos com olho seco, boca seca, aumento de parótidas e anti-Ro positivo. Qual achado indica maior risco de linfoma?",
+     "gab": "B",
+     "id": "reu-sjo-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "sífilis congênita"
+      ],
+      [
+       "B",
+       "granulomatose com poliangiite"
+      ],
+      [
+       "C",
+       "erisipela de repetição"
+      ],
+      [
+       "D",
+       "lúpus discoide"
+      ],
+      [
+       "E",
+       "policondrite recidivante"
+      ]
+     ],
+     "coment": "A policondrite inflama cartilagem, e o lóbulo não tem cartilagem, por isso é poupado. A traqueia pode estenosar e causar insuficiência respiratória.",
+     "enunciado": "Homem com orelhas vermelhas e dolorosas com lóbulos normais, nariz em sela e rouquidão. O diagnóstico é:",
+     "gab": "E",
+     "id": "reu-sjo-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "colchicina contínua"
+      ],
+      [
+       "B",
+       "prednisona contínua"
+      ],
+      [
+       "C",
+       "metotrexato"
+      ],
+      [
+       "D",
+       "alopurinol"
+      ],
+      [
+       "E",
+       "hidroxicloroquina"
+      ]
+     ],
+     "coment": "Na febre familiar do Mediterrâneo, a colchicina diária reduz as crises e impede a amiloidose AA, que é a complicação grave.",
+     "enunciado": "Jovem de origem mediterrânea com crises de febre alta e dor abdominal por serosite que duram 2 dias e se repetem. Qual droga previne crises e amiloidose?",
+     "gab": "A",
+     "id": "reu-sjo-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "vasculite por IgA"
+      ],
+      [
+       "B",
+       "glomerulonefrite pós-estreptocócica"
+      ],
+      [
+       "C",
+       "nefropatia por IgA"
+      ],
+      [
+       "D",
+       "nefrite lúpica"
+      ],
+      [
+       "E",
+       "amiloidose AA"
+      ]
+     ],
+     "coment": "Inflamação crônica eleva a proteína amiloide A sérica, que se deposita no rim. Biópsia com vermelho Congo confirma, e controlar a inflamação é o tratamento.",
+     "enunciado": "Paciente com artrite reumatoide há 20 anos, mal controlada, desenvolve síndrome nefrótica. Qual causa deve ser pensada?",
+     "gab": "E",
+     "id": "reu-sjo-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "corticoide em dose alta"
+      ],
+      [
+       "B",
+       "ciclofosfamida"
+      ],
+      [
+       "C",
+       "lágrima artificial e pilocarpina"
+      ],
+      [
+       "D",
+       "rituximabe imediato"
+      ],
+      [
+       "E",
+       "anti-TNF"
+      ]
+     ],
+     "coment": "A secura é tratada com substitutos e estimulantes da secreção, como a pilocarpina. Imunossupressores ficam para manifestações sistêmicas.",
+     "enunciado": "Qual o tratamento inicial da secura ocular e oral no Sjögren sem doença sistêmica?",
+     "gab": "C",
+     "id": "reu-sjo-5"
+    }
+   ],
+   "titulo": "Sjögren, doença mista e raridades"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "Wolfe 2016 (critérios); EULAR 2017",
+     "ideia": "Na fibromialgia, o sistema nervoso amplifica os sinais de dor, sem inflamação nem lesão nos tecidos. Por isso os exames são normais e o tratamento que mais ajuda é o exercício.",
+     "na_prova": "A banca pergunta a medida mais eficaz: exercício físico. Opioide forte, corticoide e AINE não são recomendados.",
+     "pontos": [
+      "Os critérios de 2016 pedem dor generalizada em pelo menos 4 de 5 regiões, por 3 meses ou mais, com índices de dor e de sintomas.",
+      "Cansaço, sono que não descansa e dificuldade de memória fazem parte do quadro.",
+      "O diagnóstico vale mesmo quando o paciente tem outra doença, como artrite reumatoide.",
+      "Exercício aeróbico tem a melhor evidência; amitriptilina em dose baixa, duloxetina e pregabalina ajudam alguns pacientes."
+     ],
+     "titulo": "Fibromialgia é dor amplificada"
+    },
+    {
+     "fonte": "Critérios de Yamaguchi",
+     "ideia": "É uma doença autoinflamatória com febre alta diária, e a ferritina muito alta é a pista mais forte. O diagnóstico é de exclusão, depois de afastar infecção, câncer e outras doenças reumáticas.",
+     "na_prova": "Questão típica: febre de origem obscura com rash evanescente e ferritina altíssima. A resposta é Still, depois de afastar infecção e linfoma.",
+     "pontos": [
+      "A febre sobe em picos acima de 39 °C, uma ou duas vezes por dia, junto com uma erupção cor de salmão que some.",
+      "Há artrite, dor de garganta, leucocitose com neutrófilos, enzimas hepáticas altas e FAN e fator reumatoide negativos.",
+      "A ferritina costuma passar de milhares, e a fração glicosilada fica baixa.",
+      "A complicação grave é a síndrome de ativação macrofágica, e o tratamento usa corticoide ou bloqueio de IL-1 ou IL-6."
+     ],
+     "titulo": "Doença de Still do adulto"
+    },
+    {
+     "fonte": "ILAR (classificação)",
+     "ideia": "É a artrite crônica da infância, com início antes dos 16 anos e duração de pelo menos 6 semanas. Cada subtipo tem um risco próprio, e o da forma oligoarticular é a uveíte silenciosa.",
+     "na_prova": "Contraste cobrado: na oligoarticular a uveíte é crônica e silenciosa; na forma com entesite, é aguda, dolorosa e com olho vermelho.",
+     "pontos": [
+      "A forma oligoarticular é a mais comum, em menina pequena com FAN positivo e uveíte anterior crônica sem sintomas.",
+      "Por isso essas crianças fazem exame com lâmpada de fenda periodicamente, mesmo sem queixa ocular.",
+      "A forma sistêmica se parece com a doença de Still, com febre, rash e risco de síndrome de ativação macrofágica.",
+      "A forma relacionada a entesite afeta meninos maiores com HLA-B27 e dá uveíte aguda sintomática."
+     ],
+     "titulo": "Artrite idiopática juvenil"
+    }
+   ],
+   "id": "fibro",
+   "nivel": 3,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "exercício aeróbico regular"
+      ],
+      [
+       "B",
+       "prednisona em dose baixa"
+      ],
+      [
+       "C",
+       "repouso prolongado"
+      ],
+      [
+       "D",
+       "opioide forte contínuo"
+      ],
+      [
+       "E",
+       "AINE contínuo"
+      ]
+     ],
+     "coment": "Na fibromialgia, exercício aeróbico tem a recomendação mais forte. Educação, terapia cognitivo-comportamental e higiene do sono complementam; opioide e corticoide pioram o cenário.",
+     "enunciado": "Mulher de 42 anos com dor difusa há 1 ano, sono não reparador, cansaço e exames normais. A medida com melhor evidência é:",
+     "gab": "A",
+     "id": "reu-fibro-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "lúpus eritematoso sistêmico"
+      ],
+      [
+       "B",
+       "artrite reumatoide"
+      ],
+      [
+       "C",
+       "febre reumática"
+      ],
+      [
+       "D",
+       "doença de Still do adulto"
+      ],
+      [
+       "E",
+       "endocardite infecciosa"
+      ]
+     ],
+     "coment": "Febre em picos, rash evanescente, artrite, leucocitose e ferritina muito alta compõem a doença de Still, um diagnóstico de exclusão.",
+     "enunciado": "Homem de 28 anos com febre diária de 39,5 °C, rash cor de salmão que aparece com a febre, artrite, leucocitose e ferritina de 18.000 ng/mL. Após excluir infecção e linfoma, o diagnóstico é:",
+     "gab": "D",
+     "id": "reu-fibro-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "ressonância de coluna"
+      ],
+      [
+       "B",
+       "biópsia sinovial"
+      ],
+      [
+       "C",
+       "densitometria óssea"
+      ],
+      [
+       "D",
+       "ecocardiograma"
+      ],
+      [
+       "E",
+       "exame oftalmológico com lâmpada de fenda"
+      ]
+     ],
+     "coment": "Na forma oligoarticular com FAN positivo, a uveíte anterior crônica é silenciosa e pode cegar. O rastreio com lâmpada de fenda é periódico, mesmo sem queixa.",
+     "enunciado": "Menina de 3 anos com artrite de um joelho há 3 meses e FAN positivo. Qual exame deve ser feito periodicamente?",
+     "gab": "E",
+     "id": "reu-fibro-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "exige FAN positivo"
+      ],
+      [
+       "B",
+       "pode ser feito, porque a fibromialgia não exclui outras doenças"
+      ],
+      [
+       "C",
+       "é proibido enquanto houver outra doença"
+      ],
+      [
+       "D",
+       "exige VHS elevada"
+      ],
+      [
+       "E",
+       "exige biópsia muscular"
+      ]
+     ],
+     "coment": "A revisão de 2016 deixou claro que a fibromialgia pode coexistir com outras doenças, e que o diagnóstico vale independentemente delas.",
+     "enunciado": "Pelos critérios de 2016, o diagnóstico de fibromialgia em paciente que também tem artrite reumatoide:",
+     "gab": "B",
+     "id": "reu-fibro-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "remissão da doença"
+      ],
+      [
+       "B",
+       "infecção urinária simples"
+      ],
+      [
+       "C",
+       "efeito adverso do AINE sem importância"
+      ],
+      [
+       "D",
+       "púrpura trombocitopênica imune"
+      ],
+      [
+       "E",
+       "síndrome de ativação macrofágica"
+      ]
+     ],
+     "coment": "Na síndrome de ativação macrofágica, o consumo de fibrinogênio faz a VHS cair, enquanto plaquetas despencam e a ferritina dispara. É emergência, tratada com corticoide em dose alta e bloqueio de IL-1.",
+     "enunciado": "Criança com artrite idiopática juvenil sistêmica em atividade apresenta queda súbita de plaquetas e de VHS, febre persistente e ferritina subindo muito. O diagnóstico a pensar é:",
+     "gab": "E",
+     "id": "reu-fibro-5"
+    }
+   ],
+   "titulo": "Fibromialgia, Still e AIJ"
+  }
+ ],
+ "niveis": {
+  "1": "O que mais cai: lúpus, artrite reumatoide, vasculites, FAN e gota",
+  "2": "Cai com frequência: espondiloartrites, artrose, monoartrite, esclerose sistêmica e SAF",
+  "3": "Cai menos, mas cai: miopatias, febre reumática, Sjögren e raridades, fibromialgia, Still e AIJ"
+ },
+ "ordem": 7,
+ "prefixo": "reu",
+ "roteiro": [
+  0,
+  0
+ ],
+ "roteiro_pilulas": [
+  {
+   "fonte": "Síntese das diretrizes deste mundo",
+   "ideia": "Reumatologia se resolve juntando três pistas: o padrão de acometimento, o perfil do paciente e o anticorpo. Quase sempre uma delas aponta a doença antes das outras.",
+   "na_prova": "A banca mistura duas doenças com um detalhe diferente, como idade ou anticorpo. Ache o detalhe que separa as duas antes de olhar as alternativas.",
+   "pontos": [
+    "Defina o padrão: monoartrite aguda pede punção; poliartrite simétrica de mãos lembra artrite reumatoide; dor inflamatória nas costas lembra espondiloartrite.",
+    "Olhe a pessoa: mulher jovem lembra lúpus, idoso com cefaleia lembra arterite, criança com púrpura lembra vasculite por IgA.",
+    "Leia o anticorpo como etiqueta: anti-CCP para artrite reumatoide, anti-DNA para lúpus ativo, ANCA para vasculite de pequenos vasos.",
+    "Antes de imunossuprimir, afaste infecção, e antes de biológico, rastreie tuberculose e hepatites."
+   ],
+   "titulo": "Roteiro para qualquer questão de reumato"
+  }
+ ],
+ "sabor": 7,
+ "titulo": "Reumatologia",
+ "treino_pilulas": [
+  [
+   2,
+   1
+  ],
+  [
+   7,
+   2
+  ]
+ ],
+ "versao": 1
+}

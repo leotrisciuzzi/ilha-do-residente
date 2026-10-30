@@ -1,0 +1,2995 @@
+{
+ "cor": [
+  150,
+  190,
+  255
+ ],
+ "descricao": "Ventilador sem medo: modos, mecânica, SDRA, VNI, via aérea e desmame",
+ "formato": 1,
+ "gerador": "ventilacao",
+ "id": "ventilacao",
+ "materia": "Ventilação mecânica",
+ "modulos": [
+  {
+   "aula": [
+    {
+     "fonte": "Tobin, Principles and Practice of Mechanical Ventilation",
+     "ideia": "Para empurrar ar para dentro do pulmão, o ventilador vence duas forças: a elástica, que é distender pulmão e caixa torácica, e a resistiva, que é fazer o ar correr pelo tubo e pelos brônquios.",
+     "na_prova": "A banca usa essa equação para explicar por que o pico sobe quando o tubo entope: aumenta a parte resistiva, sem mudar a elástica.",
+     "pontos": [
+      "A pressão na via aérea é o volume dividido pela complacência, mais a resistência vezes o fluxo, mais a PEEP total.",
+      "Complacência é quanto volume entra para cada cmH₂O de pressão, e elastância é o inverso.",
+      "Pulmão duro, como na SDRA, na fibrose ou no edema, tem complacência baixa e pede mais pressão para o mesmo volume."
+     ],
+     "titulo": "Equação do movimento"
+    },
+    {
+     "fonte": "Tobin, Principles and Practice of Mechanical Ventilation",
+     "ideia": "O pico é medido com o ar correndo e soma as forças resistiva e elástica. O platô é medido com uma pausa, sem fluxo, e mostra só a parte elástica, que é a pressão dentro do alvéolo.",
+     "na_prova": "Pegadinha de conta: o fluxo entra em litros por segundo, então 60 L/min vira 1 L/s antes de dividir.",
+     "pontos": [
+      "O platô se mede com uma pausa inspiratória de cerca de 0,5 a 2 segundos.",
+      "A complacência estática é o volume corrente dividido por platô menos PEEP; o normal fica entre 50 e 80 mL/cmH₂O.",
+      "A resistência é pico menos platô, dividido pelo fluxo em L/s, e o normal no intubado vai até cerca de 10 a 15."
+     ],
+     "titulo": "Pico, platô e o que cada um mede"
+    },
+    {
+     "fonte": "Tobin, Principles and Practice of Mechanical Ventilation",
+     "ideia": "Esvaziar o pulmão leva tempo, e esse tempo é maior quando a resistência é alta. Se a expiração termina antes de o pulmão esvaziar, sobra ar a cada ciclo e surge a auto-PEEP.",
+     "na_prova": "A banca mostra curva de fluxo que não volta a zero e quer auto-PEEP, corrigida com mais tempo expiratório.",
+     "pontos": [
+      "A constante de tempo é resistência vezes complacência, e expirar quase todo o volume leva de 3 a 5 constantes.",
+      "No obstrutivo, a constante é longa e o ar fica preso, causando hiperinsuflação dinâmica.",
+      "A auto-PEEP se mede com pausa expiratória, e na curva de fluxo o fluxo expiratório não chega a zero antes do próximo ciclo."
+     ],
+     "titulo": "Constante de tempo e auto-PEEP"
+    }
+   ],
+   "id": "fisio",
+   "nivel": 1,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "a pressão alveolar no fim da inspiração (componente elástico)"
+      ],
+      [
+       "B",
+       "a PEEP intrínseca"
+      ],
+      [
+       "C",
+       "a pressão intrapleural no fim da expiração"
+      ],
+      [
+       "D",
+       "a resistência das vias aéreas e do tubo"
+      ],
+      [
+       "E",
+       "a soma das pressões resistiva e elástica com fluxo correndo"
+      ]
+     ],
+     "coment": "Com fluxo zero, o termo Resistência × Fluxo some: sobra Volume/Complacência + PEEP, ou seja, a pressão que distende o alvéolo. O pico inclui o resistivo.",
+     "enunciado": "A pressão de platô, medida com pausa inspiratória, reflete principalmente:",
+     "gab": "A",
+     "id": "vm-fisio-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "17 mL/cmH₂O"
+      ],
+      [
+       "B",
+       "14 mL/cmH₂O"
+      ],
+      [
+       "C",
+       "20 mL/cmH₂O"
+      ],
+      [
+       "D",
+       "25 mL/cmH₂O"
+      ],
+      [
+       "E",
+       "50 mL/cmH₂O"
+      ]
+     ],
+     "coment": "Cst = VT / (Pplat − PEEP) = 500 / (30 − 10) = 25 mL/cmH₂O — baixa, típica de pulmão 'duro'. Usar a Ppico (500/25 = 20) dá a complacência DINÂMICA, que mistura resistência.",
+     "enunciado": "Paciente em VCV com VT 500 mL, Ppico 35, Pplat 30 e PEEP 10 cmH₂O. A complacência estática é:",
+     "gab": "D",
+     "id": "vm-fisio-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "25 cmH₂O/L/s"
+      ],
+      [
+       "B",
+       "1,5 cmH₂O/L/s"
+      ],
+      [
+       "C",
+       "15 cmH₂O/L/s"
+      ],
+      [
+       "D",
+       "0,25 cmH₂O/L/s"
+      ],
+      [
+       "E",
+       "40 cmH₂O/L/s"
+      ]
+     ],
+     "coment": "R = (Ppico − Pplat) / fluxo. 60 L/min = 1 L/s → R = 15 / 1 = 15 cmH₂O/L/s, no limite alto para um paciente intubado. Converter o fluxo para L/s é a pegadinha.",
+     "enunciado": "No mesmo ventilador, fluxo inspiratório de 60 L/min, Ppico 40 e Pplat 25 cmH₂O. A resistência é:",
+     "gab": "C",
+     "id": "vm-fisio-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "redução da sensibilidade do disparo"
+      ],
+      [
+       "B",
+       "pausa expiratória no fim da expiração"
+      ],
+      [
+       "C",
+       "desconexão do circuito"
+      ],
+      [
+       "D",
+       "pausa inspiratória no fim da inspiração"
+      ],
+      [
+       "E",
+       "aumento do fluxo inspiratório"
+      ]
+     ],
+     "coment": "Ocluindo a válvula expiratória no fim da expiração, a pressão do circuito se equilibra com a dos alvéolos: lê-se a PEEP total. Auto-PEEP = PEEP total − PEEP ajustada.",
+     "enunciado": "A medida da PEEP intrínseca (auto-PEEP) é feita com:",
+     "gab": "B",
+     "id": "vm-fisio-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "Fluxo inspiratório em onda quadrada"
+      ],
+      [
+       "B",
+       "Pressão de pico maior que a de platô"
+      ],
+      [
+       "C",
+       "Fluxo inspiratório desacelerante"
+      ],
+      [
+       "D",
+       "Fluxo expiratório que não retorna a zero antes do próximo ciclo"
+      ],
+      [
+       "E",
+       "Volume expirado igual ao inspirado"
+      ]
+     ],
+     "coment": "Se o próximo ciclo começa com o ar ainda saindo, sobra volume no alvéolo a cada respiração: hiperinsuflação dinâmica. Conduta: mais tempo expiratório (FR menor, fluxo inspiratório maior, VT menor).",
+     "enunciado": "Qual achado da curva fluxo × tempo indica aprisionamento aéreo?",
+     "gab": "D",
+     "id": "vm-fisio-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "independe da resistência das vias aéreas"
+      ],
+      [
+       "B",
+       "é menor no DPOC do que no pulmão normal"
+      ],
+      [
+       "C",
+       "é o produto resistência × complacência; obstrutivos têm constante longa"
+      ],
+      [
+       "D",
+       "corresponde ao tempo inspiratório ajustado no ventilador"
+      ],
+      [
+       "E",
+       "é a razão complacência/resistência; obstrutivos têm constante curta"
+      ]
+     ],
+     "coment": "τ = R × C. Resistência alta (asma, DPOC) alonga τ: o pulmão precisa de mais tempo para esvaziar. Na SDRA (complacência baixa), τ é curta: o pulmão esvazia rápido.",
+     "enunciado": "Quanto à constante de tempo do sistema respiratório, é correto afirmar:",
+     "gab": "C",
+     "id": "vm-fisio-6"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "inversa: elastância = 1 / complacência"
+      ],
+      [
+       "B",
+       "elastância = complacência − PEEP"
+      ],
+      [
+       "C",
+       "elastância = complacência × resistência"
+      ],
+      [
+       "D",
+       "não há relação entre elas"
+      ],
+      [
+       "E",
+       "direta: as duas aumentam juntas na SDRA"
+      ]
+     ],
+     "coment": "Elastância é a 'dureza' (cmH₂O por litro); complacência é a 'facilidade' (litro por cmH₂O). Na SDRA a elastância sobe e a complacência cai.",
+     "enunciado": "A relação entre complacência e elastância é:",
+     "gab": "A",
+     "id": "vm-fisio-7"
+    }
+   ],
+   "titulo": "Mecânica respiratória"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "Diretrizes Brasileiras de Ventilação Mecânica (AMIB/SBPT)",
+     "ideia": "O pulmão pode falhar em oxigenar ou em eliminar CO₂. A hipoxêmica vem da troca gasosa, e a hipercápnica vem da bomba que move o ar: cérebro, nervos, músculos e parede.",
+     "na_prova": "A banca dá miastenia com PaCO₂ subindo e quer insuficiência tipo 2, por falha da bomba, e não doença do pulmão.",
+     "pontos": [
+      "A tipo 1, hipoxêmica, tem PaO₂ abaixo de 60 mmHg com PaCO₂ normal ou baixa, como em pneumonia, SDRA e edema.",
+      "A tipo 2, hipercápnica, tem PaCO₂ acima de 45 a 50 com acidemia, por falha do comando, do músculo, da parede ou por fadiga.",
+      "Shunt verdadeiro não melhora bem com oxigênio a 100%, e hipoventilação pura tem gradiente alvéolo-arterial normal."
+     ],
+     "titulo": "Dois tipos de insuficiência respiratória"
+    },
+    {
+     "fonte": "Diretrizes Brasileiras de Ventilação Mecânica (AMIB/SBPT)",
+     "ideia": "A intubação é uma decisão clínica, tomada quando o paciente não protege a via aérea, não oxigena, não ventila ou vai piorar de forma previsível. Esperar a gasometria de quem claramente está esgotando custa vidas.",
+     "na_prova": "A banca dá paciente com respiração paradoxal e uso de musculatura acessória e quer intubação imediata, sem esperar exames.",
+     "pontos": [
+      "Rebaixamento importante, com Glasgow de 8 ou menos no trauma ou sem tosse e deglutição, indica proteger a via aérea.",
+      "Falha de oxigenação ou ventilação apesar do suporte não invasivo, ou sinais de fadiga, também indicam intubar.",
+      "Queimadura de via aérea, angioedema progressivo, choque grave e parada são indicações pelo curso previsto."
+     ],
+     "titulo": "Quando intubar"
+    }
+   ],
+   "id": "irpa",
+   "nivel": 1,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "tipo I (hipoxêmica)"
+      ],
+      [
+       "B",
+       "por hipoventilação alveolar pura"
+      ],
+      [
+       "C",
+       "inexistente, pois o pH é alcalino"
+      ],
+      [
+       "D",
+       "tipo II (hipercápnica)"
+      ],
+      [
+       "E",
+       "mista, com predomínio hipercápnico"
+      ]
+     ],
+     "coment": "Hipoxemia com PaCO₂ baixa: o pulmão troca mal o O₂ (V/Q e shunt na consolidação), e a hiperventilação reflexa baixa o CO₂. É o tipo I clássico.",
+     "enunciado": "Paciente com pneumonia lobar: PaO₂ 52 mmHg, PaCO₂ 32 mmHg, pH 7,47 em ar ambiente. A insuficiência respiratória é:",
+     "gab": "A",
+     "id": "vm-irpa-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "tromboembolismo pulmonar"
+      ],
+      [
+       "B",
+       "SDRA por sepse"
+      ],
+      [
+       "C",
+       "edema agudo de pulmão"
+      ],
+      [
+       "D",
+       "pneumonia multilobar"
+      ],
+      [
+       "E",
+       "intoxicação por opioide"
+      ]
+     ],
+     "coment": "O opioide deprime o drive: o pulmão está sadio, mas não é ventilado. Hipercapnia com gradiente A-a normal. As outras são doenças do parênquima ou da circulação pulmonar (tipo I).",
+     "enunciado": "Qual causa leva tipicamente a insuficiência respiratória hipercápnica com pulmão normal?",
+     "gab": "E",
+     "id": "vm-irpa-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "alteração da difusão"
+      ],
+      [
+       "B",
+       "altitude elevada"
+      ],
+      [
+       "C",
+       "shunt verdadeiro"
+      ],
+      [
+       "D",
+       "hipoventilação alveolar"
+      ],
+      [
+       "E",
+       "distúrbio V/Q com áreas de V/Q baixa"
+      ]
+     ],
+     "coment": "No shunt, o sangue passa por alvéolos que não ventilam: o O₂ extra nunca o encontra. Shunt grande (> 30%) mal sobe a PaO₂ com O₂ a 100% — é aí que entram PEEP e recrutamento.",
+     "enunciado": "Na insuficiência respiratória hipoxêmica, qual mecanismo responde MENOS ao aumento da FiO₂?",
+     "gab": "C",
+     "id": "vm-irpa-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "PaCO₂ de 38 mmHg"
+      ],
+      [
+       "B",
+       "capacidade vital < 15–20 mL/kg"
+      ],
+      [
+       "C",
+       "frequência respiratória de 18"
+      ],
+      [
+       "D",
+       "SpO₂ de 95% em ar ambiente"
+      ],
+      [
+       "E",
+       "radiografia de tórax normal"
+      ]
+     ],
+     "coment": "Nas doenças neuromusculares, a gasometria piora tarde. A queda da capacidade vital (< 15–20 mL/kg) e das pressões inspiratória e expiratória máximas antecipa a falência — regra 20/30/40.",
+     "enunciado": "Paciente com Guillain-Barré monitorizado na enfermaria. O parâmetro que melhor indica a necessidade de intubação eletiva é:",
+     "gab": "B",
+     "id": "vm-irpa-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "asma com SpO₂ 94% em O₂ por cateter"
+      ],
+      [
+       "B",
+       "DPOC exacerbado com pH 7,32 e consciente, sem tentativa de VNI"
+      ],
+      [
+       "C",
+       "edema agudo de pulmão respondendo bem à CPAP"
+      ],
+      [
+       "D",
+       "pneumonia com FR 24 e SpO₂ 93% em ar ambiente"
+      ],
+      [
+       "E",
+       "Glasgow 7 após TCE grave"
+      ]
+     ],
+     "coment": "Glasgow ≤ 8 no trauma = não protege a via aérea. No DPOC com acidose respiratória leve a primeira escolha é VNI; no edema agudo que responde à CPAP, também não se intuba.",
+     "enunciado": "Qual das situações é indicação de intubação orotraqueal?",
+     "gab": "E",
+     "id": "vm-irpa-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "uso discreto de esternocleidomastoideo em repouso há 1 semana"
+      ],
+      [
+       "B",
+       "SpO₂ de 96% com O₂ a 2 L/min"
+      ],
+      [
+       "C",
+       "fala de frases completas"
+      ],
+      [
+       "D",
+       "respiração paradoxal (abdome entra na inspiração)"
+      ],
+      [
+       "E",
+       "frequência respiratória de 16"
+      ]
+     ],
+     "coment": "O diafragma fadigado é puxado para cima pela pressão negativa do tórax: o abdome afunda na inspiração. Junto com taquipneia > 35 e sudorese, é sinal de colapso iminente.",
+     "enunciado": "Sinal clínico que indica fadiga muscular respiratória iminente:",
+     "gab": "D",
+     "id": "vm-irpa-6"
+    }
+   ],
+   "titulo": "Insuficiência respiratória e indicações"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "Diretrizes Brasileiras de Ventilação Mecânica (AMIB/SBPT)",
+     "ideia": "Prever a dificuldade antes de intubar permite preparar plano B. As escalas de Mallampati e de Cormack-Lehane medem momentos diferentes: uma antes, olhando a boca, e outra durante a laringoscopia.",
+     "na_prova": "A banca confunde as escalas. Mallampati é antes, olhando a orofaringe; Cormack-Lehane é durante, olhando a laringe.",
+     "pontos": [
+      "Mallampati se faz com o paciente sentado e a boca aberta: classe I vê úvula e pilares, e classe IV vê só o palato duro.",
+      "Cormack-Lehane se faz na laringoscopia: grau I vê a glote inteira, e grau IV não vê nem a epiglote.",
+      "O mnemônico LEMON lembra aparência, regra 3-3-2, Mallampati, obstrução e mobilidade do pescoço."
+     ],
+     "titulo": "Prever a via aérea difícil"
+    },
+    {
+     "fonte": "Diretrizes Brasileiras de Ventilação Mecânica (AMIB/SBPT)",
+     "ideia": "A sequência rápida reduz o tempo entre a perda dos reflexos e o tubo no lugar, diminuindo o risco de aspiração. Ela junta pré-oxigenação, um indutor e um bloqueador quase ao mesmo tempo.",
+     "na_prova": "A banca dá asmático em choque e pede o indutor: cetamina. E lembra que a manobra de Sellick deixou de ser rotina.",
+     "pontos": [
+      "A pré-oxigenação dura cerca de 3 minutos com oxigênio próximo de 100%.",
+      "Etomidato preserva a pressão; cetamina mantém pressão e dilata brônquios; propofol baixa a pressão.",
+      "Succinilcolina age em cerca de 45 segundos, mas é proibida em hipercalemia e em queimado após 24 a 72 horas; o rocurônio é a alternativa."
+     ],
+     "titulo": "Sequência rápida de intubação"
+    },
+    {
+     "fonte": "Diretrizes Brasileiras de Ventilação Mecânica (AMIB/SBPT)",
+     "ideia": "Ver o tubo passar não basta: a confirmação de que ele está na traqueia é a capnografia em forma de onda. A radiografia mostra a profundidade, mas não diferencia traqueia de esôfago.",
+     "na_prova": "A banca pergunta o padrão-ouro de confirmação: capnografia com onda. Ausculta e expansão ajudam, mas falham.",
+     "pontos": [
+      "A capnografia mostra CO₂ que persiste por vários ciclos, o que só acontece com o tubo na traqueia.",
+      "Na radiografia, a ponta do tubo deve ficar cerca de 3 a 5 cm acima da carina.",
+      "A fixação fica em cerca de 21 cm na mulher e 23 cm no homem, e a pressão do balonete fica entre 20 e 30 cmH₂O."
+     ],
+     "titulo": "Confirmar e fixar o tubo"
+    }
+   ],
+   "id": "via",
+   "nivel": 1,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "ausculta pulmonar em 5 pontos"
+      ],
+      [
+       "B",
+       "condensação de vapor no tubo"
+      ],
+      [
+       "C",
+       "elevação da saturação"
+      ],
+      [
+       "D",
+       "capnografia em forma de onda"
+      ],
+      [
+       "E",
+       "radiografia de tórax"
+      ]
+     ],
+     "coment": "CO₂ só sai de forma sustentada da traqueia. A radiografia mostra a altura do tubo, mas um tubo no esôfago pode projetar-se sobre a traqueia; o vapor e a ausculta enganam.",
+     "enunciado": "O método mais confiável para confirmar a posição traqueal do tubo logo após a intubação é:",
+     "gab": "D",
+     "id": "vm-via-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "succinilcolina"
+      ],
+      [
+       "B",
+       "cisatracúrio"
+      ],
+      [
+       "C",
+       "vecurônio"
+      ],
+      [
+       "D",
+       "atracúrio"
+      ],
+      [
+       "E",
+       "rocurônio"
+      ]
+     ],
+     "coment": "Após 24–72 h de queimadura, desnervação ou imobilização, surgem receptores colinérgicos extrajuncionais: a succinilcolina pode causar hipercalemia fatal. Rocurônio em dose de sequência rápida é a alternativa.",
+     "enunciado": "Grande queimado no 5º dia de internação precisa de intubação. Qual bloqueador neuromuscular deve ser EVITADO?",
+     "gab": "A",
+     "id": "vm-via-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "cetamina"
+      ],
+      [
+       "B",
+       "propofol"
+      ],
+      [
+       "C",
+       "morfina"
+      ],
+      [
+       "D",
+       "tiopental"
+      ],
+      [
+       "E",
+       "midazolam em dose alta"
+      ]
+     ],
+     "coment": "A cetamina tem efeito broncodilatador (simpaticomimético) e preserva a pressão arterial. Propofol e tiopental derrubam a PA; a morfina libera histamina.",
+     "enunciado": "Asmático em crise grave, hipotenso após volume, precisa ser intubado. O indutor preferido é:",
+     "gab": "A",
+     "id": "vm-via-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "III"
+      ],
+      [
+       "B",
+       "IIb"
+      ],
+      [
+       "C",
+       "II"
+      ],
+      [
+       "D",
+       "IV"
+      ],
+      [
+       "E",
+       "I"
+      ]
+     ],
+     "coment": "I: glote inteira; II: parte posterior da glote ou aritenoides; III: só a epiglote; IV: nem a epiglote. Graus III e IV = laringoscopia difícil — bougie e videolaringoscópio.",
+     "enunciado": "Na laringoscopia, visualiza-se apenas a epiglote. Pela classificação de Cormack-Lehane, o grau é:",
+     "gab": "A",
+     "id": "vm-via-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "tem efeito analgésico intenso"
+      ],
+      [
+       "B",
+       "é contraindicado na hipercalemia"
+      ],
+      [
+       "C",
+       "é broncodilatador potente, preferido no asmático"
+      ],
+      [
+       "D",
+       "causa hipotensão importante, devendo ser evitado no choque"
+      ],
+      [
+       "E",
+       "preserva a hemodinâmica, mas inibe transitoriamente a síntese de cortisol"
+      ]
+     ],
+     "coment": "O etomidato inibe a 11-β-hidroxilase (supressão adrenal transitória) — discussão especialmente na sepse — mas é estável na pressão. Analgesia intensa é da cetamina, não dele.",
+     "enunciado": "Sobre o etomidato na sequência rápida de intubação, é correto:",
+     "gab": "E",
+     "id": "vm-via-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "capnografia sem onda"
+      ],
+      [
+       "B",
+       "enfisema subcutâneo cervical"
+      ],
+      [
+       "C",
+       "murmúrio abolido à esquerda com aumento das pressões e hipoxemia"
+      ],
+      [
+       "D",
+       "murmúrio abolido à direita"
+      ],
+      [
+       "E",
+       "queda das pressões de pico e de platô"
+      ]
+     ],
+     "coment": "A intubação seletiva (o brônquio direito é mais vertical) ventila só um pulmão: o esquerdo colapsa, a complacência cai (pico e platô sobem) e surge shunt. Tracionar o tubo.",
+     "enunciado": "Após a intubação, a radiografia mostra a ponta do tubo no brônquio principal direito. O achado clínico esperado é:",
+     "gab": "C",
+     "id": "vm-via-6"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "40–50 cmH₂O"
+      ],
+      [
+       "B",
+       "a mínima que permita vazamento audível"
+      ],
+      [
+       "C",
+       "5–10 cmH₂O"
+      ],
+      [
+       "D",
+       "20–30 cmH₂O"
+      ],
+      [
+       "E",
+       "60 mmHg"
+      ]
+     ],
+     "coment": "Abaixo de 20 há microaspiração (risco de PAV); acima de ~30, a pressão supera a da perfusão da mucosa traqueal: isquemia, estenose e fístula. Medir com cufômetro.",
+     "enunciado": "A pressão recomendada do balonete (cuff) do tubo traqueal é:",
+     "gab": "D",
+     "id": "vm-via-7"
+    }
+   ],
+   "titulo": "Via aérea e intubação"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "Diretrizes Brasileiras de Ventilação Mecânica (AMIB/SBPT)",
+     "ideia": "Cada dispositivo entrega uma faixa de fração inspirada de oxigênio, e o alvo de saturação depende do paciente. Oxigênio demais também faz mal, sobretudo no retentor de CO₂.",
+     "na_prova": "A banca pergunta por que oxigênio em excesso sobe o CO₂ no DPOC: pela piora da relação ventilação-perfusão e pelo efeito Haldane, não só pela perda do estímulo.",
+     "pontos": [
+      "O cateter nasal de 1 a 6 L/min soma cerca de 3 a 4% por litro, e a máscara de Venturi entrega fração fixa de 24 a 50%.",
+      "A máscara com reservatório, a 10 a 15 L/min, entrega fração alta, em torno de 60 a 90%.",
+      "O alvo é saturação de 92 a 96% na maioria, e de 88 a 92% no retentor crônico de CO₂."
+     ],
+     "titulo": "Oxigênio: dispositivos e alvos"
+    },
+    {
+     "fonte": "FLORALI (NEJM 2015); Roca et al. (ROX) 2019",
+     "ideia": "O alto fluxo entrega até 60 L/min de ar aquecido e umidificado, com fração de oxigênio controlada. Ele lava o espaço morto da faringe e gera uma pequena PEEP, o que facilita a respiração.",
+     "na_prova": "A banca dá ROX baixo após algumas horas de alto fluxo e quer reavaliar intubação, para não atrasar o tubo.",
+     "pontos": [
+      "A fração inspirada vai de 21 a 100%, e a PEEP gerada é de cerca de 1 cmH₂O a cada 10 L/min com a boca fechada.",
+      "No estudo FLORALI, na insuficiência hipoxêmica sem hipercapnia, reduziu a mortalidade em 90 dias.",
+      "O índice ROX, saturação sobre fração inspirada dividido pela frequência, igual ou acima de 4,88 sugere sucesso."
+     ],
+     "titulo": "Cateter nasal de alto fluxo"
+    },
+    {
+     "fonte": "ERS/ATS 2017 (ventilação não invasiva)",
+     "ideia": "A ventilação não invasiva tem benefício comprovado em dois cenários: DPOC exacerbado com acidose respiratória e edema agudo de pulmão. Fora deles, ela pode atrasar uma intubação necessária.",
+     "na_prova": "Pegadinha: usar ventilação não invasiva como resgate de insuficiência respiratória já instalada após extubação. Nesse caso, a conduta é reintubar.",
+     "pontos": [
+      "As indicações fortes são DPOC com pH abaixo de 7,35 e PaCO₂ acima de 45, e edema pulmonar cardiogênico.",
+      "Rebaixamento sem retenção de CO₂, vômitos, instabilidade grave, trauma de face e pneumotórax não drenado contraindicam.",
+      "Sem melhora de pH, frequência e conforto em 1 a 2 horas, intuba-se; atrasar a intubação aumenta a mortalidade."
+     ],
+     "titulo": "Ventilação não invasiva"
+    }
+   ],
+   "id": "oxi",
+   "nivel": 1,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "ventilação não invasiva com dois níveis de pressão"
+      ],
+      [
+       "B",
+       "cateter nasal a 6 L/min com alvo de SpO₂ 98%"
+      ],
+      [
+       "C",
+       "aguardar o efeito do broncodilatador sem suporte"
+      ],
+      [
+       "D",
+       "intubação orotraqueal imediata"
+      ],
+      [
+       "E",
+       "O₂ por máscara com reservatório a 15 L/min"
+      ]
+     ],
+     "coment": "Acidose respiratória (pH 7,25–7,35) no DPOC é a melhor indicação de VNI: reduz intubação e mortalidade. Com pH < 7,25 ainda se pode tentar em ambiente de UTI, pronto para intubar.",
+     "enunciado": "DPOC exacerbado, consciente e cooperativo: pH 7,28, PaCO₂ 68 mmHg, FR 30. A melhor conduta ventilatória inicial é:",
+     "gab": "A",
+     "id": "vm-oxi-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "exacerbação de DPOC com hipercapnia"
+      ],
+      [
+       "B",
+       "vômitos incoercíveis com rebaixamento de consciência"
+      ],
+      [
+       "C",
+       "pós-operatório de cirurgia abdominal com hipoxemia"
+      ],
+      [
+       "D",
+       "paciente imunossuprimido com IRpA"
+      ],
+      [
+       "E",
+       "edema agudo de pulmão cardiogênico"
+      ]
+     ],
+     "coment": "Sem proteção da via aérea e com vômitos, a máscara favorece aspiração. As outras opções são indicações de VNI.",
+     "enunciado": "É contraindicação à ventilação não invasiva:",
+     "gab": "B",
+     "id": "vm-oxi-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "98–100%"
+      ],
+      [
+       "B",
+       "94–98%"
+      ],
+      [
+       "C",
+       "acima de 95% sempre"
+      ],
+      [
+       "D",
+       "80–85%"
+      ],
+      [
+       "E",
+       "88–92%"
+      ]
+     ],
+     "coment": "No retentor, oxigênio demais piora o V/Q e o efeito Haldane: a PaCO₂ sobe. Prefira Venturi e titule para 88–92%.",
+     "enunciado": "O alvo de saturação no paciente com DPOC e retenção crônica de CO₂ é:",
+     "gab": "E",
+     "id": "vm-oxi-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "0,6 — falha"
+      ],
+      [
+       "B",
+       "6,1 — tranquilizador"
+      ],
+      [
+       "C",
+       "18,4 — normal"
+      ],
+      [
+       "D",
+       "2,1 — falha iminente"
+      ],
+      [
+       "E",
+       "3,1 — intubar já"
+      ]
+     ],
+     "coment": "ROX = (92 / 0,50) / 30 = 184 / 30 ≈ 6,1. Acima de 4,88 sugere sucesso do CNAF; abaixo de ~3,85, alto risco de falha.",
+     "enunciado": "Paciente em cateter de alto fluxo: SpO₂ 92%, FiO₂ 0,50, FR 30. O índice ROX é aproximadamente:",
+     "gab": "B",
+     "id": "vm-oxi-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "aumento seletivo da PaCO₂ por reinalação"
+      ],
+      [
+       "B",
+       "lavagem do espaço morto da faringe e pequena PEEP, com FiO₂ estável"
+      ],
+      [
+       "C",
+       "ventilação com pressão de suporte ajustável"
+      ],
+      [
+       "D",
+       "PEEP de 10–15 cmH₂O independentemente da boca"
+      ],
+      [
+       "E",
+       "eliminação do trabalho respiratório como na ventilação controlada"
+      ]
+     ],
+     "coment": "O alto fluxo supera o pico inspiratório do paciente (FiO₂ real próxima da ajustada), lava o CO₂ da via aérea superior e gera alguma pressão positiva — pequena e dependente da boca fechada.",
+     "enunciado": "Mecanismo do benefício do cateter nasal de alto fluxo:",
+     "gab": "B",
+     "id": "vm-oxi-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "sedar para reduzir a frequência respiratória"
+      ],
+      [
+       "B",
+       "reintubar sem atrasar"
+      ],
+      [
+       "C",
+       "nebulização com adrenalina e alta para enfermaria"
+      ],
+      [
+       "D",
+       "VNI de resgate por 4 horas antes de decidir"
+      ],
+      [
+       "E",
+       "cateter nasal de O₂ a 5 L/min e observar"
+      ]
+     ],
+     "coment": "Na insuficiência respiratória pós-extubação já instalada, VNI de resgate atrasou a reintubação e aumentou a mortalidade (Esteban 2004). VNI e CNAF funcionam como PREVENÇÃO, logo após extubar.",
+     "enunciado": "Paciente extubado há 18 h desenvolve insuficiência respiratória com FR 38 e uso de musculatura acessória. A conduta é:",
+     "gab": "B",
+     "id": "vm-oxi-6"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "substitui o uso de diuréticos e nitratos"
+      ],
+      [
+       "B",
+       "reduz o retorno venoso e a pós-carga do VE, aliviando o coração"
+      ],
+      [
+       "C",
+       "aumenta a pós-carga do VE e deve ser evitada"
+      ],
+      [
+       "D",
+       "só funciona se houver hipercapnia"
+      ],
+      [
+       "E",
+       "é contraindicada se a PA estiver acima de 160 mmHg"
+      ]
+     ],
+     "coment": "A pressão intratorácica positiva diminui a pré-carga e a pressão transmural do VE (menor pós-carga), além de recrutar alvéolos alagados. Reduz a intubação. É complementar ao tratamento, não substituto.",
+     "enunciado": "No edema agudo de pulmão cardiogênico, a pressão positiva (CPAP/VNI):",
+     "gab": "B",
+     "id": "vm-oxi-7"
+    }
+   ],
+   "titulo": "Oxigenoterapia, cateter de alto fluxo e VNI"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "Tobin, Principles and Practice of Mechanical Ventilation",
+     "ideia": "Todo modo ventilatório se entende respondendo três perguntas: o que inicia o ciclo, o que fica fixo durante a inspiração e o que a termina. Com isso, qualquer modo novo fica fácil de ler.",
+     "na_prova": "A banca pergunta o que cicla a pressão de suporte: a queda do fluxo inspiratório, em geral para cerca de 25% do pico.",
+     "pontos": [
+      "O disparo pode ser por tempo, feito pela máquina, ou pelo paciente, sentido por queda de pressão ou por fluxo.",
+      "O que fica fixo pode ser volume e fluxo, no modo volume controlado, ou pressão, nos modos pressão controlada e pressão de suporte.",
+      "A ciclagem termina a inspiração por volume ou tempo, por tempo ou pela queda do fluxo, como na pressão de suporte."
+     ],
+     "titulo": "As três perguntas de cada ciclo"
+    },
+    {
+     "fonte": "Tobin, Principles and Practice of Mechanical Ventilation",
+     "ideia": "No volume controlado o volume é garantido e a pressão varia; na pressão controlada a pressão é fixa e o volume varia. A pressão de suporte é espontânea: o paciente dispara e termina cada ciclo.",
+     "na_prova": "A banca dá paciente em pressão controlada com volume caindo e quer piora da mecânica, como secreção ou pulmão mais duro.",
+     "pontos": [
+      "O volume controlado permite medir platô e resistência, mas a pressão sobe se o pulmão endurecer.",
+      "A pressão controlada tem fluxo desacelerante, mas o volume cai se a complacência cair ou a resistência subir.",
+      "A pressão de suporte exige que o paciente tenha estímulo respiratório e é usada no desmame."
+     ],
+     "titulo": "Volume, pressão e suporte"
+    }
+   ],
+   "id": "modos",
+   "nivel": 2,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "a PEEP aumenta para compensar"
+      ],
+      [
+       "B",
+       "o fluxo inspiratório diminui"
+      ],
+      [
+       "C",
+       "o volume corrente se mantém e as pressões de pico e platô sobem"
+      ],
+      [
+       "D",
+       "o volume corrente cai e a pressão se mantém"
+      ],
+      [
+       "E",
+       "a frequência respiratória aumenta automaticamente"
+      ]
+     ],
+     "coment": "Em VCV, o volume é a variável fixa: a pressão é consequência da mecânica. Por isso o alarme de pressão alta é essencial nesse modo.",
+     "enunciado": "No modo volume controlado (VCV), se a complacência pulmonar cair bruscamente:",
+     "gab": "C",
+     "id": "vm-modos-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "O tempo inspiratório se encurta automaticamente"
+      ],
+      [
+       "B",
+       "A pressão de pico dispara acima do ajustado"
+      ],
+      [
+       "C",
+       "Nada muda, pois a pressão é fixa"
+      ],
+      [
+       "D",
+       "O volume corrente cai, com risco de hipoventilação"
+      ],
+      [
+       "E",
+       "O volume corrente aumenta"
+      ]
+     ],
+     "coment": "Em PCV a pressão é fixa e o volume é a consequência: resistência alta reduz o fluxo e o VT entregue. O alarme essencial aqui é o de volume-minuto baixo.",
+     "enunciado": "No modo pressão controlada (PCV), o paciente desenvolve broncoespasmo. O que acontece?",
+     "gab": "D",
+     "id": "vm-modos-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "tempo inspiratório programado"
+      ],
+      [
+       "B",
+       "volume corrente atingido"
+      ],
+      [
+       "C",
+       "queda do fluxo inspiratório a uma porcentagem do pico (ex.: 25%)"
+      ],
+      [
+       "D",
+       "pressão de platô atingida"
+      ],
+      [
+       "E",
+       "frequência respiratória mínima"
+      ]
+     ],
+     "coment": "Na PSV a inspiração termina quando o fluxo cai a uma fração do pico — o paciente controla o tempo inspiratório. Por isso é um modo espontâneo.",
+     "enunciado": "A ciclagem no modo pressão de suporte (PSV) ocorre por:",
+     "gab": "C",
+     "id": "vm-modos-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "aumento do volume corrente"
+      ],
+      [
+       "B",
+       "apneia, pois a PSV depende do esforço do paciente"
+      ],
+      [
+       "C",
+       "barotrauma por pressão de suporte excessiva"
+      ],
+      [
+       "D",
+       "nenhum, pois a PSV garante uma frequência mínima"
+      ],
+      [
+       "E",
+       "hiperventilação pela pressão fixa"
+      ]
+     ],
+     "coment": "A PSV não tem frequência garantida — só a ventilação de backup em apneia, se estiver configurada. Sedação profunda pede modo controlado.",
+     "enunciado": "Paciente em PSV recebe dose alta de propofol e para de disparar o ventilador. O risco é:",
+     "gab": "B",
+     "id": "vm-modos-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "volume corrente excessivo"
+      ],
+      [
+       "B",
+       "pressão de suporte insuficiente"
+      ],
+      [
+       "C",
+       "fluxo inspiratório muito baixo"
+      ],
+      [
+       "D",
+       "sensibilidade do disparo excessiva ou vazamento no circuito (autodisparo)"
+      ],
+      [
+       "E",
+       "auto-PEEP elevada"
+      ]
+     ],
+     "coment": "Com a sensibilidade muito alta, oscilações (vazamento, água no circuito, batimento cardíaco) são lidas como esforço: autodisparo. Ajuste a sensibilidade e corrija vazamentos.",
+     "enunciado": "Ventilador disparando sozinho, a 35 ciclos por minuto, com paciente sedado e sem esforço visível. Causa provável:",
+     "gab": "D",
+     "id": "vm-modos-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "dispensar alarmes de pressão"
+      ],
+      [
+       "B",
+       "ser um modo espontâneo"
+      ],
+      [
+       "C",
+       "garantir o volume-minuto e permitir medir platô e resistência com fluxo constante"
+      ],
+      [
+       "D",
+       "ter fluxo desacelerante, melhorando a distribuição do ar"
+      ],
+      [
+       "E",
+       "limitar automaticamente a pressão alveolar"
+      ]
+     ],
+     "coment": "Com fluxo constante e pausa, o VCV é o modo da monitorização da mecânica. O PCV limita a pressão e tem fluxo desacelerante, mas o volume varia.",
+     "enunciado": "Uma vantagem do modo volume controlado sobre o pressão controlada é:",
+     "gab": "C",
+     "id": "vm-modos-6"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "termina o tempo expiratório programado"
+      ],
+      [
+       "B",
+       "o esforço do paciente desvia um fluxo mínimo do circuito (ex.: 1–5 L/min)"
+      ],
+      [
+       "C",
+       "a pressão do circuito sobe acima da PEEP"
+      ],
+      [
+       "D",
+       "o fluxo expiratório chega a 25% do pico"
+      ],
+      [
+       "E",
+       "o volume corrente é atingido"
+      ]
+     ],
+     "coment": "Há fluxo contínuo de base no circuito; quando o paciente inspira, parte desse fluxo deixa de voltar ao ventilador — esse desvio dispara o ciclo. Costuma exigir menos esforço que o disparo por pressão.",
+     "enunciado": "O disparo do ventilador por fluxo significa que o ciclo começa quando:",
+     "gab": "B",
+     "id": "vm-modos-7"
+    }
+   ],
+   "titulo": "Modos ventilatórios"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "ARDSNet 2000; Diretrizes Brasileiras de Ventilação Mecânica (AMIB/SBPT)",
+     "ideia": "O volume corrente se calcula pelo peso predito pela altura, e não pelo peso real. O pulmão de quem engordou não cresceu, então usar o peso real hiperdistende os alvéolos.",
+     "na_prova": "A banca dá obeso de 1,70 m e 130 kg e quer o volume pelo peso predito, perto de 400 mL, e não 780 mL.",
+     "pontos": [
+      "No homem, o peso predito é 50 mais 0,91 vezes a altura em cm menos 152,4.",
+      "Na mulher, o peso predito é 45,5 mais 0,91 vezes a altura em cm menos 152,4.",
+      "O volume inicial é 6 mL/kg de peso predito, até 8 sem SDRA, e na SDRA fica entre 4 e 8, com platô de 30 ou menos."
+     ],
+     "titulo": "Peso predito e volume corrente"
+    },
+    {
+     "fonte": "Diretrizes Brasileiras de Ventilação Mecânica (AMIB/SBPT)",
+     "ideia": "Além do volume, o ajuste inicial define oxigênio, PEEP, frequência, fluxo e sensibilidade. A gasometria colhida 20 a 30 minutos depois mostra o que corrigir.",
+     "na_prova": "A banca pergunta quando colher a primeira gasometria após ajustar o ventilador: em 20 a 30 minutos.",
+     "pontos": [
+      "A fração de oxigênio começa alta logo após a intubação e cai rápido até manter saturação de 92 a 96%.",
+      "A PEEP começa em 5 cmH₂O, maior na SDRA, e a frequência fica entre 12 e 20, ajustada pela PaCO₂.",
+      "O fluxo no volume controlado fica entre 40 e 60 L/min, a relação inspiração-expiração entre 1:2 e 1:3."
+     ],
+     "titulo": "O resto do pacote inicial"
+    }
+   ],
+   "id": "ajustes",
+   "nivel": 2,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "530 mL (8 mL/kg do peso predito × 1,0)"
+      ],
+      [
+       "B",
+       "660 mL (6 mL/kg do peso real)"
+      ],
+      [
+       "C",
+       "880 mL (8 mL/kg do peso real)"
+      ],
+      [
+       "D",
+       "300 mL (4 mL/kg do peso real)"
+      ],
+      [
+       "E",
+       "400 mL (6 mL/kg de peso predito ≈ 66 kg)"
+      ]
+     ],
+     "coment": "Peso predito = 50 + 0,91 × (170 − 152,4) = 50 + 16 = 66 kg. 6 mL/kg × 66 ≈ 396 mL. Usar o peso real daria um VT de 660 mL — lesão pulmonar induzida pelo ventilador.",
+     "enunciado": "Homem de 1,70 m e 110 kg, intubado por pneumonia. O volume corrente inicial adequado é de aproximadamente:",
+     "gab": "E",
+     "id": "vm-ajustes-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "57 kg"
+      ],
+      [
+       "B",
+       "48 kg"
+      ],
+      [
+       "C",
+       "60 kg"
+      ],
+      [
+       "D",
+       "45 kg"
+      ],
+      [
+       "E",
+       "52 kg"
+      ]
+     ],
+     "coment": "45,5 + 0,91 × (160 − 152,4) = 45,5 + 6,9 = 52,4 kg. Para um homem de mesma altura, seria 56,9 kg.",
+     "enunciado": "Mulher de 1,60 m. O peso predito é aproximadamente:",
+     "gab": "E",
+     "id": "vm-ajustes-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "manter 100% por 24 h para proteger contra hipóxia"
+      ],
+      [
+       "B",
+       "manter FiO₂ fixa de 60% em todos os pacientes"
+      ],
+      [
+       "C",
+       "ajustar a FiO₂ pela PaCO₂"
+      ],
+      [
+       "D",
+       "começar em 21% e subir conforme a saturação"
+      ],
+      [
+       "E",
+       "começar em 100% e reduzir rapidamente para a menor FiO₂ com SpO₂ ~92–96%"
+      ]
+     ],
+     "coment": "A FiO₂ alta cobre a fase de incerteza logo após a intubação; manter hiperóxia causa atelectasia de reabsorção e toxicidade. Ajuste pela SpO₂ e pela PaO₂.",
+     "enunciado": "Logo após a intubação, a FiO₂ inicial e sua titulação devem ser:",
+     "gab": "E",
+     "id": "vm-ajustes-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "VT 8 mL/kg de peso real, FR 25, PEEP 0, FiO₂ 100% fixa"
+      ],
+      [
+       "B",
+       "VT 10–12 mL/kg de peso real, FR 8, PEEP 0"
+      ],
+      [
+       "C",
+       "VT 6–8 mL/kg de peso predito, FR 12–16, PEEP 5, FiO₂ para SpO₂ alvo"
+      ],
+      [
+       "D",
+       "PSV 20 sem frequência de backup"
+      ],
+      [
+       "E",
+       "VT 4 mL/kg, FR 35, PEEP 15"
+      ]
+     ],
+     "coment": "Ventilação protetora também beneficia quem não tem SDRA: VT baixo pelo peso predito e PEEP fisiológica. VT de 10–12 mL/kg é prática antiga.",
+     "enunciado": "Paciente adulto sem doença pulmonar, intubado para cirurgia. Qual conjunto inicial é adequado?",
+     "gab": "C",
+     "id": "vm-ajustes-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "1:2 a 1:3"
+      ],
+      [
+       "B",
+       "4:1"
+      ],
+      [
+       "C",
+       "2:1"
+      ],
+      [
+       "D",
+       "1:6 a 1:8"
+      ],
+      [
+       "E",
+       "1:1"
+      ]
+     ],
+     "coment": "Inspiração mais curta que a expiração imita a respiração normal e dá tempo para o pulmão esvaziar. I:E invertida (inspiração maior) é recurso de oxigenação na SDRA grave, com risco de auto-PEEP.",
+     "enunciado": "Qual relação I:E é habitual em um paciente sem doença obstrutiva?",
+     "gab": "A",
+     "id": "vm-ajustes-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "porque o peso predito corrige a complacência da caixa torácica"
+      ],
+      [
+       "B",
+       "para administrar volumes maiores no obeso"
+      ],
+      [
+       "C",
+       "porque o peso real superestima a necessidade de O₂"
+      ],
+      [
+       "D",
+       "porque o peso real é difícil de medir na UTI"
+      ],
+      [
+       "E",
+       "o tamanho do pulmão depende da altura e do sexo, não do peso corporal"
+      ]
+     ],
+     "coment": "Um homem de 1,70 m tem o mesmo pulmão com 70 ou 140 kg. VT pelo peso real hiperdistende os alvéolos (volutrauma).",
+     "enunciado": "Por que o volume corrente é calculado pelo peso predito e não pelo peso real?",
+     "gab": "E",
+     "id": "vm-ajustes-6"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "somente após 6 horas"
+      ],
+      [
+       "B",
+       "apenas no dia seguinte"
+      ],
+      [
+       "C",
+       "só se a SpO₂ cair"
+      ],
+      [
+       "D",
+       "após cerca de 20–30 minutos"
+      ],
+      [
+       "E",
+       "imediatamente após o ajuste"
+      ]
+     ],
+     "coment": "A PaCO₂ leva alguns minutos para chegar a um novo equilíbrio após mudanças de ventilação: colher cedo demais mede um estado de transição.",
+     "enunciado": "Após ajustar o ventilador, quando colher a gasometria de controle?",
+     "gab": "D",
+     "id": "vm-ajustes-7"
+    }
+   ],
+   "titulo": "Parâmetros iniciais"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "Tobin, Principles and Practice of Mechanical Ventilation",
+     "ideia": "Quando a pressão de pico sobe, o platô diz onde está o problema. Se o platô não mudou, o problema está no caminho do ar; se o platô subiu junto, o problema está no pulmão ou em volta dele.",
+     "na_prova": "A banca dá pico de 45 com platô de 20 e quer aspirar e broncodilatar, e não aumentar a PEEP.",
+     "pontos": [
+      "Pico alto com platô igual indica resistência: secreção, broncoespasmo, tubo dobrado ou mordido, filtro saturado.",
+      "Pico e platô altos juntos indicam complacência baixa: pneumotórax, intubação seletiva, atelectasia ou distensão abdominal.",
+      "Pico e platô baixos, com volume expirado menor, indicam vazamento, como balonete furado ou desconexão."
+     ],
+     "titulo": "O pico subiu? Olhe o platô"
+    },
+    {
+     "fonte": "Diretrizes Brasileiras de Ventilação Mecânica (AMIB/SBPT)",
+     "ideia": "Na piora súbita, o mnemônico DOPE organiza a busca: deslocamento do tubo, obstrução, pneumotórax e equipamento. O primeiro passo é tirar o ventilador da equação.",
+     "na_prova": "A banca pergunta a primeira conduta na dessaturação súbita do intubado: desconectar e ventilar com bolsa.",
+     "pontos": [
+      "Desconecte do ventilador e ventile com bolsa a 100% de oxigênio.",
+      "Se o paciente melhora, o problema é a máquina ou o circuito; se não melhora, é o paciente ou o tubo.",
+      "Passe a sonda de aspiração para testar obstrução e examine o tórax em busca de pneumotórax."
+     ],
+     "titulo": "Piora súbita no ventilador"
+    },
+    {
+     "fonte": "Diretrizes Brasileiras de Ventilação Mecânica (AMIB/SBPT)",
+     "ideia": "A capnografia mostra o CO₂ que sai em cada expiração. Ela confirma o tubo, avalia a qualidade da reanimação e denuncia problemas como desconexão e broncoespasmo.",
+     "na_prova": "A banca dá CO₂ expirado que salta para 40 durante a reanimação e quer suspeita de retorno da circulação espontânea.",
+     "pontos": [
+      "O CO₂ expirado normal fica 2 a 5 mmHg abaixo da PaCO₂, e a diferença cresce quando aumenta o espaço morto, como na embolia.",
+      "Na reanimação, valor abaixo de 10 mmHg indica compressões ineficazes, e um salto súbito sugere retorno da circulação.",
+      "Queda súbita a zero indica extubação, desconexão ou obstrução, e a curva em barbatana de tubarão indica broncoespasmo."
+     ],
+     "titulo": "Capnografia"
+    }
+   ],
+   "id": "monitor",
+   "nivel": 2,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "SDRA em progressão"
+      ],
+      [
+       "B",
+       "pneumotórax hipertensivo"
+      ],
+      [
+       "C",
+       "intubação seletiva"
+      ],
+      [
+       "D",
+       "distensão abdominal"
+      ],
+      [
+       "E",
+       "obstrução do tubo por secreção"
+      ]
+     ],
+     "coment": "Só o componente resistivo (pico − platô) aumentou: de 5 para 25. Pense no caminho do ar — secreção, broncoespasmo, dobra ou mordida do tubo. Aspirar.",
+     "enunciado": "Paciente em VCV: pressão de pico sobe de 25 para 45 cmH₂O, com platô estável em 20. A causa mais provável é:",
+     "gab": "E",
+     "id": "vm-monitor-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "aumentar a PEEP"
+      ],
+      [
+       "B",
+       "aspiração do tubo"
+      ],
+      [
+       "C",
+       "aumentar a sedação"
+      ],
+      [
+       "D",
+       "descompressão do hemitórax direito"
+      ],
+      [
+       "E",
+       "broncodilatador inalatório"
+      ]
+     ],
+     "coment": "Pico e platô sobem juntos: a complacência caiu. Com hipotensão e murmúrio abolido, é pneumotórax hipertensivo — a VPP piora rapidamente. Descompressão e drenagem.",
+     "enunciado": "Paciente em VCV: pico sobe de 28 para 42 e platô de 22 para 36 cmH₂O, com hipotensão súbita e murmúrio abolido à direita. A conduta é:",
+     "gab": "D",
+     "id": "vm-monitor-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "broncoespasmo"
+      ],
+      [
+       "B",
+       "pneumotórax"
+      ],
+      [
+       "C",
+       "secreção no tubo"
+      ],
+      [
+       "D",
+       "auto-PEEP"
+      ],
+      [
+       "E",
+       "vazamento (cuff furado ou desconexão)"
+      ]
+     ],
+     "coment": "Ar entra e não volta pelo circuito: está escapando. Cheque o cuff, as conexões e se o tubo saiu para a faringe.",
+     "enunciado": "Volume expirado bem menor que o inspirado, pressões em queda e alarme de baixo volume-minuto. A causa mais provável é:",
+     "gab": "E",
+     "id": "vm-monitor-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "radiografia de tórax urgente"
+      ],
+      [
+       "B",
+       "desconectar do ventilador e ventilar com bolsa-válvula a O₂ 100%"
+      ],
+      [
+       "C",
+       "trocar o tubo imediatamente"
+      ],
+      [
+       "D",
+       "aumentar a PEEP para 15"
+      ],
+      [
+       "E",
+       "solicitar gasometria arterial"
+      ]
+     ],
+     "coment": "Ao desconectar, você tira a máquina da equação: se melhora com a bolsa, o problema era o ventilador ou o circuito. Siga o DOPE (passar sonda, auscultar, olhar a capnografia).",
+     "enunciado": "Paciente intubado dessatura subitamente. Primeiro passo:",
+     "gab": "B",
+     "id": "vm-monitor-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "intubação esofágica"
+      ],
+      [
+       "B",
+       "sedação excessiva"
+      ],
+      [
+       "C",
+       "melhora da perfusão pulmonar"
+      ],
+      [
+       "D",
+       "hipoventilação alveolar pura"
+      ],
+      [
+       "E",
+       "aumento do espaço morto (ex.: TEP ou baixo débito)"
+      ]
+     ],
+     "coment": "Alvéolos ventilados e não perfundidos expiram ar sem CO₂ e diluem o EtCO₂. A PaCO₂ não muda, então o gradiente aumenta.",
+     "enunciado": "Na capnografia, aumento do gradiente PaCO₂ − EtCO₂ sugere:",
+     "gab": "E",
+     "id": "vm-monitor-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "erro do capnógrafo"
+      ],
+      [
+       "B",
+       "retorno da circulação espontânea"
+      ],
+      [
+       "C",
+       "hiperventilação pelo socorrista"
+      ],
+      [
+       "D",
+       "intubação esofágica"
+      ],
+      [
+       "E",
+       "compressões ineficazes"
+      ]
+     ],
+     "coment": "O EtCO₂ na RCP reflete o débito cardíaco gerado. Um salto abrupto e sustentado indica que o coração voltou a bombear: cheque pulso.",
+     "enunciado": "Durante a reanimação, o EtCO₂ sobe de 12 para 42 mmHg. Isso sugere:",
+     "gab": "B",
+     "id": "vm-monitor-6"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "embolia gasosa"
+      ],
+      [
+       "B",
+       "reinalação de CO₂"
+      ],
+      [
+       "C",
+       "obstrução ao fluxo expiratório (broncoespasmo)"
+      ],
+      [
+       "D",
+       "extubação acidental"
+      ],
+      [
+       "E",
+       "hipotermia"
+      ]
+     ],
+     "coment": "Unidades com constantes de tempo diferentes esvaziam em momentos diferentes: o CO₂ sobe aos poucos. É o padrão obstrutivo (asma, DPOC).",
+     "enunciado": "Curva de capnografia em 'barbatana de tubarão' (subida lenta, sem platô) indica:",
+     "gab": "C",
+     "id": "vm-monitor-7"
+    }
+   ],
+   "titulo": "Monitorização: pressões, curvas e alarmes"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "Tobin, Principles and Practice of Mechanical Ventilation",
+     "ideia": "A PaCO₂ depende da ventilação alveolar, então mexe-se no CO₂ pela frequência e pelo volume corrente. Com o volume fixo em valor protetor, ajusta-se a frequência por uma regra de três.",
+     "na_prova": "A banca dá frequência 15 com PaCO₂ de 60 e alvo de 45 e quer frequência nova de 20.",
+     "pontos": [
+      "A ventilação alveolar é o volume corrente menos o espaço morto, multiplicado pela frequência.",
+      "A frequência nova é a atual vezes a PaCO₂ atual, dividida pela PaCO₂ desejada.",
+      "Frequência muito alta encurta a expiração e cria auto-PEEP; na SDRA tolera-se hipercapnia com pH de 7,20 a 7,25 ou mais."
+     ],
+     "titulo": "O CO₂ depende da ventilação"
+    },
+    {
+     "fonte": "Tobin, Principles and Practice of Mechanical Ventilation",
+     "ideia": "A oxigenação depende da fração de oxigênio e da pressão média nas vias aéreas, que mantém os alvéolos abertos. Por isso, além de subir o oxigênio, sobe-se a PEEP quando ele não basta.",
+     "na_prova": "A banca pergunta o que fazer quando a fração já está alta e a PaO₂ continua baixa: subir a PEEP, e não só o oxigênio.",
+     "pontos": [
+      "A pressão média aumenta com a PEEP e com o tempo inspiratório.",
+      "Uma estimativa clássica é que a nova fração seja a atual vezes a PaO₂ desejada, dividida pela PaO₂ atual.",
+      "Com hipoxemia apesar de fração de 0,6 ou mais, sobe-se a PEEP e avalia-se a posição prona."
+     ],
+     "titulo": "O oxigênio depende da FiO₂ e da pressão média"
+    }
+   ],
+   "id": "gaso",
+   "nivel": 2,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "16"
+      ],
+      [
+       "B",
+       "20"
+      ],
+      [
+       "C",
+       "14"
+      ],
+      [
+       "D",
+       "28"
+      ],
+      [
+       "E",
+       "10"
+      ]
+     ],
+     "coment": "FR nova = 14 × 56 / 40 = 19,6 ≈ 20. A relação é inversa: reduzir a PaCO₂ em ~30% exige ~40% mais ventilação.",
+     "enunciado": "Paciente em VCV com FR 14 e PaCO₂ 56 mmHg. Para obter PaCO₂ de 40 mmHg sem mudar o VT, a nova FR deve ser cerca de:",
+     "gab": "B",
+     "id": "vm-gaso-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "~0,45"
+      ],
+      [
+       "B",
+       "~0,21"
+      ],
+      [
+       "C",
+       "~0,32"
+      ],
+      [
+       "D",
+       "~0,80"
+      ],
+      [
+       "E",
+       "~0,60"
+      ]
+     ],
+     "coment": "FiO₂ nova = 0,60 × 80/150 = 0,32. É uma estimativa (supõe P/F constante); confirme com a SpO₂ e a próxima gasometria.",
+     "enunciado": "Paciente em FiO₂ 0,60 com PaO₂ 150 mmHg. Para uma PaO₂ alvo de ~80 mmHg, a FiO₂ estimada é:",
+     "gab": "C",
+     "id": "vm-gaso-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "reduzir a PEEP para melhorar a eliminação de CO₂"
+      ],
+      [
+       "B",
+       "aumentar a FR (até ~35), sem aumentar o VT"
+      ],
+      [
+       "C",
+       "infundir bicarbonato de rotina"
+      ],
+      [
+       "D",
+       "aumentar o VT para 10 mL/kg"
+      ],
+      [
+       "E",
+       "nada a fazer, pois qualquer pH é aceitável"
+      ]
+     ],
+     "coment": "Protocolo ARDSNet: o VT fica protetor e corrige-se o pH pela FR (até 35). Hipercapnia é tolerada com pH ≥ 7,30 no protocolo (≥ 7,20 em muitos serviços).",
+     "enunciado": "Na SDRA, com VT de 6 mL/kg e platô de 28, a gasometria mostra pH 7,27 e PaCO₂ 58 mmHg com FR 24. A conduta mais adequada é:",
+     "gab": "B",
+     "id": "vm-gaso-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "FiO₂ e PEEP (pressão média de vias aéreas)"
+      ],
+      [
+       "B",
+       "FR e VT"
+      ],
+      [
+       "C",
+       "VT e sensibilidade"
+      ],
+      [
+       "D",
+       "fluxo inspiratório e sensibilidade"
+      ],
+      [
+       "E",
+       "FR e fluxo"
+      ]
+     ],
+     "coment": "FR e VT controlam o CO₂. A oxigenação depende do O₂ oferecido (FiO₂) e de manter alvéolos abertos (PEEP, tempo inspiratório, pressão média).",
+     "enunciado": "Quais parâmetros melhoram a OXIGENAÇÃO do paciente ventilado?",
+     "gab": "A",
+     "id": "vm-gaso-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "40 mmHg em qualquer caso"
+      ],
+      [
+       "B",
+       "70 mmHg, para poupar o pulmão"
+      ],
+      [
+       "C",
+       "próximo do basal dele (~55 mmHg)"
+      ],
+      [
+       "D",
+       "25 mmHg, para compensar o bicarbonato"
+      ],
+      [
+       "E",
+       "35 mmHg, para corrigir a hipercapnia"
+      ]
+     ],
+     "coment": "Baixar a PaCO₂ para 40 com HCO₃⁻ de 34 dá pH ~7,55 (alcalose pós-hipercápnica: arritmias, convulsão) e, no desmame, o rim terá perdido o bicarbonato que ele precisa.",
+     "enunciado": "DPOC com PaCO₂ basal de 55 mmHg e HCO₃⁻ de 34, intubado. Qual alvo de PaCO₂?",
+     "gab": "C",
+     "id": "vm-gaso-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "porque o CO₂ depende apenas da PEEP"
+      ],
+      [
+       "B",
+       "porque a FiO₂ precisa subir junto"
+      ],
+      [
+       "C",
+       "porque o ventilador limita a FR em 20"
+      ],
+      [
+       "D",
+       "porque a FR não influencia a ventilação alveolar"
+      ],
+      [
+       "E",
+       "encurta o tempo expiratório (auto-PEEP) e aumenta a fração de espaço morto"
+      ]
+     ],
+     "coment": "Com FR alta, sobra pouco tempo para expirar (ar preso) e, se o VT for pequeno, uma fração maior de cada ciclo é espaço morto. A ventilação alveolar cresce menos que o esperado.",
+     "enunciado": "Por que aumentar a FR indefinidamente nem sempre reduz a PaCO₂?",
+     "gab": "E",
+     "id": "vm-gaso-6"
+    }
+   ],
+   "titulo": "Ajustes pela gasometria"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "Berlim 2012; definição global de SDRA 2024",
+     "ideia": "A SDRA é um edema pulmonar inflamatório, e não cardíaco, que aparece em até uma semana de uma agressão. A gravidade se mede pela relação PaO₂ sobre fração inspirada, com PEEP mínima.",
+     "na_prova": "A banca dá relação de 150 com PEEP de 8 e opacidades bilaterais após pancreatite e quer SDRA moderada.",
+     "pontos": [
+      "Ela exige início em até 1 semana, opacidades bilaterais e edema que a insuficiência cardíaca não explica sozinha.",
+      "Com PEEP de 5 ou mais, a relação é leve de 200 a 300, moderada de 100 a 200 e grave com 100 ou menos.",
+      "A definição global de 2024 aceita alto fluxo de 30 L/min ou mais, saturação sobre fração de até 315 e ultrassom pulmonar."
+     ],
+     "titulo": "Definição da SDRA"
+    },
+    {
+     "fonte": "ARDSNet 2000; ESICM 2023 (SDRA); definição global de SDRA 2024; Amato et al., NEJM 2015",
+     "ideia": "Na SDRA, só uma parte pequena do pulmão está aberta, como se fosse um pulmão de bebê. Volume e pressão baixos evitam rasgar esse pulmão pequeno, e isso reduz a mortalidade.",
+     "na_prova": "A banca pergunta o melhor preditor de mortalidade na SDRA ventilada: a pressão de distensão, conforme Amato em 2015.",
+     "pontos": [
+      "O volume é de 6 mL/kg de peso predito, entre 4 e 8, com platô de 30 cmH₂O ou menos.",
+      "A pressão de distensão, platô menos PEEP, deve ficar em 15 ou menos e é o melhor marcador de risco.",
+      "Manobras de recrutamento máximo de rotina não são indicadas, porque aumentaram a mortalidade no estudo ART."
+     ],
+     "titulo": "Ventilação protetora"
+    },
+    {
+     "fonte": "PROSEVA (NEJM 2013); EOLIA 2018; ARDSNet 2000; ESICM 2023 (SDRA); definição global de SDRA 2024",
+     "ideia": "Quando a SDRA é moderada a grave, a posição prona é a medida de resgate que mais reduziu mortalidade. Ela distribui melhor a ventilação e abre áreas que estavam colapsadas.",
+     "na_prova": "A banca dá relação de 110 após 12 horas de ventilação protetora e quer posição prona, antes de pensar em ECMO.",
+     "pontos": [
+      "Indica-se prona com relação abaixo de 150, fração de 0,6 ou mais e PEEP de 5 ou mais, cedo e por 16 horas ou mais por dia.",
+      "No estudo PROSEVA, a mortalidade em 28 dias caiu de cerca de 33% para 16%.",
+      "Bloqueador neuromuscular não é rotina, e a ECMO venovenosa fica para casos refratários em centro experiente."
+     ],
+     "titulo": "Resgate na SDRA grave"
+    }
+   ],
+   "id": "sdra",
+   "nivel": 3,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "óxido nítrico inalatório"
+      ],
+      [
+       "B",
+       "volume corrente de 6 mL/kg de peso predito com platô ≤ 30"
+      ],
+      [
+       "C",
+       "corticoide de rotina em todas as fases"
+      ],
+      [
+       "D",
+       "surfactante exógeno em adultos"
+      ],
+      [
+       "E",
+       "manobras de recrutamento máximo de rotina"
+      ]
+     ],
+     "coment": "ARDSNet (2000): VT 6 versus 12 mL/kg reduziu a mortalidade de 39,8% para 31%. Óxido nítrico melhora a P/F transitoriamente sem reduzir mortalidade; recrutamento máximo aumentou mortalidade no ART.",
+     "enunciado": "Qual intervenção REDUZIU a mortalidade na SDRA em ensaio clínico randomizado de grande porte?",
+     "gab": "B",
+     "id": "vm-sdra-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "29 cmH₂O — normal"
+      ],
+      [
+       "B",
+       "19 cmH₂O — acima de 15, associada a maior mortalidade"
+      ],
+      [
+       "C",
+       "39 cmH₂O — critério de ECMO"
+      ],
+      [
+       "D",
+       "19 cmH₂O — protetora, pois o platô está abaixo de 30"
+      ],
+      [
+       "E",
+       "10 cmH₂O — protetora"
+      ]
+     ],
+     "coment": "DP = Pplat − PEEP = 29 − 10 = 19. Mesmo com platô < 30, a DP > 15 indica estresse excessivo para o pulmão disponível. Reduzir o VT (se possível) ou titular a PEEP.",
+     "enunciado": "Paciente com SDRA: VT 420 mL, platô 29, PEEP 10. A driving pressure e a interpretação são:",
+     "gab": "B",
+     "id": "vm-sdra-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "óxido nítrico inalatório"
+      ],
+      [
+       "B",
+       "aumentar o VT para melhorar a oxigenação"
+      ],
+      [
+       "C",
+       "corticoide em dose de pulso"
+      ],
+      [
+       "D",
+       "ventilação oscilatória de alta frequência"
+      ],
+      [
+       "E",
+       "posição prona por pelo menos 16 horas por dia"
+      ]
+     ],
+     "coment": "PROSEVA: prona precoce (P/F < 150, FiO₂ ≥ 0,6) por ≥ 16 h/dia reduziu a mortalidade em 28 dias de 32,8% para 16%. A ventilação oscilatória aumentou mortalidade (OSCILLATE).",
+     "enunciado": "SDRA com P/F de 110 em FiO₂ 0,7 e PEEP 12, nas primeiras 24 horas. A medida com maior benefício em mortalidade é:",
+     "gab": "E",
+     "id": "vm-sdra-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "não há SDRA, pois a causa é extrapulmonar"
+      ],
+      [
+       "B",
+       "grave (P/F 150)"
+      ],
+      [
+       "C",
+       "moderada (P/F 150)"
+      ],
+      [
+       "D",
+       "leve (P/F 150)"
+      ],
+      [
+       "E",
+       "moderada (P/F 54)"
+      ]
+     ],
+     "coment": "P/F = 90 / 0,6 = 150 → entre 100 e 200: moderada. A causa pode ser pulmonar ou extrapulmonar (sepse, pancreatite, trauma, transfusão).",
+     "enunciado": "Pela definição de Berlim, paciente intubado com PEEP 8, opacidades bilaterais por pancreatite e PaO₂ 90 em FiO₂ 0,6 tem SDRA:",
+     "gab": "C",
+     "id": "vm-sdra-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "hipertensão intracraniana"
+      ],
+      [
+       "B",
+       "asma grave intubada"
+      ],
+      [
+       "C",
+       "DPOC exacerbado"
+      ],
+      [
+       "D",
+       "pneumonia bacteriana"
+      ],
+      [
+       "E",
+       "SDRA moderada"
+      ]
+     ],
+     "coment": "CO₂ é potente vasodilatador cerebral: hipercapnia aumenta o fluxo e o volume sanguíneo cerebral e a PIC. No TCE grave, mira-se PaCO₂ normal (35–40).",
+     "enunciado": "Em qual situação a hipercapnia permissiva é especialmente perigosa?",
+     "gab": "A",
+     "id": "vm-sdra-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "PEEP ou CPAP de pelo menos 5 cmH₂O no cálculo da P/F"
+      ],
+      [
+       "B",
+       "início em até 72 horas do insulto"
+      ],
+      [
+       "C",
+       "opacidade unilateral em pelo menos 2 lobos"
+      ],
+      [
+       "D",
+       "pressão de oclusão da artéria pulmonar < 18 mmHg"
+      ],
+      [
+       "E",
+       "P/F menor que 100"
+      ]
+     ],
+     "coment": "Berlim retirou a exigência do cateter de artéria pulmonar (POAP), definiu o início em até 1 semana e exige PEEP/CPAP ≥ 5. P/F < 100 é só o grau grave.",
+     "enunciado": "Critério obrigatório da definição de Berlim para SDRA:",
+     "gab": "A",
+     "id": "vm-sdra-6"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "pode ser considerado nas primeiras 48 h da SDRA grave, mas não é rotina"
+      ],
+      [
+       "B",
+       "reduziu a mortalidade em todos os ensaios clínicos"
+      ],
+      [
+       "C",
+       "é contraindicado em qualquer caso"
+      ],
+      [
+       "D",
+       "substitui a ventilação protetora"
+      ],
+      [
+       "E",
+       "deve ser usado em toda SDRA leve"
+      ]
+     ],
+     "coment": "O ACURASYS (2010) sugeriu benefício do cisatracúrio por 48 h; o ROSE (2019), com sedação mais leve no controle, não mostrou benefício. Uso seletivo: assincronia grave, hipoxemia refratária.",
+     "enunciado": "Sobre o bloqueio neuromuscular na SDRA, é correto:",
+     "gab": "A",
+     "id": "vm-sdra-7"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "driving pressure (platô − PEEP)"
+      ],
+      [
+       "B",
+       "pressão de pico"
+      ],
+      [
+       "C",
+       "FiO₂"
+      ],
+      [
+       "D",
+       "volume-minuto"
+      ],
+      [
+       "E",
+       "frequência respiratória"
+      ]
+     ],
+     "coment": "A driving pressure é o VT 'normalizado' pela complacência (VT/Cst): mostra quanto o pulmão que sobrou está sendo esticado. Foi a variável mais associada à sobrevida.",
+     "enunciado": "A medida de ventilação protetora que melhor reflete o estresse pulmonar, segundo Amato et al. (2015), é:",
+     "gab": "A",
+     "id": "vm-sdra-8"
+    }
+   ],
+   "titulo": "SDRA e ventilação protetora"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "Tobin, Principles and Practice of Mechanical Ventilation",
+     "ideia": "No paciente obstrutivo, o pulmão demora a esvaziar e o ar fica preso a cada ciclo. Esse ar preso aumenta a pressão no tórax e pode derrubar a pressão arterial.",
+     "na_prova": "A banca dá asmático que fica hipotenso logo após a intubação e quer ar preso, aliviado ao desconectar o tubo.",
+     "pontos": [
+      "A constante de tempo longa gera hiperinsuflação dinâmica e auto-PEEP.",
+      "A pressão alta no tórax reduz o retorno venoso e causa hipotensão, além do risco de barotrauma.",
+      "O paciente precisa vencer a auto-PEEP para disparar o ventilador, o que gera esforço sem ciclo."
+     ],
+     "titulo": "O inimigo é o ar preso"
+    },
+    {
+     "fonte": "Tobin, Principles and Practice of Mechanical Ventilation; Diretrizes Brasileiras de Ventilação Mecânica (AMIB/SBPT)",
+     "ideia": "A estratégia é dar tempo para o ar sair. Isso se consegue com frequência baixa, inspiração curta e expiração longa, aceitando um CO₂ mais alto.",
+     "na_prova": "A banca pergunta como reduzir a auto-PEEP: diminuir a frequência e aumentar o fluxo, para alongar a expiração.",
+     "pontos": [
+      "Use frequência de 8 a 12, volume de 6 a 8 mL/kg, fluxo alto de 60 a 100 L/min e relação de 1:3 a 1:5.",
+      "Monitore platô abaixo de 30 e auto-PEEP, aceitando hipercapnia permissiva.",
+      "Se houver hipotensão após intubar, desconecte por 30 a 60 segundos e dê volume; sem melhora, pense em pneumotórax."
+     ],
+     "titulo": "Como ventilar o obstrutivo"
+    }
+   ],
+   "id": "obstr",
+   "nivel": 3,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "aumentar a FR para melhorar a ventilação"
+      ],
+      [
+       "B",
+       "drenar os dois hemitóraces imediatamente"
+      ],
+      [
+       "C",
+       "iniciar noradrenalina e manter os parâmetros"
+      ],
+      [
+       "D",
+       "desconectar o ventilador por alguns segundos para permitir a exalação"
+      ],
+      [
+       "E",
+       "aumentar a PEEP para 15 cmH₂O"
+      ]
+     ],
+     "coment": "Hiperinsuflação dinâmica: o ar preso comprime o coração e reduz o retorno venoso. Desconectar deixa o pulmão esvaziar; a PA sobe em segundos. Depois: FR menor, fluxo alto, volume.",
+     "enunciado": "Asmático intubado há 5 minutos fica hipotenso (PA 70/40), com tórax hiperexpandido e murmúrio diminuído bilateralmente. Primeira conduta:",
+     "gab": "D",
+     "id": "vm-obstr-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "aumentar o VT para 10 mL/kg"
+      ],
+      [
+       "B",
+       "aumentar o tempo inspiratório com pausa longa"
+      ],
+      [
+       "C",
+       "aumentar a FR e reduzir o fluxo"
+      ],
+      [
+       "D",
+       "reduzir a FR e aumentar o fluxo inspiratório"
+      ],
+      [
+       "E",
+       "inverter a relação I:E"
+      ]
+     ],
+     "coment": "O que importa é o tempo EXPIRATÓRIO. FR menor alonga o ciclo; fluxo maior encurta a inspiração. Os dois dão mais tempo para o ar sair.",
+     "enunciado": "Para reduzir a auto-PEEP em um paciente com asma grave em VCV, deve-se:",
+     "gab": "D",
+     "id": "vm-obstr-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "aumentar o VT para 10 mL/kg"
+      ],
+      [
+       "B",
+       "reduzir o fluxo inspiratório"
+      ],
+      [
+       "C",
+       "sedar profundamente e paralisar"
+      ],
+      [
+       "D",
+       "reduzir a PEEP para zero"
+      ],
+      [
+       "E",
+       "elevar a PEEP externa para ~7–8 cmH₂O"
+      ]
+     ],
+     "coment": "Para disparar, o paciente precisa primeiro vencer a auto-PEEP. PEEP externa em ~70–85% da intrínseca reduz esse degrau sem aumentar o ar preso (o ponto de colapso está nas vias aéreas).",
+     "enunciado": "Paciente com DPOC em ventilação assistida não consegue disparar o ventilador em vários esforços visíveis. Auto-PEEP medida de 10 cmH₂O, PEEP ajustada de 3. Conduta:",
+     "gab": "E",
+     "id": "vm-obstr-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "alcalose respiratória leve"
+      ],
+      [
+       "B",
+       "normalizar a PaCO₂ em 40 mmHg nas primeiras horas"
+      ],
+      [
+       "C",
+       "pH acima de 7,40 a qualquer custo"
+      ],
+      [
+       "D",
+       "aceitar hipercapnia com pH ≥ ~7,20, priorizando evitar hiperinsuflação"
+      ],
+      [
+       "E",
+       "manter PaCO₂ abaixo de 35"
+      ]
+     ],
+     "coment": "Tentar normalizar o CO₂ exige FR alta, que aprisiona ar e mata. A hipercapnia permissiva foi o que reduziu a mortalidade do asmático ventilado.",
+     "enunciado": "No asmático grave intubado, o objetivo gasométrico inicial é:",
+     "gab": "D",
+     "id": "vm-obstr-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "pressão de pico normal com platô baixo"
+      ],
+      [
+       "B",
+       "volume expirado maior que o inspirado"
+      ],
+      [
+       "C",
+       "EtCO₂ igual à PaCO₂"
+      ],
+      [
+       "D",
+       "curva de fluxo expiratório que chega a zero antes do próximo ciclo"
+      ],
+      [
+       "E",
+       "platô elevado com auto-PEEP medida alta"
+      ]
+     ],
+     "coment": "Ar preso aumenta o volume pulmonar no fim da expiração (auto-PEEP) e no fim da inspiração (platô). Platô > 30 e auto-PEEP > 10 pedem menos ventilação-minuto.",
+     "enunciado": "Qual achado indica hiperinsuflação dinâmica significativa no paciente obstrutivo em VCV?",
+     "gab": "E",
+     "id": "vm-obstr-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "PSV 5 sem frequência de backup"
+      ],
+      [
+       "B",
+       "VT 8 mL/kg de peso real, FR 24, I:E 2:1"
+      ],
+      [
+       "C",
+       "VT 4 mL/kg, FR 35, PEEP 15"
+      ],
+      [
+       "D",
+       "VT 10 mL/kg, FR 20, fluxo 30 L/min, I:E 1:1"
+      ],
+      [
+       "E",
+       "VT 6–8 mL/kg de peso predito, FR 10–12, fluxo 60–80 L/min, I:E ≥ 1:3"
+      ]
+     ],
+     "coment": "Meta: tempo expiratório longo e volume-minuto modesto. FR alta e fluxo lento encurtam a expiração e aprisionam ar.",
+     "enunciado": "Ajuste inicial adequado para um paciente com DPOC exacerbado que precisou de intubação:",
+     "gab": "E",
+     "id": "vm-obstr-6"
+    }
+   ],
+   "titulo": "Asma e DPOC no ventilador"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "Diretrizes Brasileiras de Ventilação Mecânica (AMIB/SBPT); ABC (Lancet 2008)",
+     "ideia": "O desmame começa com uma triagem diária: a causa da intubação melhorou e o paciente está estável? Se sim, ele já pode fazer o teste de respiração espontânea.",
+     "na_prova": "A banca pergunta a frequência da triagem para desmame: diária. Esperar o paciente ficar perfeito atrasa a extubação.",
+     "pontos": [
+      "A triagem pede PaO₂ de 60 ou mais com fração de 0,4 ou menos e PEEP de 5 a 8 ou menos.",
+      "Também pede estabilidade hemodinâmica, estímulo respiratório, tosse e pH de 7,25 a 7,30 ou mais.",
+      "Despertar diário junto com o teste de respiração espontânea reduziu tempo de ventilação e mortalidade no estudo ABC."
+     ],
+     "titulo": "Pronto para tentar?"
+    },
+    {
+     "fonte": "Yang e Tobin, NEJM 1991; Diretrizes Brasileiras de Ventilação Mecânica (AMIB/SBPT)",
+     "ideia": "O teste simula a vida sem o ventilador por 30 a 120 minutos, com suporte mínimo. Se o paciente aguenta sem sinais de cansaço, a extubação tem boa chance de dar certo.",
+     "na_prova": "A banca dá frequência de 30 e volume de 300 mL e pede o índice: 30 dividido por 0,3 dá 100, abaixo de 105.",
+     "pontos": [
+      "O teste usa pressão de suporte de 5 a 7 cmH₂O com PEEP de 5 ou menos, ou tubo T.",
+      "Falha é frequência acima de 35, saturação abaixo de 90%, taquicardia acima de 140, pressão muito alta ou baixa e agitação.",
+      "O índice de Tobin, frequência dividida pelo volume em litros, abaixo de 105 prediz sucesso, mas não deve ser usado sozinho."
+     ],
+     "titulo": "Teste de respiração espontânea"
+    },
+    {
+     "fonte": "Diretrizes Brasileiras de Ventilação Mecânica (AMIB/SBPT)",
+     "ideia": "A extubação não termina o cuidado, porque alguns pacientes falham nas primeiras 48 horas. Nos de alto risco, o suporte não invasivo preventivo reduz a reintubação.",
+     "na_prova": "A banca dá DPOC hipercápnico recém-extubado e quer ventilação não invasiva preventiva, e não esperar a falha.",
+     "pontos": [
+      "Idade acima de 65 anos, insuficiência cardíaca, DPOC e hipercapnia são fatores de alto risco de falha.",
+      "Nesses pacientes, usa-se ventilação não invasiva ou alto fluxo preventivos logo após extubar.",
+      "Se o teste de vazamento do balonete falhar, dá-se corticoide pelo menos 4 horas antes da extubação."
+     ],
+     "titulo": "Depois do tubo"
+    }
+   ],
+   "id": "desmame",
+   "nivel": 3,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "100 — sugere falha (> 80)"
+      ],
+      [
+       "B",
+       "9.000 — sugere falha"
+      ],
+      [
+       "C",
+       "10 — sugere sucesso"
+      ],
+      [
+       "D",
+       "100 — sugere sucesso (< 105)"
+      ],
+      [
+       "E",
+       "0,1 — sugere falha"
+      ]
+     ],
+     "coment": "IRRS = FR / VT em litros = 30 / 0,3 = 100 respirações/min/L. Respiração rápida e superficial (IRRS alto) prediz falha; o corte clássico é 105.",
+     "enunciado": "Durante o TRE, paciente com FR 30 e VT 300 mL. O índice de Tobin (IRRS) e a interpretação são:",
+     "gab": "D",
+     "id": "vm-desmame-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "VCV com FR 12 e VT 8 mL/kg"
+      ],
+      [
+       "B",
+       "PSV 20 cmH₂O por 6 horas"
+      ],
+      [
+       "C",
+       "SIMV reduzindo 2 ciclos por dia"
+      ],
+      [
+       "D",
+       "CPAP 15 cmH₂O por 10 minutos"
+      ],
+      [
+       "E",
+       "PSV 5–7 cmH₂O com PEEP ≤ 5 por 30–120 minutos"
+      ]
+     ],
+     "coment": "Suporte mínimo ou tubo T simulam a respiração após extubar. Desmame gradual por SIMV é o método MAIS lento — não é recomendado.",
+     "enunciado": "Qual configuração é aceita para o teste de respiração espontânea?",
+     "gab": "E",
+     "id": "vm-desmame-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "SpO₂ de 94% em FiO₂ 0,35"
+      ],
+      [
+       "B",
+       "FR de 38 com sudorese e uso de musculatura acessória"
+      ],
+      [
+       "C",
+       "PAS de 130 mmHg"
+      ],
+      [
+       "D",
+       "FR de 22 e paciente tranquilo"
+      ],
+      [
+       "E",
+       "FC de 98 (antes 90)"
+      ]
+     ],
+     "coment": "Taquipneia > 35 com sinais de esforço e estresse adrenérgico = falha. Volte ao suporte prévio, procure a causa e tente de novo em 24 h.",
+     "enunciado": "Critério que indica FALHA no teste de respiração espontânea:",
+     "gab": "B",
+     "id": "vm-desmame-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "VNI preventiva logo após a extubação"
+      ],
+      [
+       "B",
+       "manter intubado mais 48 horas"
+      ],
+      [
+       "C",
+       "aguardar falha e então iniciar VNI de resgate"
+      ],
+      [
+       "D",
+       "corticoide sistêmico por 7 dias"
+      ],
+      [
+       "E",
+       "traqueostomia antes de extubar"
+      ]
+     ],
+     "coment": "No alto risco, VNI (ou VNI intercalada com CNAF) imediatamente após a extubação reduz a reintubação. VNI de RESGATE após a falha instalada aumenta a mortalidade.",
+     "enunciado": "Paciente de 72 anos, com insuficiência cardíaca e DPOC, passou no TRE e será extubado. Para reduzir o risco de reintubação, recomenda-se:",
+     "gab": "A",
+     "id": "vm-desmame-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "administrar corticoide pelo menos 4 horas antes"
+      ],
+      [
+       "B",
+       "fazer traqueostomia imediata"
+      ],
+      [
+       "C",
+       "aumentar a pressão do cuff"
+      ],
+      [
+       "D",
+       "adrenalina nebulizada antes de extubar como única medida"
+      ],
+      [
+       "E",
+       "extubar e observar, sem medidas"
+      ]
+     ],
+     "coment": "Sem vazamento ao desinsuflar o cuff = edema de laringe provável. Corticoide sistêmico (≥ 4 h antes, em geral 12–24 h) reduz estridor e reintubação. A adrenalina nebulizada trata o estridor instalado.",
+     "enunciado": "Paciente intubado há 9 dias por queimadura de via aérea, com teste de vazamento do cuff positivo para obstrução (sem vazamento). Antes de extubar, deve-se:",
+     "gab": "A",
+     "id": "vm-desmame-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "prolongado"
+      ],
+      [
+       "B",
+       "simples"
+      ],
+      [
+       "C",
+       "difícil"
+      ],
+      [
+       "D",
+       "precoce"
+      ],
+      [
+       "E",
+       "impossível"
+      ]
+     ],
+     "coment": "Simples = sucesso no 1º TRE. Difícil = até 3 TREs ou até 7 dias após o primeiro. Prolongado = mais de 3 TREs ou mais de 7 dias.",
+     "enunciado": "Paciente que falhou em 2 testes de respiração espontânea e foi extubado no 5º dia. Pela classificação internacional, o desmame foi:",
+     "gab": "C",
+     "id": "vm-desmame-6"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "desmame gradual por SIMV"
+      ],
+      [
+       "B",
+       "interrupção diária da sedação pareada ao teste de respiração espontânea"
+      ],
+      [
+       "C",
+       "manter PSV alta até a alta da UTI"
+      ],
+      [
+       "D",
+       "sedação profunda contínua até a resolução do quadro"
+      ],
+      [
+       "E",
+       "traqueostomia de rotina no 2º dia"
+      ]
+     ],
+     "coment": "No estudo ABC (Girard 2008), acordar o paciente e testar a respiração no mesmo dia reduziu o tempo de VM e a mortalidade em 1 ano.",
+     "enunciado": "Qual estratégia reduz o tempo de ventilação mecânica e a mortalidade?",
+     "gab": "B",
+     "id": "vm-desmame-7"
+    }
+   ],
+   "titulo": "Desmame e extubação"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "ARDSNet 2000; ESICM 2023 (SDRA); definição global de SDRA 2024",
+     "ideia": "O próprio ventilador pode lesar o pulmão de quatro formas. Entender cada uma explica por que se usa volume baixo, platô limitado e PEEP suficiente.",
+     "na_prova": "A banca pergunta qual lesão a PEEP previne: o atelectrauma, ao manter os alvéolos abertos no fim da expiração.",
+     "pontos": [
+      "O volutrauma vem da hiperdistensão, e o barotrauma causa pneumotórax e pneumomediastino.",
+      "O atelectrauma vem de abrir e fechar alvéolos a cada ciclo, e o biotrauma é a inflamação que se espalha pelo corpo.",
+      "A prevenção usa volume baixo, platô de 30 ou menos, pressão de distensão de 15 ou menos e PEEP que evite o colapso cíclico."
+     ],
+     "titulo": "Lesão pulmonar pelo ventilador"
+    },
+    {
+     "fonte": "Tobin, Principles and Practice of Mechanical Ventilation",
+     "ideia": "A pressão positiva no tórax reduz o retorno de sangue ao coração e pode baixar a pressão arterial. Em compensação, ela alivia o trabalho do ventrículo esquerdo, o que ajuda quem tem insuficiência cardíaca.",
+     "na_prova": "Pegadinha: usar variação da pressão de pulso em paciente que respira espontaneamente ou em fibrilação atrial. Nesses casos, o índice não vale.",
+     "pontos": [
+      "A hipotensão logo após a intubação é comum, sobretudo no paciente desidratado.",
+      "A PEEP alta pode aumentar a pós-carga do ventrículo direito e piorar o cor pulmonale.",
+      "A variação da pressão de pulso acima de 13% prevê resposta a volume, mas só em volume controlado, sem esforço e em ritmo sinusal."
+     ],
+     "titulo": "Coração e ventilador"
+    },
+    {
+     "fonte": "SHEA/IDSA/APIC 2022",
+     "ideia": "É a pneumonia que surge depois de 48 horas de intubação, causada sobretudo por germes hospitalares. As medidas de prevenção atacam a aspiração de secreções e o tempo de ventilação.",
+     "na_prova": "A banca pergunta se trocar o circuito a cada 48 horas previne pneumonia: não, a troca só se faz se ele estiver sujo ou com defeito.",
+     "pontos": [
+      "Os agentes mais comuns são Pseudomonas, Acinetobacter, enterobactérias e Staphylococcus aureus.",
+      "A prevenção inclui cabeceira entre 30 e 45 graus, despertar diário e avaliação diária de extubação.",
+      "Também se mantém o balonete entre 20 e 30 cmH₂O e não se troca o circuito de rotina."
+     ],
+     "titulo": "Pneumonia associada à ventilação"
+    }
+   ],
+   "id": "compl",
+   "nivel": 3,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "vasoconstrição pela hiperóxia"
+      ],
+      [
+       "B",
+       "redução do retorno venoso pela pressão intratorácica positiva"
+      ],
+      [
+       "C",
+       "aumento da pós-carga do ventrículo esquerdo"
+      ],
+      [
+       "D",
+       "hipercalemia pela succinilcolina"
+      ],
+      [
+       "E",
+       "aumento do débito cardíaco"
+      ]
+     ],
+     "coment": "Na respiração espontânea a pressão intratorácica é negativa e 'puxa' sangue; na VPP ela fica positiva e reduz o retorno venoso. Some-se a vasodilatação dos sedativos e a perda do tônus simpático. Volume e vasopressor à mão.",
+     "enunciado": "Paciente intubado na sala de emergência evolui com hipotensão nos primeiros minutos de VPP. O mecanismo mais comum é:",
+     "gab": "B",
+     "id": "vm-compl-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "manter a cabeceira elevada a 30–45°"
+      ],
+      [
+       "B",
+       "manter a pressão do cuff abaixo de 15 cmH₂O"
+      ],
+      [
+       "C",
+       "antibiótico profilático de rotina"
+      ],
+      [
+       "D",
+       "trocar o circuito do ventilador a cada 48 horas"
+      ],
+      [
+       "E",
+       "sedação profunda contínua"
+      ]
+     ],
+     "coment": "Cabeceira elevada reduz a aspiração de conteúdo gástrico e orofaríngeo. Trocar o circuito de rotina aumenta a manipulação sem benefício; cuff baixo favorece microaspiração.",
+     "enunciado": "É medida preventiva de pneumonia associada à ventilação mecânica:",
+     "gab": "A",
+     "id": "vm-compl-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "paciente sedado, em VCV com VT ≥ 8 mL/kg, ritmo sinusal"
+      ],
+      [
+       "B",
+       "paciente em PSV com esforço espontâneo"
+      ],
+      [
+       "C",
+       "paciente com VT de 4 mL/kg"
+      ],
+      [
+       "D",
+       "paciente em fibrilação atrial"
+      ],
+      [
+       "E",
+       "paciente com tórax aberto"
+      ]
+     ],
+     "coment": "A VPP depende de uma variação de pressão intratorácica regular e suficiente. Arritmia, respiração espontânea e VT baixo produzem falsos resultados.",
+     "enunciado": "A variação da pressão de pulso (VPP) para prever resposta a volume é válida em:",
+     "gab": "A",
+     "id": "vm-compl-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "oxitoxicidade"
+      ],
+      [
+       "B",
+       "volutrauma"
+      ],
+      [
+       "C",
+       "biotrauma"
+      ],
+      [
+       "D",
+       "barotrauma"
+      ],
+      [
+       "E",
+       "atelectrauma"
+      ]
+     ],
+     "coment": "Sem PEEP suficiente, unidades colapsam na expiração e reabrem a cada inspiração, gerando forças de cisalhamento. A PEEP é a principal prevenção.",
+     "enunciado": "Mecanismo de lesão pulmonar pela abertura e fechamento cíclico de alvéolos instáveis:",
+     "gab": "E",
+     "id": "vm-compl-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "vírus respiratórios exclusivamente"
+      ],
+      [
+       "B",
+       "Pseudomonas aeruginosa e outros germes hospitalares"
+      ],
+      [
+       "C",
+       "apenas germes atípicos"
+      ],
+      [
+       "D",
+       "apenas Streptococcus pneumoniae"
+      ],
+      [
+       "E",
+       "Pneumocystis jirovecii de rotina"
+      ]
+     ],
+     "coment": "PAV tardia (≥ 5 dias) e uso prévio de antibiótico aumentam o risco de multirresistentes: Pseudomonas, Acinetobacter, enterobactérias produtoras de ESBL e MRSA, conforme a microbiologia local.",
+     "enunciado": "Paciente intubado há 5 dias: febre, secreção purulenta, piora da oxigenação e novo infiltrado. Pensa-se em PAV. Os agentes a cobrir incluem:",
+     "gab": "B",
+     "id": "vm-compl-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "aumentar a pós-carga do ventrículo direito e piorar a hemodinâmica"
+      ],
+      [
+       "B",
+       "melhorar o débito cardíaco em todos os casos"
+      ],
+      [
+       "C",
+       "reduzir a pós-carga do ventrículo direito"
+      ],
+      [
+       "D",
+       "aumentar o retorno venoso"
+      ],
+      [
+       "E",
+       "não ter qualquer efeito hemodinâmico"
+      ]
+     ],
+     "coment": "A pressão alveolar alta comprime capilares pulmonares e aumenta a resistência vascular pulmonar: o VD já sobrecarregado pode falir. No VD em falência, use PEEP e platô mínimos e evite hipercapnia e hipoxemia.",
+     "enunciado": "Ventilação com PEEP elevada em paciente com cor pulmonale agudo (TEP maciço) pode:",
+     "gab": "A",
+     "id": "vm-compl-6"
+    }
+   ],
+   "titulo": "Complicações e cuidados"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "ARDSNet 2000; ESICM 2023 (SDRA); definição global de SDRA 2024; Diretrizes Brasileiras de Ventilação Mecânica (AMIB/SBPT)",
+     "ideia": "Todo caso de ventilação se resolve em quatro passos: ajustar o volume pelo peso predito, ler a mecânica, corrigir CO₂ e oxigênio e, se piorar, procurar a causa.",
+     "na_prova": "Use o roteiro para eliminar alternativas: a conduta certa quase sempre respeita volume protetor e limites de pressão.",
+     "pontos": [
+      "Calcule o peso predito pela altura e pelo sexo e use 6 mL/kg.",
+      "Leia a mecânica: platô de 30 ou menos, pressão de distensão de 15 ou menos, complacência e resistência.",
+      "Ajuste o CO₂ pela frequência e o oxigênio pela fração inspirada e pela PEEP, e use DOPE e pico contra platô se piorar."
+     ],
+     "titulo": "Roteiro para cada caso no ventilador"
+    },
+    {
+     "fonte": "Diretrizes Brasileiras de Ventilação Mecânica (AMIB/SBPT)",
+     "ideia": "Algumas situações pedem ajustes que parecem contrariar a regra geral. Saber o porquê de cada exceção evita erros graves.",
+     "na_prova": "A banca dá cetoacidoso intubado com frequência ajustada para PaCO₂ de 40 e quer o erro: perdeu a compensação respiratória.",
+     "pontos": [
+      "Na SDRA, volume de 6, platô de 30 ou menos, PEEP pela gravidade e prona se a relação ficar abaixo de 150.",
+      "No obstrutivo, frequência baixa, fluxo alto, tolerância ao CO₂ e vigilância da auto-PEEP.",
+      "Na acidose metabólica grave, como a cetoacidose, mantém-se ventilação-minuto alta, senão o pH despenca."
+     ],
+     "titulo": "Cenários clássicos"
+    }
+   ],
+   "id": "casos",
+   "nivel": 3,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "reduzir o VT para ~310 mL (6 mL/kg do peso predito)"
+      ],
+      [
+       "B",
+       "aumentar a PEEP para 20 para reduzir o platô"
+      ],
+      [
+       "C",
+       "reduzir a PEEP para 5 para baixar o platô"
+      ],
+      [
+       "D",
+       "manter, pois o VT é 6 mL/kg do peso real"
+      ],
+      [
+       "E",
+       "trocar para PSV 10"
+      ]
+     ],
+     "coment": "Peso predito = 45,5 + 0,91 × 7,6 ≈ 52 kg. 540 mL = ~10 mL/kg de peso predito! 6 × 52 ≈ 312 mL. Com isso, o platô e a DP (23) também cairão.",
+     "enunciado": "Mulher, 1,60 m e 90 kg, com SDRA. Está em VCV com VT 540 mL, platô 33, PEEP 10. A conduta é:",
+     "gab": "A",
+     "id": "vm-casos-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "priorizar hipercapnia permissiva"
+      ],
+      [
+       "B",
+       "usar FR 12 e VT 6 mL/kg, como padrão"
+      ],
+      [
+       "C",
+       "mirar PaCO₂ de 40 mmHg"
+      ],
+      [
+       "D",
+       "manter volume-minuto alto, próximo ao que o paciente fazia antes"
+      ],
+      [
+       "E",
+       "usar PSV baixa para deixar o paciente descansar"
+      ]
+     ],
+     "coment": "A PaCO₂ de 15 é a compensação que segura o pH. Se o ventilador deixar a PaCO₂ subir para 40, o pH cai para ~6,7 — risco de PCR. Intubar só se inevitável, e com FR alta.",
+     "enunciado": "Paciente com cetoacidose diabética grave (pH 7,05, HCO₃⁻ 5, PaCO₂ 15) precisa ser intubado. O ajuste ventilatório inicial deve:",
+     "gab": "D",
+     "id": "vm-casos-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "< 25 mmHg"
+      ],
+      [
+       "B",
+       "45–55 mmHg (hipercapnia permissiva)"
+      ],
+      [
+       "C",
+       "25–30 mmHg de forma contínua"
+      ],
+      [
+       "D",
+       "35–40 mmHg"
+      ],
+      [
+       "E",
+       "não importa a PaCO₂, só a PaO₂"
+      ]
+     ],
+     "coment": "Hipercapnia vasodilata e sobe a PIC; hiperventilação prolongada causa vasoconstrição e isquemia. A hiperventilação (30–35) fica como ponte curta na herniação iminente.",
+     "enunciado": "Paciente com TCE grave, PIC elevada, sem sinais de herniação. Qual alvo de PaCO₂?",
+     "gab": "D",
+     "id": "vm-casos-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "driving pressure de 34: lesão pulmonar"
+      ],
+      [
+       "B",
+       "pneumotórax hipertensivo"
+      ],
+      [
+       "C",
+       "resistência de 20 cmH₂O/L/s: obstrução de vias aéreas (broncoespasmo)"
+      ],
+      [
+       "D",
+       "resistência normal e complacência normal"
+      ],
+      [
+       "E",
+       "complacência baixa: SDRA"
+      ]
+     ],
+     "coment": "R = (42 − 22) / 1 = 20 cmH₂O/L/s (alta). Cst = 450 / 14 ≈ 32 e DP = 14 (aceitável). O problema está no caminho do ar: broncodilatador e aspiração.",
+     "enunciado": "Paciente em VCV: VT 450 mL, Ppico 42, Pplat 22, PEEP 8, fluxo 60 L/min, com sibilos difusos. A interpretação é:",
+     "gab": "C",
+     "id": "vm-casos-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "manter em prona contínua por 7 dias sem retornar"
+      ],
+      [
+       "B",
+       "suspender a prona e iniciar óxido nítrico"
+      ],
+      [
+       "C",
+       "voltar a supino definitivamente, pois a P/F passou de 150"
+      ],
+      [
+       "D",
+       "manter as sessões de ~16 h por dia até P/F ≥ 150 em supino, com PEEP ≤ 10 e FiO₂ ≤ 0,6"
+      ],
+      [
+       "E",
+       "transferir para ECMO"
+      ]
+     ],
+     "coment": "No PROSEVA, as sessões seguiram até a melhora mantida em SUPINO (P/F ≥ 150, PEEP ≤ 10, FiO₂ ≤ 0,6, 4 h após voltar). A melhora em prona não basta.",
+     "enunciado": "Após prona, o paciente com SDRA tem P/F que subiu de 90 para 170. Qual a conduta em relação à posição?",
+     "gab": "D",
+     "id": "vm-casos-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "erro da pressão programada, que sobe sozinha"
+      ],
+      [
+       "B",
+       "melhora da mecânica pulmonar"
+      ],
+      [
+       "C",
+       "piora da complacência ou aumento de resistência (secreção, broncoespasmo, edema)"
+      ],
+      [
+       "D",
+       "vazamento do cuff, que aumentaria o VT"
+      ],
+      [
+       "E",
+       "aumento da FiO₂"
+      ]
+     ],
+     "coment": "Em PCV a pressão é fixa: VT que cai indica que a mesma pressão empurra menos ar — pulmão mais duro ou via aérea mais estreita. Investigue (aspiração, radiografia, ausculta).",
+     "enunciado": "Paciente em PCV 20 acima da PEEP de 8 tem VT caindo de 450 para 280 mL ao longo do dia, sem mudança no esforço. A causa provável é:",
+     "gab": "C",
+     "id": "vm-casos-6"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "extubar e iniciar VNI"
+      ],
+      [
+       "B",
+       "manter, pois pH 7,12 é aceitável"
+      ],
+      [
+       "C",
+       "aumentar o VT em 1 mL/kg (aceitando platô > 30) e/ou considerar bicarbonato"
+      ],
+      [
+       "D",
+       "reduzir a FR para 20"
+      ],
+      [
+       "E",
+       "aumentar a PEEP para 20 para remover CO₂"
+      ]
+     ],
+     "coment": "ARDSNet: pH < 7,30 → FR até 35; se ainda < 7,15 com FR 35, pode-se subir o VT de 1 em 1 mL/kg (o limite de platô passa a ser flexível) e considerar bicarbonato. ECMO-CO₂ em centros de referência.",
+     "enunciado": "Paciente com SDRA: VT 6 mL/kg, FR 35, platô 28, pH 7,12, PaCO₂ 80. Pelo protocolo ARDSNet, a conduta é:",
+     "gab": "C",
+     "id": "vm-casos-7"
+    }
+   ],
+   "titulo": "Casos clínicos integrados"
+  }
+ ],
+ "niveis": {
+  "1": "Fundamentos (fisiologia, via aérea, suporte não invasivo)",
+  "2": "O ventilador por dentro",
+  "3": "Clínica e casos (herói)"
+ },
+ "ordem": 6,
+ "prefixo": "vm",
+ "roteiro": [
+  0,
+  0
+ ],
+ "roteiro_pilulas": [
+  {
+   "fonte": "ARDSNet 2000; ESICM 2023 (SDRA); definição global de SDRA 2024; Diretrizes Brasileiras de Ventilação Mecânica (AMIB/SBPT)",
+   "ideia": "Todo caso de ventilação se resolve em quatro passos: ajustar o volume pelo peso predito, ler a mecânica, corrigir CO₂ e oxigênio e, se piorar, procurar a causa.",
+   "na_prova": "Use o roteiro para eliminar alternativas: a conduta certa quase sempre respeita volume protetor e limites de pressão.",
+   "pontos": [
+    "Calcule o peso predito pela altura e pelo sexo e use 6 mL/kg.",
+    "Leia a mecânica: platô de 30 ou menos, pressão de distensão de 15 ou menos, complacência e resistência.",
+    "Ajuste o CO₂ pela frequência e o oxigênio pela fração inspirada e pela PEEP, e use DOPE e pico contra platô se piorar."
+   ],
+   "titulo": "Roteiro para cada caso no ventilador"
+  }
+ ],
+ "sabor": 5,
+ "titulo": "Ventilação Mecânica",
+ "treino_pilulas": [
+  [
+   8,
+   1
+  ],
+  [
+   4,
+   1
+  ]
+ ],
+ "versao": 1
+}

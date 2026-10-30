@@ -1,0 +1,1950 @@
+{
+ "cor": [
+  230,
+  110,
+  110
+ ],
+ "descricao": "Do estágio A ao choque cardiogênico: BNP, fenótipos, pilares, dispositivos, diurético e Chagas",
+ "formato": 1,
+ "gerador": "insuf_cardiaca",
+ "id": "insuf_cardiaca",
+ "materia": "Cardiologia",
+ "modulos": [
+  {
+   "aula": [
+    {
+     "fonte": "AHA/ACC/HFSA 2022; ESC 2026; definição universal 2021",
+     "ideia": "Insuficiência cardíaca é uma síndrome: sintomas de congestão ou de baixo débito causados por um coração com defeito de estrutura ou de função. O peptídeo natriurético alto ou a congestão comprovada confirmam que o coração é o culpado.",
+     "na_prova": "A banca dá fração de ejeção que subiu de 30% para 45% com o tratamento e quer IC com fração melhorada, e não cura: os remédios continuam.",
+     "pontos": [
+      "A AHA/ACC 2022 e a diretriz brasileira dividem pela fração de ejeção: reduzida até 40%, levemente reduzida de 41 a 49% e preservada a partir de 50%.",
+      "A ESC 2026 simplificou e trata tudo abaixo de 50% como fração reduzida, porque essas faixas respondem aos mesmos remédios.",
+      "Fração melhorada é a que era de 40% ou menos e subiu acima de 40% com ganho de 10 pontos; o tratamento deve ser mantido."
+     ],
+     "titulo": "O que é insuficiência cardíaca"
+    },
+    {
+     "fonte": "AHA/ACC/HFSA 2022; ESC 2026",
+     "ideia": "O estágio conta a história da doença e nunca regride; a classe funcional da NYHA mede os sintomas de hoje e muda com o tratamento. Por isso um paciente pode estar no estágio C e na classe I ao mesmo tempo.",
+     "na_prova": "Pegadinha: paciente que melhorou e não tem mais sintomas continua no estágio C, mas passa para a classe I da NYHA.",
+     "pontos": [
+      "Estágio A é ter fator de risco sem doença do coração, e B é ter doença estrutural sem sintomas, como hipertrofia ou infarto prévio.",
+      "Estágio C é ter ou já ter tido sintomas, e D é a insuficiência cardíaca avançada e refratária.",
+      "Na NYHA, a classe I não tem limitação, a II limita esforços habituais, a III limita esforços menores e a IV tem sintoma em repouso."
+     ],
+     "titulo": "Estágios e classe funcional"
+    }
+   ],
+   "id": "defin",
+   "nivel": 1,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "Não tem IC, portanto não se classifica"
+      ],
+      [
+       "B",
+       "D"
+      ],
+      [
+       "C",
+       "B (pré-IC: doença estrutural sem sintomas)"
+      ],
+      [
+       "D",
+       "C"
+      ],
+      [
+       "E",
+       "A"
+      ]
+     ],
+     "coment": "Doença estrutural (FE baixa, IAM prévio) sem sintomas = estágio B. Já se beneficia de IECA/BRA, betabloqueador e iSGLT2 para prevenir sintomas.",
+     "enunciado": "Paciente com IAM prévio e FE de 35% no eco, totalmente assintomático. Estágio da IC (ACC/AHA):",
+     "gab": "C",
+     "id": "ic-defin-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "I"
+      ],
+      [
+       "B",
+       "II"
+      ],
+      [
+       "C",
+       "IV"
+      ],
+      [
+       "D",
+       "Não se aplica"
+      ],
+      [
+       "E",
+       "III"
+      ]
+     ],
+     "coment": "Sintomas com esforços menores que os habituais = III. II é limitação só nos esforços habituais (ex.: subir dois lances de escada).",
+     "enunciado": "Paciente com ICFEr que tem dispneia ao andar no plano por meio quarteirão, mas não em repouso. Classe NYHA:",
+     "gab": "E",
+     "id": "ic-defin-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "ICFEr"
+      ],
+      [
+       "B",
+       "ICFElr de novo"
+      ],
+      [
+       "C",
+       "IC com FE melhorada (ICFEm)"
+      ],
+      [
+       "D",
+       "ICFEp"
+      ],
+      [
+       "E",
+       "IC curada"
+      ]
+     ],
+     "coment": "FE melhorada: era ≤ 40%, subiu acima de 40% com ganho ≥ 10 pontos. A terapia deve ser mantida (TRED-HF).",
+     "enunciado": "FE inicial de 30%, que subiu para 46% após 1 ano de tratamento. Classificação atual:",
+     "gab": "C",
+     "id": "ic-defin-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "B"
+      ],
+      [
+       "B",
+       "A (em risco)"
+      ],
+      [
+       "C",
+       "Pré-clínico B por ter diabetes"
+      ],
+      [
+       "D",
+       "D"
+      ],
+      [
+       "E",
+       "C"
+      ]
+     ],
+     "coment": "Fatores de risco sem alteração estrutural nem sintomas = estágio A: controlar PA, glicemia (iSGLT2 em DM2 reduz internação por IC), peso.",
+     "enunciado": "Hipertenso e diabético, sem sopro, eco normal e sem sintomas. Estágio:",
+     "gab": "B",
+     "id": "ic-defin-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "NYHA só se aplica à ICFEp"
+      ],
+      [
+       "B",
+       "o estágio não regride, a classe NYHA pode melhorar com o tratamento"
+      ],
+      [
+       "C",
+       "estágio é definido pela FE"
+      ],
+      [
+       "D",
+       "estágio D é sinônimo de NYHA II"
+      ],
+      [
+       "E",
+       "os dois são a mesma coisa"
+      ]
+     ],
+     "coment": "Quem já teve sintoma é C para sempre, mesmo assintomático depois do tratamento (que fica NYHA I).",
+     "enunciado": "Uma diferença importante entre estágio ACC/AHA e classe NYHA:",
+     "gab": "B",
+     "id": "ic-defin-5"
+    }
+   ],
+   "titulo": "Definição e classificações"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "AHA/ACC/HFSA 2022",
+     "ideia": "Quando o débito cai, o corpo entende que falta volume e ativa o sistema simpático, a renina-angiotensina-aldosterona e o hormônio antidiurético. Isso compensa no começo, mas retém sal e água e remodela o coração.",
+     "na_prova": "A banca explica os remédios por aqui: betabloqueador, bloqueio do sistema renina-angiotensina e antagonista da aldosterona combatem a ativação neuro-hormonal que piora o coração.",
+     "pontos": [
+      "O débito é a frequência vezes o volume sistólico, que depende de pré-carga, pós-carga e contratilidade.",
+      "A congestão esquerda causa dispneia, ortopneia, dispneia paroxística noturna, estertores e edema agudo de pulmão.",
+      "A congestão direita causa turgência jugular, fígado grande, edema e ascite, e a causa mais comum de IC direita é a IC esquerda."
+     ],
+     "titulo": "Do débito baixo à congestão"
+    },
+    {
+     "fonte": "AHA/ACC/HFSA 2022; ESC 2026",
+     "ideia": "Na fração reduzida o problema é contrair: o ventrículo dilata e bate fraco. Na fração preservada o problema é relaxar: o ventrículo é rígido e precisa de pressão alta para encher.",
+     "na_prova": "A banca associa terceira bulha à fração reduzida e quarta bulha à fração preservada, e pergunta por que a fibrilação atrial descompensa tanto quem tem ventrículo rígido.",
+     "pontos": [
+      "Na fração reduzida, o ventrículo esquerdo é dilatado e pode haver terceira bulha.",
+      "O perfil típico da fração preservada é o idoso que tem hipertensão, obesidade, diabetes ou fibrilação atrial, e nele pode haver quarta bulha.",
+      "A fração preservada piora com taquicardia, que encurta o enchimento, e com a perda da contração atrial na fibrilação atrial."
+     ],
+     "titulo": "Fração reduzida e fração preservada"
+    }
+   ],
+   "id": "fisio",
+   "nivel": 1,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "dispneia paroxística noturna"
+      ],
+      [
+       "B",
+       "turgência jugular com refluxo hepatojugular"
+      ],
+      [
+       "C",
+       "ortopneia"
+      ],
+      [
+       "D",
+       "B3 em ápice"
+      ],
+      [
+       "E",
+       "estertores crepitantes bibasais"
+      ]
+     ],
+     "coment": "Congestão sistêmica: turgência jugular, hepatomegalia, refluxo hepatojugular, edema, ascite. Estertores e ortopneia são do lado esquerdo.",
+     "enunciado": "Sinal de congestão do lado direito:",
+     "gab": "B",
+     "id": "ic-fisio-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "DPOC"
+      ],
+      [
+       "B",
+       "estenose pulmonar"
+      ],
+      [
+       "C",
+       "TEP crônico"
+      ],
+      [
+       "D",
+       "infarto de VD"
+      ],
+      [
+       "E",
+       "insuficiência cardíaca esquerda"
+      ]
+     ],
+     "coment": "A hipertensão venocapilar pulmonar da IC esquerda sobrecarrega o VD.",
+     "enunciado": "A causa mais comum de insuficiência cardíaca direita é:",
+     "gab": "E",
+     "id": "ic-fisio-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "aumenta a FE"
+      ],
+      [
+       "B",
+       "reduz a pressão do átrio"
+      ],
+      [
+       "C",
+       "melhora o relaxamento ventricular"
+      ],
+      [
+       "D",
+       "perde a contração atrial e encurta a diástole, piorando o enchimento do VE rígido"
+      ],
+      [
+       "E",
+       "não tem efeito na ICFEp"
+      ]
+     ],
+     "coment": "O VE rígido depende do 'chute atrial' e de tempo de diástole. Controle de frequência/ritmo é parte do tratamento.",
+     "enunciado": "Por que a fibrilação atrial descompensa tanto a ICFEp?",
+     "gab": "D",
+     "id": "ic-fisio-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "B2 hipofonética isolada"
+      ],
+      [
+       "B",
+       "B3"
+      ],
+      [
+       "C",
+       "clique sistólico"
+      ],
+      [
+       "D",
+       "estalido de abertura"
+      ],
+      [
+       "E",
+       "B4"
+      ]
+     ],
+     "coment": "B3: enchimento rápido num VE dilatado e complacente demais. B4: contração atrial contra VE rígido (HAS, ICFEp, isquemia).",
+     "enunciado": "Bulha associada a disfunção sistólica com sobrecarga de volume:",
+     "gab": "B",
+     "id": "ic-fisio-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "redução da pós-carga"
+      ],
+      [
+       "B",
+       "retenção de sódio e água, vasoconstrição e fibrose miocárdica"
+      ],
+      [
+       "C",
+       "aumento da contratilidade benéfica a longo prazo"
+      ],
+      [
+       "D",
+       "natriurese e vasodilatação"
+      ],
+      [
+       "E",
+       "redução do ADH"
+      ]
+     ],
+     "coment": "Compensação útil no curto prazo que vira dano no longo — por isso bloquear SRAA e aldosterona reduz mortalidade.",
+     "enunciado": "A ativação do SRAA na IC contribui para:",
+     "gab": "B",
+     "id": "ic-fisio-5"
+    }
+   ],
+   "titulo": "Fisiopatologia e mecanismos de compensação"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "AHA/ACC/HFSA 2022; Diretriz Brasileira de IC 2018 e atualização 2021",
+     "ideia": "Saber a causa muda o tratamento, porque algumas formas de insuficiência cardíaca têm remédio específico ou são reversíveis. As mais comuns são isquêmica e hipertensiva, e no Brasil Chagas e valvopatia reumática ainda pesam.",
+     "na_prova": "A banca dá cardiomiopatia dilatada nova e pergunta o primeiro passo na causa: afastar isquemia e, em área endêmica, fazer sorologia de Chagas.",
+     "pontos": [
+      "Outras causas são álcool, miocardite, periparto, taquicardiomiopatia, quimioterapia, doenças infiltrativas e tireoide.",
+      "A investigação inicial inclui eletrocardiograma, ecocardiograma, função tireoidiana, ferro e sorologia de Chagas quando há exposição.",
+      "A pesquisa de isquemia usa cateterismo, angiotomografia de coronárias ou teste funcional, conforme o caso."
+     ],
+     "titulo": "Procure a causa"
+    },
+    {
+     "fonte": "ESC 2026; AHA/ACC/HFSA 2022",
+     "ideia": "Algumas causas têm uma pista de ouro que aparece na história ou nos exames. Reconhecer a pista evita tratar só o sintoma e deixar passar a doença de base.",
+     "na_prova": "Pegadinha: baixa voltagem no eletrocardiograma com parede espessa no eco é desproporção que sugere doença infiltrativa, e não hipertrofia hipertensiva.",
+     "pontos": [
+      "Na amiloidose por transtirretina, há idoso com túnel do carpo bilateral, eletrocardiograma de baixa voltagem e parede espessa no eco.",
+      "A forma periparto aparece do último mês da gestação até 5 meses depois do parto, e a bromocriptina pode ser considerada.",
+      "Na taquicardiomiopatia, a frequência alta persistente baixa a fração de ejeção, que se recupera com o controle do ritmo."
+     ],
+     "titulo": "Pistas clássicas"
+    }
+   ],
+   "id": "etiol",
+   "nivel": 1,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "amiloidose cardíaca por transtirretina"
+      ],
+      [
+       "B",
+       "cardiomiopatia chagásica"
+      ],
+      [
+       "C",
+       "cardiomiopatia alcoólica"
+      ],
+      [
+       "D",
+       "cardiomiopatia hipertensiva"
+      ],
+      [
+       "E",
+       "pericardite constritiva"
+      ]
+     ],
+     "coment": "Discrepância voltagem baixa × parede espessa + túnel do carpo = amiloidose. Cintilografia com pirofosfato e pesquisa de cadeias leves.",
+     "enunciado": "Idoso com IC, síndrome do túnel do carpo bilateral, baixa voltagem no ECG e paredes espessadas no eco. Hipótese principal:",
+     "gab": "A",
+     "id": "ic-etiol-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "estenose mitral reumática"
+      ],
+      [
+       "B",
+       "miocardiopatia hipertrófica"
+      ],
+      [
+       "C",
+       "cardiomiopatia periparto"
+      ],
+      [
+       "D",
+       "anemia puerperal isolada"
+      ],
+      [
+       "E",
+       "TEP crônico"
+      ]
+     ],
+     "coment": "IC com FE < 45% do último mês da gestação até 5 meses pós-parto, sem outra causa. Tratamento de ICFEr (evitando IECA/BRA na gestação).",
+     "enunciado": "Puérpera de 3 semanas com dispneia progressiva, edema e FE de 30%, sem cardiopatia prévia. Diagnóstico mais provável:",
+     "gab": "C",
+     "id": "ic-etiol-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "miocardite viral"
+      ],
+      [
+       "B",
+       "cardiomiopatia dilatada idiopática"
+      ],
+      [
+       "C",
+       "Chagas"
+      ],
+      [
+       "D",
+       "taquicardiomiopatia"
+      ],
+      [
+       "E",
+       "amiloidose"
+      ]
+     ],
+     "coment": "A disfunção causada por taquicardia persistente é reversível com controle de frequência/ritmo — sempre considerar diante de FA rápida e FE baixa.",
+     "enunciado": "Paciente com FA de resposta ventricular de 140 bpm há meses e FE de 30%. Após controle da frequência, a FE vai a 55%. Etiologia:",
+     "gab": "D",
+     "id": "ic-etiol-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "miocardite autoimune por checkpoint"
+      ],
+      [
+       "B",
+       "cardiopatia isquêmica"
+      ],
+      [
+       "C",
+       "derrame pericárdico"
+      ],
+      [
+       "D",
+       "cardiotoxicidade por bloqueio de HER2, em geral reversível"
+      ],
+      [
+       "E",
+       "dano cumulativo dose-dependente irreversível típico das antraciclinas"
+      ]
+     ],
+     "coment": "Trastuzumabe: disfunção tipo II, não dose-dependente e geralmente reversível. Antraciclina: tipo I, cumulativa e mais irreversível.",
+     "enunciado": "Mulher em tratamento de câncer de mama com trastuzumabe evolui com queda da FE de 60% para 42%. Mecanismo:",
+     "gab": "D",
+     "id": "ic-etiol-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "PET-CT"
+      ],
+      [
+       "B",
+       "ressonância cardíaca para todos"
+      ],
+      [
+       "C",
+       "ecocardiograma transtorácico"
+      ],
+      [
+       "D",
+       "cateterismo direito"
+      ],
+      [
+       "E",
+       "biópsia endomiocárdica"
+      ]
+     ],
+     "coment": "Eco: FE, valvas, geometria, pressões. RM e biópsia são reservadas a dúvidas etiológicas específicas.",
+     "enunciado": "Exame inicial indispensável na investigação de IC recém-diagnosticada:",
+     "gab": "C",
+     "id": "ic-etiol-5"
+    }
+   ],
+   "titulo": "Etiologias"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "SBC 2023 (cardiomiopatia chagásica)",
+     "ideia": "Cerca de 30% dos portadores crônicos do Trypanosoma cruzi desenvolvem cardiopatia, décadas depois da infecção. É uma miocardite crônica com fibrose, que atinge o sistema de condução e forma aneurisma na ponta do ventrículo.",
+     "na_prova": "A banca dá migrante de área rural com bloqueio de ramo direito e divisional anterossuperior: pense em Chagas e peça sorologia.",
+     "pontos": [
+      "O eletrocardiograma típico tem bloqueio de ramo direito com bloqueio divisional anterossuperior esquerdo.",
+      "Extrassístoles ventriculares, bradicardias e bloqueios atrioventriculares também são comuns.",
+      "A morte súbita por arritmia ventricular é a principal causa de óbito, seguida de insuficiência cardíaca e embolia do aneurisma apical."
+     ],
+     "titulo": "A cardiopatia brasileira"
+    },
+    {
+     "fonte": "SBC 2023; BENEFIT (NEJM 2015)",
+     "ideia": "A insuficiência cardíaca chagásica usa os mesmos pilares, mas com cuidado com a frequência baixa. O antiparasitário tem papel nas fases iniciais e não reduziu eventos na cardiopatia já estabelecida.",
+     "na_prova": "Questão clássica: o benznidazol muda o prognóstico da cardiopatia chagásica estabelecida? Não, segundo o estudo BENEFIT.",
+     "pontos": [
+      "O betabloqueador é usado, com dose limitada por bradicardia ou distúrbio de condução.",
+      "A amiodarona trata taquicardia ventricular sintomática, e o desfibrilador implantável entra na prevenção secundária.",
+      "Trombo apical, AVC prévio ou fibrilação atrial pedem anticoagulação; o benznidazol se indica na fase aguda e em crianças, jovens e mulheres em idade fértil."
+     ],
+     "titulo": "Tratamento na doença de Chagas"
+    }
+   ],
+   "id": "chagas",
+   "nivel": 1,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "bloqueio de ramo direito com bloqueio divisional anterossuperior esquerdo"
+      ],
+      [
+       "B",
+       "bloqueio de ramo esquerdo isolado com PR curto"
+      ],
+      [
+       "C",
+       "supradesnivelamento difuso do ST"
+      ],
+      [
+       "D",
+       "onda delta e PR curto"
+      ],
+      [
+       "E",
+       "QT curto"
+      ]
+     ],
+     "coment": "BRD + BDAS é a associação clássica; somam-se extrassístoles ventriculares, bradiarritmias e BAV.",
+     "enunciado": "ECG mais típico da cardiopatia chagásica crônica:",
+     "gab": "A",
+     "id": "ic-chagas-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "endocardite"
+      ],
+      [
+       "B",
+       "tamponamento"
+      ],
+      [
+       "C",
+       "dissecção de aorta"
+      ],
+      [
+       "D",
+       "morte súbita por arritmia ventricular"
+      ],
+      [
+       "E",
+       "infarto agudo do miocárdio"
+      ]
+     ],
+     "coment": "A fibrose cria circuitos de reentrada → TV/FV. CDI na prevenção secundária, amiodarona para TV sintomática.",
+     "enunciado": "Principal causa de morte na cardiopatia chagásica:",
+     "gab": "D",
+     "id": "ic-chagas-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "ressecção cirúrgica imediata"
+      ],
+      [
+       "B",
+       "anticoagulação"
+      ],
+      [
+       "C",
+       "nenhuma conduta"
+      ],
+      [
+       "D",
+       "benznidazol"
+      ],
+      [
+       "E",
+       "apenas AAS"
+      ]
+     ],
+     "coment": "Trombo intracavitário (e AVC prévio ou FA) indica anticoagulação pelo alto risco embólico.",
+     "enunciado": "Paciente chagásico com aneurisma apical e trombo no eco. Conduta:",
+     "gab": "B",
+     "id": "ic-chagas-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "redução da parasitemia sem redução de eventos clínicos"
+      ],
+      [
+       "B",
+       "aumento da FE em todos"
+      ],
+      [
+       "C",
+       "que deve ser usado em todos com IC"
+      ],
+      [
+       "D",
+       "reversão da fibrose"
+      ],
+      [
+       "E",
+       "redução de mortalidade de 50%"
+      ]
+     ],
+     "coment": "Reduziu a carga parasitária, mas não morte, IC nem arritmias. Fica reservado à fase aguda, crianças/jovens e casos selecionados.",
+     "enunciado": "Sobre o benznidazol na cardiopatia chagásica crônica já estabelecida, o estudo BENEFIT mostrou:",
+     "gab": "A",
+     "id": "ic-chagas-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "não tem benefício nessa etiologia"
+      ],
+      [
+       "B",
+       "aumenta a parasitemia"
+      ],
+      [
+       "C",
+       "bradicardia e distúrbios de condução frequentes"
+      ],
+      [
+       "D",
+       "causa piora da fibrose"
+      ],
+      [
+       "E",
+       "interage com o benznidazol"
+      ]
+     ],
+     "coment": "Doença do sistema de condução limita a titulação; às vezes é preciso marca-passo para conseguir otimizar.",
+     "enunciado": "Por que o betabloqueador costuma ficar em dose menor no chagásico com IC?",
+     "gab": "C",
+     "id": "ic-chagas-5"
+    }
+   ],
+   "titulo": "Cardiomiopatia chagásica"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "ESC 2026; HFA 2019 (peptídeos)",
+     "ideia": "O coração sob pressão libera BNP e NT-proBNP. Valores baixos afastam bem a insuficiência cardíaca, e por isso o peptídeo é ótimo para excluir o diagnóstico na dispneia.",
+     "na_prova": "Pegadinha: o sacubitril eleva o BNP, mas não o NT-proBNP. Por isso, em quem usa sacubitril-valsartana, acompanha-se o NT-proBNP.",
+     "pontos": [
+      "Ambulatorialmente, a insuficiência cardíaca é improvável com BNP abaixo de 35 pg/mL ou NT-proBNP abaixo de 125 pg/mL.",
+      "Na emergência, os cortes de exclusão são BNP abaixo de 100 pg/mL e NT-proBNP abaixo de 300 pg/mL.",
+      "Idade, doença renal, fibrilação atrial e embolia pulmonar elevam o peptídeo; a obesidade baixa e pode dar falso-negativo."
+     ],
+     "titulo": "Peptídeos natriuréticos"
+    },
+    {
+     "fonte": "Framingham; ESC 2026",
+     "ideia": "O diagnóstico junta clínica, peptídeo e ecocardiograma. Os critérios de Framingham organizam a clínica, e o ecocardiograma mede a fração de ejeção e dá pistas da causa.",
+     "na_prova": "A banca dá um caso e pede para contar critérios. Edema de tornozelo é menor, e dispneia paroxística noturna é maior.",
+     "pontos": [
+      "Framingham exige 2 critérios maiores, ou 1 maior e 2 menores.",
+      "São maiores: dispneia paroxística noturna, turgência jugular, estertores, cardiomegalia, edema agudo de pulmão, terceira bulha e refluxo hepatojugular.",
+      "São menores: edema de tornozelos, tosse noturna, dispneia aos esforços, hepatomegalia, derrame pleural e frequência acima de 120."
+     ],
+     "titulo": "Clínica e ecocardiograma"
+    }
+   ],
+   "id": "diag",
+   "nivel": 2,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "deve-se repetir só em 1 ano"
+      ],
+      [
+       "B",
+       "IC aguda grave"
+      ],
+      [
+       "C",
+       "IC é improvável (< 125 pg/mL no contexto crônico)"
+      ],
+      [
+       "D",
+       "indica ICFEr"
+      ],
+      [
+       "E",
+       "IC confirmada"
+      ]
+     ],
+     "coment": "Valor abaixo do corte de exclusão: procurar outra causa de dispneia. Os peptídeos têm alto valor preditivo negativo.",
+     "enunciado": "Dispneia em ambulatório, NT-proBNP de 80 pg/mL. Interpretação:",
+     "gab": "C",
+     "id": "ic-diag-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "indica TEP"
+      ],
+      [
+       "B",
+       "indica sepse"
+      ],
+      [
+       "C",
+       "exclui IC aguda"
+      ],
+      [
+       "D",
+       "fica na zona cinzenta: acima de 300, abaixo de 1.800"
+      ],
+      [
+       "E",
+       "confirma IC aguda"
+      ]
+     ],
+     "coment": "Acima de 75 anos, o corte para confirmar é 1.800; abaixo de 300 exclui. Entre os dois, depende de clínica e eco.",
+     "enunciado": "Paciente de 80 anos no PS com dispneia e NT-proBNP de 1.200 pg/mL. Pelos cortes por idade para IC aguda:",
+     "gab": "D",
+     "id": "ic-diag-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "BNP, mais fiel nesse caso"
+      ],
+      [
+       "B",
+       "troponina"
+      ],
+      [
+       "C",
+       "ambos se comportam igual"
+      ],
+      [
+       "D",
+       "nenhum dos dois"
+      ],
+      [
+       "E",
+       "NT-proBNP, pois o BNP sobe pela inibição da neprilisina"
+      ]
+     ],
+     "coment": "A neprilisina degrada BNP: inibida, o BNP sobe artificialmente. O NT-proBNP não é substrato e segue refletindo a IC.",
+     "enunciado": "Paciente em uso de sacubitril-valsartana. Qual peptídeo deve ser usado para monitorar?",
+     "gab": "E",
+     "id": "ic-diag-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "obesidade aumenta o BNP"
+      ],
+      [
+       "B",
+       "o valor exclui IC com certeza"
+      ],
+      [
+       "C",
+       "BNP não se altera com o peso"
+      ],
+      [
+       "D",
+       "deve-se usar troponina"
+      ],
+      [
+       "E",
+       "obesidade reduz os peptídeos — o BNP pode estar falsamente baixo"
+      ]
+     ],
+     "coment": "Tecido adiposo expressa receptores de clearance e há menor produção: em obesos, cortes devem ser mais baixos e o eco é decisivo.",
+     "enunciado": "Obeso com IMC 42 e quadro sugestivo de IC, BNP de 60 pg/mL. Cuidado:",
+     "gab": "E",
+     "id": "ic-diag-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "1 critério menor"
+      ],
+      [
+       "B",
+       "3 critérios menores sem nenhum maior"
+      ],
+      [
+       "C",
+       "apenas edema de tornozelos"
+      ],
+      [
+       "D",
+       "apenas dispneia aos esforços"
+      ],
+      [
+       "E",
+       "2 critérios maiores, ou 1 maior + 2 menores"
+      ]
+     ],
+     "coment": "Menores isolados são pouco específicos (edema, tosse, dispneia aos esforços).",
+     "enunciado": "Pelos critérios de Framingham, confirma IC:",
+     "gab": "E",
+     "id": "ic-diag-5"
+    }
+   ],
+   "titulo": "Diagnóstico: clínica, peptídeos e eco"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "Reddy et al. (H2FPEF) 2018; ESC 2026",
+     "ideia": "Na fração preservada, a fração de ejeção é normal e o problema é a pressão de enchimento alta. O diagnóstico exige sintomas, fração de 50% ou mais e prova de pressão alta, depois de afastar imitadores.",
+     "na_prova": "A banca dá idosa obesa, hipertensa, com fibrilação atrial e dispneia, e pede o escore. A fibrilação atrial vale 3 pontos, o item mais pesado.",
+     "pontos": [
+      "Peptídeo alto, relação E/e' elevada, átrio esquerdo grande e pressão pulmonar alta indicam pressão de enchimento elevada.",
+      "O escore H2FPEF dá 3 pontos à fibrilação atrial, 2 à obesidade e 1 a cada um destes: dois anti-hipertensivos, pressão pulmonar acima de 35, idade acima de 60 e E/e' acima de 9.",
+      "Com 6 ou mais pontos a probabilidade é alta; amiloidose, valvopatia e doença do pericárdio precisam ser afastadas."
+     ],
+     "titulo": "Diagnosticar a fração preservada"
+    },
+    {
+     "fonte": "ESC 2026; FINEARTS-HF 2024",
+     "ideia": "Por muito tempo nada mudava o prognóstico da fração preservada. Hoje, inibidores de SGLT2 reduzem internações, e a ESC 2026 também recomenda antagonista mineralocorticoide e terapia com GLP-1 para quem é obeso.",
+     "na_prova": "A banca pergunta qual classe reduz internação na fração preservada: inibidor de SGLT2. Betabloqueador não tem esse benefício na fração preservada.",
+     "pontos": [
+      "Empagliflozina e dapagliflozina reduzem internação por insuficiência cardíaca em qualquer fração de ejeção.",
+      "A finerenona reduziu eventos no estudo FINEARTS-HF, e a ESC 2026 inclui o antagonista mineralocorticoide na base do tratamento.",
+      "Na obesidade, semaglutida ou tirzepatida melhoram sintomas; diurético trata a congestão, e hipertensão e fibrilação atrial precisam de controle."
+     ],
+     "titulo": "Tratar a fração preservada"
+    }
+   ],
+   "id": "icfep",
+   "nivel": 2,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "6 pontos — baixa"
+      ],
+      [
+       "B",
+       "9 pontos — alta probabilidade de ICFEp"
+      ],
+      [
+       "C",
+       "não se aplica com FA"
+      ],
+      [
+       "D",
+       "2 pontos — baixa"
+      ],
+      [
+       "E",
+       "4 pontos — intermediária"
+      ]
+     ],
+     "coment": "Obesidade 2 + HAS 1 + FA 3 + PSAP 1 + idade 1 + E/e' 1 = 9. ≥ 6 = alta probabilidade.",
+     "enunciado": "Mulher de 72 anos, IMC 34, em 2 anti-hipertensivos, com FA, E/e' de 14 e PSAP de 40. Pelo H2FPEF:",
+     "gab": "B",
+     "id": "ic-icfep-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "hidralazina-nitrato"
+      ],
+      [
+       "B",
+       "verapamil"
+      ],
+      [
+       "C",
+       "digoxina"
+      ],
+      [
+       "D",
+       "ivabradina"
+      ],
+      [
+       "E",
+       "empagliflozina (iSGLT2)"
+      ]
+     ],
+     "coment": "EMPEROR-Preserved e DELIVER (iSGLT2) foram positivos. As outras não têm evidência na ICFEp.",
+     "enunciado": "Droga que reduziu internação por IC na ICFEp em ensaios recentes:",
+     "gab": "E",
+     "id": "ic-icfep-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "digoxina"
+      ],
+      [
+       "B",
+       "agonista de GLP-1 (semaglutida)"
+      ],
+      [
+       "C",
+       "betabloqueador em dose máxima"
+      ],
+      [
+       "D",
+       "nitrato de longa ação"
+      ],
+      [
+       "E",
+       "espironolactona em dose alta"
+      ]
+     ],
+     "coment": "STEP-HFpEF (semaglutida) e SUMMIT (tirzepatida): melhora de sintomas, peso e eventos de IC no fenótipo obeso.",
+     "enunciado": "Na ICFEp com obesidade, terapia que melhorou sintomas e capacidade funcional:",
+     "gab": "B",
+     "id": "ic-icfep-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "anemia ferropriva"
+      ],
+      [
+       "B",
+       "DPOC leve"
+      ],
+      [
+       "C",
+       "amiloidose cardíaca"
+      ],
+      [
+       "D",
+       "hipotireoidismo subclínico"
+      ],
+      [
+       "E",
+       "hipertensão do avental branco"
+      ]
+     ],
+     "coment": "Amiloidose tem tratamento específico (tafamidis) e imita a ICFEp hipertensiva.",
+     "enunciado": "Antes de rotular ICFEp num idoso com parede espessa, é preciso excluir:",
+     "gab": "C",
+     "id": "ic-icfep-4"
+    }
+   ],
+   "titulo": "ICFEp: diagnosticar e tratar"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "ESC 2026; AHA/ACC/HFSA 2022",
+     "ideia": "Na fração reduzida, quatro classes de remédio reduzem morte e internação, cada uma por um mecanismo diferente. Por isso todas devem ser iniciadas em poucas semanas, em dose baixa, e tituladas depois.",
+     "na_prova": "A banca pergunta o que falta na prescrição. Procure qual dos quatro pilares está ausente, e não o diurético, que alivia sintoma sem reduzir mortalidade.",
+     "pontos": [
+      "Os pilares são betabloqueador, sacubitril-valsartana ou IECA, antagonista mineralocorticoide e inibidor de SGLT2.",
+      "Depois de uma internação, a otimização rápida com consultas precoces reduziu morte e reinternação no estudo STRONG-HF.",
+      "Ivabradina, vericiguate, hidralazina com nitrato e digoxina entram em situações específicas, depois dos pilares."
+     ],
+     "titulo": "Os quatro pilares"
+    },
+    {
+     "fonte": "SODIUM-HF 2022; ESC 2026",
+     "ideia": "Mudanças de hábito e cuidados simples evitam descompensações. A restrição de sal exagerada, porém, não reduziu eventos e pode piorar a nutrição.",
+     "na_prova": "Pegadinha: prescrever restrição hídrica e de sal rigorosa para todo paciente. A evidência atual não apoia isso.",
+     "pontos": [
+      "No estudo SODIUM-HF, cortar muito o sódio não reduziu eventos, então se evita apenas o excesso, abaixo de cerca de 5 g de sal por dia.",
+      "A restrição de água fica para hiponatremia ou congestão refratária.",
+      "Vacinas, exercício, parar álcool e tabaco, evitar AINE e glitazonas e pesar-se todo dia completam o cuidado."
+     ],
+     "titulo": "Medidas gerais"
+    }
+   ],
+   "id": "cronico",
+   "nivel": 2,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "um remédio por vez até a dose máxima antes do próximo"
+      ],
+      [
+       "B",
+       "iniciar só IECA e esperar 6 meses"
+      ],
+      [
+       "C",
+       "esperar a FE do 2º eco para tratar"
+      ],
+      [
+       "D",
+       "só diurético até ficar assintomático"
+      ],
+      [
+       "E",
+       "iniciar os quatro pilares em poucas semanas, em doses baixas, e titular"
+      ]
+     ],
+     "coment": "Os benefícios aparecem em semanas: atrasar pilares custa vidas. Ordem flexível conforme PA, FC, K⁺ e função renal.",
+     "enunciado": "Paciente com ICFEr recém-diagnosticada, estável. Estratégia recomendada atualmente:",
+     "gab": "E",
+     "id": "ic-cronico-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "restrição intensa (< 1,5 g/dia) não reduziu morte nem internação"
+      ],
+      [
+       "B",
+       "restrição de sódio piora a função renal sempre"
+      ],
+      [
+       "C",
+       "restrição hídrica rígida é obrigatória para todos"
+      ],
+      [
+       "D",
+       "o sal deve ser liberado sem limite"
+      ],
+      [
+       "E",
+       "restrição intensa reduziu mortalidade em 50%"
+      ]
+     ],
+     "coment": "Evitar excesso de sal (< 5 g/dia) é razoável; restrição extrema não trouxe benefício e piora a nutrição.",
+     "enunciado": "Sobre a restrição de sódio na IC, o estudo SODIUM-HF mostrou:",
+     "gab": "A",
+     "id": "ic-cronico-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "liraglutida"
+      ],
+      [
+       "B",
+       "pioglitazona"
+      ],
+      [
+       "C",
+       "metformina"
+      ],
+      [
+       "D",
+       "insulina"
+      ],
+      [
+       "E",
+       "dapagliflozina"
+      ]
+     ],
+     "coment": "Glitazonas retêm líquido e aumentam internação por IC.",
+     "enunciado": "Medicação que deve ser evitada por piorar a ICFEr:",
+     "gab": "B",
+     "id": "ic-cronico-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "trocar todos os remédios por diurético"
+      ],
+      [
+       "B",
+       "manter as doses da alta por 1 ano antes de ajustar"
+      ],
+      [
+       "C",
+       "evitar retorno precoce"
+      ],
+      [
+       "D",
+       "suspender o betabloqueador por 3 meses"
+      ],
+      [
+       "E",
+       "otimizar rapidamente as doses dos pilares com visitas frequentes nas primeiras semanas"
+      ]
+     ],
+     "coment": "Titulação intensiva com segurança (pressão, K⁺, função renal, NT-proBNP) reduziu morte e reinternação em 180 dias.",
+     "enunciado": "Após internação por IC descompensada, o estudo STRONG-HF mostrou benefício de:",
+     "gab": "E",
+     "id": "ic-cronico-4"
+    }
+   ],
+   "titulo": "ICFEr crônica: a sequência certa"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "ESC 2026; AHA/ACC/HFSA 2022",
+     "ideia": "O desfibrilador previne morte súbita por arritmia, e a ressincronização faz os dois ventrículos baterem juntos quando há bloqueio de ramo esquerdo. As duas exigem tratamento otimizado antes da indicação.",
+     "na_prova": "A banca dá QRS largo sem bloqueio de ramo esquerdo e abaixo de 150 ms: o benefício da ressincronização é duvidoso.",
+     "pontos": [
+      "Na prevenção primária, o desfibrilador se indica com fração de 35% ou menos e classe II ou III após 3 meses de tratamento otimizado.",
+      "Na prevenção secundária, o desfibrilador se indica após taquicardia ou fibrilação ventricular sustentada.",
+      "A ressincronização tem a indicação mais forte com fração de 35% ou menos, ritmo sinusal, bloqueio de ramo esquerdo e QRS de 150 ms ou mais."
+     ],
+     "titulo": "Desfibrilador e ressincronização"
+    },
+    {
+     "fonte": "ESC 2026; IRONMAN 2022; AFFIRM-AHF 2020",
+     "ideia": "Comorbidades mudam o prognóstico da insuficiência cardíaca. Corrigir o ferro, controlar a fibrilação atrial e manejar o potássio permite manter os pilares e reduz internações.",
+     "na_prova": "Pegadinha: ferro oral na insuficiência cardíaca. Ele não funciona; o que melhora sintomas e reduz internação é o ferro venoso.",
+     "pontos": [
+      "Há deficiência de ferro com ferritina abaixo de 100, ou de 100 a 299 com saturação abaixo de 20%, e ela se trata com ferro venoso.",
+      "Na fibrilação atrial, anticoagula-se pelo escore CHA2DS2-VA e evita-se diltiazem e verapamil na fração reduzida.",
+      "Na hipercalemia causada pelos pilares, ajustam-se doses e usam-se quelantes para manter os remédios."
+     ],
+     "titulo": "Ferro, fibrilação atrial e eletrólitos"
+    }
+   ],
+   "id": "disp",
+   "nivel": 2,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "marca-passo convencional"
+      ],
+      [
+       "B",
+       "nenhum dispositivo"
+      ],
+      [
+       "C",
+       "ressincronização"
+      ],
+      [
+       "D",
+       "CDI para prevenção primária"
+      ],
+      [
+       "E",
+       "CDI só se tiver síncope"
+      ]
+     ],
+     "coment": "FE ≤ 35% persistente com NYHA II–III após terapia otimizada → CDI. QRS estreito: sem TRC.",
+     "enunciado": "ICFEr isquêmica, FE 30%, NYHA II após 6 meses de terapia otimizada, QRS 110 ms. Indicação:",
+     "gab": "D",
+     "id": "ic-disp-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "terapia de ressincronização cardíaca (com ou sem CDI)"
+      ],
+      [
+       "B",
+       "apenas CDI"
+      ],
+      [
+       "C",
+       "ivabradina isolada"
+      ],
+      [
+       "D",
+       "transplante imediato"
+      ],
+      [
+       "E",
+       "marca-passo VVI"
+      ]
+     ],
+     "coment": "BRE com QRS ≥ 150 ms é o melhor cenário para TRC: melhora sintomas, FE e sobrevida.",
+     "enunciado": "FE 28%, ritmo sinusal, BRE com QRS de 165 ms, NYHA III com terapia otimizada. Indicação mais forte:",
+     "gab": "A",
+     "id": "ic-disp-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "sulfato ferroso oral"
+      ],
+      [
+       "B",
+       "ferro intravenoso (carboximaltose)"
+      ],
+      [
+       "C",
+       "transfusão"
+      ],
+      [
+       "D",
+       "não tratar, pois a ferritina é normal"
+      ],
+      [
+       "E",
+       "eritropoietina"
+      ]
+     ],
+     "coment": "Ferritina 100–299 com saturação < 20% = deficiência de ferro na IC. Ferro IV melhora capacidade, qualidade de vida e reduz internação; oral não (IRONOUT-HF).",
+     "enunciado": "ICFEr com ferritina 180 ng/mL e saturação de transferrina 14%, sintomático, Hb 12,5. Conduta:",
+     "gab": "B",
+     "id": "ic-disp-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "carvedilol"
+      ],
+      [
+       "B",
+       "digoxina como adjuvante"
+      ],
+      [
+       "C",
+       "diltiazem"
+      ],
+      [
+       "D",
+       "amiodarona em casos selecionados"
+      ],
+      [
+       "E",
+       "bisoprolol"
+      ]
+     ],
+     "coment": "Bloqueadores de canal de cálcio não di-hidropiridínicos são inotrópicos negativos e pioram a ICFEr.",
+     "enunciado": "ICFEr com FA de resposta rápida, PA normal. Para controle da frequência, evitar:",
+     "gab": "C",
+     "id": "ic-disp-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "suplementar potássio"
+      ],
+      [
+       "B",
+       "aceitar K⁺ de 6,5"
+      ],
+      [
+       "C",
+       "quelante de potássio (patiromer ou ciclossilicato de zircônio) para viabilizar os pilares"
+      ],
+      [
+       "D",
+       "suspender definitivamente os pilares"
+      ],
+      [
+       "E",
+       "trocar tudo por diurético tiazídico em dose alta"
+      ]
+     ],
+     "coment": "Os quelantes permitem manter/otimizar bloqueio do SRAA e ARM (DIAMOND), com dieta orientada e monitorização.",
+     "enunciado": "Paciente com ICFEr e K⁺ 5,6 recorrente que impede manter espironolactona e ARNI. Estratégia moderna:",
+     "gab": "C",
+     "id": "ic-disp-5"
+    }
+   ],
+   "titulo": "Dispositivos e comorbidades"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "ESC 2026; Diretriz Brasileira de IC 2018 e atualização 2021",
+     "ideia": "Na descompensação, duas perguntas guiam o tratamento: o paciente está congesto e está perfundindo bem? As respostas formam quatro perfis, cada um com uma conduta.",
+     "na_prova": "A banca descreve extremidades frias, pressão convergente e estertores: perfil frio e úmido, que pede inotrópico.",
+     "pontos": [
+      "O perfil quente e úmido é o mais comum e pede diurético venoso, com vasodilatador se a pressão permitir.",
+      "O perfil frio e úmido pede inotrópico, como dobutamina, com ou sem vasopressor, além do diurético.",
+      "O perfil frio e seco pede reposição volêmica cautelosa, e o quente e seco está compensado."
+     ],
+     "titulo": "Perfis de Stevenson"
+    },
+    {
+     "fonte": "ESC 2026; Diretriz Brasileira de IC 2018 e atualização 2021",
+     "ideia": "No edema agudo de pulmão, o líquido invade os alvéolos porque a pressão nos capilares pulmonares subiu. O tratamento baixa essa pressão com vasodilatador, diurético e pressão positiva.",
+     "na_prova": "A banca quer saber o que não fazer: morfina de rotina. E lembra de procurar o gatilho, como falta de adesão, arritmia, isquemia ou infecção.",
+     "pontos": [
+      "O paciente fica sentado, recebe oxigênio e ventilação não invasiva, que reduz intubação, além de furosemida venosa.",
+      "Nitrato entra se a pressão sistólica estiver acima de 100 a 110 mmHg; morfina não é rotina.",
+      "No edema hipertensivo, o vasodilatador em dose alta é a peça principal, porque o problema é redistribuição de volume."
+     ],
+     "titulo": "Edema agudo de pulmão"
+    }
+   ],
+   "id": "aguda",
+   "nivel": 3,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "L: volume"
+      ],
+      [
+       "B",
+       "A: alta para casa"
+      ],
+      [
+       "C",
+       "C: dobutamina"
+      ],
+      [
+       "D",
+       "B: noradrenalina isolada"
+      ],
+      [
+       "E",
+       "B (quente-úmido): furosemida IV + vasodilatador"
+      ]
+     ],
+     "coment": "Congesto e bem perfundido. Diurético de alça IV; nitrato se PA permite.",
+     "enunciado": "Paciente ortopneico, com estertores, turgência jugular, extremidades quentes e PA 150×90. Perfil e tratamento:",
+     "gab": "E",
+     "id": "ic-aguda-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "B: nitroprussiato"
+      ],
+      [
+       "B",
+       "C (frio-úmido): inotrópico (dobutamina), vasopressor se hipotensão, e diurético"
+      ],
+      [
+       "C",
+       "A: manter medicação oral"
+      ],
+      [
+       "D",
+       "L: soro fisiológico 2 L"
+      ],
+      [
+       "E",
+       "C: betabloqueador em dose dobrada"
+      ]
+     ],
+     "coment": "Baixo débito com congestão. Dobutamina para débito; noradrenalina se PAS muito baixa; diurético após restaurar perfusão.",
+     "enunciado": "Paciente congesto, com extremidades frias, sonolento, PA 82×60 e lactato 4. Perfil e conduta:",
+     "gab": "B",
+     "id": "ic-aguda-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "morfina em dose alta"
+      ],
+      [
+       "B",
+       "dobutamina"
+      ],
+      [
+       "C",
+       "betabloqueador IV em bolus"
+      ],
+      [
+       "D",
+       "VNI + nitrato IV em dose alta (+ furosemida)"
+      ],
+      [
+       "E",
+       "soro fisiológico"
+      ]
+     ],
+     "coment": "No EAP hipertensivo o líquido foi redistribuído: vasodilatação rápida + pressão positiva resolvem; diurético complementa.",
+     "enunciado": "Edema agudo de pulmão hipertensivo (PA 210×120) com SpO₂ 82%. Medidas iniciais mais importantes:",
+     "gab": "D",
+     "id": "ic-aguda-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "nitroprussiato"
+      ],
+      [
+       "B",
+       "VNI"
+      ],
+      [
+       "C",
+       "mais furosemida"
+      ],
+      [
+       "D",
+       "ultrafiltração"
+      ],
+      [
+       "E",
+       "reposição volêmica cautelosa e reavaliação"
+      ]
+     ],
+     "coment": "Perfil L: sem congestão e hipoperfundido — pré-carga baixa. Pequenas alíquotas de volume e reavaliar.",
+     "enunciado": "Paciente seco e frio (perfil L), hipotenso, após diurese excessiva. Conduta:",
+     "gab": "E",
+     "id": "ic-aguda-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "vacinação recente"
+      ],
+      [
+       "B",
+       "má adesão ao tratamento ou à dieta"
+      ],
+      [
+       "C",
+       "excesso de exercício"
+      ],
+      [
+       "D",
+       "uso de iSGLT2"
+      ],
+      [
+       "E",
+       "jejum de 12 horas"
+      ]
+     ],
+     "coment": "Adesão, infecção, arritmia, isquemia e drogas (AINE) respondem pela maioria. Buscar sempre para evitar reinternação.",
+     "enunciado": "Fator precipitante mais comum de descompensação a investigar:",
+     "gab": "B",
+     "id": "ic-aguda-5"
+    }
+   ],
+   "titulo": "IC aguda: perfis e tratamento"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "ESC 2026; DOSE 2011; ADVOR 2022",
+     "ideia": "Na descompensação, o diurético venoso precisa de dose suficiente e de checagem precoce da resposta. Dose alta descongestiona mais, mesmo que a creatinina suba um pouco.",
+     "na_prova": "A banca pergunta o que fazer com resposta ruim ao diurético: dobrar a dose de alça e, depois, bloquear outro segmento do néfron.",
+     "pontos": [
+      "Quem não usava diurético recebe 20 a 40 mg de furosemida venosa; quem usava recebe de 1 a 2,5 vezes a dose oral diária.",
+      "A resposta é boa se o sódio urinário em 2 horas passa de 50 a 70 mEq/L ou a diurese passa de 100 a 150 mL/h nas primeiras 6 horas.",
+      "Se a resposta for ruim, dobra-se a dose de alça e depois associa-se acetazolamida ou tiazídico, o bloqueio sequencial."
+     ],
+     "titulo": "Dose e resposta do diurético"
+    },
+    {
+     "fonte": "HFA 2019 (diuréticos); ESC 2026",
+     "ideia": "Quando a creatinina sobe enquanto o paciente melhora e perde congestão, isso não é dano renal verdadeiro. Parar o diurético nesse momento deixa congestão residual, que prediz reinternação.",
+     "na_prova": "Pegadinha clássica: creatinina subiu de 1,2 para 1,5 com o paciente melhorando. A conduta é manter a descongestão.",
+     "pontos": [
+      "A subida discreta de creatinina com melhora clínica tem bom prognóstico e não indica suspender o diurético.",
+      "Suspender o diurético com o paciente ainda congesto é um erro comum.",
+      "Congestão residual na alta é um dos maiores preditores de reinternação."
+     ],
+     "titulo": "Creatinina que sobe ao descongestionar"
+    }
+   ],
+   "id": "diur",
+   "nivel": 3,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "1.000 mg IV em bolus"
+      ],
+      [
+       "B",
+       "20 mg IV 1 vez ao dia"
+      ],
+      [
+       "C",
+       "10 mg IV"
+      ],
+      [
+       "D",
+       "manter 80 mg via oral"
+      ],
+      [
+       "E",
+       "80 a 200 mg/dia de furosemida IV (1 a 2,5× a dose oral)"
+      ]
+     ],
+     "coment": "Quem já usa alça precisa de ao menos a mesma dose IV; no DOSE, 2,5× descongestionou mais.",
+     "enunciado": "Paciente com IC usando furosemida 80 mg/dia por via oral, internado congesto. Dose inicial IV razoável:",
+     "gab": "E",
+     "id": "ic-diur-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "suspender o diurético"
+      ],
+      [
+       "B",
+       "manter e reavaliar em 24 h"
+      ],
+      [
+       "C",
+       "dar soro fisiológico"
+      ],
+      [
+       "D",
+       "dobrar a dose do diurético de alça"
+      ],
+      [
+       "E",
+       "iniciar dobutamina de rotina"
+      ]
+     ],
+     "coment": "Natriurese < 50–70 mEq/L em 2 h = resposta insuficiente; dobrar a dose e reavaliar.",
+     "enunciado": "Duas horas após furosemida IV, sódio urinário de 30 mEq/L. Conduta:",
+     "gab": "D",
+     "id": "ic-diur-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "associar acetazolamida ou tiazídico (bloqueio sequencial do néfron)"
+      ],
+      [
+       "B",
+       "suspender o diurético"
+      ],
+      [
+       "C",
+       "iniciar AINE"
+      ],
+      [
+       "D",
+       "reduzir a dose à metade"
+      ],
+      [
+       "E",
+       "restringir proteína"
+      ]
+     ],
+     "coment": "Resistência a diurético: o túbulo distal hipertrofia e reabsorve o sódio. Bloquear outros segmentos (ADVOR, CLOROTIC); vigiar K⁺, Na⁺ e creatinina.",
+     "enunciado": "Mesmo com furosemida em dose alta, o paciente segue congesto e com pouca diurese. Próximo passo:",
+     "gab": "A",
+     "id": "ic-diur-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "suspender todos os pilares definitivamente"
+      ],
+      [
+       "B",
+       "iniciar soro fisiológico"
+      ],
+      [
+       "C",
+       "solicitar biópsia renal"
+      ],
+      [
+       "D",
+       "manter a descongestão: a alta da creatinina com melhora clínica não indica dano"
+      ],
+      [
+       "E",
+       "suspender o diurético imediatamente"
+      ]
+     ],
+     "coment": "Hemoconcentração e queda de pressão de filtração. O que piora o prognóstico é alta com congestão residual.",
+     "enunciado": "Durante descongestão eficaz (perda de 5 kg, melhora da dispneia), a creatinina sobe de 1,3 para 1,6. Conduta:",
+     "gab": "D",
+     "id": "ic-diur-4"
+    }
+   ],
+   "titulo": "Diuréticos na IC aguda e resistência"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "AHA 2017 (choque cardiogênico); ESC 2026",
+     "ideia": "Choque cardiogênico é pressão baixa com hipoperfusão porque o coração não bombeia. A causa número um é o infarto, e abrir a artéria culpada é a medida que mais salva vidas.",
+     "na_prova": "A banca pergunta o vasopressor de primeira escolha no choque cardiogênico: noradrenalina, e não dopamina.",
+     "pontos": [
+      "Os sinais são pressão sistólica abaixo de 90 mmHg ou necessidade de vasopressor, com lactato alto, oligúria, extremidades frias ou confusão.",
+      "O vasopressor de escolha é a noradrenalina, e o inotrópico é a dobutamina; dopamina causa mais arritmia e é evitada.",
+      "Suporte mecânico, como balão, Impella ou ECMO, entra em casos selecionados, guiado pelos estágios SCAI."
+     ],
+     "titulo": "Reconhecer e tratar o choque"
+    },
+    {
+     "fonte": "ACC/AHA 2025 (síndromes coronarianas agudas)",
+     "ideia": "Alguns choques depois do infarto vêm de uma estrutura que se rompeu ou de um ventrículo direito que parou. Cada um tem um sinal típico e um tratamento próprio.",
+     "na_prova": "A banca dá infarto inferior com hipotensão após nitrato e pulmão limpo: é infarto de ventrículo direito, tratado com volume.",
+     "pontos": [
+      "Sopro sistólico novo com choque ou edema de pulmão sugere ruptura de músculo papilar ou comunicação interventricular.",
+      "Nesses casos, o ecocardiograma é urgente e o tratamento é cirúrgico.",
+      "Choque com turgência jugular e pulmões limpos no infarto inferior sugere infarto de ventrículo direito, que pede volume e não nitrato."
+     ],
+     "titulo": "Complicações mecânicas do infarto"
+    }
+   ],
+   "id": "choque",
+   "nivel": 3,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "nitroglicerina IV"
+      ],
+      [
+       "B",
+       "soro fisiológico 3 L"
+      ],
+      [
+       "C",
+       "dopamina em dose alta"
+      ],
+      [
+       "D",
+       "betabloqueador IV"
+      ],
+      [
+       "E",
+       "revascularização urgente da artéria culpada"
+      ]
+     ],
+     "coment": "SHOCK trial: revascularização precoce aumentou a sobrevida. Noradrenalina e dobutamina são ponte.",
+     "enunciado": "IAM anterior extenso com PA 78×50, lactato 5 e extremidades frias. Medida que mais muda o prognóstico:",
+     "gab": "E",
+     "id": "ic-choque-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "noradrenalina"
+      ],
+      [
+       "B",
+       "fenilefrina"
+      ],
+      [
+       "C",
+       "dopamina"
+      ],
+      [
+       "D",
+       "vasopressina isolada"
+      ],
+      [
+       "E",
+       "adrenalina como primeira escolha"
+      ]
+     ],
+     "coment": "Na comparação com dopamina (SOAP II), noradrenalina teve menos arritmia e menor mortalidade no subgrupo cardiogênico.",
+     "enunciado": "Vasopressor de escolha no choque cardiogênico:",
+     "gab": "A",
+     "id": "ic-choque-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "dobutamina antes de qualquer volume"
+      ],
+      [
+       "B",
+       "expansão volêmica e evitar nitrato/diurético"
+      ],
+      [
+       "C",
+       "nitroglicerina IV"
+      ],
+      [
+       "D",
+       "morfina e nitrato"
+      ],
+      [
+       "E",
+       "furosemida IV"
+      ]
+     ],
+     "coment": "Infarto de VD: o VE depende da pré-carga. Ver V3R/V4R; volume e revascularização.",
+     "enunciado": "IAM inferior com hipotensão, turgência jugular e pulmões limpos. Conduta inicial:",
+     "gab": "B",
+     "id": "ic-choque-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "estenose aórtica"
+      ],
+      [
+       "B",
+       "pericardite de Dressler"
+      ],
+      [
+       "C",
+       "ruptura de músculo papilar com insuficiência mitral aguda"
+      ],
+      [
+       "D",
+       "tromboembolismo pulmonar"
+      ],
+      [
+       "E",
+       "reinfarto sem complicação mecânica"
+      ]
+     ],
+     "coment": "Complicação mecânica (2–7 dias). Eco urgente, suporte (balão intra-aórtico, vasodilatador se possível) e cirurgia.",
+     "enunciado": "Sopro holossistólico novo em ápice no 4º dia de IAM, com EAP e hipotensão súbitos. Diagnóstico:",
+     "gab": "C",
+     "id": "ic-choque-4"
+    }
+   ],
+   "titulo": "Choque cardiogênico"
+  },
+  {
+   "aula": [
+    {
+     "fonte": "ESC 2026; AHA/ACC/HFSA 2022",
+     "ideia": "No estágio D, a doença não responde mais ao tratamento habitual e o paciente vive internando. Reconhecer esse momento permite discutir transplante, dispositivo de assistência ou cuidado paliativo a tempo.",
+     "na_prova": "A banca pergunta quando encaminhar para centro de IC avançada: na presença desses sinais, antes que o paciente fique grave demais para o transplante.",
+     "pontos": [
+      "Os sinais são internações repetidas, intolerância aos pilares por pressão baixa ou rim, necessidade de inotrópico e caquexia.",
+      "Classe III ou IV persistente e hiponatremia também indicam doença avançada.",
+      "As opções são transplante, dispositivo de assistência ventricular, inotrópico paliativo e cuidados paliativos integrados."
+     ],
+     "titulo": "Insuficiência cardíaca avançada"
+    },
+    {
+     "fonte": "ESC 2026; AHA/ACC/HFSA 2022; Diretriz Brasileira de IC 2018 e atualização 2021",
+     "ideia": "Toda questão de insuficiência cardíaca se resolve com as mesmas seis perguntas, em ordem. Seguir o roteiro evita pular etapas e errar a conduta.",
+     "na_prova": "Use o roteiro para eliminar alternativas: a conduta certa costuma corrigir o gatilho ou completar um pilar.",
+     "pontos": [
+      "Primeiro, confirme que é insuficiência cardíaca pela clínica, pelo peptídeo e pelo ecocardiograma.",
+      "Depois, defina o fenótipo pela fração de ejeção, a causa e o perfil hemodinâmico de agora.",
+      "Por fim, ache o gatilho da descompensação e veja o que falta dos pilares e dos dispositivos."
+     ],
+     "titulo": "Roteiro do caso"
+    }
+   ],
+   "id": "casos",
+   "nivel": 3,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "BNP normal"
+      ],
+      [
+       "B",
+       "FE de 45%"
+      ],
+      [
+       "C",
+       "boa tolerância ao exercício"
+      ],
+      [
+       "D",
+       "NYHA I estável"
+      ],
+      [
+       "E",
+       "necessidade de reduzir os pilares por hipotensão e piora renal, com internações repetidas"
+      ]
+     ],
+     "coment": "Intolerância à terapia de base e internações recorrentes indicam encaminhar para avaliação de transplante/LVAD.",
+     "enunciado": "Sinal de que a IC está entrando no estágio avançado:",
+     "gab": "E",
+     "id": "ic-casos-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "CDI (prevenção secundária) + amiodarona"
+      ],
+      [
+       "B",
+       "marca-passo convencional"
+      ],
+      [
+       "C",
+       "apenas betabloqueador"
+      ],
+      [
+       "D",
+       "ablação de rotina sem CDI"
+      ],
+      [
+       "E",
+       "benznidazol"
+      ]
+     ],
+     "coment": "TV sustentada sintomática = prevenção secundária com CDI; amiodarona reduz terapias do dispositivo.",
+     "enunciado": "Chagásico com IC, FE 25%, síncope e TV sustentada documentada. Conduta para prevenir morte súbita:",
+     "gab": "A",
+     "id": "ic-casos-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "AINE aumenta a FE"
+      ],
+      [
+       "B",
+       "AINE retém sódio e água e reduz a resposta aos diuréticos"
+      ],
+      [
+       "C",
+       "AINE causa taquicardiomiopatia"
+      ],
+      [
+       "D",
+       "AINE causa hipocalemia que piora a contração"
+      ],
+      [
+       "E",
+       "interação com iSGLT2 que causa cetose"
+      ]
+     ],
+     "coment": "Prostaglandinas são essenciais à natriurese e à perfusão renal na IC. AINE são contraindicados.",
+     "enunciado": "ICFEr que descompensou após iniciar diclofenaco para lombalgia. O mecanismo:",
+     "gab": "B",
+     "id": "ic-casos-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "suspender a espironolactona"
+      ],
+      [
+       "B",
+       "acrescentar digoxina"
+      ],
+      [
+       "C",
+       "trocar carvedilol por atenolol"
+      ],
+      [
+       "D",
+       "trocar enalapril por sacubitril-valsartana (após 36 h)"
+      ],
+      [
+       "E",
+       "acrescentar ivabradina sem avaliar a FC"
+      ]
+     ],
+     "coment": "PARADIGM-HF: ARNI reduziu morte e internação em relação ao enalapril. Com PA e K⁺ adequados, é a troca indicada.",
+     "enunciado": "Mulher de 55 anos, FE 30%, NYHA II, em carvedilol 25 mg 2×/dia, enalapril, espironolactona e dapagliflozina; PA 118×70, K⁺ 4,6. Próximo ajuste com maior impacto em mortalidade:",
+     "gab": "D",
+     "id": "ic-casos-4"
+    }
+   ],
+   "titulo": "IC avançada e casos integrados"
+  }
+ ],
+ "niveis": {
+  "1": "Fundamentos (definição, mecanismos, causas)",
+  "2": "Diagnóstico e tratamento crônico",
+  "3": "IC aguda, choque e casos (herói)"
+ },
+ "ordem": 2,
+ "prefixo": "ic",
+ "roteiro": [
+  11,
+  1
+ ],
+ "sabor": 2,
+ "titulo": "Insuficiência Cardíaca",
+ "treino_pilulas": [
+  [
+   8,
+   0
+  ],
+  [
+   9,
+   0
+  ]
+ ],
+ "versao": 1
+}

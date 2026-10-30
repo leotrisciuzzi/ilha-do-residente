@@ -1,0 +1,3545 @@
+{
+ "cor": [
+  90,
+  220,
+  210
+ ],
+ "descricao": "Do pH ao laudo completo: distúrbios simples e mistos, ânion gap, delta-delta e compensação",
+ "formato": 1,
+ "gerador": "gasometria",
+ "id": "gasometria",
+ "materia": "Gasometria",
+ "modulos": [
+  {
+   "aula": [
+    {
+     "fig": "ph_h",
+     "fonte": "Berend et al., NEJM 2014; Seifter, NEJM 2014",
+     "ideia": "O pH é uma forma logarítmica de medir a concentração de hidrogênio. Por isso pequenas mudanças no pH escondem grandes mudanças de hidrogênio: cair 0,3 no pH significa dobrar o hidrogênio.",
+     "na_prova": "A banca dá uma gasometria com pH que não bate com PaCO₂ e bicarbonato e pede a conclusão: amostra ou digitação com erro.",
+     "pontos": [
+      "No sangue normal, a concentração de hidrogênio é de 40 nanomoles por litro, que corresponde a pH 7,40.",
+      "Com pH 7,10, o hidrogênio dobra para cerca de 80 nanomoles por litro; a faixa compatível com a vida vai de cerca de 6,8 a 7,8.",
+      "A fórmula de Kassirer-Bleich, hidrogênio igual a 24 vezes PaCO₂ dividido por bicarbonato, confere se uma gasometria é coerente."
+     ],
+     "titulo": "pH e íon hidrogênio"
+    },
+    {
+     "fig": "tampao",
+     "fonte": "Berend et al., NEJM 2014; Seifter, NEJM 2014",
+     "ideia": "Um tampão é um ácido fraco junto com sua base, capaz de absorver hidrogênio ou hidroxila sem deixar o pH variar muito. Ele funciona melhor quando o pH do meio está perto do seu pKa.",
+     "na_prova": "A banca pergunta por que um tampão perde eficácia: quando o pH se afasta muito do pKa, sobra pouca forma ácida ou pouca forma básica para reagir.",
+     "pontos": [
+      "Ácido é quem doa hidrogênio e base é quem recebe; o ácido forte se dissocia todo e o fraco fica em equilíbrio.",
+      "O pKa é o pH em que metade do ácido está dissociada, e o tampão rende mais a uma unidade de pH para cima ou para baixo.",
+      "A equação de Henderson-Hasselbalch resume isso: pH igual a pKa mais o logaritmo da razão entre base e ácido."
+     ],
+     "titulo": "Ácidos, bases e tampões"
+    },
+    {
+     "fig": "bicarbonato",
+     "fonte": "Berend et al., NEJM 2014; Seifter, NEJM 2014",
+     "ideia": "O bicarbonato é o tampão mais importante do corpo, apesar de seu pKa de 6,1 estar longe de 7,4. O segredo é que ele é aberto: o pulmão regula o CO₂ em minutos e o rim regula o bicarbonato em dias.",
+     "na_prova": "A banca dá bicarbonato e PaCO₂ dobrados juntos e pergunta o pH: ele fica normal, porque a razão continua 20 para 1.",
+     "pontos": [
+      "O CO₂ se junta à água e forma ácido carbônico, que se desfaz em hidrogênio e bicarbonato, com ajuda da anidrase carbônica.",
+      "O pH é 6,1 mais o logaritmo de bicarbonato dividido por 0,03 vezes a PaCO₂; no normal, 24 dividido por 1,2 dá 20.",
+      "O que define o pH é a razão de 20 para 1 entre bicarbonato e CO₂, e não cada valor isolado."
+     ],
+     "titulo": "O sistema bicarbonato e CO₂"
+    }
+   ],
+   "id": "quimica",
+   "nivel": 1,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "40 mmol/L"
+      ],
+      [
+       "B",
+       "40 nmol/L"
+      ],
+      [
+       "C",
+       "4 µmol/L"
+      ],
+      [
+       "D",
+       "7,4 nmol/L"
+      ],
+      [
+       "E",
+       "0,4 mEq/L"
+      ]
+     ],
+     "coment": "pH = −log[H⁺] → [H⁺] = 10⁻⁷·⁴ mol/L ≈ 4 × 10⁻⁸ mol/L = 40 nmol/L. É uma concentração minúscula (nano), por isso pequenas variações absolutas de H⁺ mudam muito o pH.",
+     "enunciado": "A concentração de H⁺ correspondente a um pH sanguíneo de 7,40 é de aproximadamente:",
+     "gab": "B",
+     "id": "gaso-quimica-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "praticamente dobra"
+      ],
+      [
+       "B",
+       "cai pela metade"
+      ],
+      [
+       "C",
+       "aumenta cerca de 10 vezes"
+      ],
+      [
+       "D",
+       "aumenta cerca de 3 vezes"
+      ],
+      [
+       "E",
+       "aumenta cerca de 30%"
+      ]
+     ],
+     "coment": "log 2 ≈ 0,3. Uma queda de 0,3 no pH equivale a multiplicar o H⁺ por 2: de 40 para ~80 nEq/L. A escala logarítmica 'esconde' variações grandes.",
+     "enunciado": "Se o pH de um paciente cai de 7,40 para 7,10, a concentração de H⁺:",
+     "gab": "A",
+     "id": "gaso-quimica-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "o pH do meio está próximo do seu pKa"
+      ],
+      [
+       "B",
+       "contém apenas a forma ácida"
+      ],
+      [
+       "C",
+       "é formado por um ácido forte"
+      ],
+      [
+       "D",
+       "seu pKa está muito abaixo do pH do meio"
+      ],
+      [
+       "E",
+       "contém apenas a forma básica"
+      ]
+     ],
+     "coment": "Na região pH ≈ pKa as formas ácida e básica estão em quantidades parecidas, então o sistema consegue absorver tanto H⁺ quanto OH⁻. Ácido forte não tampona: dissocia tudo.",
+     "enunciado": "Um tampão químico é mais eficiente quando:",
+     "gab": "A",
+     "id": "gaso-quimica-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "7,40"
+      ],
+      [
+       "B",
+       "7,35"
+      ],
+      [
+       "C",
+       "7,10"
+      ],
+      [
+       "D",
+       "6,10"
+      ],
+      [
+       "E",
+       "7,45"
+      ]
+     ],
+     "coment": "0,03 × 40 = 1,2. 24 / 1,2 = 20. log 20 ≈ 1,3. pH = 6,1 + 1,3 = 7,40.",
+     "enunciado": "Usando Henderson-Hasselbalch (pKa 6,1; solubilidade do CO₂ 0,03), qual o pH de um sangue com HCO₃⁻ = 24 mEq/L e PaCO₂ = 40 mmHg?",
+     "gab": "A",
+     "id": "gaso-quimica-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "Porque seu pKa coincide com o pH do sangue arterial"
+      ],
+      [
+       "B",
+       "Porque o bicarbonato se comporta como ácido forte"
+      ],
+      [
+       "C",
+       "Porque funciona sem depender de nenhuma enzima"
+      ],
+      [
+       "D",
+       "Porque é um sistema aberto, regulado por pulmão e rim"
+      ],
+      [
+       "E",
+       "Porque é o único tampão do plasma e das hemácias"
+      ]
+     ],
+     "coment": "Num sistema fechado, um tampão com pKa 6,1 seria fraco a pH 7,4. Mas o CO₂ formado ao tamponar H⁺ é eliminado pelo pulmão, e o rim regenera HCO₃⁻ — os dois componentes são controlados de fora.",
+     "enunciado": "Por que o par bicarbonato/CO₂ é o tampão extracelular mais importante, apesar de ter pKa 6,1?",
+     "gab": "D",
+     "id": "gaso-quimica-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "7,22"
+      ],
+      [
+       "B",
+       "7,52"
+      ],
+      [
+       "C",
+       "7,10"
+      ],
+      [
+       "D",
+       "7,40"
+      ],
+      [
+       "E",
+       "7,30"
+      ]
+     ],
+     "coment": "[H⁺] = 24 × 60 / 24 = 60 nEq/L. 40 nEq/L é pH 7,40; 60 nEq/L ≈ 7,22 (−log 6 × 10⁻⁸). É uma acidose respiratória aguda típica.",
+     "enunciado": "Pelo atalho de Kassirer-Bleich ([H⁺] = 24 × PaCO₂ / HCO₃⁻), qual o pH aproximado com PaCO₂ = 60 mmHg e HCO₃⁻ = 24 mEq/L?",
+     "gab": "A",
+     "id": "gaso-quimica-6"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "H₂PO₄⁻ ⇌ HPO₄²⁻ + H⁺"
+      ],
+      [
+       "B",
+       "H₂CO₃ → H₂O + O₂"
+      ],
+      [
+       "C",
+       "CO₂ + H₂O ⇌ H₂CO₃"
+      ],
+      [
+       "D",
+       "NH₃ + H⁺ ⇌ NH₄⁺"
+      ],
+      [
+       "E",
+       "HCO₃⁻ + Cl⁻ ⇌ HCl + CO₃²⁻"
+      ]
+     ],
+     "coment": "Ela acelera a hidratação do CO₂ (e a reação inversa). Está nas hemácias, no túbulo proximal (luminal e intracelular) e em outros epitélios. A acetazolamida a inibe.",
+     "enunciado": "A anidrase carbônica catalisa qual reação?",
+     "gab": "C",
+     "id": "gaso-quimica-7"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "7,30 — acidose respiratória aguda"
+      ],
+      [
+       "B",
+       "7,20 — acidose metabólica simples"
+      ],
+      [
+       "C",
+       "7,40 — gasometria normal, sem distúrbio"
+      ],
+      [
+       "D",
+       "7,40 — há dois distúrbios que se anulam"
+      ],
+      [
+       "E",
+       "7,55 — alcalose respiratória pura"
+      ]
+     ],
+     "coment": "12 / (0,03 × 20) = 12 / 0,6 = 20 → pH 7,40. A razão está preservada, mas HCO₃⁻ e PaCO₂ estão muito alterados: há acidose metabólica + alcalose respiratória. pH normal NÃO exclui distúrbio.",
+     "enunciado": "Um paciente tem HCO₃⁻ = 12 mEq/L e PaCO₂ = 20 mmHg. Qual o pH calculado e o que ele significa?",
+     "gab": "D",
+     "id": "gaso-quimica-8"
+    }
+   ],
+   "titulo": "Química do pH e tampões"
+  },
+  {
+   "aula": [
+    {
+     "fig": "carga_acida",
+     "fonte": "Berend et al., NEJM 2014; Seifter, NEJM 2014",
+     "ideia": "O corpo produz dois tipos de ácido. O CO₂, que é volátil e sai pelo pulmão em enorme quantidade, e os ácidos fixos, que só o rim consegue eliminar.",
+     "na_prova": "A banca pergunta qual órgão elimina o ácido sulfúrico da dieta: o rim, porque esse ácido não é volátil.",
+     "pontos": [
+      "O metabolismo gera cerca de 15.000 mmol de CO₂ por dia, todos eliminados pela respiração.",
+      "Os ácidos fixos somam cerca de 1 mEq/kg/dia e vêm de aminoácidos com enxofre, fosfatos e ácidos orgânicos.",
+      "Como só o rim elimina ácidos fixos, a doença renal avançada leva a acidose metabólica."
+     ],
+     "titulo": "A carga ácida diária"
+    },
+    {
+     "fig": "defesas",
+     "fonte": "Berend et al., NEJM 2014; Seifter, NEJM 2014",
+     "ideia": "Contra mudanças de pH, o corpo tem três defesas com velocidades diferentes. Os tampões agem em segundos, o pulmão em minutos e o rim em dias.",
+     "na_prova": "A banca usa a velocidade para separar agudo de crônico: a compensação renal completa só aparece depois de alguns dias.",
+     "pontos": [
+      "Os tampões incluem bicarbonato, hemoglobina, proteínas, fosfato e o osso, que se desmineraliza na acidose crônica.",
+      "O pulmão ajusta a ventilação pelos quimiorreceptores centrais, que sentem o CO₂, e pelos periféricos, que sentem hidrogênio e hipóxia.",
+      "O rim reabsorve todo o bicarbonato filtrado e fabrica bicarbonato novo, com resposta máxima em 3 a 5 dias."
+     ],
+     "titulo": "Três linhas de defesa"
+    },
+    {
+     "fig": "ventilacao_co2",
+     "fonte": "West, Fisiologia respiratória",
+     "ideia": "A PaCO₂ depende da produção de CO₂ dividida pela ventilação alveolar. Dobrar a ventilação alveolar corta a PaCO₂ pela metade, mas respirar rápido e superficial ventila sobretudo o espaço morto.",
+     "na_prova": "Pegadinha: paciente taquipneico com PaCO₂ alta. A respiração rápida e superficial pode aumentar a ventilação-minuto sem aumentar a ventilação alveolar.",
+     "pontos": [
+      "A ventilação alveolar é o volume corrente menos o espaço morto, multiplicado pela frequência respiratória.",
+      "Cerca de 70% do CO₂ viaja como bicarbonato, 20% ligado à hemoglobina e 10% dissolvido.",
+      "Pelo efeito Haldane, a hemoglobina sem oxigênio carrega mais CO₂, e por isso oxigênio em excesso no DPOC retentor pode elevar a PaCO₂."
+     ],
+     "titulo": "Ventilação e CO₂"
+    }
+   ],
+   "id": "fisiologia",
+   "nivel": 1,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "ácido sulfúrico"
+      ],
+      [
+       "B",
+       "CO₂ (ácido volátil)"
+      ],
+      [
+       "C",
+       "ácido fosfórico"
+      ],
+      [
+       "D",
+       "ácido lático"
+      ],
+      [
+       "E",
+       "ácido clorídrico gástrico"
+      ]
+     ],
+     "coment": "São ~15.000 mmol/dia de CO₂, contra 50–100 mEq/dia de ácidos fixos. O CO₂ vira ácido ao se hidratar (H₂CO₃) e é eliminado pelo pulmão.",
+     "enunciado": "Em termos quantitativos, o principal ácido produzido diariamente pelo organismo é:",
+     "gab": "B",
+     "id": "gaso-fisiologia-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "pelo pulmão"
+      ],
+      [
+       "B",
+       "pelo suor"
+      ],
+      [
+       "C",
+       "pelo rim"
+      ],
+      [
+       "D",
+       "pelas fezes"
+      ],
+      [
+       "E",
+       "pela bile"
+      ]
+     ],
+     "coment": "Só o rim elimina ácidos não voláteis: excreta H⁺ (como NH₄⁺ e acidez titulável) e, com isso, devolve HCO₃⁻ novo ao sangue. Por isso a insuficiência renal acumula ácido.",
+     "enunciado": "Os ácidos fixos (não voláteis), como o sulfúrico e o fosfórico, são eliminados principalmente:",
+     "gab": "C",
+     "id": "gaso-fisiologia-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "Tampões → rim → pulmão"
+      ],
+      [
+       "B",
+       "Rim → pulmão → tampões"
+      ],
+      [
+       "C",
+       "Tampões → pulmão → rim"
+      ],
+      [
+       "D",
+       "Pulmão → tampões → rim"
+      ],
+      [
+       "E",
+       "Todas atuam com a mesma velocidade"
+      ]
+     ],
+     "coment": "Tampões agem em segundos, a resposta ventilatória em minutos a horas e o rim leva horas a dias (máximo em 3–5 dias). Por isso há fórmulas diferentes para distúrbios respiratórios agudos e crônicos.",
+     "enunciado": "Qual a sequência temporal correta das defesas contra uma carga ácida aguda?",
+     "gab": "C",
+     "id": "gaso-fisiologia-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "queda da concentração de hemoglobina"
+      ],
+      [
+       "B",
+       "aumento do CO₂ (via H⁺ no líquor)"
+      ],
+      [
+       "C",
+       "queda da PaO₂ arterial"
+      ],
+      [
+       "D",
+       "aumento do bicarbonato plasmático"
+      ],
+      [
+       "E",
+       "aumento da pressão arterial"
+      ]
+     ],
+     "coment": "O CO₂ atravessa a barreira hematoencefálica, hidrata-se no líquor e libera H⁺, que estimula os receptores centrais. A hipóxia é sentida pelos periféricos (corpos carotídeos).",
+     "enunciado": "Os quimiorreceptores centrais (bulbo) respondem principalmente a:",
+     "gab": "B",
+     "id": "gaso-fisiologia-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "40 mmHg"
+      ],
+      [
+       "B",
+       "10 mmHg"
+      ],
+      [
+       "C",
+       "80 mmHg"
+      ],
+      [
+       "D",
+       "30 mmHg"
+      ],
+      [
+       "E",
+       "20 mmHg"
+      ]
+     ],
+     "coment": "PaCO₂ é inversamente proporcional à ventilação alveolar: dobrar a ventilação corta a PaCO₂ pela metade (40 → 20). Essa relação é usada para ajustar o ventilador mecânico.",
+     "enunciado": "Com produção de CO₂ constante, se a ventilação alveolar dobra, uma PaCO₂ inicial de 40 mmHg passa a ser de aproximadamente:",
+     "gab": "E",
+     "id": "gaso-fisiologia-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "bicarbonato no plasma"
+      ],
+      [
+       "B",
+       "carbaminoemoglobina"
+      ],
+      [
+       "C",
+       "carbonato de cálcio"
+      ],
+      [
+       "D",
+       "CO₂ dissolvido"
+      ],
+      [
+       "E",
+       "ácido carbônico livre"
+      ]
+     ],
+     "coment": "Na hemácia a anidrase carbônica forma H₂CO₃ → H⁺ (tamponado pela Hb) + HCO₃⁻, que sai para o plasma em troca de Cl⁻. Cerca de 70% do CO₂ viaja assim.",
+     "enunciado": "A maior parte do CO₂ é transportada no sangue sob a forma de:",
+     "gab": "A",
+     "id": "gaso-fisiologia-6"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "produção de CO₂ aumentada pelo trabalho respiratório"
+      ],
+      [
+       "B",
+       "produção excessiva de CO₂ pelo metabolismo"
+      ],
+      [
+       "C",
+       "compensação de alcalose metabólica primária"
+      ],
+      [
+       "D",
+       "ventilação alveolar baixa por excesso de espaço morto"
+      ],
+      [
+       "E",
+       "erro de coleta com bolha de ar na seringa"
+      ]
+     ],
+     "coment": "Ventilação alveolar = (200 − 150) × 40 = 2 L/min. Respiração rápida e superficial (fadiga, doença neuromuscular) mantém a ventilação-minuto, mas não lava o CO₂.",
+     "enunciado": "Paciente com FR 40 irpm e volume corrente de 200 mL (espaço morto ~150 mL) tem PaCO₂ elevada apesar de ventilação-minuto de 8 L/min. A explicação é:",
+     "gab": "D",
+     "id": "gaso-fisiologia-7"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "a Hb desoxigenada transporta mais CO₂ e H⁺ que a oxigenada"
+      ],
+      [
+       "B",
+       "a acidose desvia a curva da hemoglobina para a direita"
+      ],
+      [
+       "C",
+       "o CO₂ é 20 vezes mais solúvel que o O₂"
+      ],
+      [
+       "D",
+       "o monóxido de carbono tem alta afinidade pela Hb"
+      ],
+      [
+       "E",
+       "o 2,3-DPG aumenta na altitude"
+      ]
+     ],
+     "coment": "Nos tecidos, ao liberar O₂, a Hb passa a aceitar mais CO₂/H⁺; no pulmão, ao oxigenar, libera CO₂. 'Acidose desvia a curva para a direita' é o efeito Bohr, o 'irmão' do Haldane. Relevância: O₂ em excesso no DPOC retentor pode subir a PaCO₂.",
+     "enunciado": "O efeito Haldane descreve que:",
+     "gab": "A",
+     "id": "gaso-fisiologia-8"
+    }
+   ],
+   "titulo": "De onde vem o ácido e quem o remove"
+  },
+  {
+   "aula": [
+    {
+     "fig": "rim_proximal",
+     "fonte": "Berend et al., NEJM 2014; Seifter, NEJM 2014",
+     "ideia": "O rim filtra uma quantidade enorme de bicarbonato e precisa recuperá-lo, senão haveria acidose em horas. A maior parte volta no túbulo proximal, com ajuda da anidrase carbônica.",
+     "na_prova": "A banca dá paciente em acetazolamida com acidose hiperclorêmica e pergunta o mecanismo: perda urinária de bicarbonato no túbulo proximal.",
+     "pontos": [
+      "O glomérulo filtra cerca de 4.500 mEq de bicarbonato por dia, e 80 a 90% voltam no túbulo proximal.",
+      "A célula secreta hidrogênio, que se junta ao bicarbonato na luz e vira CO₂ e água; o CO₂ entra na célula e o bicarbonato volta ao sangue.",
+      "A acetazolamida bloqueia a anidrase carbônica, perde bicarbonato na urina e causa acidose de ânion gap normal."
+     ],
+     "titulo": "Reabsorver o bicarbonato filtrado"
+    },
+    {
+     "fig": "rim_novo",
+     "fonte": "Berend et al., NEJM 2014; Seifter, NEJM 2014",
+     "ideia": "Para repor o bicarbonato gasto com os ácidos do dia, o rim precisa excretar hidrogênio. Como a urina só aceita pouco hidrogênio livre, ele sai ligado a tampões: fosfato e, sobretudo, amônia.",
+     "na_prova": "A banca pergunta qual via o rim aumenta na acidose crônica: a excreção de amônio, que também é estimulada pela hipocalemia.",
+     "pontos": [
+      "A acidez titulável, com fosfato, responde por cerca de um terço e aumenta pouco.",
+      "O amônio responde por cerca de dois terços e é a via que mais cresce na acidose crônica.",
+      "No ducto coletor, as células intercaladas tipo A secretam hidrogênio e as tipo B secretam bicarbonato."
+     ],
+     "titulo": "Gerar bicarbonato novo"
+    },
+    {
+     "fig": "aldosterona",
+     "fonte": "Berend et al., NEJM 2014; Seifter, NEJM 2014",
+     "ideia": "A aldosterona reabsorve sódio, deixa a luz tubular negativa e facilita a saída de hidrogênio e potássio. Por isso excesso de aldosterona dá alcalose com hipocalemia e falta dá acidose com hipercalemia.",
+     "na_prova": "A banca pergunta por que a alcalose do vômito não se corrige sozinha: falta volume e falta cloro, e o rim retém bicarbonato junto com o sódio.",
+     "pontos": [
+      "Uma alcalose metabólica se mantém por hipovolemia, falta de cloro, hipocalemia ou excesso de aldosterona.",
+      "Sem cloro suficiente, a célula tipo B não consegue trocar bicarbonato por cloro e o bicarbonato fica retido.",
+      "Na acidose inorgânica o potássio tende a sair das células, e na alcalose tende a entrar."
+     ],
+     "titulo": "Aldosterona, volume, cloro e potássio"
+    }
+   ],
+   "id": "rim",
+   "nivel": 1,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "Túbulo contorcido distal"
+      ],
+      [
+       "B",
+       "Alça de Henle"
+      ],
+      [
+       "C",
+       "Ducto coletor medular"
+      ],
+      [
+       "D",
+       "Túbulo proximal"
+      ],
+      [
+       "E",
+       "Ducto coletor cortical"
+      ]
+     ],
+     "coment": "80–90% no túbulo proximal, via secreção de H⁺ (NHE3) e anidrase carbônica. O restante é recuperado na alça e no néfron distal.",
+     "enunciado": "A maior parte do bicarbonato filtrado é reabsorvida em qual segmento?",
+     "gab": "D",
+     "id": "gaso-rim-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "acidose respiratória por hipoventilação"
+      ],
+      [
+       "B",
+       "alcalose respiratória por estímulo central"
+      ],
+      [
+       "C",
+       "alcalose metabólica hipoclorêmica e hipocalêmica"
+      ],
+      [
+       "D",
+       "acidose metabólica hiperclorêmica (AG normal)"
+      ],
+      [
+       "E",
+       "acidose metabólica de ânion gap elevado por cetose"
+      ]
+     ],
+     "coment": "Inibir a anidrase carbônica no túbulo proximal faz o HCO₃⁻ ser perdido na urina; o Cl⁻ sobe para manter a eletroneutralidade → acidose hiperclorêmica (ânion gap normal), semelhante a uma ATR proximal.",
+     "enunciado": "O uso de acetazolamida tende a causar:",
+     "gab": "D",
+     "id": "gaso-rim-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "a excreção de NH₄⁺ (amoniagênese)"
+      ],
+      [
+       "B",
+       "a reabsorção de cloro"
+      ],
+      [
+       "C",
+       "a acidez titulável (fosfato)"
+      ],
+      [
+       "D",
+       "a secreção de bicarbonato pela pendrina"
+      ],
+      [
+       "E",
+       "a filtração de H⁺ livre"
+      ]
+     ],
+     "coment": "A amoniagênese a partir da glutamina pode aumentar várias vezes em dias. É por isso que o ânion gap urinário (que estima o NH₄⁺) ajuda a distinguir diarreia de acidose tubular renal.",
+     "enunciado": "Na acidose metabólica crônica, o mecanismo renal que mais aumenta para excretar ácido é:",
+     "gab": "A",
+     "id": "gaso-rim-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "a célula principal"
+      ],
+      [
+       "B",
+       "a célula intercalada tipo B"
+      ],
+      [
+       "C",
+       "o podócito"
+      ],
+      [
+       "D",
+       "a célula intercalada tipo A"
+      ],
+      [
+       "E",
+       "a célula justaglomerular"
+      ]
+     ],
+     "coment": "Intercalada tipo A = secreta Ácido (H⁺-ATPase). Tipo B = secreta Bicarbonato (pendrina). A célula principal reabsorve Na⁺ e secreta K⁺ sob ação da aldosterona.",
+     "enunciado": "No ducto coletor, a célula responsável por secretar H⁺ é:",
+     "gab": "D",
+     "id": "gaso-rim-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "alcalose respiratória aguda"
+      ],
+      [
+       "B",
+       "acidose metabólica de AG elevado"
+      ],
+      [
+       "C",
+       "acidose metabólica hiperclorêmica"
+      ],
+      [
+       "D",
+       "acidose respiratória crônica"
+      ],
+      [
+       "E",
+       "alcalose metabólica"
+      ]
+     ],
+     "coment": "Hiperaldosteronismo primário: a aldosterona aumenta a secreção de H⁺ e K⁺ no coletor → alcalose metabólica hipocalêmica com hipertensão (cloro urinário alto, não responde a soro).",
+     "enunciado": "Mulher de 45 anos, hipertensa, com K⁺ = 2,9 mEq/L e HCO₃⁻ = 32 mEq/L, renina suprimida e aldosterona alta. O distúrbio ácido-base esperado é:",
+     "gab": "E",
+     "id": "gaso-rim-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "o excesso de aldosterona primário"
+      ],
+      [
+       "B",
+       "a perda de bicarbonato nas fezes"
+      ],
+      [
+       "C",
+       "a hiperventilação"
+      ],
+      [
+       "D",
+       "a produção de ácido lático"
+      ],
+      [
+       "E",
+       "a depleção de volume e de cloro"
+      ]
+     ],
+     "coment": "O vômito GERA a alcalose (perda de HCl), mas quem a mantém é o rim: hipovolemia faz reabsorver Na⁺ com HCO₃⁻, e a falta de Cl⁻ impede a excreção de HCO₃⁻ pela pendrina. Repor SF 0,9% + KCl corrige.",
+     "enunciado": "Num paciente com vômitos há 5 dias, o principal fator que MANTÉM a alcalose metabólica é:",
+     "gab": "E",
+     "id": "gaso-rim-6"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "não se alterar, pois o K⁺ não participa"
+      ],
+      [
+       "B",
+       "cair, porque o K⁺ entra nas células"
+      ],
+      [
+       "C",
+       "cair, por perda urinária imediata de K⁺"
+      ],
+      [
+       "D",
+       "subir, por maior absorção intestinal"
+      ],
+      [
+       "E",
+       "subir, pela saída de K⁺ das células"
+      ]
+     ],
+     "coment": "O H⁺ entra nas células e o K⁺ sai para manter a eletroneutralidade. O efeito é maior nas acidoses inorgânicas (hiperclorêmicas) que nas orgânicas (lactato, cetoácidos).",
+     "enunciado": "Numa acidose metabólica aguda por ácido mineral (ex.: HCl), o potássio sérico tende a:",
+     "gab": "E",
+     "id": "gaso-rim-7"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "Porque, mesmo no pH mínimo (~4,5), há pouquíssimo H⁺ livre"
+      ],
+      [
+       "B",
+       "Porque o H⁺ secretado é reabsorvido no túbulo proximal"
+      ],
+      [
+       "C",
+       "Porque a aldosterona bloqueia a secreção de H⁺"
+      ],
+      [
+       "D",
+       "Porque o bicarbonato urinário neutraliza todo o H⁺"
+      ],
+      [
+       "E",
+       "Porque a urina não pode ficar mais ácida que o plasma"
+      ]
+     ],
+     "coment": "pH 4,5 corresponde a ~0,03 mEq/L de H⁺ livre: com 1,5 L de urina, só ~0,05 mEq/dia sairiam livres, contra 50–100 mEq/dia necessários. O resto sai como H₂PO₄⁻ e NH₄⁺.",
+     "enunciado": "Por que o rim precisa de tampões urinários (fosfato e amônia) para excretar ácido?",
+     "gab": "A",
+     "id": "gaso-rim-8"
+    }
+   ],
+   "titulo": "O rim no equilíbrio ácido-base"
+  },
+  {
+   "aula": [
+    {
+     "fig": "curva_o2",
+     "fonte": "West, Fisiologia respiratória",
+     "ideia": "A PaO₂ mede o oxigênio dissolvido e a saturação mede quanto da hemoglobina está carregada. A curva entre as duas não é reta, e alguns pontos dela caem muito em prova.",
+     "na_prova": "A banca dá saturação de 90% e pergunta a PaO₂ aproximada: 60 mmHg, o limite da insuficiência respiratória.",
+     "pontos": [
+      "Ao nível do mar e em ar ambiente, a PaO₂ normal fica entre 80 e 100 mmHg e cai com a idade.",
+      "Insuficiência respiratória hipoxêmica é PaO₂ abaixo de 60 mmHg, que corresponde a saturação de cerca de 90%.",
+      "PaO₂ de 40 corresponde a saturação de 75%, a do sangue venoso misto, e a P50 de cerca de 27 mmHg corresponde a 50%."
+     ],
+     "titulo": "PaO₂ e saturação"
+    },
+    {
+     "fig": "curva_desvio",
+     "fonte": "West, Fisiologia respiratória",
+     "ideia": "A curva tem forma de S porque cada oxigênio que se liga facilita o próximo. Quando ela se desloca para a direita, a hemoglobina solta oxigênio com mais facilidade nos tecidos.",
+     "na_prova": "Pegadinha: monóxido de carbono desvia a curva para a esquerda. Além de ocupar a hemoglobina, ele dificulta a liberação do oxigênio que restou.",
+     "pontos": [
+      "Desviam para a direita: mais hidrogênio, mais CO₂, febre e mais 2,3-DPG, como na anemia crônica e na altitude.",
+      "Desviam para a esquerda: alcalose, hipotermia, sangue estocado, hemoglobina fetal, monóxido de carbono e meta-hemoglobina.",
+      "Desvio para a esquerda prende o oxigênio e prejudica a entrega aos tecidos, mesmo com saturação alta."
+     ],
+     "titulo": "A curva de dissociação da hemoglobina"
+    },
+    {
+     "fig": "conteudo_o2",
+     "fonte": "West, Fisiologia respiratória",
+     "ideia": "Quem transporta o oxigênio é a hemoglobina; o oxigênio dissolvido é mínimo. Por isso PaO₂ e saturação normais não garantem oferta adequada quando falta hemoglobina ou ela está bloqueada.",
+     "na_prova": "A banca dá intoxicação por fumaça com oxímetro de 99% e quer co-oximetria e oxigênio a 100%.",
+     "pontos": [
+      "O conteúdo arterial é 1,34 vezes hemoglobina vezes saturação, mais 0,003 vezes PaO₂, e fica em torno de 20 mL/dL.",
+      "No monóxido de carbono, o oxímetro de pulso lê a carboxi-hemoglobina como normal; o diagnóstico exige co-oximetria.",
+      "Na meta-hemoglobina, causada por dapsona ou benzocaína, a saturação trava em cerca de 85% e o tratamento é azul de metileno."
+     ],
+     "titulo": "Conteúdo de oxigênio e armadilhas"
+    }
+   ],
+   "id": "oxigenio",
+   "nivel": 1,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "Hemoglobina fetal"
+      ],
+      [
+       "B",
+       "Alcalose"
+      ],
+      [
+       "C",
+       "Hipotermia"
+      ],
+      [
+       "D",
+       "Acidose e febre"
+      ],
+      [
+       "E",
+       "Redução do 2,3-DPG"
+      ]
+     ],
+     "coment": "Direita = menos afinidade = libera O₂ onde ele é necessário: H⁺, CO₂, temperatura e 2,3-DPG altos (o músculo em exercício é ácido, quente e rico em CO₂). As outras alternativas desviam para a esquerda.",
+     "enunciado": "Qual das alterações desvia a curva de dissociação da hemoglobina para a DIREITA?",
+     "gab": "D",
+     "id": "gaso-oxigenio-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "20 mL/dL"
+      ],
+      [
+       "B",
+       "15 mL/dL"
+      ],
+      [
+       "C",
+       "6 mL/dL"
+      ],
+      [
+       "D",
+       "9,5 mL/dL"
+      ],
+      [
+       "E",
+       "12 mL/dL"
+      ]
+     ],
+     "coment": "CaO₂ = 1,34 × 7 × 0,98 + 0,003 × 95 = 9,19 + 0,29 ≈ 9,5 mL/dL — metade do normal (~20), apesar de PaO₂ e saturação perfeitas. Gasometria normal não garante oxigenação tecidual.",
+     "enunciado": "Paciente com Hb = 7 g/dL, SaO₂ = 98% e PaO₂ = 95 mmHg. O conteúdo arterial de O₂ é de aproximadamente:",
+     "gab": "D",
+     "id": "gaso-oxigenio-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "lactato sérico isolado"
+      ],
+      [
+       "B",
+       "co-oximetria (carboxi-hemoglobina)"
+      ],
+      [
+       "C",
+       "radiografia de tórax em PA e perfil"
+      ],
+      [
+       "D",
+       "gasometria venosa central"
+      ],
+      [
+       "E",
+       "oximetria de pulso em outro dedo"
+      ]
+     ],
+     "coment": "Intoxicação por CO: o oxímetro comum não distingue COHb de oxi-Hb e a PaO₂ (O₂ dissolvido) é normal. Só a co-oximetria mede a fração de COHb. Conduta: O₂ a 100% imediatamente.",
+     "enunciado": "Bombeiro resgatado de incêndio, cefaleia e confusão. SpO₂ 99%, PaO₂ 98 mmHg. O exame que confirma o diagnóstico mais provável é:",
+     "gab": "B",
+     "id": "gaso-oxigenio-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "50%"
+      ],
+      [
+       "B",
+       "75%"
+      ],
+      [
+       "C",
+       "98%"
+      ],
+      [
+       "D",
+       "90%"
+      ],
+      [
+       "E",
+       "80%"
+      ]
+     ],
+     "coment": "É o 'joelho' da curva: acima de 60 mmHg a saturação muda pouco; abaixo, despenca. Por isso PaO₂ < 60 (Sat < 90%) define insuficiência respiratória.",
+     "enunciado": "Uma PaO₂ de 60 mmHg corresponde a uma saturação de aproximadamente:",
+     "gab": "D",
+     "id": "gaso-oxigenio-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "Corrigir a acidose"
+      ],
+      [
+       "B",
+       "Aumentar a frequência respiratória"
+      ],
+      [
+       "C",
+       "Transfundir até Hb 10 g/dL mantendo SaO₂ 90%"
+      ],
+      [
+       "D",
+       "Elevar a PaO₂ de 60 para 100 mmHg"
+      ],
+      [
+       "E",
+       "Elevar a SaO₂ para 100% com O₂ suplementar"
+      ]
+     ],
+     "coment": "Atual: 1,34 × 6 × 0,90 ≈ 7,2. Sat 100%: 1,34 × 6 × 1,0 ≈ 8,0. Hb 10: 1,34 × 10 × 0,90 ≈ 12,1. O O₂ dissolvido extra (0,003 × 40 = 0,12) é desprezível.",
+     "enunciado": "Paciente com Hb 6 g/dL e SaO₂ 90%. Qual intervenção aumenta MAIS o conteúdo arterial de O₂?",
+     "gab": "C",
+     "id": "gaso-oxigenio-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "não transporta O₂ até ser reaquecida"
+      ],
+      [
+       "B",
+       "aumenta a P50 da hemoglobina do receptor"
+      ],
+      [
+       "C",
+       "vira meta-hemoglobina durante o estoque"
+      ],
+      [
+       "D",
+       "segura mais o O₂ e libera menos aos tecidos"
+      ],
+      [
+       "E",
+       "libera mais O₂ aos tecidos (curva à direita)"
+      ]
+     ],
+     "coment": "Menos 2,3-DPG = curva à esquerda = P50 menor = a Hb segura o O₂. O 2,3-DPG se recompõe em horas a dias.",
+     "enunciado": "O sangue estocado tem 2,3-DPG reduzido. Logo após uma transfusão maciça, a hemoglobina transfundida:",
+     "gab": "D",
+     "id": "gaso-oxigenio-6"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "Embolia pulmonar — anticoagulação"
+      ],
+      [
+       "B",
+       "Intoxicação por CO — câmara hiperbárica"
+      ],
+      [
+       "C",
+       "Shunt intrapulmonar — PEEP"
+      ],
+      [
+       "D",
+       "Anemia aguda — transfusão"
+      ],
+      [
+       "E",
+       "Meta-hemoglobinemia — azul de metileno"
+      ]
+     ],
+     "coment": "O ferro oxidado (Fe³⁺) da meta-Hb não carrega O₂ e o oxímetro tende a marcar ~85%. A PaO₂ é alta porque mede O₂ dissolvido. Azul de metileno reduz a meta-Hb (cuidado na deficiência de G6PD).",
+     "enunciado": "Após anestesia tópica com benzocaína para endoscopia, o paciente fica cianótico, SpO₂ 85% que não melhora com O₂ a 100%, PaO₂ 300 mmHg e sangue 'cor de chocolate'. Diagnóstico e tratamento:",
+     "gab": "E",
+     "id": "gaso-oxigenio-7"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "13 mL/dL"
+      ],
+      [
+       "B",
+       "20 mL/dL"
+      ],
+      [
+       "C",
+       "1,34 mL/dL"
+      ],
+      [
+       "D",
+       "3 mL/dL"
+      ],
+      [
+       "E",
+       "0,3 mL/dL"
+      ]
+     ],
+     "coment": "0,003 mL/dL/mmHg × 100 = 0,3 mL/dL, contra ~19,7 mL/dL ligados à Hb. É por isso que a saturação e a hemoglobina dominam o conteúdo de O₂.",
+     "enunciado": "Quanto O₂ está dissolvido no plasma com PaO₂ de 100 mmHg?",
+     "gab": "E",
+     "id": "gaso-oxigenio-8"
+    }
+   ],
+   "titulo": "Oxigenação: PaO₂, saturação e curva"
+  },
+  {
+   "aula": [
+    {
+     "fig": "cascata_o2",
+     "fonte": "West, Fisiologia respiratória",
+     "ideia": "A equação do gás alveolar estima quanto oxigênio chega ao alvéolo. Comparar com a PaO₂ mostra se o pulmão consegue passar esse oxigênio para o sangue.",
+     "na_prova": "A banca dá PaO₂ baixa com gradiente normal e quer hipoventilação ou altitude, e não doença do pulmão.",
+     "pontos": [
+      "Em ar ambiente ao nível do mar, a PAO₂ é cerca de 150 menos 1,25 vezes a PaCO₂, ou seja, cerca de 100 com PaCO₂ de 40.",
+      "O gradiente alvéolo-arterial é a PAO₂ menos a PaO₂ e fica entre 5 e 15 mmHg no jovem.",
+      "O limite normal estimado do gradiente é a idade dividida por 4, mais 4."
+     ],
+     "titulo": "Equação do gás alveolar"
+    },
+    {
+     "fig": "hipoxemia",
+     "fonte": "West, Fisiologia respiratória",
+     "ideia": "O gradiente alvéolo-arterial separa as causas em dois grupos. Gradiente normal significa pulmão bom e falta de oxigênio no alvéolo; gradiente alto significa que o pulmão não troca bem.",
+     "na_prova": "A banca dá hipoxemia que não melhora com oxigênio a 100% e quer shunt, como na SDRA ou na atelectasia.",
+     "pontos": [
+      "Com gradiente normal estão a fração inspirada baixa, como na altitude, e a hipoventilação, como por opioide ou doença neuromuscular.",
+      "Com gradiente alto estão o distúrbio ventilação-perfusão, o shunt e o distúrbio de difusão.",
+      "O distúrbio ventilação-perfusão melhora bem com oxigênio, enquanto o shunt grande quase não melhora mesmo com 100%."
+     ],
+     "titulo": "Cinco causas de hipoxemia"
+    },
+    {
+     "fig": "pf",
+     "fonte": "Definição de Berlim 2012; definição global de SDRA 2024",
+     "ideia": "A relação PaO₂ dividida pela fração inspirada de oxigênio mede a oxigenação levando em conta quanto oxigênio o paciente recebe. Ela é a base para classificar a gravidade da SDRA.",
+     "na_prova": "A banca dá PaO₂ de 80 com fração de 0,8 e pede a classificação: relação de 100, SDRA grave.",
+     "pontos": [
+      "A fração inspirada entra como fração decimal, 0,21 em ar ambiente, e a relação normal fica entre 400 e 500.",
+      "Pela definição de Berlim, com PEEP de 5 ou mais, a SDRA é leve de 200 a 300, moderada de 100 a 200 e grave com 100 ou menos.",
+      "A definição global de 2024 aceita também a relação SpO₂ sobre fração inspirada e pacientes em cateter nasal de alto fluxo."
+     ],
+     "titulo": "Relação P/F"
+    }
+   ],
+   "id": "trocas",
+   "nivel": 1,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "150 mmHg"
+      ],
+      [
+       "B",
+       "60 mmHg"
+      ],
+      [
+       "C",
+       "100 mmHg"
+      ],
+      [
+       "D",
+       "40 mmHg"
+      ],
+      [
+       "E",
+       "80 mmHg"
+      ]
+     ],
+     "coment": "PAO₂ = 0,21 × (760 − 47) − 40/0,8 = 150 − 50 = 100 mmHg.",
+     "enunciado": "Ao nível do mar, em ar ambiente, com PaCO₂ = 40 mmHg, a PAO₂ esperada é de aproximadamente:",
+     "gab": "C",
+     "id": "gaso-trocas-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "hipoventilação alveolar"
+      ],
+      [
+       "B",
+       "baixa FiO₂"
+      ],
+      [
+       "C",
+       "distúrbio de difusão"
+      ],
+      [
+       "D",
+       "shunt intrapulmonar"
+      ],
+      [
+       "E",
+       "distúrbio ventilação/perfusão"
+      ]
+     ],
+     "coment": "PAO₂ = 150 − 70 × 1,25 = 62,5. Gradiente = 62,5 − 60 = 2,5 (normal). O pulmão troca bem; falta ventilar. Tratar a causa (naloxona) e ventilar.",
+     "enunciado": "Jovem com intoxicação por opioide: ar ambiente, PaO₂ = 60 mmHg, PaCO₂ = 70 mmHg. O mecanismo da hipoxemia é:",
+     "gab": "A",
+     "id": "gaso-trocas-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "90 mmHg"
+      ],
+      [
+       "B",
+       "25 mmHg"
+      ],
+      [
+       "C",
+       "12 mmHg"
+      ],
+      [
+       "D",
+       "2 mmHg"
+      ],
+      [
+       "E",
+       "52 mmHg"
+      ]
+     ],
+     "coment": "PAO₂ = 150 − 30 × 1,25 = 112,5. Gradiente = 112,5 − 60 = 52,5 mmHg — muito aumentado: distúrbio V/Q/shunt. Note que a hiperventilação (PaCO₂ 30) elevou a PAO₂, mas o sangue não conseguiu acompanhar.",
+     "enunciado": "Paciente com pneumonia: ar ambiente, PaO₂ = 60 mmHg, PaCO₂ = 30 mmHg. O gradiente A-a é de aproximadamente:",
+     "gab": "E",
+     "id": "gaso-trocas-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "450 — normal"
+      ],
+      [
+       "B",
+       "180 — SDRA moderada"
+      ],
+      [
+       "C",
+       "250 — SDRA leve"
+      ],
+      [
+       "D",
+       "90 — SDRA grave"
+      ],
+      [
+       "E",
+       "180 — SDRA grave"
+      ]
+     ],
+     "coment": "P/F = 90 / 0,5 = 180, entre 100 e 200 → SDRA moderada (com PEEP ≥ 5 e demais critérios).",
+     "enunciado": "Paciente intubado com PaO₂ = 90 mmHg em FiO₂ = 0,5 e PEEP de 8, com infiltrado bilateral agudo não cardiogênico. A relação P/F e a classificação de Berlim são:",
+     "gab": "B",
+     "id": "gaso-trocas-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "distúrbio V/Q leve"
+      ],
+      [
+       "B",
+       "baixa FiO₂ ambiente"
+      ],
+      [
+       "C",
+       "shunt verdadeiro"
+      ],
+      [
+       "D",
+       "hipoventilação"
+      ],
+      [
+       "E",
+       "anemia"
+      ]
+     ],
+     "coment": "No shunt, o sangue passa por alvéolos não ventilados e nunca encontra o O₂ oferecido. Na hipoventilação e no V/Q, aumentar a FiO₂ eleva a PAO₂ e corrige bem a PaO₂.",
+     "enunciado": "A hipoxemia que praticamente NÃO melhora com FiO₂ de 100% sugere:",
+     "gab": "C",
+     "id": "gaso-trocas-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "shunt intrapulmonar"
+      ],
+      [
+       "B",
+       "embolia pulmonar"
+      ],
+      [
+       "C",
+       "hipoventilação alveolar"
+      ],
+      [
+       "D",
+       "distúrbio de difusão grave"
+      ],
+      [
+       "E",
+       "baixa pressão inspirada de O₂"
+      ]
+     ],
+     "coment": "Pressão barométrica menor = menos O₂ no ar inspirado. O gradiente A-a é normal porque o pulmão é sadio. A hiperventilação (PaCO₂ 30) é a resposta adaptativa.",
+     "enunciado": "Montanhista saudável a 4.000 m: PaO₂ 50 mmHg, PaCO₂ 30 mmHg e gradiente A-a de 6 mmHg. O mecanismo da hipoxemia é:",
+     "gab": "E",
+     "id": "gaso-trocas-6"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "15 mmHg"
+      ],
+      [
+       "B",
+       "24 mmHg"
+      ],
+      [
+       "C",
+       "60 mmHg"
+      ],
+      [
+       "D",
+       "40 mmHg"
+      ],
+      [
+       "E",
+       "10 mmHg"
+      ]
+     ],
+     "coment": "Estimativa: idade/4 + 4 = 80/4 + 4 = 24 mmHg. O gradiente aumenta com a idade (mais heterogeneidade V/Q).",
+     "enunciado": "O limite superior esperado do gradiente A-a para um paciente de 80 anos é de aproximadamente:",
+     "gab": "B",
+     "id": "gaso-trocas-7"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "200"
+      ],
+      [
+       "B",
+       "400"
+      ],
+      [
+       "C",
+       "120"
+      ],
+      [
+       "D",
+       "80"
+      ],
+      [
+       "E",
+       "320"
+      ]
+     ],
+     "coment": "80 / 0,4 = 200. Repare que a PaO₂ 'normal' de 80 engana: em FiO₂ 40% a PAO₂ esperada seria ~235 (0,4 × 713 − 50), ou seja, gradiente A-a ~155. Sempre relacione a PaO₂ com a FiO₂.",
+     "enunciado": "Paciente em FiO₂ 0,4 com PaO₂ 80 mmHg e PaCO₂ 40 mmHg. A relação P/F é:",
+     "gab": "A",
+     "id": "gaso-trocas-8"
+    }
+   ],
+   "titulo": "Trocas gasosas: gradiente A-a e P/F"
+  },
+  {
+   "aula": [
+    {
+     "fig": "referencias",
+     "fonte": "Berend et al., NEJM 2014; Seifter, NEJM 2014",
+     "ideia": "Ler gasometria começa por saber o normal. A gasometria venosa serve bem para pH e bicarbonato, mas não serve para avaliar oxigenação.",
+     "na_prova": "A banca pergunta se a gasometria venosa basta para acompanhar a cetoacidose: sim, para pH e bicarbonato.",
+     "pontos": [
+      "Os valores arteriais normais são pH de 7,35 a 7,45, PaCO₂ de 35 a 45 mmHg e bicarbonato de 22 a 26 mEq/L.",
+      "O excesso de base vai de menos 2 a mais 2, e o lactato normal fica abaixo de 2 mmol/L.",
+      "Na venosa, o pH é cerca de 0,03 a 0,05 menor e a PCO₂ é cerca de 4 a 6 maior; PCO₂ venosa normal afasta hipercapnia."
+     ],
+     "titulo": "Valores de referência"
+    },
+    {
+     "fig": "erros_coleta",
+     "fonte": "Berend et al., NEJM 2014; Seifter, NEJM 2014",
+     "ideia": "Erros na coleta mudam o resultado e podem simular doença. Cada erro tem um padrão previsível, e conhecê-lo evita condutas erradas.",
+     "na_prova": "A banca dá leucemia com 200 mil leucócitos, PaO₂ de 40 e oxímetro de 98%. É roubo leucocitário na seringa, e não hipoxemia real.",
+     "pontos": [
+      "Bolha de ar equilibra a amostra com o ar: a PaO₂ vai em direção a 150 e a PaCO₂ cai.",
+      "Demora em temperatura ambiente deixa as células consumirem oxigênio; na leucocitose extrema, isso cria pseudo-hipoxemia com oxímetro normal.",
+      "Excesso de heparina líquida dilui a amostra e baixa falsamente a PCO₂ e o bicarbonato."
+     ],
+     "titulo": "Erros de coleta"
+    },
+    {
+     "fig": "roteiro",
+     "fonte": "Berend et al., NEJM 2014; Seifter, NEJM 2014",
+     "ideia": "Toda gasometria se lê na mesma ordem, e pular passos é a causa mais comum de erro. O roteiro começa pelo pH e termina na oxigenação e no contexto clínico.",
+     "na_prova": "Questões de distúrbio misto quase sempre se resolvem no terceiro passo: a compensação fora do esperado denuncia o segundo distúrbio.",
+     "pontos": [
+      "Primeiro veja o pH e depois quem o explica: o bicarbonato, se metabólico, ou a PaCO₂, se respiratório.",
+      "Em seguida, cheque se a compensação está dentro do esperado e, na acidose metabólica, calcule o ânion gap corrigido pela albumina.",
+      "Se o ânion gap estiver alto, faça o delta-delta e, por fim, avalie a oxigenação e a clínica."
+     ],
+     "titulo": "O roteiro em seis passos"
+    }
+   ],
+   "id": "coleta",
+   "nivel": 2,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "diagnosticar intoxicação por CO sem co-oximetria"
+      ],
+      [
+       "B",
+       "calcular o gradiente alvéolo-arterial de oxigênio"
+      ],
+      [
+       "C",
+       "acompanhar pH e bicarbonato na cetoacidose diabética"
+      ],
+      [
+       "D",
+       "avaliar a oxigenação em SDRA"
+      ],
+      [
+       "E",
+       "definir a relação P/F"
+      ]
+     ],
+     "coment": "pH e HCO₃⁻ venosos se correlacionam bem com os arteriais (diferenças pequenas e previsíveis). Para oxigenação não servem: a PvO₂ reflete a extração tecidual.",
+     "enunciado": "A gasometria venosa periférica pode substituir a arterial principalmente para:",
+     "gab": "C",
+     "id": "gaso-coleta-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "reduzir o pH"
+      ],
+      [
+       "B",
+       "aumentar a PaO₂ e reduzir a PaCO₂"
+      ],
+      [
+       "C",
+       "reduzir a PaO₂ e aumentar a PaCO₂"
+      ],
+      [
+       "D",
+       "aumentar o bicarbonato"
+      ],
+      [
+       "E",
+       "não alterar os gases, só o pH"
+      ]
+     ],
+     "coment": "O ar ambiente tem PO₂ ~150 e PCO₂ ~0: a amostra se equilibra com ele. Expulse as bolhas e analise logo.",
+     "enunciado": "Uma bolha de ar grande deixada na seringa de gasometria tende a:",
+     "gab": "B",
+     "id": "gaso-coleta-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "shunt por infiltrado pulmonar leucêmico"
+      ],
+      [
+       "B",
+       "embolia pulmonar por hiperviscosidade"
+      ],
+      [
+       "C",
+       "meta-hemoglobinemia pela quimioterapia"
+      ],
+      [
+       "D",
+       "oxímetro de pulso com defeito de leitura"
+      ],
+      [
+       "E",
+       "consumo de O₂ pelos leucócitos na seringa"
+      ]
+     ],
+     "coment": "As células metabolicamente ativas consomem o O₂ da amostra. Confie na SpO₂ e repita a gasometria em gelo, processando imediatamente.",
+     "enunciado": "Paciente com leucemia (200.000 leucócitos/mm³), SpO₂ 97%, porém a gasometria colhida há 1 h e deixada na bancada mostra PaO₂ 45 mmHg. A explicação mais provável é:",
+     "gab": "E",
+     "id": "gaso-coleta-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "considerar a amostra incoerente e repetir/conferir"
+      ],
+      [
+       "B",
+       "diagnosticar alcalose respiratória"
+      ],
+      [
+       "C",
+       "iniciar bicarbonato"
+      ],
+      [
+       "D",
+       "diagnosticar acidose metabólica com compensação total"
+      ],
+      [
+       "E",
+       "diagnosticar gasometria normal"
+      ]
+     ],
+     "coment": "[H⁺] = 24 × 40 / 12 = 80 nEq/L → pH ~7,10, não 7,40. Os três valores não podem coexistir: erro de coleta, de análise ou de digitação.",
+     "enunciado": "Uma gasometria informa pH 7,40, PaCO₂ 40 mmHg e HCO₃⁻ 12 mEq/L. A conduta correta é:",
+     "gab": "A",
+     "id": "gaso-coleta-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "calcular o ânion gap"
+      ],
+      [
+       "B",
+       "olhar a PaO₂"
+      ],
+      [
+       "C",
+       "avaliar o pH (acidemia ou alcalemia)"
+      ],
+      [
+       "D",
+       "calcular o delta-delta"
+      ],
+      [
+       "E",
+       "calcular a compensação esperada"
+      ]
+     ],
+     "coment": "O pH diz para que lado o paciente está 'pendendo'. Só depois se procura o culpado (HCO₃⁻ ou PaCO₂) e se checa a compensação.",
+     "enunciado": "O primeiro passo na interpretação sistemática de uma gasometria é:",
+     "gab": "C",
+     "id": "gaso-coleta-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "a pressão arterial média"
+      ],
+      [
+       "B",
+       "a integridade do arco palmar pela artéria radial"
+      ],
+      [
+       "C",
+       "a presença de fístula"
+      ],
+      [
+       "D",
+       "a circulação colateral pela artéria ulnar"
+      ],
+      [
+       "E",
+       "o retorno venoso"
+      ]
+     ],
+     "coment": "Comprimem-se radial e ulnar, a mão empalidece; solta-se a ulnar: a cor deve voltar em poucos segundos. Garante perfusão da mão se a radial for lesada.",
+     "enunciado": "O teste de Allen, feito antes da punção da artéria radial, avalia:",
+     "gab": "D",
+     "id": "gaso-coleta-6"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "< 2 mmol/L"
+      ],
+      [
+       "B",
+       "< 0,2 mmol/L"
+      ],
+      [
+       "C",
+       "< 6 mmol/L"
+      ],
+      [
+       "D",
+       "< 10 mmol/L"
+      ],
+      [
+       "E",
+       "< 4 mmol/L"
+      ]
+     ],
+     "coment": "Lactato normal < 2 mmol/L. Na sepse, ≥ 2 sugere hipoperfusão e ≥ 4 indica gravidade (e, com hipotensão refratária, define choque séptico quando > 2 apesar de volume e vasopressor).",
+     "enunciado": "Qual valor de lactato arterial é considerado normal?",
+     "gab": "A",
+     "id": "gaso-coleta-7"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "alcalose metabólica primária"
+      ],
+      [
+       "B",
+       "acidose metabólica compensada"
+      ],
+      [
+       "C",
+       "erro de coleta (amostra venosa)"
+      ],
+      [
+       "D",
+       "acidose respiratória crônica compensada"
+      ],
+      [
+       "E",
+       "gasometria normal, pois o pH está normal"
+      ]
+     ],
+     "coment": "[H⁺] = 24 × 60 / 34 ≈ 42 → pH ~7,37: coerente. PaCO₂ alta com HCO₃⁻ alto e pH pouco abaixo de 7,40 = acidose respiratória crônica bem compensada pelo rim.",
+     "enunciado": "DPOC estável com pH 7,37, PaCO₂ 60 mmHg e HCO₃⁻ 34 mEq/L. A melhor interpretação é:",
+     "gab": "D",
+     "id": "gaso-coleta-8"
+    }
+   ],
+   "titulo": "Coleta, valores normais e o roteiro"
+  },
+  {
+   "aula": [
+    {
+     "fig": "acidemia",
+     "fonte": "Berend et al., NEJM 2014; Seifter, NEJM 2014",
+     "ideia": "Acidemia é o estado do sangue, medido pelo pH; acidose é o processo que empurra o pH para baixo. Por isso pode haver acidose com pH normal, se outro processo empurrar para o lado oposto.",
+     "na_prova": "A banca dá pH de 7,40 com bicarbonato de 12 e PaCO₂ de 20 e quer distúrbio misto, e não gasometria normal.",
+     "pontos": [
+      "Acidemia é pH abaixo de 7,35, e alcalemia é pH acima de 7,45.",
+      "Acidose e alcalose são processos, metabólicos ou respiratórios, que podem coexistir.",
+      "pH normal com bicarbonato e PaCO₂ muito alterados indica dois distúrbios opostos."
+     ],
+     "titulo": "Acidemia e acidose"
+    },
+    {
+     "fig": "primario",
+     "fonte": "Berend et al., NEJM 2014; Seifter, NEJM 2014",
+     "ideia": "O distúrbio primário é o que explica a direção do pH. Na compensação, bicarbonato e PaCO₂ andam sempre no mesmo sentido; se andam em sentidos opostos, há obrigatoriamente dois distúrbios.",
+     "na_prova": "Pista de prova: bicarbonato baixo com PaCO₂ alta é acidose mista, metabólica e respiratória, sem precisar de fórmula.",
+     "pontos": [
+      "Acidemia com bicarbonato baixo é acidose metabólica, e acidemia com PaCO₂ alta é acidose respiratória.",
+      "Alcalemia com bicarbonato alto é alcalose metabólica, e alcalemia com PaCO₂ baixa é alcalose respiratória.",
+      "A compensação raramente leva o pH a 7,40, com exceção da alcalose respiratória crônica."
+     ],
+     "titulo": "Quem explica o pH"
+    }
+   ],
+   "id": "primario",
+   "nivel": 2,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "alcalose respiratória"
+      ],
+      [
+       "B",
+       "acidose metabólica"
+      ],
+      [
+       "C",
+       "não há distúrbio"
+      ],
+      [
+       "D",
+       "alcalose metabólica"
+      ],
+      [
+       "E",
+       "acidose respiratória"
+      ]
+     ],
+     "coment": "Acidemia com HCO₃⁻ baixo = acidose metabólica. A PaCO₂ baixa é a compensação respiratória (mesmo sentido do HCO₃⁻).",
+     "enunciado": "pH 7,25 · PaCO₂ 28 mmHg · HCO₃⁻ 12 mEq/L. O distúrbio primário é:",
+     "gab": "B",
+     "id": "gaso-primario-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "acidose metabólica"
+      ],
+      [
+       "B",
+       "acidose mista"
+      ],
+      [
+       "C",
+       "acidose respiratória"
+      ],
+      [
+       "D",
+       "alcalose metabólica"
+      ],
+      [
+       "E",
+       "alcalose respiratória"
+      ]
+     ],
+     "coment": "Acidemia com PaCO₂ alta = acidose respiratória. O HCO₃⁻ subiu pouco (+3 para +20 de PaCO₂): padrão agudo.",
+     "enunciado": "pH 7,27 · PaCO₂ 60 mmHg · HCO₃⁻ 27 mEq/L. O distúrbio primário é:",
+     "gab": "C",
+     "id": "gaso-primario-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "acidose respiratória"
+      ],
+      [
+       "B",
+       "acidose metabólica"
+      ],
+      [
+       "C",
+       "alcalose respiratória"
+      ],
+      [
+       "D",
+       "alcalose mista"
+      ],
+      [
+       "E",
+       "alcalose metabólica"
+      ]
+     ],
+     "coment": "Alcalemia com HCO₃⁻ alto = alcalose metabólica; a PaCO₂ elevada é hipoventilação compensatória.",
+     "enunciado": "pH 7,52 · PaCO₂ 48 mmHg · HCO₃⁻ 38 mEq/L. O distúrbio primário é:",
+     "gab": "E",
+     "id": "gaso-primario-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "alcalose respiratória"
+      ],
+      [
+       "B",
+       "gasometria normal"
+      ],
+      [
+       "C",
+       "alcalose metabólica"
+      ],
+      [
+       "D",
+       "acidose respiratória"
+      ],
+      [
+       "E",
+       "acidose metabólica"
+      ]
+     ],
+     "coment": "Alcalemia com PaCO₂ baixa = alcalose respiratória; HCO₃⁻ levemente baixo é a compensação (aguda: −2 por 10 de PaCO₂).",
+     "enunciado": "pH 7,49 · PaCO₂ 28 mmHg · HCO₃⁻ 21 mEq/L. O distúrbio primário é:",
+     "gab": "A",
+     "id": "gaso-primario-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "acidose respiratória compensada"
+      ],
+      [
+       "B",
+       "alcalose metabólica com hipoventilação"
+      ],
+      [
+       "C",
+       "acidose metabólica compensada"
+      ],
+      [
+       "D",
+       "alcalose mista (metabólica + respiratória)"
+      ],
+      [
+       "E",
+       "acidose mista (metabólica + respiratória)"
+      ]
+     ],
+     "coment": "HCO₃⁻ baixo (acidose metabólica) e PaCO₂ alta (acidose respiratória): sentidos opostos, ambos acidificando. Ex.: PCR, choque com insuficiência respiratória. pH muito baixo é típico de distúrbio misto.",
+     "enunciado": "pH 7,08 · PaCO₂ 55 mmHg · HCO₃⁻ 16 mEq/L. A melhor classificação é:",
+     "gab": "E",
+     "id": "gaso-primario-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "gasometria normal para a altitude"
+      ],
+      [
+       "B",
+       "alcalose respiratória com compensação renal"
+      ],
+      [
+       "C",
+       "alcalose metabólica com compensação adequada"
+      ],
+      [
+       "D",
+       "alcalose mista (metabólica + respiratória)"
+      ],
+      [
+       "E",
+       "acidose mista (metabólica + respiratória)"
+      ]
+     ],
+     "coment": "HCO₃⁻ alto e PaCO₂ baixa: sentidos opostos, ambos alcalinizando. Ex.: cirrótico (hiperventila) com vômitos ou uso de diurético. pH perigosamente alto.",
+     "enunciado": "pH 7,62 · PaCO₂ 30 mmHg · HCO₃⁻ 30 mEq/L. A melhor classificação é:",
+     "gab": "D",
+     "id": "gaso-primario-6"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "acidose metabólica compensada"
+      ],
+      [
+       "B",
+       "gasometria normal, pois o pH é 7,40"
+      ],
+      [
+       "C",
+       "acidose metabólica + alcalose respiratória"
+      ],
+      [
+       "D",
+       "acidose respiratória com compensação renal"
+      ],
+      [
+       "E",
+       "alcalose respiratória compensada"
+      ]
+     ],
+     "coment": "Valores muito alterados com pH 7,40: dois processos opostos se anulando. Na sepse é comum: hiperventilação (alcalose resp) + acidose lática. Intoxicação por salicilato faz o mesmo.",
+     "enunciado": "pH 7,40 · PaCO₂ 20 mmHg · HCO₃⁻ 12 mEq/L em paciente séptico. A interpretação é:",
+     "gab": "C",
+     "id": "gaso-primario-7"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "HCO₃⁻ e PaCO₂ ambos abaixo do normal"
+      ],
+      [
+       "B",
+       "HCO₃⁻ e PaCO₂ ambos acima do normal"
+      ],
+      [
+       "C",
+       "PaO₂ baixa com PaCO₂ alta"
+      ],
+      [
+       "D",
+       "HCO₃⁻ e PaCO₂ alterados em sentidos opostos"
+      ],
+      [
+       "E",
+       "HCO₃⁻ alterado com PaCO₂ dentro do normal"
+      ]
+     ],
+     "coment": "A compensação sempre move o outro componente no MESMO sentido. Se um sobe e o outro desce, cada um está empurrando o pH por conta própria.",
+     "enunciado": "Em qual situação o distúrbio misto é OBRIGATÓRIO, sem precisar de fórmula?",
+     "gab": "D",
+     "id": "gaso-primario-8"
+    }
+   ],
+   "titulo": "Qual é o distúrbio primário?"
+  },
+  {
+   "aula": [
+    {
+     "fig": "winter",
+     "fonte": "Berend et al., NEJM 2014; Seifter, NEJM 2014",
+     "ideia": "Quando o bicarbonato muda, o pulmão ajusta a PaCO₂ para proteger o pH. As fórmulas dizem qual PaCO₂ é esperada; valor fora da faixa denuncia um distúrbio respiratório associado.",
+     "na_prova": "A banca dá acidose metabólica com PaCO₂ acima do previsto por Winter e quer acidose respiratória associada.",
+     "pontos": [
+      "Na acidose metabólica, a fórmula de Winter prevê PaCO₂ de 1,5 vezes o bicarbonato mais 8, com margem de 2.",
+      "Um atalho é que a PaCO₂ esperada lembra os dois dígitos depois da vírgula do pH, como 25 para pH 7,25.",
+      "Na alcalose metabólica, a PaCO₂ esperada é 0,7 vezes o bicarbonato mais 21, e raramente passa de 55 a 60."
+     ],
+     "titulo": "Distúrbio metabólico, resposta do pulmão"
+    },
+    {
+     "fig": "comp_respiratoria",
+     "fonte": "Berend et al., NEJM 2014; Seifter, NEJM 2014",
+     "ideia": "Quando a PaCO₂ muda, o rim ajusta o bicarbonato, mas leva dias para fazê-lo por completo. Por isso a resposta esperada depende de o quadro ser agudo ou crônico.",
+     "na_prova": "A banca dá DPOC com PaCO₂ de 60 e bicarbonato de 31: subiu 3,5 por 10 mmHg, compensação crônica adequada.",
+     "pontos": [
+      "Na acidose respiratória aguda, o bicarbonato sobe 1 para cada 10 mmHg de PaCO₂ acima de 40; na crônica, sobe cerca de 3,5.",
+      "Na alcalose respiratória aguda, o bicarbonato cai 2 para cada 10 mmHg abaixo de 40; na crônica, cai 4 a 5.",
+      "Valor medido fora da faixa esperada indica um segundo distúrbio metabólico."
+     ],
+     "titulo": "Distúrbio respiratório, resposta do rim"
+    }
+   ],
+   "id": "compensacao",
+   "nivel": 2,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "adequada (esperado 24–28)"
+      ],
+      [
+       "B",
+       "insuficiente: há acidose respiratória associada"
+      ],
+      [
+       "C",
+       "excessiva: há alcalose respiratória associada"
+      ],
+      [
+       "D",
+       "impossível de avaliar"
+      ],
+      [
+       "E",
+       "adequada apenas se o pH fosse 7,40"
+      ]
+     ],
+     "coment": "Winter: 1,5 × 12 + 8 = 26 (±2 → 24 a 28). A PaCO₂ medida (26) está dentro: acidose metabólica simples com compensação adequada.",
+     "enunciado": "Acidose metabólica com HCO₃⁻ = 12 mEq/L e PaCO₂ = 26 mmHg (pH 7,28). A compensação respiratória está:",
+     "gab": "A",
+     "id": "gaso-compensacao-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "acidose metabólica com compensação respiratória adequada"
+      ],
+      [
+       "B",
+       "acidose respiratória crônica"
+      ],
+      [
+       "C",
+       "acidose metabólica + acidose respiratória associada"
+      ],
+      [
+       "D",
+       "alcalose metabólica"
+      ],
+      [
+       "E",
+       "acidose metabólica + alcalose respiratória"
+      ]
+     ],
+     "coment": "Winter: 1,5 × 10 + 8 = 23 (21–25). PaCO₂ de 35 está ACIMA: o paciente não consegue hiperventilar o suficiente (fadiga, sedação, doença pulmonar) — acidose respiratória associada, sinal de alarme.",
+     "enunciado": "HCO₃⁻ = 10 mEq/L, PaCO₂ = 35 mmHg, pH 7,08. A interpretação é:",
+     "gab": "C",
+     "id": "gaso-compensacao-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "acidose metabólica + alcalose respiratória associada"
+      ],
+      [
+       "B",
+       "acidose metabólica com compensação respiratória adequada"
+      ],
+      [
+       "C",
+       "erro de coleta obrigatório"
+      ],
+      [
+       "D",
+       "alcalose metabólica pura"
+      ],
+      [
+       "E",
+       "acidose metabólica + acidose respiratória associada"
+      ]
+     ],
+     "coment": "Winter: 1,5 × 14 + 8 = 29 (27–31). PaCO₂ 20 está ABAIXO: há hiperventilação primária além da compensação. Pense em salicilato, sepse, cirrose. O pH alcalêmico já denunciava.",
+     "enunciado": "HCO₃⁻ = 14 mEq/L, PaCO₂ = 20 mmHg, pH 7,46. A interpretação é:",
+     "gab": "A",
+     "id": "gaso-compensacao-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "49 mmHg"
+      ],
+      [
+       "B",
+       "40 mmHg"
+      ],
+      [
+       "C",
+       "60 mmHg"
+      ],
+      [
+       "D",
+       "30 mmHg"
+      ],
+      [
+       "E",
+       "68 mmHg"
+      ]
+     ],
+     "coment": "0,7 × 40 + 21 = 49 (±2 → 47 a 51). Se a PaCO₂ medida for 48, a compensação é adequada.",
+     "enunciado": "Alcalose metabólica com HCO₃⁻ = 40 mEq/L. A PaCO₂ esperada pela compensação é de aproximadamente:",
+     "gab": "A",
+     "id": "gaso-compensacao-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "35 mEq/L"
+      ],
+      [
+       "B",
+       "24 mEq/L"
+      ],
+      [
+       "C",
+       "20 mEq/L"
+      ],
+      [
+       "D",
+       "31 mEq/L"
+      ],
+      [
+       "E",
+       "27 mEq/L"
+      ]
+     ],
+     "coment": "Aguda: +1 para cada 10 acima de 40. 70 − 40 = 30 → +3 → 24 + 3 = 27. Nessa fase só os tampões intracelulares atuaram.",
+     "enunciado": "Acidose respiratória AGUDA com PaCO₂ = 70 mmHg. O HCO₃⁻ esperado é de aproximadamente:",
+     "gab": "E",
+     "id": "gaso-compensacao-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "40–41 mEq/L"
+      ],
+      [
+       "B",
+       "34–35 mEq/L"
+      ],
+      [
+       "C",
+       "26–27 mEq/L"
+      ],
+      [
+       "D",
+       "30–31 mEq/L"
+      ],
+      [
+       "E",
+       "24–25 mEq/L"
+      ]
+     ],
+     "coment": "Crônica: +3,5 para cada 10. 3 × 3,5 = 10,5 → 24 + 10,5 ≈ 34–35. O rim levou dias para gerar esse bicarbonato.",
+     "enunciado": "Acidose respiratória CRÔNICA com PaCO₂ = 70 mmHg. O HCO₃⁻ esperado é de aproximadamente:",
+     "gab": "B",
+     "id": "gaso-compensacao-6"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "acidose metabólica"
+      ],
+      [
+       "B",
+       "acidose respiratória aguda pura"
+      ],
+      [
+       "C",
+       "acidose respiratória crônica (compensada)"
+      ],
+      [
+       "D",
+       "alcalose metabólica"
+      ],
+      [
+       "E",
+       "acidose respiratória crônica agudizada com HCO₃⁻ abaixo do esperado"
+      ]
+     ],
+     "coment": "PaCO₂ +20: aguda esperaria HCO₃⁻ 26; crônica, ~31. Medido 30 → crônica. pH também confere: crônica varia ~0,03 por 10 → 7,40 − 0,06 ≈ 7,34.",
+     "enunciado": "DPOC: pH 7,32 · PaCO₂ 60 mmHg · HCO₃⁻ 30 mEq/L. A classificação mais adequada é:",
+     "gab": "C",
+     "id": "gaso-compensacao-7"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "19–20 mEq/L"
+      ],
+      [
+       "B",
+       "13–14 mEq/L"
+      ],
+      [
+       "C",
+       "23–24 mEq/L"
+      ],
+      [
+       "D",
+       "21–22 mEq/L"
+      ],
+      [
+       "E",
+       "27–28 mEq/L"
+      ]
+     ],
+     "coment": "Alcalose respiratória crônica: −4 a −5 para cada 10. 24 − 4,5 ≈ 19–20. É fisiológico na gestação (por isso a 'PaCO₂ 40' de uma gestante já sugere retenção).",
+     "enunciado": "Gestante no 3º trimestre (hiperventilação crônica pela progesterona) com PaCO₂ = 30 mmHg. O HCO₃⁻ esperado é de aproximadamente:",
+     "gab": "A",
+     "id": "gaso-compensacao-8"
+    }
+   ],
+   "titulo": "Compensações: as fórmulas"
+  },
+  {
+   "aula": [
+    {
+     "fig": "gamble_normal",
+     "fonte": "Kraut e Madias, Nat Rev Nephrol 2010; Berend et al., NEJM 2014",
+     "ideia": "O ânion gap estima os ânions que o laboratório não mede, sobretudo a albumina. Quando entra um ácido com ânion próprio, como lactato ou cetona, esse gap aumenta.",
+     "na_prova": "A banca dá séptico com albumina de 2 e ânion gap de 12 e quer o gap corrigido de 17, que revela acidose lática.",
+     "pontos": [
+      "O ânion gap é o sódio menos a soma de cloro e bicarbonato, e o normal fica em torno de 8 a 12 mEq/L.",
+      "Para cada 1 g/dL de albumina abaixo de 4, somam-se 2,5 ao ânion gap.",
+      "Sem essa correção, a hipoalbuminemia esconde uma acidose de ânion gap alto, comum em UTI e cirrose."
+     ],
+     "titulo": "O que é o ânion gap"
+    },
+    {
+     "fig": "gamble_comparar",
+     "fonte": "Kraut e Madias, Nat Rev Nephrol 2010; Berend et al., NEJM 2014",
+     "ideia": "Ânion gap alto significa que entrou um ácido trazendo um ânion que não é cloro. O mnemônico GOLDMARK reúne as causas mais importantes.",
+     "na_prova": "A banca dá acidose de ânion gap alto em alcoolista com visão turva e quer metanol, com gap osmolar elevado.",
+     "pontos": [
+      "Glicóis, como etileno e propilenoglicol, e oxoprolina, pelo uso crônico de paracetamol, estão entre elas.",
+      "Também entram L-lactato, D-lactato da síndrome do intestino curto, metanol e aspirina.",
+      "Insuficiência renal avançada e cetoacidose, diabética, alcoólica ou de jejum, completam a lista."
+     ],
+     "titulo": "Ânion gap elevado"
+    },
+    {
+     "fonte": "Kraut e Madias, Nat Rev Nephrol 2010; Berend et al., NEJM 2014",
+     "ideia": "Na acidose de ânion gap normal, o problema não é ganho de ácido, e sim perda de bicarbonato, que o rim compensa retendo cloro. Por isso ela se chama hiperclorêmica.",
+     "na_prova": "A banca dá diarreia com acidose e cloro alto e quer acidose hiperclorêmica, confirmada pelo ânion gap urinário negativo.",
+     "pontos": [
+      "Diarreia, fístulas pancreáticas ou biliares e ureterossigmoidostomia perdem bicarbonato pelo intestino.",
+      "Acidose tubular renal, acetazolamida e grande volume de soro fisiológico, rico em cloro, também causam esse padrão.",
+      "Ânion gap baixo aparece na hipoalbuminemia, no mieloma, na hipercalcemia e na intoxicação por lítio."
+     ],
+     "titulo": "Ânion gap normal e ânion gap baixo"
+    }
+   ],
+   "id": "aniongap",
+   "nivel": 2,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "12"
+      ],
+      [
+       "B",
+       "24"
+      ],
+      [
+       "C",
+       "28"
+      ],
+      [
+       "D",
+       "36"
+      ],
+      [
+       "E",
+       "8"
+      ]
+     ],
+     "coment": "140 − (104 + 12) = 24 mEq/L: aumentado. Acidose metabólica de ânion gap elevado.",
+     "enunciado": "Na⁺ 140, Cl⁻ 104, HCO₃⁻ 12 mEq/L. O ânion gap é:",
+     "gab": "B",
+     "id": "gaso-aniongap-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "22 — elevado"
+      ],
+      [
+       "B",
+       "12 — normal"
+      ],
+      [
+       "C",
+       "17 — elevado"
+      ],
+      [
+       "D",
+       "10 — normal"
+      ],
+      [
+       "E",
+       "7 — baixo"
+      ]
+     ],
+     "coment": "AG = 138 − 126 = 12 (parece normal). Corrigido = 12 + 2,5 × (4 − 2) = 17: elevado. Provável acidose lática escondida. Na UTI, sempre corrija.",
+     "enunciado": "Paciente séptico com Na⁺ 138, Cl⁻ 108, HCO₃⁻ 18 e albumina 2,0 g/dL. O ânion gap corrigido é:",
+     "gab": "C",
+     "id": "gaso-aniongap-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "Diarreia aguda"
+      ],
+      [
+       "B",
+       "Cetoacidose diabética"
+      ],
+      [
+       "C",
+       "Infusão de grande volume de soro fisiológico"
+      ],
+      [
+       "D",
+       "Acidose tubular renal tipo 1"
+      ],
+      [
+       "E",
+       "Uso de acetazolamida"
+      ]
+     ],
+     "coment": "Na CAD acumulam-se cetoácidos (β-hidroxibutirato e acetoacetato), ânions não medidos. As demais perdem HCO₃⁻ ou ganham Cl⁻: AG normal.",
+     "enunciado": "Qual das condições causa acidose metabólica de ânion gap ELEVADO?",
+     "gab": "B",
+     "id": "gaso-aniongap-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "Intoxicação por metanol"
+      ],
+      [
+       "B",
+       "Acidose lática"
+      ],
+      [
+       "C",
+       "Insuficiência renal avançada"
+      ],
+      [
+       "D",
+       "Intoxicação por salicilato"
+      ],
+      [
+       "E",
+       "Diarreia profusa"
+      ]
+     ],
+     "coment": "A diarreia perde HCO₃⁻ (secreções intestinais são alcalinas); o rim retém Cl⁻ → hipercloremia, AG normal.",
+     "enunciado": "Qual das condições causa acidose metabólica de ânion gap NORMAL?",
+     "gab": "E",
+     "id": "gaso-aniongap-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "alcalose metabólica"
+      ],
+      [
+       "B",
+       "acidose metabólica de AG baixo"
+      ],
+      [
+       "C",
+       "acidose respiratória"
+      ],
+      [
+       "D",
+       "acidose metabólica de AG elevado"
+      ],
+      [
+       "E",
+       "acidose metabólica hiperclorêmica"
+      ]
+     ],
+     "coment": "AG = 136 − (114 + 12) = 10 → normal. O Cl⁻ subiu o quanto o HCO₃⁻ caiu: padrão hiperclorêmico, típico de perda intestinal.",
+     "enunciado": "Diarreia de 3 dias: Na⁺ 136, Cl⁻ 114, HCO₃⁻ 12. A classificação é:",
+     "gab": "E",
+     "id": "gaso-aniongap-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "insuficiência renal aguda com retenção de ácidos"
+      ],
+      [
+       "B",
+       "cetoacidose por jejum prolongado"
+      ],
+      [
+       "C",
+       "acidose hiperclorêmica pelo excesso de cloro do soro"
+      ],
+      [
+       "D",
+       "alcalose de contração com acidúria paradoxal"
+      ],
+      [
+       "E",
+       "acidose lática por hipoperfusão persistente"
+      ]
+     ],
+     "coment": "O SF tem Na⁺ e Cl⁻ iguais (154), bem mais Cl⁻ que o plasma (~104). Na visão de Stewart, cai a diferença de íons fortes. Soluções balanceadas (Ringer lactato, Plasma-Lyte) causam menos esse efeito.",
+     "enunciado": "Paciente recebeu 8 litros de SF 0,9% na reanimação e evolui com HCO₃⁻ 17 e Cl⁻ 116, AG normal. O mecanismo é:",
+     "gab": "C",
+     "id": "gaso-aniongap-6"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "cetoacidose diabética grave"
+      ],
+      [
+       "B",
+       "diarreia secretora intensa"
+      ],
+      [
+       "C",
+       "acidose lática por choque"
+      ],
+      [
+       "D",
+       "mieloma múltiplo ou hipoalbuminemia"
+      ],
+      [
+       "E",
+       "intoxicação por metanol ou etilenoglicol"
+      ]
+     ],
+     "coment": "Menos albumina (principal ânion não medido) ou paraproteína catiônica (IgG do mieloma) reduzem o AG. Também lítio e brometo (este interfere na dosagem do cloro).",
+     "enunciado": "Um ânion gap BAIXO (ex.: 2 mEq/L) deve fazer pensar em:",
+     "gab": "D",
+     "id": "gaso-aniongap-7"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "o cloreto"
+      ],
+      [
+       "B",
+       "o fosfato"
+      ],
+      [
+       "C",
+       "o lactato"
+      ],
+      [
+       "D",
+       "a albumina"
+      ],
+      [
+       "E",
+       "o sulfato"
+      ]
+     ],
+     "coment": "A albumina responde pela maior parte do AG normal. Cada 1 g/dL a menos reduz o AG em ~2,5 mEq/L, daí a correção.",
+     "enunciado": "O principal ânion não medido responsável pelo ânion gap normal é:",
+     "gab": "D",
+     "id": "gaso-aniongap-8"
+    }
+   ],
+   "titulo": "Ânion gap"
+  },
+  {
+   "aula": [
+    {
+     "fig": "delta_delta",
+     "fonte": "Kraut e Madias, Nat Rev Nephrol 2010; Berend et al., NEJM 2014",
+     "ideia": "Numa acidose de ânion gap alto pura, cada ácido que entra consome um bicarbonato e sobe o gap em um. Comparar quanto o gap subiu com quanto o bicarbonato caiu revela um segundo distúrbio escondido.",
+     "na_prova": "A banca dá cetoacidose com vômitos e delta-delta de 2,5 e quer alcalose metabólica associada.",
+     "pontos": [
+      "A razão é o ânion gap menos 12, dividido por 24 menos o bicarbonato.",
+      "Abaixo de 1, o bicarbonato caiu demais e há também acidose de ânion gap normal, como na cetoacidose com diarreia ou excesso de soro.",
+      "Acima de 2, o bicarbonato está alto demais e há alcalose metabólica associada, como em vômitos."
+     ],
+     "titulo": "Delta-delta"
+    },
+    {
+     "fig": "gap_osmolar",
+     "fonte": "Kraut e Madias, Nat Rev Nephrol 2010; Berend et al., NEJM 2014",
+     "ideia": "O gap osmolar mostra partículas no sangue que a fórmula não conta, como os álcoois tóxicos. Somado ao ânion gap alto, ele aponta metanol ou etilenoglicol.",
+     "na_prova": "Pista: etanol e isopropanol elevam o gap osmolar sem acidose importante; metanol e etilenoglicol elevam os dois gaps.",
+     "pontos": [
+      "A osmolaridade calculada é 2 vezes o sódio, mais glicose dividida por 18, mais ureia dividida por 6; o gap normal é menor que 10.",
+      "Metanol causa visão turva em tempestade de neve, e etilenoglicol causa cristais de oxalato na urina e lesão renal.",
+      "O antídoto é fomepizol ou etanol, que bloqueiam a álcool desidrogenase, e os casos graves vão para hemodiálise."
+     ],
+     "titulo": "Gap osmolar"
+    }
+   ],
+   "id": "deltadelta",
+   "nivel": 2,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "0 — não há acidose"
+      ],
+      [
+       "B",
+       "3,0 — acidose de AG alto + alcalose metabólica"
+      ],
+      [
+       "C",
+       "1,3 — alcalose metabólica pura"
+      ],
+      [
+       "D",
+       "0,5 — acidose de AG alto + acidose de AG normal"
+      ],
+      [
+       "E",
+       "1,3 — acidose de AG elevado pura"
+      ]
+     ],
+     "coment": "AG = 140 − 110 = 30 → ΔAG = 18. ΔHCO₃⁻ = 24 − 10 = 14. 18/14 ≈ 1,3 → entre 1 e 2: acidose de AG elevado sem outro distúrbio metabólico.",
+     "enunciado": "Na⁺ 140, Cl⁻ 100, HCO₃⁻ 10. Qual a razão Δ/Δ e a interpretação?",
+     "gab": "E",
+     "id": "gaso-deltadelta-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "acidose de AG elevado + hiperclorêmica"
+      ],
+      [
+       "B",
+       "acidose de AG elevado + alcalose metabólica"
+      ],
+      [
+       "C",
+       "distúrbio respiratório isolado"
+      ],
+      [
+       "D",
+       "alcalose metabólica isolada"
+      ],
+      [
+       "E",
+       "acidose de AG elevado pura (Δ/Δ entre 1 e 2)"
+      ]
+     ],
+     "coment": "AG = 140 − 115 = 25 → ΔAG 13. ΔHCO₃⁻ = 4. Δ/Δ = 3,25. Se só houvesse a cetoacidose, o HCO₃⁻ seria ~11; está 20 porque os vômitos (perda de HCl) somaram uma alcalose. HCO₃⁻ quase normal escondia uma CAD.",
+     "enunciado": "Diabético com vômitos: Na⁺ 140, Cl⁻ 95, HCO₃⁻ 20. A interpretação metabólica completa é:",
+     "gab": "B",
+     "id": "gaso-deltadelta-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "acidose de AG elevado + acidose de AG normal"
+      ],
+      [
+       "B",
+       "acidose de AG elevado + alcalose metabólica"
+      ],
+      [
+       "C",
+       "acidose de AG elevado pura"
+      ],
+      [
+       "D",
+       "nenhum distúrbio metabólico"
+      ],
+      [
+       "E",
+       "alcalose respiratória"
+      ]
+     ],
+     "coment": "AG = 136 − 118 = 18 → ΔAG 6. ΔHCO₃⁻ = 16. 6/16 ≈ 0,4. O HCO₃⁻ caiu muito mais do que o AG explica: há também perda de bicarbonato (ex.: diarreia) ou hipercloremia.",
+     "enunciado": "Na⁺ 136, Cl⁻ 110, HCO₃⁻ 8. A razão Δ/Δ indica:",
+     "gab": "A",
+     "id": "gaso-deltadelta-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "22 — acidose de AG normal associada"
+      ],
+      [
+       "B",
+       "12 — acidose mista"
+      ],
+      [
+       "C",
+       "24 — normal"
+      ],
+      [
+       "D",
+       "18 — sem outro distúrbio"
+      ],
+      [
+       "E",
+       "30 — alcalose metabólica associada"
+      ]
+     ],
+     "coment": "AG = 140 − 116 = 24 → ΔAG = 12. HCO₃⁻ corrigido = 18 + 12 = 30 (> 26–28): sem o ácido extra, o paciente estaria com alcalose metabólica.",
+     "enunciado": "Na⁺ 140, Cl⁻ 98, HCO₃⁻ 18. O HCO₃⁻ 'corrigido' (HCO₃⁻ + ΔAG) e a conclusão são:",
+     "gab": "E",
+     "id": "gaso-deltadelta-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "300 mOsm/kg"
+      ],
+      [
+       "B",
+       "285 mOsm/kg"
+      ],
+      [
+       "C",
+       "290 mOsm/kg"
+      ],
+      [
+       "D",
+       "310 mOsm/kg"
+      ],
+      [
+       "E",
+       "280 mOsm/kg"
+      ]
+     ],
+     "coment": "2 × 140 + 90/18 + 30/6 = 280 + 5 + 5 = 290 mOsm/kg.",
+     "enunciado": "Na⁺ 140 mEq/L, glicose 90 mg/dL, ureia 30 mg/dL. A osmolalidade calculada é:",
+     "gab": "C",
+     "id": "gaso-deltadelta-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "intoxicação por salicilato"
+      ],
+      [
+       "B",
+       "diarreia com desidratação grave"
+      ],
+      [
+       "C",
+       "acidose tubular renal distal"
+      ],
+      [
+       "D",
+       "intoxicação por metanol ou etilenoglicol"
+      ],
+      [
+       "E",
+       "cetoacidose diabética com hiperglicemia"
+      ]
+     ],
+     "coment": "Gap osmolar = 30 (> 10) junto com AG alto: álcoois tóxicos. O álcool intacto eleva o gap osmolar; os metabólitos (ácido fórmico; glicolato/oxalato) elevam o AG.",
+     "enunciado": "Acidose de AG elevado, osmolalidade medida 320 e calculada 290 mOsm/kg. A principal hipótese é:",
+     "gab": "D",
+     "id": "gaso-deltadelta-6"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "ânion gap baixo com hipercalcemia"
+      ],
+      [
+       "B",
+       "alteração visual em 'tempestade de neve'"
+      ],
+      [
+       "C",
+       "cristais de oxalato de cálcio na urina"
+      ],
+      [
+       "D",
+       "cetose sem acidose metabólica"
+      ],
+      [
+       "E",
+       "gap osmolar normal com AG elevado"
+      ]
+     ],
+     "coment": "O etilenoglicol vira ácido glicólico e oxálico; o oxalato precipita com cálcio (cristais em 'envelope', hipocalcemia, LRA). O metanol vira ácido fórmico, tóxico para a retina e o nervo óptico.",
+     "enunciado": "Achado que sugere intoxicação por ETILENOGLICOL em vez de metanol:",
+     "gab": "C",
+     "id": "gaso-deltadelta-7"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "N-acetilcisteína"
+      ],
+      [
+       "B",
+       "azul de metileno"
+      ],
+      [
+       "C",
+       "flumazenil"
+      ],
+      [
+       "D",
+       "naloxona"
+      ],
+      [
+       "E",
+       "fomepizol"
+      ]
+     ],
+     "coment": "Bloquear a álcool desidrogenase impede a formação dos metabólitos tóxicos (o etanol faz isso por competição). Hemodiálise remove álcool e metabólitos nos casos graves.",
+     "enunciado": "O antídoto específico na intoxicação por metanol ou etilenoglicol é:",
+     "gab": "E",
+     "id": "gaso-deltadelta-8"
+    }
+   ],
+   "titulo": "Delta-delta e gap osmolar"
+  },
+  {
+   "aula": [
+    {
+     "fig": "ag_urinario",
+     "fonte": "Kraut e Madias, Nat Rev Nephrol 2010; Berend et al., NEJM 2014",
+     "ideia": "O ânion gap urinário estima quanto amônio o rim está excretando. Se o rim excreta bem, a causa da acidose está fora dele; se não excreta, o rim é o problema.",
+     "na_prova": "Macete de prova: negativo lembra gut, o intestino. O teste perde valor com cetonúria ou sódio urinário abaixo de 20.",
+     "pontos": [
+      "O ânion gap urinário é sódio mais potássio menos cloro na urina, porque o amônio sai acompanhado de cloro.",
+      "Valor negativo indica boa excreção de amônio e causa extrarrenal, como diarreia.",
+      "Valor positivo indica que o rim não excreta amônio, como nas acidoses tubulares distal e tipo 4."
+     ],
+     "titulo": "Ânion gap urinário"
+    },
+    {
+     "fig": "atr",
+     "fonte": "Kraut e Madias, Nat Rev Nephrol 2010; Berend et al., NEJM 2014",
+     "ideia": "As acidoses tubulares renais nascem de falhas em pontos diferentes do néfron. O potássio e o pH urinário ajudam a descobrir onde está a falha.",
+     "na_prova": "A banca dá diabético com acidose hiperclorêmica e potássio alto e quer acidose tubular tipo 4, por hipoaldosteronismo hiporreninêmico.",
+     "pontos": [
+      "Na distal, ou tipo 1, o rim não secreta hidrogênio: a urina fica com pH acima de 5,5, há hipocalemia e cálculos.",
+      "Na proximal, ou tipo 2, o rim perde bicarbonato, há hipocalemia e muitas vezes síndrome de Fanconi, por mieloma ou tenofovir.",
+      "Na tipo 4, falta ação da aldosterona e há hipercalemia, como na nefropatia diabética ou com IECA e espironolactona."
+     ],
+     "titulo": "Os três tipos de acidose tubular"
+    }
+   ],
+   "id": "atr",
+   "nivel": 3,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "positivo pela perda de potássio"
+      ],
+      [
+       "B",
+       "próximo de zero, pela perda de sódio"
+      ],
+      [
+       "C",
+       "negativo, pelo aumento da excreção de NH₄⁺"
+      ],
+      [
+       "D",
+       "positivo, pois o rim não excreta NH₄⁺"
+      ],
+      [
+       "E",
+       "impossível de interpretar sem o pH urinário"
+      ]
+     ],
+     "coment": "O rim saudável responde à acidose excretando muito NH₄⁺ com Cl⁻: o Cl⁻ urinário supera Na⁺ + K⁺ → AG urinário negativo. 'NeGUTivo' = causa intestinal.",
+     "enunciado": "Na acidose metabólica hiperclorêmica causada por diarreia, o ânion gap urinário tende a ser:",
+     "gab": "C",
+     "id": "gaso-atr-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "cetoacidose"
+      ],
+      [
+       "B",
+       "ATR tipo 4"
+      ],
+      [
+       "C",
+       "ATR tipo 1 (distal)"
+      ],
+      [
+       "D",
+       "diarreia oculta"
+      ],
+      [
+       "E",
+       "ATR tipo 2"
+      ]
+     ],
+     "coment": "pH urinário > 5,5 apesar de acidemia = falha na secreção distal de H⁺. Hipocalemia, litíase/nefrocalcinose e Sjögren completam o quadro de ATR distal.",
+     "enunciado": "Mulher com síndrome de Sjögren, cálculos renais de repetição, K⁺ 2,8, acidose de AG normal e pH urinário 6,5. O diagnóstico é:",
+     "gab": "C",
+     "id": "gaso-atr-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "ATR tipo 4"
+      ],
+      [
+       "B",
+       "ATR tipo 2"
+      ],
+      [
+       "C",
+       "ATR tipo 1"
+      ],
+      [
+       "D",
+       "acidose lática tipo B"
+      ],
+      [
+       "E",
+       "alcalose metabólica"
+      ]
+     ],
+     "coment": "Hipercalemia + acidose leve de AG normal + capacidade de acidificar a urina (pH < 5,5) = falta de ação da aldosterona. Na nefropatia diabética a renina é baixa.",
+     "enunciado": "Diabético com nefropatia, K⁺ 6,0, HCO₃⁻ 18, AG normal e pH urinário 5,0. O diagnóstico mais provável é:",
+     "gab": "A",
+     "id": "gaso-atr-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "ATR tipo 2 (proximal)"
+      ],
+      [
+       "B",
+       "diabetes descompensado"
+      ],
+      [
+       "C",
+       "diarreia osmótica"
+      ],
+      [
+       "D",
+       "ATR tipo 4 (hipoaldosteronismo)"
+      ],
+      [
+       "E",
+       "ATR tipo 1 (distal)"
+      ]
+     ],
+     "coment": "Defeito generalizado do túbulo proximal: perde HCO₃⁻, glicose, fosfato, aminoácidos e urato. As cadeias leves do mieloma são causa clássica.",
+     "enunciado": "Paciente com mieloma: acidose de AG normal, K⁺ 3,0, glicosúria com glicemia normal, fosfatúria e aminoacidúria. O diagnóstico é:",
+     "gab": "A",
+     "id": "gaso-atr-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "Porque o túbulo proximal passa a secretar mais H⁺ que o normal"
+      ],
+      [
+       "B",
+       "Porque a aldosterona elevada estimula a secreção distal de H⁺"
+      ],
+      [
+       "C",
+       "Porque o glomérulo deixa de filtrar bicarbonato quando ele cai"
+      ],
+      [
+       "D",
+       "Porque há perda intestinal de bicarbonato associada"
+      ],
+      [
+       "E",
+       "Porque, abaixo do novo limiar, o HCO₃⁻ filtrado é todo reabsorvido"
+      ]
+     ],
+     "coment": "O proximal só reabsorve até um limiar menor (~15–18). Com o sérico abaixo dele, pouco HCO₃⁻ chega ao distal, que acidifica normalmente. Ao dar bicarbonato, o sérico sobe e volta a bicarbonatúria.",
+     "enunciado": "Por que, na ATR tipo 2 estabelecida, o pH urinário pode ficar abaixo de 5,5?",
+     "gab": "E",
+     "id": "gaso-atr-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "−80 — ATR tipo 1"
+      ],
+      [
+       "B",
+       "−25 — perda extrarrenal"
+      ],
+      [
+       "C",
+       "+25 — ATR distal"
+      ],
+      [
+       "D",
+       "0 — sem conclusão possível"
+      ],
+      [
+       "E",
+       "+135 — ATR tipo 4"
+      ]
+     ],
+     "coment": "30 + 25 − 80 = −25 (negativo): o rim está excretando NH₄⁺ adequadamente. A acidose vem de fora do rim, por exemplo diarreia ou fístula.",
+     "enunciado": "Urina: Na⁺ 30, K⁺ 25, Cl⁻ 80 mEq/L, num paciente com acidose hiperclorêmica. O AG urinário e a provável origem são:",
+     "gab": "B",
+     "id": "gaso-atr-6"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "Furosemida"
+      ],
+      [
+       "B",
+       "Tenofovir"
+      ],
+      [
+       "C",
+       "Espironolactona"
+      ],
+      [
+       "D",
+       "Anfotericina B"
+      ],
+      [
+       "E",
+       "Acetazolamida"
+      ]
+     ],
+     "coment": "Antagonistas da aldosterona (espironolactona), IECA/BRA, heparina, trimetoprima e tacrolimo reduzem a secreção de K⁺ e H⁺ no coletor. Anfotericina dá ATR tipo 1; acetazolamida e tenofovir, padrão proximal.",
+     "enunciado": "Qual medicamento pode causar acidose de AG normal com HIPERcalemia (padrão de ATR tipo 4)?",
+     "gab": "C",
+     "id": "gaso-atr-7"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "restrição de potássio"
+      ],
+      [
+       "B",
+       "fludrocortisona"
+      ],
+      [
+       "C",
+       "citrato de potássio"
+      ],
+      [
+       "D",
+       "acetazolamida"
+      ],
+      [
+       "E",
+       "furosemida"
+      ]
+     ],
+     "coment": "O citrato é álcali (vira HCO₃⁻ no fígado), repõe K⁺ e o citrato urinário inibe a cristalização de cálcio. Doses relativamente baixas bastam, ao contrário da ATR tipo 2.",
+     "enunciado": "O tratamento de escolha para corrigir a acidose e prevenir cálculos na ATR tipo 1 é:",
+     "gab": "C",
+     "id": "gaso-atr-8"
+    }
+   ],
+   "titulo": "AG normal: ATR e ânion gap urinário"
+  },
+  {
+   "aula": [
+    {
+     "fig": "alcalose",
+     "fonte": "Kraut e Madias, Nat Rev Nephrol 2010; Berend et al., NEJM 2014",
+     "ideia": "Toda alcalose metabólica precisa de um fator que a gera e de outro que a mantém. O cloro urinário separa as que respondem a soro das que não respondem.",
+     "na_prova": "No vômito, a banca dá sódio urinário alto para confundir. Use o cloro urinário, porque o sódio sai arrastado pelo bicarbonato.",
+     "pontos": [
+      "A alcalose é gerada por perda de hidrogênio, como em vômitos, sonda e diuréticos, ou por ganho de base.",
+      "Cloro urinário abaixo de 20 indica alcalose que responde a soro, como no vômito e no diurético usado antes.",
+      "Cloro urinário alto com hipertensão sugere hiperaldosteronismo ou Cushing; sem hipertensão, diurético em uso, Bartter ou Gitelman."
+     ],
+     "titulo": "Alcalose metabólica: gerar e manter"
+    },
+    {
+     "fig": "asma_paco2",
+     "fonte": "West, Fisiologia respiratória; Kraut e Madias, Nat Rev Nephrol 2010; Berend et al., NEJM 2014",
+     "ideia": "A alcalose respiratória vem de hiperventilação, e a acidose respiratória vem de hipoventilação. Na asma grave, uma PaCO₂ que volta ao normal é sinal de cansaço, e não de melhora.",
+     "na_prova": "A banca dá asmático em crise há horas com PaCO₂ de 42 e quer insuficiência respiratória iminente, com indicação de suporte ventilatório.",
+     "pontos": [
+      "A hiperventilação aparece quando algo estimula o centro respiratório, como ansiedade, dor, febre, sepse precoce, embolia, gestação, cirrose ou salicilato.",
+      "A hipoventilação aparece com opioides e sedativos, doenças neuromusculares, obesidade-hipoventilação e DPOC exacerbada.",
+      "Na alcalose respiratória, parestesias e tetania vêm da queda do cálcio ionizado."
+     ],
+     "titulo": "Distúrbios respiratórios"
+    }
+   ],
+   "id": "alcaloses",
+   "nivel": 3,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "alcalose hipoclorêmica e hipocalêmica, com Cl⁻ urinário alto"
+      ],
+      [
+       "B",
+       "alcalose hipoclorêmica e hipocalêmica, com Cl⁻ urinário baixo"
+      ],
+      [
+       "C",
+       "alcalose respiratória por hiperventilação e dor"
+      ],
+      [
+       "D",
+       "acidose metabólica hiperclorêmica com hipocalemia"
+      ],
+      [
+       "E",
+       "acidose de AG elevado por cetose de jejum"
+      ]
+     ],
+     "coment": "Perda de HCl gera a alcalose; a depleção de volume e de Cl⁻ a mantém e o rim retém cloro avidamente (Cl⁻ urinário baixo). A hipocalemia vem da perda renal (hiperaldosteronismo secundário + bicarbonatúria).",
+     "enunciado": "O padrão laboratorial esperado em vômitos incoercíveis é:",
+     "gab": "B",
+     "id": "gaso-alcaloses-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "hiperaldosteronismo primário"
+      ],
+      [
+       "B",
+       "síndrome de Liddle"
+      ],
+      [
+       "C",
+       "Gitelman"
+      ],
+      [
+       "D",
+       "Bartter"
+      ],
+      [
+       "E",
+       "vômitos ocultos"
+      ]
+     ],
+     "coment": "Gitelman = defeito no cotransportador Na-Cl do túbulo distal (como um tiazídico): hipocalciúria e hipomagnesemia. Bartter (como alça) cursa com hipercalciúria. Ambos são normotensos.",
+     "enunciado": "Jovem normotensa com hipocalemia, alcalose metabólica, cloro urinário alto, hipomagnesemia e hipocalciúria, sem uso de diuréticos. O diagnóstico mais provável é:",
+     "gab": "C",
+     "id": "gaso-alcaloses-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "uso de diurético"
+      ],
+      [
+       "B",
+       "estenose de artéria renal"
+      ],
+      [
+       "C",
+       "síndrome de Gitelman"
+      ],
+      [
+       "D",
+       "vômitos"
+      ],
+      [
+       "E",
+       "hiperaldosteronismo primário"
+      ]
+     ],
+     "coment": "Aldosterona alta com renina baixa = produção autônoma (adenoma ou hiperplasia adrenal). Na estenose renal, renina e aldosterona estão ambas altas.",
+     "enunciado": "Hipertenso com hipocalemia, alcalose metabólica, renina suprimida e aldosterona elevada. Diagnóstico:",
+     "gab": "E",
+     "id": "gaso-alcaloses-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "bicarbonato de sódio"
+      ],
+      [
+       "B",
+       "espironolactona"
+      ],
+      [
+       "C",
+       "SF 0,9% com reposição de KCl"
+      ],
+      [
+       "D",
+       "acetazolamida como primeira escolha"
+      ],
+      [
+       "E",
+       "restrição de sal"
+      ]
+     ],
+     "coment": "Repor volume e cloro permite ao rim excretar o excesso de HCO₃⁻ (via pendrina e menor reabsorção proximal). Repor K⁺ é essencial. Acetazolamida fica para quem não tolera volume.",
+     "enunciado": "O tratamento da alcalose metabólica causada por vômitos é:",
+     "gab": "C",
+     "id": "gaso-alcaloses-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "alcalose respiratória pela taquipneia"
+      ],
+      [
+       "B",
+       "PaCO₂ normal, quadro tranquilizador"
+      ],
+      [
+       "C",
+       "sinal de fadiga e insuficiência iminente"
+      ],
+      [
+       "D",
+       "compensação de alcalose metabólica"
+      ],
+      [
+       "E",
+       "erro de coleta, pois deveria estar baixa"
+      ]
+     ],
+     "coment": "Na crise, a hiperventilação deixa a PaCO₂ baixa (~30). Uma PaCO₂ que 'normaliza' com o paciente ainda taquipneico mostra que ele não consegue mais ventilar: pensar em intubação.",
+     "enunciado": "Asmático em crise há 6 horas, FR 36, uso de musculatura acessória e PaCO₂ = 42 mmHg. A interpretação é:",
+     "gab": "C",
+     "id": "gaso-alcaloses-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "alcalose respiratória crônica fisiológica"
+      ],
+      [
+       "B",
+       "acidose metabólica compensada pela respiração"
+      ],
+      [
+       "C",
+       "alcalose metabólica por hiperêmese"
+      ],
+      [
+       "D",
+       "acidose respiratória por compressão diafragmática"
+      ],
+      [
+       "E",
+       "distúrbio misto grave que exige investigação"
+      ]
+     ],
+     "coment": "A progesterona estimula o centro respiratório. HCO₃⁻ esperado na crônica: 24 − 4,5 ≈ 19,5 → confere. É normal na gravidez.",
+     "enunciado": "Gestante de 32 semanas: pH 7,46, PaCO₂ 30 mmHg, HCO₃⁻ 20 mEq/L. A interpretação é:",
+     "gab": "A",
+     "id": "gaso-alcaloses-6"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "hipocalemia aguda pela hiperventilação"
+      ],
+      [
+       "B",
+       "hipoglicemia de estresse"
+      ],
+      [
+       "C",
+       "hipermagnesemia relativa"
+      ],
+      [
+       "D",
+       "queda do cálcio ionizado pela alcalose"
+      ],
+      [
+       "E",
+       "aumento da PaO₂ com vasoconstrição"
+      ]
+     ],
+     "coment": "Na alcalose, a albumina libera H⁺ e liga mais Ca²⁺, reduzindo o cálcio ionizado, mesmo com o cálcio total normal. Conduta: acalmar e orientar a respiração.",
+     "enunciado": "Crise de ansiedade com hiperventilação: parestesias periorais e espasmo carpopedal. O mecanismo é:",
+     "gab": "D",
+     "id": "gaso-alcaloses-7"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "a aldosterona fica suprimida pela alcalemia"
+      ],
+      [
+       "B",
+       "o rim perde a capacidade de reabsorver o bicarbonato filtrado"
+      ],
+      [
+       "C",
+       "há uma acidose metabólica associada não percebida"
+      ],
+      [
+       "D",
+       "o rim reabsorve Na⁺ trocando por H⁺, para defender o volume"
+      ],
+      [
+       "E",
+       "o estômago passa a secretar bicarbonato em excesso"
+      ]
+     ],
+     "coment": "Prioridade do rim: defender o volume. Com pouco Cl⁻ disponível, o Na⁺ é reabsorvido em troca de H⁺ e K⁺ (aldosterona alta). Resultado: urina ácida, alcalose mantida e hipocalemia piorando.",
+     "enunciado": "A acidúria paradoxal do vômito prolongado ocorre porque:",
+     "gab": "D",
+     "id": "gaso-alcaloses-8"
+    }
+   ],
+   "titulo": "Alcaloses e distúrbios respiratórios"
+  },
+  {
+   "aula": [
+    {
+     "fig": "cad",
+     "fonte": "Consenso de crises hiperglicêmicas ADA/EASD 2024",
+     "ideia": "Na cetoacidose, a falta de insulina faz o fígado produzir cetonas em excesso. O tratamento segue uma ordem: volume, potássio, insulina e glicose, e o consenso de 2024 atualizou os critérios.",
+     "na_prova": "A banca dá cetoacidose com potássio de 3,2 e quer repor potássio antes da insulina. O valor de corte mudou de 3,3 para 3,5 em 2024.",
+     "pontos": [
+      "O diagnóstico exige glicemia de 200 ou mais ou diabetes conhecido, beta-hidroxibutirato de 3 ou mais, e pH abaixo de 7,3 ou bicarbonato abaixo de 18.",
+      "A insulina só começa com potássio acima de 3,5, e o bicarbonato fica para pH abaixo de 7,0.",
+      "A resolução é beta-hidroxibutirato abaixo de 0,6 com pH venoso de 7,3 ou mais, ou bicarbonato de 18 ou mais."
+     ],
+     "titulo": "Cetoacidose diabética"
+    },
+    {
+     "fonte": "Kraut e Madias, Nat Rev Nephrol 2010; Berend et al., NEJM 2014",
+     "ideia": "Algumas intoxicações e doenças têm uma gasometria tão típica que viram questão certa. Reconhecer o padrão poupa tempo na prova.",
+     "na_prova": "A banca dá salicilato com pH quase normal e quer distúrbio misto: alcalose respiratória com acidose metabólica.",
+     "pontos": [
+      "O salicilato causa alcalose respiratória precoce e acidose de ânion gap alto, com zumbido e náuseas.",
+      "O lactato tipo A vem de hipoperfusão, e o tipo B surge sem hipóxia, por metformina, linezolida, falta de tiamina ou câncer.",
+      "No ventilador, a nova ventilação-minuto é a atual vezes a PaCO₂ atual, dividida pela PaCO₂ desejada."
+     ],
+     "titulo": "Outros clássicos"
+    }
+   ],
+   "id": "casos",
+   "nivel": 3,
+   "questoes": [
+    {
+     "alts": [
+      [
+       "A",
+       "acidose metabólica + acidose respiratória"
+      ],
+      [
+       "B",
+       "acidose metabólica + alcalose metabólica"
+      ],
+      [
+       "C",
+       "acidose hiperclorêmica com compensação adequada"
+      ],
+      [
+       "D",
+       "acidose de AG elevado com compensação adequada"
+      ],
+      [
+       "E",
+       "acidose metabólica + alcalose respiratória"
+      ]
+     ],
+     "coment": "AG = 132 − 102 = 30. Winter = 1,5 × 6 + 8 = 17 (15–19): PaCO₂ 18 adequada. Δ/Δ = 18/18 = 1: cetoacidose pura. Coerência: [H⁺] = 24 × 18/6 = 72 → pH ~7,14.",
+     "enunciado": "Jovem com DM1: glicemia 520, Na⁺ 132, Cl⁻ 96, HCO₃⁻ 6, PaCO₂ 18 mmHg, pH 7,14, cetonúria. A interpretação completa é:",
+     "gab": "D",
+     "id": "gaso-casos-1"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "cetoacidose resolvida; acidose hiperclorêmica pelo SF"
+      ],
+      [
+       "B",
+       "cetoacidose persistente: aumentar a dose de insulina"
+      ],
+      [
+       "C",
+       "nova acidose lática por hipoperfusão"
+      ],
+      [
+       "D",
+       "alcalose metabólica pela correção excessiva"
+      ],
+      [
+       "E",
+       "erro laboratorial na dosagem do cloro"
+      ]
+     ],
+     "coment": "Pelo consenso de 2024, a CAD está resolvida com beta-hidroxibutirato abaixo de 0,6 e pH venoso de 7,3 ou mais (ou HCO₃⁻ ≥ 18). O AG de 10 confirma que os cetoácidos sumiram; o HCO₃⁻ ainda baixo vem do Cl⁻ do soro. Não se intensifica a insulina por isso.",
+     "enunciado": "A mesma paciente após 12 h de tratamento com SF e insulina: glicemia 200, Na⁺ 140, Cl⁻ 115, HCO₃⁻ 15, pH venoso 7,31 e beta-hidroxibutirato 0,4 mmol/L. A interpretação é:",
+     "gab": "A",
+     "id": "gaso-casos-2"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "restringir potássio"
+      ],
+      [
+       "B",
+       "iniciar insulina em bomba e repor potássio só depois"
+      ],
+      [
+       "C",
+       "administrar bicarbonato"
+      ],
+      [
+       "D",
+       "repor potássio e adiar a insulina até K⁺ acima de 3,5"
+      ],
+      [
+       "E",
+       "iniciar insulina imediatamente em bolus"
+      ]
+     ],
+     "coment": "Apesar de o K⁺ sérico costumar estar normal ou alto na CAD, o corporal total está depletado. A insulina leva K⁺ para dentro das células e pode causar hipocalemia grave e arritmia. O consenso de 2024 adia a insulina até K⁺ acima de 3,5 (antes, 3,3).",
+     "enunciado": "Na admissão de uma CAD, o K⁺ sérico é 3,0 mEq/L. A conduta correta é:",
+     "gab": "D",
+     "id": "gaso-casos-3"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "alcalose respiratória pura com compensação renal"
+      ],
+      [
+       "B",
+       "gasometria normal, pois o pH é 7,45"
+      ],
+      [
+       "C",
+       "acidose de AG elevado + alcalose respiratória"
+      ],
+      [
+       "D",
+       "acidose de AG elevado com compensação adequada"
+      ],
+      [
+       "E",
+       "alcalose metabólica com hipoventilação"
+      ]
+     ],
+     "coment": "AG = 140 − 118 = 22 (alto). Winter = 1,5 × 15 + 8 = 30,5 (28,5–32,5): a PaCO₂ de 22 está muito abaixo → alcalose respiratória primária. É o distúrbio misto clássico do salicilato.",
+     "enunciado": "Ingestão de grande quantidade de AAS: pH 7,45, PaCO₂ 22 mmHg, HCO₃⁻ 15, Na⁺ 140, Cl⁻ 103. A interpretação é:",
+     "gab": "C",
+     "id": "gaso-casos-4"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "AG corrigido 17: acidose lática mascarada"
+      ],
+      [
+       "B",
+       "acidose hiperclorêmica pura pelo soro"
+      ],
+      [
+       "C",
+       "acidose respiratória por fadiga"
+      ],
+      [
+       "D",
+       "alcalose metabólica pela hipoalbuminemia"
+      ],
+      [
+       "E",
+       "AG normal (12), sem acidose de AG alto"
+      ]
+     ],
+     "coment": "AG = 135 − 123 = 12, aparentemente normal. Corrigido: 12 + 2,5 × 2 = 17. O lactato de 6 confirma. Sem a correção, a acidose lática passaria despercebida.",
+     "enunciado": "Paciente séptico: lactato 6 mmol/L, albumina 2,0 g/dL, Na⁺ 135, Cl⁻ 105, HCO₃⁻ 18. O que o cálculo revela?",
+     "gab": "A",
+     "id": "gaso-casos-5"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "8 L/min"
+      ],
+      [
+       "B",
+       "10 L/min"
+      ],
+      [
+       "C",
+       "12 L/min"
+      ],
+      [
+       "D",
+       "6 L/min"
+      ],
+      [
+       "E",
+       "16 L/min"
+      ]
+     ],
+     "coment": "VE nova ≈ 8 × 60/40 = 12 L/min (por exemplo, aumentando a FR). A relação é inversa: para reduzir a PaCO₂ em 1/3, aumente a ventilação em 50%.",
+     "enunciado": "Paciente em ventilação mecânica com volume-minuto de 8 L/min e PaCO₂ 60 mmHg. Para atingir PaCO₂ de 40 mmHg (espaço morto constante), o volume-minuto deve ser de aproximadamente:",
+     "gab": "C",
+     "id": "gaso-casos-6"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "pH ~7,61: alcalose pós-hipercápnica"
+      ],
+      [
+       "B",
+       "pH 7,20: acidose metabólica associada"
+      ],
+      [
+       "C",
+       "pH 7,35: acidose respiratória"
+      ],
+      [
+       "D",
+       "pH 7,50: alcalose respiratória pura"
+      ],
+      [
+       "E",
+       "pH 7,40: gasometria corrigida, sem riscos"
+      ]
+     ],
+     "coment": "O HCO₃⁻ de 34 (gerado pelo rim em dias) não cai rapidamente. [H⁺] = 24 × 35/34 ≈ 25 → pH ~7,61. Ventile para a PaCO₂ basal do paciente.",
+     "enunciado": "DPOC retentor crônico (PaCO₂ basal 60, HCO₃⁻ 34) é intubado e ventilado até PaCO₂ de 35 mmHg. A gasometria provável e o risco são:",
+     "gab": "A",
+     "id": "gaso-casos-7"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "Dois: alcalose respiratória + alcalose metabólica pelos vômitos"
+      ],
+      [
+       "B",
+       "Dois: acidose metabólica + acidose respiratória"
+      ],
+      [
+       "C",
+       "Um: alcalose respiratória com compensação renal"
+      ],
+      [
+       "D",
+       "Dois: acidose de AG alto + alcalose respiratória"
+      ],
+      [
+       "E",
+       "Três: acidose AG alto + alcalose metabólica + respiratória"
+      ]
+     ],
+     "coment": "AG = 140 − 109 = 31 → acidose de AG elevado. Δ/Δ = 19/5 ≈ 3,8 → alcalose metabólica (vômitos). Winter = 1,5 × 19 + 8 = 36,5: a PaCO₂ de 25 está muito abaixo → alcalose respiratória (abstinência/hepatopatia). Distúrbio triplo.",
+     "enunciado": "Etilista com vômitos há 3 dias e cetoacidose alcoólica: pH 7,50, PaCO₂ 25 mmHg, HCO₃⁻ 19, Na⁺ 140, Cl⁻ 90. Quantos distúrbios há?",
+     "gab": "E",
+     "id": "gaso-casos-8"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "aumenta a PaCO₂ pela carga de volume"
+      ],
+      [
+       "B",
+       "produz lactato pela diluição da hemoglobina"
+      ],
+      [
+       "C",
+       "reduz a diferença de íons fortes (SID)"
+      ],
+      [
+       "D",
+       "aumenta os ácidos fracos (fosfato)"
+      ],
+      [
+       "E",
+       "aumenta a concentração de albumina"
+      ]
+     ],
+     "coment": "O SID do plasma é ~40 (Na⁺ 140 − Cl⁻ 100); o do SF é zero (154 − 154). Diluir o plasma com SID zero baixa o SID: acidose. O Ringer lactato tem SID efetivo ~28 após o lactato ser metabolizado, por isso acidifica menos.",
+     "enunciado": "Pela abordagem de Stewart, a infusão de grande volume de SF 0,9% causa acidose porque:",
+     "gab": "C",
+     "id": "gaso-casos-9"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "acidose respiratória pura pela hipoventilação"
+      ],
+      [
+       "B",
+       "acidose metabólica compensada"
+      ],
+      [
+       "C",
+       "acidose metabólica lática pura"
+      ],
+      [
+       "D",
+       "acidose mista: respiratória + metabólica lática"
+      ],
+      [
+       "E",
+       "alcalose mista pelas drogas da reanimação"
+      ]
+     ],
+     "coment": "PaCO₂ alta e HCO₃⁻ baixo, em sentidos opostos: dois processos acidificantes. [H⁺] = 24 × 70/15 = 112 → pH ~6,95. Ventilar adequadamente já corrige boa parte do pH.",
+     "enunciado": "PCR revertida: pH 6,95, PaCO₂ 70 mmHg, HCO₃⁻ 15, lactato 9 mmol/L. A interpretação é:",
+     "gab": "D",
+     "id": "gaso-casos-10"
+    },
+    {
+     "alts": [
+      [
+       "A",
+       "acidose hiperclorêmica — bicarbonato oral"
+      ],
+      [
+       "B",
+       "alcalose de contração: soro fisiológico"
+      ],
+      [
+       "C",
+       "tipo A (hipoperfusão): só reposição de volume"
+      ],
+      [
+       "D",
+       "tipo B (metformina): suspender; diálise se grave"
+      ],
+      [
+       "E",
+       "cetoacidose euglicêmica: insulina e glicose"
+      ]
+     ],
+     "coment": "Sem choque ou hipóxia, o lactato alto é tipo B. A metformina acumula na insuficiência renal e inibe a gliconeogênese a partir do lactato. A hemodiálise remove a droga e corrige a acidose nos casos graves.",
+     "enunciado": "Idoso em uso de metformina, com lesão renal aguda por desidratação: lactato 12 mmol/L, pH 7,00, PA normal. A classificação e a conduta são:",
+     "gab": "D",
+     "id": "gaso-casos-11"
+    }
+   ],
+   "titulo": "Casos clínicos integrados"
+  }
+ ],
+ "niveis": {
+  "1": "Fundamentos (química e fisiologia)",
+  "2": "Interpretação passo a passo",
+  "3": "Clínica e casos (herói)"
+ },
+ "ordem": 5,
+ "prefixo": "gaso",
+ "roteiro": [
+  5,
+  2
+ ],
+ "sabor": 4,
+ "titulo": "Gasometria",
+ "treino_pilulas": [
+  [
+   7,
+   0
+  ],
+  [
+   7,
+   1
+  ]
+ ],
+ "versao": 1
+}
