@@ -28,7 +28,17 @@ GERADORES = {"hipercalemia": "hiperk_treino", "gasometria": "gaso_treino", "vent
              "internato_cognicao": "internato_cognicao_treino", "internato_parkinson": "internato_parkinson_treino",
              "caso_pneumonia": "caso_pneumonia_treino", "caso_abscesso_renal": "caso_abscesso_renal_treino",
              "caso_graves": "caso_graves_treino", "caso_coledoco": "caso_coledoco_treino",
-             "mfc_epidemio": "mfc_epidemio_treino", "mfc_sus": "mfc_sus_treino", "mfc_consulta": "mfc_consulta_treino", "mfc_vigilancia": "mfc_vigilancia_treino", "mfc_trabalhador": "mfc_trabalhador_treino", "mfc_indicadores": "mfc_indicadores_treino", "mfc_idoso": "mfc_idoso_treino", "mfc_etica": "mfc_etica_treino"}
+             "mfc_epidemio": "mfc_epidemio_treino", "mfc_sus": "mfc_sus_treino", "mfc_consulta": "mfc_consulta_treino", "mfc_vigilancia": "mfc_vigilancia_treino", "mfc_trabalhador": "mfc_trabalhador_treino", "mfc_indicadores": "mfc_indicadores_treino", "mfc_idoso": "mfc_idoso_treino", "mfc_etica": "mfc_etica_treino", "mfc_ferramentas": "mfc_ferramentas_treino"}
+try:                                    # livro de ECG: um gerador por mundo (fora do APK/web por enquanto)
+    from .ecgaz_indice import PRONTOS as _LIVRO_ECG
+    GERADORES.update({m: m + "_treino" for m in _LIVRO_ECG.values()})
+except ImportError:
+    pass
+try:                                    # Tratado de MFC, volume 2: idem
+    from .tratado_indice import PRONTOS as _LIVRO_MFC
+    GERADORES.update({m: m + "_treino" for m in _LIVRO_MFC.values()})
+except ImportError:
+    pass
 
 
 class _Conteudo:

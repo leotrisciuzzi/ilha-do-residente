@@ -14,7 +14,7 @@ POR_CLIMA = {"chuva": "capa_chuva", "tempestade": "capa_chuva", "neve": "parka",
              "vulcao": "bombeiro", "carnaval": "magico", "cerejeira": "quimono", "noite": "pijama",
              "cristal": "mineiro", "outono": "sobretudo", "gotico": "cure",
              "frota": "frota", "samurai": "samurai", "neon": "neon", "colonia": "fuzileiro", "runico": "patrulheiro",
-             "reino": "paladino"}
+             "reino": "paladino", "lamancha": "quixote", "grito": "grito", "arraial": "caipira", "jardim": "caminhante"}
 
 CABELO = set("hjd")
 JALECO = set("Ww")
@@ -24,6 +24,13 @@ CALCA = set("p")
 SAPATO = set("B")
 
 TRAJES = {
+    # festa junina: o Doutor de sempre, de chapéu de palha e camisa xadrez, com o cachecol dele
+    "caipira": dict(
+        cores={"A": (214, 62, 66), "D": (150, 34, 48), "S": (248, 226, 180), "T": (226, 186, 96), "C": (176, 132, 62),
+               "Z": (112, 72, 44), "p": (60, 92, 150)},
+        cabelo="chapeu", jaleco="A", camisa="S", cachecol="manter", sapato="Z", listras=[17, 19, 21], listras_cor="S",
+        pontos=[(16, 5, "S"), (16, 7, "S"), (16, 9, "S"), (16, 11, "S"), (18, 6, "S"), (18, 8, "S"), (18, 10, "S")],
+        topo=["....KKKKKKK.....", "...KTTTTTTTK....", "KKKKDDDDDDDDKKKK", "KCTTTCTTTCTTTCTK"]),
     "capa_chuva": dict(
         cores={"A": (250, 206, 40), "D": (206, 150, 18), "S": (255, 238, 150), "Z": (60, 140, 76), "C": (30, 26, 36)},
         cabelo="capuz", jaleco="A", camisa="A", cachecol=None, sapato="Z",
@@ -142,6 +149,109 @@ TRAJES = {
                "Z": (132, 138, 158), "p": (132, 138, 158), "h": (204, 162, 72), "j": (242, 208, 112), "d": (142, 102, 42)},
         cabelo="manter", jaleco="A", camisa="T", cachecol=None, sapato="Z", faixa=(20, "C"),
         pontos=[(16, 8, "C"), (17, 8, "C"), (17, 7, "C"), (17, 9, "C"), (18, 8, "C")]),
+    # Dom Quixote (desenho próprio, não é o Doutor vestido): magro e comprido, bacia de barbeiro na cabeça (o elmo de
+    # Mambrino, com o entalhe), bigode e cavanhaque grisalhos, gola de rufo, couraça velha e botas
+    "quixote": dict(
+        cores={"A": (170, 178, 194), "D": (112, 120, 142), "S": (226, 232, 240), "C": (240, 194, 74), "I": (184, 128, 40),
+               "T": (255, 234, 150), "h": (176, 176, 184), "j": (232, 232, 238), "d": (130, 130, 142),
+               "F": (236, 192, 152), "f": (204, 150, 112), "N": (30, 24, 30), "M": (160, 56, 64), "Q": (248, 246, 232),
+               "p": (112, 78, 50), "Z": (72, 48, 32), "Y": (122, 60, 44)},
+        desenho=["......KKKKK.....",
+                 ".....KTCCCCK....",
+                 "....KTCCCCCCK...",
+                 "KKKKKKKKKKKKKK..",
+                 "KCCCCCCCCCCK.CCK",
+                 ".KIIIIIIIIIIKKK.",
+                 "...KhFFFFFFFK...",
+                 "...KhFFKFFFKFK..",
+                 "...KhfFKFFFKFK..",
+                 "...KhfFFFFFFFFK.",
+                 "...KhfFFFFFFFFK.",
+                 "....KfjjjjjjjK..",
+                 "....KfFFMMFFK...",
+                 "....KKFjjjjK....",
+                 ".....KKjjjK.....",
+                 ".......KjK......",
+                 "....KQQQQQK.....",
+                 "...KASSAAADK....",
+                 "...KASAAAADKKFK.",
+                 "...KAAAAAADAFFK.",
+                 "...KDAAAADDDKK..",
+                 "...KYYYYYYYK....",
+                 "...KppppppppK...",
+                 "...KKKKKKpppK...",
+                 ".........KppK...",
+                 ".........KppK...",
+                 "........KZZZZK..",
+                 "........KKKKKK.."],
+        susto={7: "...KhFWKFFWKFK..", 8: "...KhfWWFFWWFK..", 12: "....KfFFKKKFK...", 13: "....KKFjKMKjK..."}),
+    # o Caminhante de Bosch (o andarilho do quadro de mesmo nome): chapéu cinza mole, casaco remendado, cesto de palha nas
+    # costas e o joelho de fora
+    "caminhante": dict(
+        cores={"A": (150, 146, 136), "D": (104, 98, 98), "S": (192, 188, 172), "T": (118, 112, 108), "t": (156, 150, 140),
+               "C": (216, 176, 104), "I": (150, 106, 62), "F": (240, 204, 170), "f": (206, 158, 128), "h": (120, 92, 72),
+               "Y": (106, 64, 50), "p": (156, 124, 100), "U": (240, 204, 170), "Z": (72, 52, 44), "M": (160, 56, 64), "W": (255, 255, 255)},
+        desenho=["......KKKKKK....",
+                 ".....KTtTTTTK...",
+                 ".....KTtTTTTK...",
+                 "..KKKKTTTTTTKK..",
+                 "..KtTTTTTTTTTTK.",
+                 "...KKKKKKKKKKK..",
+                 "....KhFFFFFFFK..",
+                 "....KhFKFFFKFK..",
+                 "....KfFKFFFKFK..",
+                 "....KfFFFFFFFK..",
+                 "....KfFFFFFFFK..",
+                 "....KfFFKKKFK...",
+                 "....KKFFFFFK....",
+                 ".....KKKKKK.....",
+                 "..KCIK.KAK......",
+                 ".KCICKKAAAK.....",
+                 ".KICIKAASAAK....",
+                 ".KCICKASAAAKKFK.",
+                 ".KICIKAAAAADFFK.",
+                 ".KCICKAAAADKKK..",
+                 "..KKKKYYYYYK....",
+                 "....KAAAAAADK...",
+                 "....KKKKKpppK...",
+                 ".........KUUK...",
+                 ".........KppK...",
+                 ".........KppK...",
+                 "........KZZZZK..",
+                 "........KKKKKK.."],
+        susto={7: "....KhWKFFWKFK..", 8: "....KfWWFFWWFK..", 11: "....KfFKKKKFK...", 12: "....KKFKMMKK...."}),
+    # a figura de O Grito (Munch): crânio pálido sem cabelo, órbitas fundas, boca em O, mãos nas bochechas, manto escuro
+    "grito": dict(
+        cores={"F": (232, 216, 150), "f": (186, 170, 120), "H": (232, 216, 150), "A": (46, 48, 76), "D": (24, 24, 44),
+               "S": (92, 86, 112), "M": (46, 18, 30), "Z": (18, 18, 30)},
+        desenho=["....KKKKKKKK....",
+                 "...KFFFFFFFFK...",
+                 "..KFFFFFFFFFFK..",
+                 "..KFfFFFFFFFFK..",
+                 "..KFfFFFFFFFFK..",
+                 "..KFKKKFFKKKFK..",
+                 "..KfKKKFFKKKFK..",
+                 "..KfFFFFFFFFFK..",
+                 ".KHKfFFFFFFFKHK.",
+                 ".KHKfFKKKKFFKHK.",
+                 ".KHKfFKMMKFFKHK.",
+                 ".KHKfFKMMKFFKHK.",
+                 ".KAKfFKKKKFFKAK.",
+                 ".KAAKfFFFFFKAAK.",
+                 ".KAAAKKKKKKAAAK.",
+                 "..KAAAAAAAAAAK..",
+                 "..KAAAAAAAAADK..",
+                 "..KAAASAAAADDK..",
+                 "..KAASAAAADDDK..",
+                 "..KASAAAADDDK...",
+                 "..KSAAAADDDDK...",
+                 "...KAAADDDDK....",
+                 "...KAADDDDDK....",
+                 "....KKKKKKK.....",
+                 ".........KDDK...",
+                 ".........KDDK...",
+                 "........KZZZZK..",
+                 "........KKKKKK.."]),
 }
 
 
@@ -153,6 +263,12 @@ def aplicar(linhas, nome):
     """Linhas do Doutor (16 colunas, já com o cachecol do quadro) → linhas com o traje (pode ter linhas a mais no
     topo, que sobem o desenho). Devolve (linhas, quantas linhas foram acrescentadas em cima)."""
     t = TRAJES[nome]
+    if "desenho" in t:                                    # personagem de outra obra: desenho inteiro, só o susto muda
+        d = list(t["desenho"])
+        if "KMK" in linhas[12]:
+            for y, l in t.get("susto", {}).items():
+                d[y] = l
+        return d, 0
     rows = [list(l.ljust(16, ".")) for l in linhas]
     cab = t.get("cabelo")
     for y in range(15):                                   # cabeça

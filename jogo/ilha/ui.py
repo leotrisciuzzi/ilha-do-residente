@@ -8,7 +8,7 @@ import time
 
 import pygame
 
-from . import art, data, edicao
+from . import art, cenario_desenho, data, edicao
 from .audio import MUSICA_FIM, Audio
 from .controle import PADEVENT, ACOES as ACOES_PAD, NOMES as NOMES_PAD, Pad
 from .game import Jogo, LW, LH
@@ -57,7 +57,7 @@ def fonte(tam, bold=False):
 
 def _dicas_pad():
     """Dicas de rodapé com botões de controle (Steam/Steam Deck); a Ilha do Vestibulando é de teclado e mouse."""
-    return edicao.STEAM and not edicao.VESTIBULANDO
+    return edicao.STEAM and not edicao.VESTIBULANDO and not edicao.LANCAMENTO and not edicao.CARDIO
 
 
 ROTULOS_COMENT = {"Por quê:": (30, 120, 40), "E as outras:": (170, 60, 40), "Para fixar:": (120, 70, 160)}
@@ -94,6 +94,23 @@ def sombra(tela, txt, f, cor, pos, centro=False, sombra_cor=(40, 30, 30)):
     tela.blit(o, (x + 2, y + 2))
     tela.blit(s, (x, y))
     return s.get_width()
+
+
+def sino(tela, cor, centro, t=0):
+    """Ícone de sino (item Lembretes do menu), com contorno de tinta como as bolinhas dos itens. t > 0 balança o
+    sino, para o lembrete urgente chamar atenção."""
+    cx, cy = centro
+    ang = math.sin(t / 5) * 0.35 if t else 0.0
+    pts = [(-11, 8), (-9, 4), (-8, -3), (-5, -9), (0, -11), (5, -9), (8, -3), (9, 4), (11, 8)]
+    giro = [(cx + x * math.cos(ang) - (y + 11) * math.sin(ang), cy - 11 + x * math.sin(ang) + (y + 11) * math.cos(ang))
+            for x, y in pts]
+    pygame.draw.polygon(tela, cor, giro)
+    pygame.draw.polygon(tela, TINTA, giro, 2)
+    bx = cx - 22 * math.sin(ang)                               # badalo embaixo da boca, acompanha o giro
+    by = cy - 11 + 22 * math.cos(ang)
+    pygame.draw.circle(tela, cor, (int(bx), int(by)), 4)
+    pygame.draw.circle(tela, TINTA, (int(bx), int(by)), 4, 2)
+    pygame.draw.circle(tela, TINTA, (cx, cy - 12), 3)          # argola de cima
 
 
 def painel(tela, rect, cor=PAPEL, borda=TINTA, raio=16):
@@ -222,8 +239,8 @@ class Cenario:
     def trocar(self, idx):
         self.idx = idx
         pal = art.paleta(idx)
-        self.ceu = art.ceu(pal, LW, LH)
-        self.camadas = art.fundo(pal, LW, LH, idx * 7 + 3)
+        self.ceu = cenario_desenho.ceu(LW, LH)
+        self.camadas = cenario_desenho.camadas(("bosque", "confeitado")[idx % 2], LW, LH, idx * 7 + 3)
         self.s = pygame.Surface((LW, LH))
         from .level import Nivel
         n = type("N", (), {})()
@@ -236,7 +253,8 @@ class Cenario:
         s = self.s
         s.blit(self.ceu, (0, 0))
         for i in range(4):
-            art.nuvem(s, (i * 95 - self.t * 0.1 * (1 + i % 2)) % (LW + 60) - 50, 10 + (i * 19) % 45, 0.7 + (i % 3) * 0.15)
+            cenario_desenho.nuvem_ceu(s, (i * 95 - self.t * 0.1 * (1 + i % 2)) % (LW + 60) - 50, 10 + (i * 19) % 45,
+                                      0.7 + (i % 3) * 0.15)
         for i, c in enumerate(self.camadas):
             ox = -int(self.t * (0.1, 0.2, 0.35)[i]) % LW
             s.blit(c, (ox - LW, 0))
@@ -247,7 +265,7 @@ class Cenario:
         x = (self.t * 0.6) % (LW + 60) - 30
         s.blit(art.heroi("andar", (self.t // 8) % 4, True, 1), (int(x) - 20, chao - 46))
         from . import pets
-        s.blit(pets.sprite("gato_branco", "vermelha", "nenhum", "andar", self.t // 5), (int(x) - 44, chao - 17))
+        s.blit(pets.sprite("gato_branco", "vermelha", "nenhum", "andar", self.t // 5), (int(x) - 46, chao - 20))
         bx = (x + 120) % (LW + 60) - 30
         s.blit(art.bicho_questao(self.t // 14, (250, 170, 90), virado=-1), (int(bx), chao - 26 - int(abs(math.sin(self.t * 0.1)) * 3)))
         tela.blit(pygame.transform.scale(s, (W, H)), (0, 0))
@@ -440,7 +458,9 @@ class Menu(Estado):
                 continue
             r = pygame.Rect(MX + 15 + entra * entra * 6, y, W - 2 * MX - 30, self.linha_h - 6)
             cor = (150, 140, 140) if it.get("desab") else TINTA
-            if it.get("cor"):
+            if it.get("icone") == "sino":
+                sino(tela, it.get("cor") or AMARELO, (r.x + 52, r.centery), self._t if it.get("alerta") else 0)
+            elif it.get("cor"):
                 pygame.draw.circle(tela, it["cor"], (r.x + 52, r.centery), 12)
                 pygame.draw.circle(tela, TINTA, (r.x + 52, r.centery), 12, 2)
             lim = 52 if it.get("dir") else 62
@@ -667,6 +687,8 @@ class Quiz(Estado):
                 self.alt_imgs[k] = im
         self.gab = app.gabarito(q)
         self._layout()
+        if getattr(app, "neuro", None):          # Neuralwaves: marca a hora em que a questão abriu
+            app.neuro.questao_aberta(q, contexto)
 
     def _layout(self):
         f = self.app.f
@@ -806,16 +828,27 @@ class Quiz(Estado):
 
     def _responder(self, letra):
         self.escolha = letra
+        if getattr(self.app, "neuro", None):     # Neuralwaves: resposta + estado mental enquanto ela estava aberta
+            self.app.neuro.respondeu(self.q, letra, letra == self.gab)
         self.app.audio.tocar("certo" if letra == self.gab else "errado")
+        if self.app.save.config.get("estilo") != "questoes":      # Traço Ilha (só no modo 'Com diversão')
+            self.efeito = ["acerto", 26] if letra == self.gab else ["erro", 24]
 
     def update(self, inp):
         self.t += 1
+        ef = getattr(self, "efeito", None)
+        if ef and ef[1] > 0:
+            ef[1] -= 1
 
     def draw(self, tela):
         if self.fundo:
             self.fundo.draw(tela)
+        ef = getattr(self, "efeito", None)
+        if ef and ef[0] == "acerto":                              # acertou: explosão radial atrás do painel
+            from .cenario_desenho import explosao
+            tela.blit(explosao(W, H, cores=((250, 196, 60), (255, 224, 120)), seed=7), (0, 0))
         v = pygame.Surface((W, H), pygame.SRCALPHA)
-        v.fill((30, 20, 50, 150))
+        v.fill((30, 20, 50, 70 if ef and ef[0] == "acerto" else 150))
         tela.blit(v, (0, 0))
         f = self.app.f
         q = self.q
@@ -959,6 +992,15 @@ class Quiz(Estado):
             if len(figs) > 1:
                 sombra(tela, f"Figura {self.zoom_i + 1} de {len(figs)} · I = próxima · qualquer tecla fecha",
                        f["peq"], (255, 255, 255), (W // 2, H - 16), centro=True)
+        ef = getattr(self, "efeito", None)
+        if ef and ef[1] > 0:
+            if ef[0] == "acerto" and ef[1] > 16:                  # clarão curto do acerto
+                fl = pygame.Surface((W, H), pygame.SRCALPHA)
+                fl.fill((255, 250, 220, (ef[1] - 16) * 14))
+                tela.blit(fl, (0, 0))
+            elif ef[0] == "erro":                                 # errou: a tela treme (A Vaca e o Frango)
+                k = 1 + ef[1] // 8
+                tela.scroll(random.randint(-k, k), random.randint(-k, k))
 
 
 _IMGS = {}
@@ -1010,14 +1052,27 @@ class Briefing(Estado):
                 self.trechos.append((ponto, (pi, ki)))
         # narradora fica fora das edições de venda (Steam, Android, Vestibulando)
         self.leitura = narrador.Leitura([t for t, _ in self.trechos]) if self.trechos and not edicao.STEAM else None
-        self.bt_ouvir = pygame.Rect(W - 320, 34, 220, 40)
+        # módulos com aula animada (ilha/aula_animada.py): o botão abre o professor lendo a aula, no lugar da narradora
+        self.animada = bool(info.get("animada") and self.pilulas and not edicao.STEAM)
+        self.bt_ouvir = pygame.Rect(W - 362, 34, 290, 40) if self.animada else pygame.Rect(W - 320, 34, 220, 40)
         self._lido = -1
 
     def _ouvir_disponivel(self):
-        return self.leitura is not None and self.leitura.disponivel()
+        return self.animada or (self.leitura is not None and self.leitura.disponivel())
+
+    def _ir_para_fase(self):
+        self._sair()
+        self.iniciar()
 
     def _alternar_leitura(self):
         if not self._ouvir_disponivel():
+            return
+        if self.animada:
+            from .aula_animada import AulaAnimada
+            if self.leitura:
+                self.leitura.parar()
+            self.app.push(AulaAnimada(self.app, self.pilulas, self.info.get("titulo", ""), self._ir_para_fase,
+                                      chave=self.info.get("animada")))
             return
         if self.leitura.tocando:
             self.leitura.parar()
@@ -1080,8 +1135,12 @@ class Briefing(Estado):
         tela.blit(c, area.topleft, (0, self.rol, area.w, area.h))
         if self._ouvir_disponivel():
             lt = self.leitura
-            rot = "■ Parar leitura" if lt.tocando and not lt.preparando else ("… preparando voz" if lt.tocando else "▶ Ouvir (L / Y)")
-            pygame.draw.rect(tela, AMARELO if lt.tocando else (240, 235, 220), self.bt_ouvir, border_radius=12)
+            tocando = bool(lt and lt.tocando)
+            if self.animada:
+                rot = "▶ Aula com o professor"
+            else:
+                rot = "■ Parar leitura" if tocando and not lt.preparando else ("… preparando voz" if tocando else "▶ Ouvir (L / Y)")
+            pygame.draw.rect(tela, AMARELO if tocando or self.animada else (240, 235, 220), self.bt_ouvir, border_radius=12)
             pygame.draw.rect(tela, TINTA, self.bt_ouvir, 2, border_radius=12)
             t2 = f["med"].render(rot, True, TINTA)
             tela.blit(t2, (self.bt_ouvir.centerx - t2.get_width() // 2, self.bt_ouvir.centery - t2.get_height() // 2))
@@ -1140,7 +1199,7 @@ class Briefing(Estado):
             if p.get("exemplo"):                     # caso resolvido: a regra aplicada a um paciente, com números
                 y = caixa("CASO RESOLVIDO", p["exemplo"], (226, 246, 222), (110, 180, 110), (40, 110, 40), y + 4)
             if p.get("na_prova"):
-                y = caixa("NA PROVA", p["na_prova"], (226, 238, 255), (120, 150, 210), (50, 80, 150), y + 4)
+                y = caixa("NA PRÁTICA" if edicao.LANCAMENTO else "NA PROVA", p["na_prova"], (226, 238, 255), (120, 150, 210), (50, 80, 150), y + 4)
             if p.get("fonte"):
                 for ln in quebrar("Fonte: " + p["fonte"], f["peq"], area.w - 20):
                     ops.append((f["peq"].render(ln, True, (140, 125, 125)), (10, y)))
@@ -1489,7 +1548,7 @@ class App:
         self.save = data.Save()
         from . import loja
         loja.aplicar(self.save)          # personagem e itens equipados (heroi.py)
-        if edicao.STEAM and not edicao.VESTIBULANDO:   # Steam: tela cheia por padrão (sempre no Steam Deck)
+        if edicao.STEAM and not edicao.VESTIBULANDO and not edicao.LANCAMENTO and not edicao.CARDIO:   # Steam: tela cheia por padrão (sempre no Steam Deck)
             tela_cheia = tela_cheia or edicao.no_steam_deck() or self.save.config.get("tela_cheia", True)
         if tela_cheia:
             try:
@@ -1520,6 +1579,7 @@ class App:
         self.servidor = data.SemServidor() if edicao.STEAM else data.Servidor()
         self.sincronia = None            # progresso unificado PC + celular (não vai nas edições de venda)
         self.conta = None
+        self.neuro = None                # Ilha do Residente - Neuralwaves (coroa de EEG); ilha/neuro, ligado no main.py
         if _sincronia_ligada():
             try:
                 from .sincronia import Sincronia
@@ -1629,8 +1689,18 @@ class App:
         if self.save.config.get("estilo") == "questoes":      # 'Sem risadinha': só as questões, sem a fase
             self.push(SoQuestoes(self, questoes, titulo, contexto, fim))
             return
-        jogo = Jogo(self, questoes, titulo, seed, paleta_idx, fim, contexto)
+        from . import cenario_desenho
+        if (getattr(self, "estilo_forcado", None) or self.save.config.get("estilo")) == "fps":   # Ilha do Residente FPS
+            from .fps import JogoFPS             # mesma fase, mesmas questões e o mesmo res/pontuação, em 1ª pessoa
+            self.push(Fase(self, JogoFPS(self, questoes, titulo, seed, paleta_idx, fim, contexto,
+                                         cenario=cenario_desenho.interior_da_chave(chave))))
+            self.audio.trilha("fps")             # as sinfonias de Beethoven (musicas_fps/), que puxam os climas do FPS
+            self._musica(self.audio.iniciar_musica())
+            return
+        jogo = Jogo(self, questoes, titulo, seed, paleta_idx, fim, contexto,
+                    cenario=cenario_desenho.interior_da_chave(chave))     # mundos de hospital: enfermaria
         self.push(Fase(self, jogo))
+        self.audio.trilha("ilha")
         self._musica(self.audio.iniciar_musica())
 
     # -- controles
@@ -1766,6 +1836,8 @@ class App:
                 self.rodando = False
             elif e.type == pygame.KEYDOWN and e.key == pygame.K_F11:
                 self.alternar_tela_cheia()
+            elif e.type == pygame.KEYDOWN and e.key == pygame.K_F8 and self.neuro:
+                self.neuro.abrir_painel()
             elif e.type == pygame.KEYDOWN and e.key == pygame.K_m and not isinstance(topo, (EntradaTexto, Quiz)):
                 self.save.config["mudo"] = self.audio.alternar_mudo()
                 self.save.salvar()
@@ -1787,6 +1859,9 @@ class App:
             return
         topo = self.pilha[-1]
         self.audio.abaixar(not isinstance(topo, Fase))
+        if self.neuro:
+            self.neuro.passo()                   # leituras novas da coroa, ações da dinâmica
+            topo = self.pilha[-1]
         # entrada "apertada" sem evento correspondente (ex.: pulo) chega via update
         topo.update(self.entrada)
         if self.sincronia:
@@ -1805,12 +1880,14 @@ class App:
             if self.toque:
                 # celular: botão ◀ Voltar sempre visível nos menus (a fase tem a pausa; a questão, os botões)
                 self.toque.voltar_visivel = len(self.pilha) > 1 and not isinstance(
-                    self.pilha[-1], (Fase, Quiz, Resultado, Carregando))
+                    self.pilha[-1], (Fase, Quiz, Resultado, Carregando)) and not getattr(self.pilha[-1], "sem_voltar", False)
                 if self.toque.voltar_visivel:
                     self.toque.desenhar_voltar(self.tela)
                 self.toque.desenhar_ondas(self.tela)
             if self._trans:
                 self._desenhar_transicao()
+            if self.neuro:
+                self.neuro.desenhar(self.tela)
             self._desenhar_toast()
         self._preencher_margens()
         pygame.display.flip()
@@ -1824,9 +1901,15 @@ class App:
                 self.rodando = False
 
     def loop(self, gasometria=False, ventilacao=False, hipercalemia=False, farmacologia=False, ic=False, reumatologia=False,
-             prova_cm=False, mfc=False):
+             prova_cm=False, mfc=False, arena=False):
         from .menus import menu_principal, abrir_gasometria, abrir_ventilacao, abrir_hipercalemia, abrir_farmacologia
-        if edicao.VESTIBULANDO:
+        if edicao.CARDIO:
+            from .cardio import menu_cardio
+            self.push(menu_cardio(self))
+        elif edicao.LANCAMENTO:
+            from .lancamento import menu_lancamento
+            self.push(menu_lancamento(self))
+        elif edicao.VESTIBULANDO:
             from .vestibulando import menu_vestibulando
             self.push(menu_vestibulando(self))
         elif edicao.ANDROID:
@@ -1837,7 +1920,10 @@ class App:
             self.push(menu_steam(self))
         else:
             self.push(menu_principal(self))
-        if prova_cm and not edicao.STEAM:
+        if arena and not edicao.STEAM:
+            from .arena import abrir as abrir_arena
+            abrir_arena(self)
+        elif prova_cm and not edicao.STEAM:
             from .menus import abrir_internato
             abrir_internato(self)
         elif mfc and not edicao.STEAM:
@@ -1857,11 +1943,15 @@ class App:
         elif reumatologia and not edicao.STEAM:
             from .menus import REUMATO, abrir_tema
             abrir_tema(self, REUMATO)
-        if not os.environ.get("ILHA_SEM_ESCOLHA"):
+        if self.neuro:
+            self.neuro.abrir_inicio()    # Neuralwaves: painel da coroa por cima do menu principal
+        if not os.environ.get("ILHA_SEM_ESCOLHA") and not edicao.CARDIO:     # Cardio: personagem único
             from .personagens import abrir_escolha
             abrir_escolha(self)          # escolha do personagem por cima de tudo, ao abrir o jogo
         while self.rodando and self.pilha:
             self.quadro()
+        if self.neuro:
+            self.neuro.encerrar()
         if self.sincronia:
             self.sincronia.finalizar()
         self.servidor.encerrar()

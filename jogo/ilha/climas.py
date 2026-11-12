@@ -38,7 +38,7 @@ CLIMAS = {
                   estrelas=70, astro="lua", part=[("vagalume", 22)], luz=(70, 66, 40)),
     "floresta": dict(nome="Floresta encantada", ceu=((96, 150, 126), (196, 224, 168)), tom=(164, 212, 156), silhueta="arvores",
                      nuvens=True, fachos="raios", cor_facho=(110, 120, 60), part=[("esporo", 26)]),
-    "outono": dict(nome="Outono", ceu=((226, 150, 106), (252, 214, 160)), tom=(246, 190, 150), nuvens=True, silhueta="outono",
+    "outono": dict(por_do_sol=True, nome="Outono", ceu=((226, 150, 106), (252, 214, 160)), tom=(246, 190, 150), nuvens=True, silhueta="outono",
                    astro="sol_baixo", part=[("folha", 50)], vento=0.5),
     "cerejeira": dict(nome="Cerejeiras", ceu=((248, 190, 210), (255, 236, 226)), tom=(255, 216, 228), nuvens=True, silhueta="torii",
                       astro="sol", part=[("petala", 60), ("vapor", 10)], vento=0.35),
@@ -51,7 +51,7 @@ CLIMAS = {
                    luz=(60, 50, 90)),
     "vulcao": dict(nome="Vulcão", ceu=((36, 8, 12), (150, 48, 28)), tom=(232, 140, 118), nuvens=False, silhueta="vulcao",
                    part=[("brasa", 55), ("cinza", 30)], brilho_chao=(90, 30, 0), luz=(90, 40, 10)),
-    "praia": dict(nome="Pôr do sol na praia", ceu=((246, 112, 112), (255, 214, 140)), tom=(255, 200, 176), silhueta="coqueiros",
+    "praia": dict(por_do_sol=True, nome="Pôr do sol na praia", ceu=((246, 112, 112), (255, 214, 140)), tom=(255, 200, 176), silhueta="coqueiros",
                   nuvens=True, astro="sol_poente", part=[("gaivota", 4), ("semente", 6)]),
     "carnaval": dict(nome="Parque à noite", ceu=((36, 16, 66), (118, 48, 118)), tom=(188, 158, 222), nuvens=False, silhueta="roda",
                      estrelas=50, fachos="holofotes", fogos=True, part=[("confete", 55)], luz=(80, 50, 80)),
@@ -64,11 +64,11 @@ CLIMAS = {
     # --- climas temáticos (trilhas originais "32 bits" em tools/partituras.py)
     # ficção científica de TV dos anos 70: céu pintado de magenta e laranja, rochas de isopor, planeta verde,
     # nave da frota cruzando o céu e o brilho dourado do teletransporte
-    "frota": dict(nome="Planeta da Frota (anos 70)", ceu=((58, 14, 82), (238, 112, 92)), tom=(236, 174, 214),
+    "frota": dict(por_do_sol=True, nome="Planeta da Frota (anos 70)", ceu=((58, 14, 82), (238, 112, 92)), tom=(236, 174, 214),
                   nuvens=False, estrelas=55, astro="planeta_verde", silhueta="rochas_alien",
                   part=[("tele", 20)], extra="nave", luz=(60, 40, 70)),
     # Japão feudal: sol vermelho no crepúsculo, castelo de telhados curvos, monte nevado, pinheiros e bambus
-    "samurai": dict(nome="Japão feudal", ceu=((142, 36, 50), (252, 184, 124)), tom=(244, 186, 168), nuvens=True,
+    "samurai": dict(por_do_sol=True, nome="Japão feudal", ceu=((142, 36, 50), (252, 184, 124)), tom=(244, 186, 168), nuvens=True,
                     astro="sol_vermelho", silhueta="castelo_jp", part=[("folha_bordo", 42)], vento=0.7,
                     neblina=(70, 36, 40)),
     # cyberpunk: megacidade de noite, letreiros de neon, chuva colorida, carros voadores e um peixe holográfico
@@ -78,7 +78,7 @@ CLIMAS = {
                  neblina=(46, 8, 58), luz=(80, 30, 90)),
     # colônia de fronteira: poeira laranja, dois sóis, base de colonos com farol piscando, cristais azuis e a
     # colmeia alienígena com o tapete roxo; nave de desembarque passando
-    "colonia": dict(nome="Colônia de fronteira", ceu=((86, 32, 22), (228, 142, 82)), tom=(238, 172, 134), nuvens=False,
+    "colonia": dict(por_do_sol=True, nome="Colônia de fronteira", ceu=((86, 32, 22), (228, 142, 82)), tom=(238, 172, 134), nuvens=False,
                     astro="sois_duplos", silhueta="colonia", part=[("areia", 46), ("esporo_roxo", 14)], vento=1.3,
                     neblina=(90, 48, 26), extra="nave_drop"),
     # masmorra rúnica: fortaleza de pedra e ferro, runas acesas, portal girando, lava no chão e brasas
@@ -86,9 +86,27 @@ CLIMAS = {
                    silhueta="fortaleza", part=[("brasa", 40), ("cinza", 22)], brilho_chao=(80, 30, 0),
                    luz=(80, 50, 22), extra="portal"),
     # reino de fantasia: tarde dourada, castelo de torres azuis com bandeiras, moinho girando, faíscas de magia
-    "reino": dict(nome="Reino de fantasia", ceu=((70, 112, 192), (252, 216, 160)), tom=(252, 228, 194), nuvens=True,
+    "reino": dict(por_do_sol=True, nome="Reino de fantasia", ceu=((70, 112, 192), (252, 216, 160)), tom=(252, 228, 194), nuvens=True,
                   astro="sol_baixo", silhueta="castelo_reino", fachos="raios", cor_facho=(90, 80, 40),
                   part=[("faisca", 24), ("folha", 8)], vento=0.3, extra="moinho"),
+    # tela conceito de Dom Quixote: planície de La Mancha ao meio-dia, moinhos girando; aqui o elenco inteiro muda
+    # (Quixote, Sancho e os inimigos do livro: figurino.ELENCO e quixote.py)
+    "lamancha": dict(nome="La Mancha", ceu=((86, 156, 226), (252, 232, 176)), tom=(244, 204, 120), nuvens=True,
+                     astro="sol", silhueta="mancha", part=[("areia", 24), ("folha", 6)], vento=0.5, extra="moinho",
+                     pas_cenario=True),
+    # tela conceito de O Grito (Munch): céu de sangue em linhas que ondulam, fiorde preto-azulado e a ponte; a tela toda
+    # parece pintada (pinceladas por cima), e o elenco inteiro muda (figurino.ELENCO e grito.py)
+    "grito": dict(nome="O Grito", ceu=((196, 54, 44), (248, 190, 90)), tom=(190, 110, 96), nuvens=False,
+                  ceu_pintado=True, pinceladas=True, part=[("cinza", 14)], vento=0.4, luz=(60, 30, 20)),
+    # arraial no Bosque das Gotas, ao anoitecer: clima comum, com o elenco de sempre (não é tela conceito)
+    "arraial": dict(por_do_sol=True, nome="Arraial da Ilha", ceu=((62, 58, 136), (252, 178, 122)), tom=(255, 222, 196), nuvens=True,
+                    estrelas=30, astro="lua", silhueta="arraial", part=[("vagalume", 8), ("faisca", 8)], vento=0.1,
+                    extra="baloes"),
+    # tela conceito de O Jardim das Delícias (Bosch): as portas cinzentas do tríptico abrem ao entrar, e o mundo passa de
+    # Paraíso a Jardim e a Inferno conforme o herói avança na fase (Controle._pesos_triptico); o elenco inteiro muda
+    # (figurino.ELENCO e jardim.py)
+    "jardim": dict(nome="O Jardim das Delícias", ceu=((92, 176, 228), (206, 232, 230)), tom=None, nuvens=False,
+                   triptico=True, part=[("petala", 16), ("brilho", 6)], vento=0.15),
 }
 
 # título da faixa (Audio.nome sem o autor) → clima
@@ -112,10 +130,15 @@ FAIXA_CLIMA = {
     "Caverna de Cristal": "cristal", "Caverna do Plantão": "cristal",
     "Fronteira Final": "frota", "Caminho do Samurai": "samurai", "Neon da Megacidade": "neon",
     "Colônia Fronteiriça": "colonia", "Portal Rúnico": "runico", "Reino em Guerra": "reino",
+    "Moinhos de La Mancha": "lamancha", "O Grito": "grito", "Arraial da Ilha": "arraial", "Jardim das Delícias": "jardim",
+    # trilha do FPS (musicas_fps/): as sinfonias em menor puxam o gótico, as heroicas em maior as cerejeiras
+    "Sinfonia nº 5": "gotico", "Sinfonia nº 7": "gotico", "Sinfonia nº 3": "cerejeira", "Sinfonia nº 9": "cerejeira",
 }
+ESTREIA = "jardim"     # a tela conceito mais recente abre o rodízio (Audio._rodizio); None = sorteio puro
 # faixas curtas tocam mais de uma vez seguida, para o clima não trocar depressa demais
 VOLTAS = {"Parque de Diversões": 2, "Canção de Ninar Feliz": 1, "Aventura Chiptune 1": 1, "Olho da Tempestade": 1,
-          "Caverna de Cristal": 1, "Neve Caindo": 1, "Reino em Guerra": 1}
+          "Caverna de Cristal": 1, "Neve Caindo": 1, "Reino em Guerra": 1, "Moinhos de La Mancha": 1, "O Grito": 1, "Arraial da Ilha": 1, "Jardim das Delícias": 1,
+          "Sinfonia nº 5": 1, "Sinfonia nº 3": 1}
 
 
 def titulo(nome):
@@ -153,10 +176,34 @@ def halo(r, cor):
     return _cache[ch]
 
 
-def _ceu(topo, base, lw, lh):
-    ch = ("ceu", topo, base, lw, lh)
+def _ceu(topo, base, lw, lh, raios=False):
+    """Céu de desenho (assets/estilo/GUIA_DE_ESTILO.md): faixas chapadas de borda ondulada, do topo à base, sem
+    degradê nem pontilhado; no pôr do sol, uma faixa rosa-lilás a mais e raios diagonais de luz."""
+    ch = ("ceu", topo, base, lw, lh, raios)
     if ch not in _cache:
-        _cache[ch] = art.ceu({"ceu_topo": topo, "ceu_base": base}, lw, lh)
+        rng = random.Random(sum(topo) * 7 + sum(base))
+        s = pygame.Surface((lw, lh))
+        cores = [_mix(topo, base, (i / 4) ** 0.85) for i in range(5)]
+        if raios:
+            cores.insert(2, _mix(_mix(topo, base, 0.4), (236, 150, 196), 0.45))
+        s.fill(cores[0])
+        n = len(cores)
+        for i, cor in enumerate(cores[1:], 1):
+            y0 = lh * (0.12 + 0.62 * i / n)
+            fz, amp, k = rng.uniform(0, 6.28), rng.uniform(1.5, 4), rng.choice((1, 2, 3))
+            pts = [(0, lh)] + [(x, y0 + amp * math.sin(2 * math.pi * k * x / lw + fz)) for x in range(0, lw + 1, 2)] + [(lw, lh)]
+            pygame.draw.polygon(s, cor, pts)
+        if raios:
+            luz = pygame.Surface((lw, lh), pygame.SRCALPHA)
+            ox = lw * rng.uniform(0.55, 0.85)
+            for _ in range(4):
+                a = rng.uniform(0.55, 1.25)
+                larg = rng.uniform(0.05, 0.12)
+                pts = [(ox, -10), (ox - lh * 1.4 * math.tan(a - larg) - lw * 0.1, lh * 1.4),
+                       (ox - lh * 1.4 * math.tan(a + larg) - lw * 0.1, lh * 1.4)]
+                pygame.draw.polygon(luz, (255, 246, 220, 34), pts)
+            s.blit(luz, (0, 0))
+        _cache[ch] = s
     return _cache[ch]
 
 
@@ -173,6 +220,9 @@ def _estrelas(n, lw, lh, seed):
             s.set_at((x, y), cor)
             if b > 200 and rng.random() < 0.4:
                 pts.append((x, y))
+            elif b > 200 and 0 < x < lw - 1 and y > 0:                   # estrela de desenho: cruzinha
+                for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+                    s.set_at((x + dx, y + dy), _mix(cor, (0, 0, 0), 0.45))
         _cache[ch] = (s, pts)
     return _cache[ch]
 
@@ -193,25 +243,24 @@ def _nebulosa(lw, lh, seed):
 
 
 def _aurora(lw, lh, seed, cor_baixo, cor_cima):
-    """Uma cortina larga (2×LW) que rola: colunas verticais com degradê, base ondulando."""
+    """Aurora de desenho: uma cortina larga (2×LW) que rola, feita de três faixas chapadas onduladas (sem degradê),
+    com franja de colunas na borda de baixo. Fundo preto (somada ao céu com ADD)."""
     ch = ("aurora", lw, lh, seed, cor_baixo)
     if ch not in _cache:
         rng = random.Random(seed)
         w, h = lw * 2, int(lh * 0.55)
         s = pygame.Surface((w, h))
         f1, f2, p1, p2 = rng.uniform(1.5, 2.5), rng.uniform(4, 6), rng.uniform(0, 6), rng.uniform(0, 6)
+        cores = [cor_baixo, _mix(cor_baixo, cor_cima, 0.5), cor_cima]
         for x in range(w):
             u = x / w * 2 * math.pi
             base = h * (0.62 + 0.16 * math.sin(f1 * u + p1) + 0.07 * math.sin(f2 * u + p2))
             alto = h * (0.30 + 0.18 * (0.5 + 0.5 * math.sin(3 * u + p2)))
-            forca = 0.55 + 0.45 * math.sin(7 * u + p1) ** 2
-            for i in range(int(alto)):
-                y = int(base - i)
-                if 0 <= y < h:
-                    t = i / alto
-                    k = forca * (1 - t) ** 1.2 * (0.6 if x % 2 else 1.0)
-                    c = _mix(cor_baixo, cor_cima, t)
-                    s.set_at((x, y), tuple(int(v * k) for v in c))
+            franja = (2, 0, 4, 1)[x % 4]
+            for i, cor in enumerate(cores):
+                y0 = int(base - alto * i / 3) + (franja if i == 0 else 0)
+                y1 = int(base - alto * (i + 1) / 3)
+                s.fill(cor, (x, max(0, y1), 1, max(0, min(h, y0) - max(0, y1))))
         _cache[ch] = s
     return _cache[ch]
 
@@ -695,6 +744,20 @@ def _silhueta_tema(tipo, s, luzes, lw, lh, chao, cor, claro, rng):
         for cx_ in (int(lw * 0.2), int(lw * 0.82)):                                   # canos e correntes
             s.fill(escuro, (cx_, chao - 40, 3, 46))
             s.fill(escuro, (cx_ - 2, chao - 42, 7, 3))
+    elif tipo == "mancha":                     # serra azulada, castelo em ruína e o moinho distante (as pás giram)
+        serra = _mix(cor, (120, 140, 200), 0.3)
+        poly(s, serra, [(0, chao + 6), (int(lw * 0.1), chao - 26), (int(lw * 0.3), chao - 34),
+                        (int(lw * 0.5), chao - 16), (int(lw * 0.72), chao - 30), (lw, chao + 6)])
+        s.fill(serra, (0, chao + 6, lw, lh - chao))                                  # no celular em pé, sem vão até os morros
+        mx, mh = ANCORA["moinho"]
+        mx = int(lw * mx)
+        poly(s, claro, [(mx - 6, chao - 24), (mx - 4, chao - mh), (mx + 4, chao - mh), (mx + 6, chao - 24)])
+        poly(s, escuro, [(mx - 6, chao - mh), (mx, chao - mh - 7), (mx + 6, chao - mh)])
+        cx = int(lw * 0.66)
+        s.fill(escuro, (cx - 16, chao - 40, 32, 18))                                 # o castelo que ele jura ser estalagem
+        for x in range(cx - 16, cx + 16, 6):
+            s.fill(escuro, (x, chao - 44, 4, 4))
+        s.fill(escuro, (cx + 6, chao - 54, 10, 16))
     elif tipo == "castelo_reino":              # morros, castelo de torres azuis com bandeiras, moinho, bosque
         poly(s, _mix(cor, (255, 255, 255), 0.15), [(0, chao + 6), (int(lw * 0.08), chao - 28), (int(lw * 0.3), chao - 34),
                                                     (int(lw * 0.4), chao + 6)])
@@ -723,6 +786,42 @@ def _silhueta_tema(tipo, s, luzes, lw, lh, chao, cor, claro, rng):
             s.fill(claro, (hx, chao - 6, 12, 12))
             poly(s, (170, 130, 70), [(hx - 2, chao - 6), (hx + 6, chao - 13), (hx + 14, chao - 6)])
             luzes.append((hx + 4, chao - 2, (255, 200, 110)))
+    elif tipo == "arraial":                    # morro redondo com a capelinha, casinhas e um fio de luzes ao longe
+        cx = int(lw * 0.5)                                                           # no vão entre o Daidara e o Oni
+        ell = pygame.draw.ellipse
+        morro, parede, telha = (132, 106, 170), (246, 226, 214), (156, 76, 96)       # lilás de anoitecer, nunca barro
+        ell(s, morro, (cx - 52, chao - 22, 104, 76))
+        s.fill(parede, (cx - 8, chao - 32, 16, 13))                                  # a capelinha, assentada no morro
+        poly(s, telha, [(cx - 10, chao - 32), (cx, chao - 40), (cx + 10, chao - 32)])
+        s.fill(parede, (cx + 8, chao - 42, 7, 26))                                   # a torre do sino
+        poly(s, telha, [(cx + 7, chao - 42), (cx + 11, chao - 49), (cx + 16, chao - 42)])
+        luzes.append((cx, chao - 25, (255, 214, 130)))
+        luzes.append((cx + 11, chao - 37, (255, 214, 130)))
+        for k in range(2):                                                           # casinhas no pé do morro
+            hx = cx - 34 + k * 15
+            s.fill(parede, (hx, chao - 15, 11, 9))
+            poly(s, telha, [(hx - 2, chao - 15), (hx + 5, chao - 21), (hx + 13, chao - 15)])
+            luzes.append((hx + 5, chao - 11, (255, 200, 110)))
+        for k in range(9):                                                           # o fio de luzes, da torre morro abaixo
+            u = k / 8
+            luzes.append((int(cx + 14 + u * 34), int(chao - 42 + u * 26 + 5 * 4 * u * (1 - u)),
+                          ((255, 120, 110), (255, 220, 110), (130, 210, 255))[k % 3]))
+
+
+def _balao(cor):
+    """Balão de papel do arraial: gota de cabeça para baixo, em gomos chapados, com contorno da própria cor."""
+    ch = ("balao", cor)
+    if ch not in _cache:
+        s = pygame.Surface((13, 18), pygame.SRCALPHA)
+        esc, som = _mix(cor, (50, 16, 60), 0.6), _mix(cor, (90, 30, 90), 0.3)
+        pontos = [(6, 17), (4, 14), (1, 9), (0, 5), (3, 1), (6, 0), (9, 1), (12, 5), (11, 9), (8, 14)]
+        pygame.draw.polygon(s, esc, pontos)
+        pygame.draw.polygon(s, cor, [(6, 15), (5, 13), (2, 9), (1, 5), (4, 2), (6, 1), (9, 2), (11, 5), (10, 9), (7, 13)])
+        pygame.draw.polygon(s, som, [(6, 15), (7, 13), (10, 9), (11, 5), (9, 2), (8, 2), (9, 6), (8, 10)])
+        pygame.draw.line(s, _mix(cor, (255, 250, 220), 0.6), (3, 4), (3, 7))
+        s.fill(_mix(cor, (255, 250, 220), 0.5), (5, 12, 3, 1))
+        _cache[ch] = s
+    return _cache[ch]
 
 
 # --------------------------------------------------------------------- partículas
@@ -960,26 +1059,180 @@ class Particulas:
 
 # --------------------------------------------------------------------- o controle da fase
 
+def _ceu_grito(lw, lh):
+    """O céu de O Grito: faixas de cor pura que serpenteiam, sem degradê (emenda na horizontal). Pixel a pixel uma vez."""
+    ch = ("ceu_grito", lw, lh)
+    if ch not in _cache:
+        cores = [(190, 50, 42), (226, 84, 40), (240, 130, 48), (250, 190, 80), (252, 214, 110), (238, 138, 54),
+                 (212, 70, 44), (168, 44, 54), (232, 112, 56), (248, 176, 84), (214, 150, 110), (150, 120, 130)]
+        n = len(cores)
+        s = pygame.Surface((lw, lh))
+        for y in range(lh):
+            k = y / lh
+            for x in range(lw):
+                fx = 2 * math.pi * x / lw
+                onda = 0.1 * math.sin(fx * 2 + k * 5) + 0.05 * math.sin(fx * 3 - k * 9) + 0.025 * math.sin(fx * 7 + k * 3)
+                s.set_at((x, y), cores[min(n - 1, max(0, int((k * 1.45 + onda) * n)))])
+        _cache[ch] = s
+    return _cache[ch]
+
+
+def _pinceladas(lw, lh):
+    """Por cima de tudo (multiplica): riscos longos e tortos, para a tela inteira parecer pintada."""
+    ch = ("pinceladas", lw, lh)
+    if ch not in _cache:
+        v = pygame.Surface((lw, lh))
+        v.fill((255, 255, 255))
+        r = random.Random(1893)
+        for _ in range(lw * lh // 500):
+            x, y = r.uniform(0, lw), r.uniform(0, lh)
+            f, a = r.uniform(0.03, 0.08), r.uniform(1, 3)
+            cor = r.choice(((226, 214, 206), (240, 226, 214), (214, 206, 214)))
+            pts = [(x + i * 3, y + math.sin(i * 3 * f + x) * a) for i in range(r.randint(5, 16))]
+            pygame.draw.lines(v, cor, False, pts)
+        _cache[ch] = v
+    return _cache[ch]
+
+
+def _ceu_triptico(i, lw, lh):
+    """Os três céus do tríptico, em faixas chapadas: 0 Paraíso (manhã clara), 1 Jardim (azul de Bosch), 2 Inferno (noite com
+    a cidade em chamas no horizonte; devolve também os focos de fogo, que piscam por quadro)."""
+    ch = ("ceu_tri", i, lw, lh)
+    if ch in _cache:
+        return _cache[ch]
+    s = pygame.Surface((lw, lh))
+    cores = (((148, 206, 222), (168, 216, 224), (192, 228, 224), (216, 238, 222), (238, 244, 214)),
+             ((84, 164, 226), (108, 182, 232), (140, 204, 236), (182, 224, 234), (246, 220, 216)),
+             ((12, 8, 22), (26, 12, 30), (52, 16, 32), (96, 26, 32), (168, 56, 32), (232, 120, 44)))[i]
+    n = len(cores)
+    for x in range(lw):
+        fx = 2 * math.pi * x / lw
+        for y in range(lh):
+            k = y / (lh * 0.62) + 0.035 * math.sin(fx * 2 + y * 0.03) + 0.018 * math.sin(fx * 5)
+            s.set_at((x, y), cores[max(0, min(n - 1, int(k * n)))])
+    focos = []
+    rng = random.Random(1500 + i)
+    if i < 2:
+        from .cenario_desenho import nuvem_ceu
+        for _ in range(6):
+            nuvem_ceu(s, rng.randint(0, lw), rng.randint(6, int(lh * 0.38)), rng.uniform(0.6, 1.1))
+    else:                                              # a cidade queimando, que Bosch pinta no alto do painel
+        chao = int(lh * 0.56)
+        x = -6
+        while x < lw:
+            w, h = rng.randint(8, 20), rng.randint(12, 42)
+            s.fill((14, 8, 18), (x, chao - h, w, h + 16))
+            if rng.random() < 0.5:
+                pygame.draw.polygon(s, (14, 8, 18), [(x, chao - h), (x + w // 2, chao - h - rng.randint(5, 12)), (x + w, chao - h)])
+            for _ in range(rng.randint(1, 3)):         # janelas em brasa
+                s.fill((248, 150, 48), (x + rng.randint(1, max(1, w - 3)), chao - rng.randint(3, h), 2, 3))
+            if rng.random() < 0.55:
+                focos.append((x + w // 2, chao - h))
+            x += w + rng.randint(0, 4)
+    _cache[ch] = (s, focos)
+    return _cache[ch]
+
+
+def _portas_triptico(lw, lh):
+    """As duas portas fechadas do tríptico: o mundo em grisalha, numa esfera de vidro, com a moldura de carvalho."""
+    ch = ("portas", lw, lh)
+    if ch in _cache:
+        return _cache[ch]
+    s = pygame.Surface((lw, lh))
+    s.fill((64, 70, 66))
+    cx, cy, r = lw // 2, lh // 2, int(min(lw, lh) * 0.42)
+    pygame.draw.circle(s, (118, 130, 122), (cx, cy), r)
+    pygame.draw.circle(s, (92, 104, 100), (cx + r // 5, cy + r // 5), int(r * 0.86))
+    pygame.draw.circle(s, (118, 130, 122), (cx - r // 12, cy - r // 12), int(r * 0.8))
+    terra = int(cy + r * 0.26)                         # o mundo: um disco chato de terra e água, antes das cores
+    pygame.draw.ellipse(s, (146, 154, 136), (cx - r + 3, terra - r // 4, 2 * r - 6, r // 2))
+    pygame.draw.ellipse(s, (98, 114, 112), (cx - r // 2, terra - r // 10, r, r // 5))
+    rng = random.Random(1490)
+    for _ in range(9):                                 # montes e árvores miúdas
+        x, a = rng.randint(cx - int(r * 0.8), cx + int(r * 0.8)), rng.randint(5, 14)
+        pygame.draw.ellipse(s, (108, 120, 110), (x - a // 2, terra - a - rng.randint(-2, 4), a, a))
+    for _ in range(5):                                 # nuvens de cima, em faixas
+        x, y = rng.randint(cx - int(r * 0.7), cx + int(r * 0.3)), rng.randint(cy - int(r * 0.74), cy - int(r * 0.24))
+        pygame.draw.ellipse(s, (170, 178, 168), (x, y, rng.randint(20, 48), rng.randint(4, 8)))
+    pygame.draw.circle(s, (206, 212, 200), (cx, cy), r, 2)
+    pygame.draw.arc(s, (240, 244, 236), (cx - r + 7, cy - r + 7, 2 * r - 14, 2 * r - 14), 1.6, 2.8, 2)
+    for k in range(5):                                 # moldura de carvalho
+        c = _mix((98, 66, 44), (46, 30, 28), k / 5)
+        pygame.draw.rect(s, c, (k, k, lw - 2 * k, lh - 2 * k), 1)
+    s.fill((22, 14, 16), (cx - 1, 0, 2, lh))           # o vão entre as duas portas
+    _cache[ch] = (s.subsurface((0, 0, cx, lh)).copy(), s.subsurface((cx, 0, lw - cx, lh)).copy())
+    return _cache[ch]
+
+
+def _moldura_triptico(lh):
+    """O caixilho entre dois painéis: carvalho escuro, dobradiças douradas. É por aqui que o herói muda de painel."""
+    ch = ("moldura_tri", lh)
+    if ch not in _cache:
+        s = pygame.Surface((16, lh), pygame.SRCALPHA)
+        s.fill((88, 58, 42))
+        s.fill((122, 84, 56), (2, 0, 3, lh))
+        s.fill((48, 30, 30), (12, 0, 4, lh))
+        s.fill((30, 18, 22), (0, 0, 1, lh))
+        s.fill((30, 18, 22), (15, 0, 1, lh))
+        for y in range(10, lh, 46):                    # as dobradiças
+            s.fill((30, 18, 22), (0, y - 1, 16, 12))
+            s.fill((226, 180, 84), (1, y, 14, 10))
+            s.fill((160, 112, 46), (1, y + 7, 14, 3))
+            s.fill((255, 232, 150), (7, y + 3, 2, 2))
+        for y in range(4, lh, 9):                      # veios da madeira
+            s.fill((74, 48, 38), (6, y, 5, 1))
+        _cache[ch] = s
+    return _cache[ch]
+
+
+def _craquelure(lw, lh):
+    """Por cima de tudo (multiplica): as rachaduras finas do óleo sobre carvalho de 500 anos."""
+    ch = ("craquelure", lw, lh)
+    if ch not in _cache:
+        v = pygame.Surface((lw, lh))
+        v.fill((255, 255, 255))
+        r = random.Random(1505)
+        for _ in range(lw * lh // 3200):
+            x, y, a = r.uniform(0, lw), r.uniform(0, lh), r.uniform(0, 6.28)
+            pts = [(x, y)]
+            for _ in range(r.randint(3, 8)):
+                a += r.uniform(-0.9, 0.9)
+                x, y = x + math.cos(a) * 4, y + math.sin(a) * 4
+                pts.append((x, y))
+            pygame.draw.lines(v, (244, 240, 232), False, pts)
+        _cache[ch] = v
+    return _cache[ch]
+
+
+PART_PARAISO = {"semente": 12, "brilho": 8}
+PART_JARDIM = {"petala": 16, "brilho": 6}
+PART_INFERNO = {"brasa": 40, "cinza": 18}
+
+
 class Clima:
     """Um clima pronto para desenhar: céu, cenário tingido e as peças do fundo."""
 
-    def __init__(self, cid, lw, lh, camadas, mapa, seed):
+    def __init__(self, cid, lw, lh, camadas, mapa, seed, forca_tom=1.0):
         self.id, self.cfg = cid, CLIMAS[cid]
         cfg = self.cfg
         self.lw, self.lh = lw, lh
-        self.ceu = _ceu(*cfg["ceu"], lw, lh) if cfg["ceu"] else None
+        self.ceu = _ceu(*cfg["ceu"], lw, lh, cfg.get("por_do_sol", False)) if cfg["ceu"] else None
+        if cfg.get("ceu_pintado"):
+            self.ceu = _ceu_grito(lw, lh)
         tom = cfg.get("tom")
         if tom:
             self.camadas = []
+            tom_cam = _mix(tom, (255, 255, 255), 1 - forca_tom)            # cenário já pintado no clima: tinge menos
             for c in camadas:
                 c = c.copy()
-                c.fill(tom, special_flags=MULT)
+                c.fill(tom_cam, special_flags=MULT)
                 self.camadas.append(c)
             self.mapa = mapa.copy()
             claro = 0.12 if cfg.get("pb") else 0.45                                # no gótico o chão também escurece
             self.mapa.fill(_mix(tom, (255, 255, 255), claro), special_flags=MULT)   # mapa mais claro que o fundo
         else:
             self.camadas, self.mapa = camadas, mapa
+        self.camadas_base = camadas                        # as originais (cenario_desenho.ancoras é por superfície)
         self.estrelas = _estrelas(cfg["estrelas"], lw, lh, seed) if cfg.get("estrelas") else None
         self.nebulosa = _nebulosa(lw, lh, seed) if cfg.get("nebulosa") else None
         self.auroras = [_aurora(lw, lh, seed, (30, 150, 90), (60, 30, 110)),
@@ -1050,9 +1303,11 @@ class Controle:
 
     def _ativar(self, cid):
         j = self.j
-        self.atual = Clima(cid, self.lw, self.lh, j.camadas, j.mapa_base, self.seed)
+        camadas, forca = j.camadas_de(cid) if hasattr(j, "camadas_de") else (j.camadas, 1.0)   # cenário do clima
+        self.atual = Clima(cid, self.lw, self.lh, camadas, j.mapa_base, self.seed, forca)
         j.mapa = self.atual.mapa
         self.alvo = None
+        self._t_portas = getattr(self, "t", 0)             # tríptico: as portas abrem a cada entrada no clima
 
     @property
     def nome(self):
@@ -1078,6 +1333,9 @@ class Controle:
         if abs(dx) > 40:                                   # câmera pulou (checkpoint): não arrasta as partículas
             dx = 0
         c = self.atual.cfg
+        if c.get("triptico"):                              # cada painel com a sua poeira no ar
+            pa, inf = self._pesos_triptico()
+            self.atual.part = (PART_INFERNO if inf > 0.5 else PART_PARAISO if pa > 0.5 else PART_JARDIM)
         self.part.manter(self.atual.part, self.atual.vento, dx)
         if c.get("raios"):
             self.prox_raio -= 1
@@ -1133,10 +1391,73 @@ class Controle:
             v = r.uniform(0.7, 1.1)
             self.fogos.append([x, y, math.cos(a) * v, math.sin(a) * v, r.randint(34, 50), cor])
 
+    # -- o tríptico de Bosch
+    def _pesos_triptico(self):
+        """(Paraíso, Inferno) de 0 a 1, pela posição do herói na fase: um terço de painel para cada lado. Sem fase (arena),
+        fica no Jardim."""
+        nivel = getattr(self.j, "nivel", None)
+        if nivel is None or getattr(self.j, "interior", None):
+            return 0.0, 0.0
+        u = max(0.0, min(1.0, self.j.p.x / (nivel.w * 16)))
+        return max(0.0, min(1.0, (0.36 - u) / 0.06)), max(0.0, min(1.0, (u - 0.64) / 0.06))
+
+    def _camada_triptico(self, i):
+        """As versões da camada i: a clara do Paraíso e a do Inferno, com as peças que só existem lá."""
+        base = self.atual.camadas[i]
+        ch = ("cam_tri", id(base))
+        if ch not in _cache:
+            from . import cenario_desenho
+            pa_x, inf_x = cenario_desenho.extras(self.atual.camadas_base[i])
+            pa = base.copy()
+            pa.fill((238, 250, 232), special_flags=MULT)
+            pa.fill((14, 18, 18, 0), special_flags=ADD)
+            if pa_x:
+                pa.blit(pa_x, (0, 0))
+            inf = base.copy()
+            inf.fill((76, 50, 72), special_flags=MULT)
+            if inf_x:
+                inf.blit(inf_x, (0, 0))
+            _cache[ch] = (pa, inf)
+        return _cache[ch]
+
+    def _ceu_tri(self, s, cx):
+        pa, inf = self._pesos_triptico()
+        s.blit(_ceu_triptico(1, self.lw, self.lh)[0], (0, 0))
+        for k, peso in ((0, pa), (2, inf)):
+            if peso > 0:
+                ceu, focos = _ceu_triptico(k, self.lw, self.lh)
+                ceu.set_alpha(int(255 * peso))
+                s.blit(ceu, (0, 0))
+                for n, (x, y) in enumerate(focos):     # a cidade queima, sem parar
+                    b = (0.6 + 0.4 * math.sin(self.t * 0.13 + n * 2.1)) * peso
+                    s.blit(halo(9, _q((int(150 * b), int(66 * b), int(14 * b)))), (x - 9, y - 9), special_flags=ADD)
+                    s.fill(_q((255, int(150 * b + 60), 60)), (x - 1, y - 2 - (self.t // 6 + n) % 3, 2, 3))
+
+    def _portas(self, s):
+        """As portas cinzentas abrem sobre as dobradiças, de fora para dentro, e o mundo aparece em cores."""
+        k = self.t - getattr(self, "_t_portas", -999)
+        if not 0 <= k < 62:
+            return
+        esq, dir_ = _portas_triptico(self.lw, self.lh)
+        ang = max(0, k - 10) / 52 * math.pi / 2
+        for p, x_de in ((esq, lambda w: 0), (dir_, lambda w: self.lw - w)):
+            w = int(p.get_width() * math.cos(ang))
+            if w > 0:
+                s.blit(pygame.transform.scale(p, (w, self.lh)), (x_de(w), 0))
+
     # -- desenho
     def draw_ceu(self, s, cx):
         a, c, lw, lh, t = self.atual, self.atual.cfg, self.lw, self.lh, self.t
-        s.blit(a.ceu or self.j.ceu, (0, 0))
+        if c.get("triptico"):
+            self._ceu_tri(s, cx)
+        elif c.get("ceu_pintado"):                           # o céu ondula linha a linha, sem parar
+            ox = -(cx // 30) % lw
+            for y in range(lh):
+                dx = (ox + int(3 * math.sin(y * 0.07 + t * 0.035))) % lw
+                s.blit(a.ceu, (dx, y), (0, y, lw, 1))
+                s.blit(a.ceu, (dx - lw, y), (0, y, lw, 1))
+        else:
+            s.blit(a.ceu or self.j.ceu, (0, 0))
         if a.nebulosa:
             s.blit(a.nebulosa, (-(cx // 40) % lw - lw, 0), special_flags=ADD)
             s.blit(a.nebulosa, (-(cx // 40) % lw, 0), special_flags=ADD)
@@ -1201,7 +1522,7 @@ class Controle:
                     s.set_at((x + dx, y), cor)
                     if c["silhueta"] == "farol" or (c["silhueta"] == "catedral" and i == 0):
                         self._facho_farol(s, x + dx, y)
-        if c.get("extra") in ("nave", "nave_drop", "holograma"):
+        if c.get("extra") in ("nave", "nave_drop", "holograma", "baloes"):
             self._ceu_animado(s, c["extra"], cx)
         return c.get("nuvens", True)
 
@@ -1239,6 +1560,14 @@ class Controle:
 
     def _ceu_animado(self, s, tipo, cx):
         t, lw, lh = self.t, self.lw, self.lh
+        if tipo == "baloes":                       # balões de papel subindo devagar, balançando
+            for k, (fx, per, cor) in enumerate(((0.16, 2300, (240, 96, 96)), (0.47, 2900, (248, 196, 80)),
+                                                (0.8, 2600, (110, 180, 230)), (0.63, 3400, (226, 130, 210)))):
+                u = ((t + k * 700) % per) / per
+                x = int(lw * fx + 10 * math.sin(t * 0.012 + k) - cx * 0.03) % (lw + 24) - 12
+                y = int(lh * 0.62 - u * (lh * 0.72))
+                s.blit(_balao(cor), (x - 6, y))
+            return
         if tipo == "holograma":                    # peixe holográfico enorme nadando sobre a cidade
             per = 900
             u = (t % per) / per
@@ -1282,7 +1611,14 @@ class Controle:
 
     def draw_meio(self, s, cx):
         """Depois dos morros e antes do mapa: holofotes do parque nascendo de trás do terreno; lampiões góticos."""
+        if getattr(self.j, "interior", None):             # dentro do hospital: sem silhuetas nem fachos
+            return
         c, t, lw, lh = self.atual.cfg, self.t, self.lw, self.lh
+        if c.get("triptico") and getattr(self.j, "nivel", None) is not None:      # os caixilhos entre os painéis
+            for u in (1 / 3, 2 / 3):
+                x = int(self.j.nivel.w * 16 * u) - cx
+                if -16 < x < lw:
+                    s.blit(_moldura_triptico(lh), (x - 8, 0))
         if c.get("pb"):
             passo = 150
             base = int(lh * 0.8)
@@ -1308,8 +1644,36 @@ class Controle:
             s.blit(a.cristais, (-(cx // 6) % lw - lw, 0))
             s.blit(a.cristais, (-(cx // 6) % lw, 0))
 
+    def pos_camada(self, s, cx, i, oy):
+        """Logo depois de colar a camada i do cenário: as pás dos moinhos dela giram (e a camada da frente as cobre);
+        no tríptico, a camada do painel vizinho entra por cima."""
+        if self.atual.cfg.get("triptico"):
+            pesos = self._pesos_triptico()
+            if any(pesos):
+                ox = -int(cx * (0.15, 0.3, 0.5)[i]) % self.lw
+                for cam, peso in zip(self._camada_triptico(i), pesos):
+                    if peso > 0:
+                        cam.set_alpha(int(255 * peso))
+                        s.blit(cam, (ox - self.lw, oy))
+                        s.blit(cam, (ox, oy))
+            return
+        if not self.atual.cfg.get("pas_cenario"):
+            return
+        from . import cenario_desenho, quixote
+        ancoras = cenario_desenho.ancoras(self.atual.camadas_base[i])
+        ox = -int(cx * (0.15, 0.3, 0.5)[i]) % self.lw
+        for ax, ay, r in ancoras:
+            for dx in (ox - self.lw, ox):
+                if -r <= ax + dx <= self.lw + r:
+                    quixote.pas(s, ax + dx, ay + oy, r, self.t * 0.018 + ax)
+
     def pos_mundo(self, s):
         """Clima gótico: o mundo vira preto e branco de alto contraste; só o vermelho volta (rosácea, rosas, batom)."""
+        if self.atual.cfg.get("triptico"):                 # no Inferno o chão e os inimigos também queimam em vermelho
+            inf = self._pesos_triptico()[1]
+            if inf > 0:
+                s.fill((255 - int(66 * inf), 255 - int(120 * inf), 255 - int(106 * inf)), special_flags=MULT)
+            return
         if not self.atual.cfg.get("pb"):
             return
         s.blit(pygame.transform.grayscale(s), (0, 0))
@@ -1347,6 +1711,8 @@ class Controle:
         return _cache[ch]
 
     def draw_frente(self, s, cx, cy):
+        if getattr(self.j, "interior", None):             # dentro do hospital: sem chuva, neve nem neblina
+            return
         a, c, t = self.atual, self.atual.cfg, self.t
         if a.brilho_chao:
             s.blit(a.brilho_chao, (0, self.lh - a.brilho_chao.get_height()), special_flags=ADD)
@@ -1370,6 +1736,11 @@ class Controle:
             s.fill((k, k, k + 6), special_flags=ADD)
         if c.get("pb"):
             s.blit(self._vinheta(), (0, 0), special_flags=MULT)
+        if c.get("pinceladas"):
+            s.blit(_pinceladas(self.lw, self.lh), (0, 0), special_flags=MULT)
+        if c.get("triptico"):
+            s.blit(_craquelure(self.lw, self.lh), (0, 0), special_flags=MULT)
+            self._portas(s)
         if self.veu:                                       # véu da troca de clima
             k = abs(self.veu) / self.VEU
             v = int(255 * (1 - 0.85 * k))

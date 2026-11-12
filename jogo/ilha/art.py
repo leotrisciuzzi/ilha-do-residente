@@ -687,25 +687,30 @@ def fundo(pal, largura, altura, seed=0):
 # ------------------------------------------------------------------ tiles
 
 def _tile_terra(pal, variante, prof):
-    """Terra pastel com padrão de anéis e riscos de giz."""
+    """Terra no traço de desenho (assets/estilo/GUIA_DE_ESTILO.md): cor chapada que escurece com a profundidade,
+    uma pedrinha contornada de vez em quando e riscos curtos de textura."""
     chave = ("terra", tuple(pal["terra"]), variante, prof)
     if chave in _cache:
         return _cache[chave]
     base = mix(pal["terra"], pal["terra_esc"], min(0.45, prof * 0.12))
-    anel = mix(base, pal["terra_esc"], 0.55)
-    luz = mix(base, pal["terra_clara"], 0.5)
+    risco = mix(base, pal["terra_esc"], 0.6)
     s = pygame.Surface((TILE, TILE))
     s.fill(base)
     rng = random.Random(variante * 97 + prof * 13 + 5)
-    for _ in range(2):
-        cx, cy, r = rng.randrange(2, 14), rng.randrange(2, 14), rng.choice((2, 2, 3))
-        pygame.draw.circle(s, anel, (cx, cy), r, 1)
-        s.set_at((cx - 1, cy - 1), luz)
-    for _ in range(5):
-        x, y = rng.randrange(16), rng.randrange(16)
-        for k in range(3):
-            if 0 <= x + k // 2 < 16 and 0 <= y - k < 16:
-                s.set_at((x + k // 2, y - k), luz if k % 2 else mix(base, anel, 0.4))
+    if variante % 3 == 0:                                   # pedrinha: oval chapada, contorno escuro, brilho
+        w, h = rng.choice(((5, 3), (4, 3), (6, 4)))
+        x, y = rng.randrange(2, TILE - w - 1), rng.randrange(2, TILE - h - 1)
+        pygame.draw.ellipse(s, pal["contorno"], (x, y, w, h))
+        pygame.draw.ellipse(s, mix(base, pal["terra_clara"], 0.55), (x + 1, y + 1, w - 2, h - 2))
+        s.set_at((x + 1, y + 1), pal["terra_clara"])
+    for _ in range(2):                                      # riscos: ︶ e traço vertical curto
+        x, y = rng.randrange(1, TILE - 5), rng.randrange(2, TILE - 3)
+        if rng.random() < 0.5:
+            s.set_at((x, y), risco)
+            s.fill(risco, (x + 1, y + 1, 2, 1))
+            s.set_at((x + 3, y), risco)
+        else:
+            s.fill(risco, (x, y, 1, rng.randint(2, 3)))
     _cache[chave] = s
     return s
 
@@ -900,6 +905,12 @@ def _placa_hospital(s, x, base):
     s.fill(K, (x - 1, base - 24, 16, 13)); s.fill((250, 248, 240), (x, base - 23, 14, 11))
     s.fill((214, 214, 228), (x, base - 13, 14, 1))
     from . import edicao
+    if edicao.LANCAMENTO:            # na Ilha do Lançamento a partida é um quadro com o gráfico de vendas subindo
+        s.fill((30, 40, 70), (x, base - 23, 14, 10))
+        for i, h in enumerate((2, 3, 5, 8)):
+            s.fill((90, 220, 140), (x + 2 + 3 * i, base - 14 - h, 2, h))
+        s.fill((255, 210, 80), (x + 11, base - 23, 2, 2))
+        return
     if edicao.VESTIBULANDO:          # na Ilha do Vestibulando a partida é a escola: lousa verde com "1+1"
         s.fill((40, 110, 70), (x, base - 23, 14, 10))
         giz = (240, 244, 236)

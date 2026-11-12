@@ -1,13 +1,16 @@
 """Protagonista: o Doutor (cabelo cacheado, óculos redondos, jaleco, gravata e cachecol
 arco-íris) montado num pônei branco de crina rosa e lilás, no traço dos 16 bits.
-Desenho original, pixel a pixel em ASCII.
+Desenho original, pixel a pixel em ASCII. Toque anime/Disney (2026-11-09): olhos grandes com
+reflexo (E) e brilho (J), bochechas, sombra dura do lado direito (luz de cima à esquerda), caras
+exageradas na dor (">_<", "X_X", boca escancarada) e squash & stretch do grupo montaria + cavaleiro
+(`esq` em _pose) no pulo, queda, abaixar e pouso — tamanho do sprite, mão e hitbox não mudam.
 
 Partes: pônei sem pernas (com variantes de boca aberta, piscada e susto), sela, o Doutor
 sentado (o cachecol ondula) e, no lugar das patas, uma nuvem dourada que estica, achata e
 pulsa conforme o estado.
 
-Personagens e itens (loja.py vende, o save guarda): PERSONAGENS (Doutor no pônei; Doutora de pé na
-nuvem com o bastão de Esculápio), NUVENS (paleta + efeito), BASTOES (desenhados por código) e ROUPAS
+Personagens e itens (loja.py vende, o save guarda): PERSONAGENS (todos sentados na montaria como o
+Doutor; tipo "pe" = cabeça e corpo próprios, desenhados sentados no pônei), NUVENS (paleta + efeito), BASTOES (desenhados por código) e ROUPAS
 (cor da camisa/pijama). equipar() escolhe o visual do jogo; heroi(..., visual=) desenha outro
 (prévia da loja) sem mexer no equipado."""
 import math
@@ -24,29 +27,31 @@ PAL = {
     "s": (150, 160, 188), "m": (250, 160, 206), "l": (196, 156, 244), "z": (246, 214, 224), "q": (112, 100, 128),
     # Doutor
     "h": (128, 78, 42), "j": (186, 124, 66), "d": (78, 44, 26),
-    "F": (252, 210, 172), "f": (222, 152, 112), "N": (56, 40, 52), "M": (170, 56, 72),
+    "F": (252, 210, 172), "f": (222, 152, 112), "N": (150, 104, 54), "M": (170, 56, 72), "J": (76, 138, 104),
     "U": (176, 148, 226), "p": (98, 80, 92), "B": (126, 74, 40), "b": (80, 44, 24),
     # arco-íris (cachecol e gravata), uma cor por linha
     "a": (240, 70, 80), "c": (255, 150, 60), "e": (255, 226, 80), "i": (110, 210, 110),
     "n": (90, 160, 250), "v": (170, 110, 230),
 }
 
-# pônei inteiro sem as pernas (cabeça, pescoço com crina, corpo, cauda), virado à direita
+# pônei inteiro sem as pernas (cabeça, pescoço com crina, corpo, cauda), virado à direita.
+# Toque anime: olho grande (5×5) com dois reflexos e cílio, topete caindo na testa, bochecha rosada,
+# sorriso em U, cauda erguida e ondulada; luz de cima à esquerda (sombra w/s embaixo e no peito).
 PONEI = """
 ....................KK.........
 ...................KzWK........
-.................KKmzWWKK......
-...............KKmmlWWWWWK.....
-..............KmmlmlWWWWWWK....
-.............KmmlmmWWWKEWWWK...
-.............KmlmmlWWWKKWWWWK..
-............KmmlmmWWWWKKWWWWWK.
-............KmlmlWWWWWWWWWzzzzK
-...........KmmlmWWWWWWWWWzzzKzK
-...........KmlmmwWWWWWWWWzzzzzK
-..KKK...KKKKKmlmwwWWWKKKwwzzzK.
-.KmlK.KWWWWWWmlWwwWWWK..KKKKK..
-KmlmKKWWWWWWWWmWwwWWWK.........
+.................KKmlmmKK......
+...............KKmmlmlmWWK.....
+..............KmmlmlmKKKKWK....
+.............KmmlmmWKEEKKWWK...
+.............KmlmmlWKEKKKWWWK..
+............KmmlmmWWKqKEKWWWWK.
+............KmlmlWWWWKKKWWzzzzK
+...........KmmlmWWWWWWWWmzzzKzK
+...KK......KmlmmwWWWWKWWWKzzzzK
+..KmlK..KKKKKmlmwwWWWwKKKwzzzK.
+.KmlmlKWWWWWWmlWwwWWWK..KKKKK..
+KmlmlKWWWWWWWWmWwwWWWK.........
 KmlmlKWWWWWWWWWWwwWWWWK........
 KmllmKWWWWWWWWWWWwWWWWWK.......
 .KmlmKwWWWWWWWWWWWWWWWWWK......
@@ -66,21 +71,29 @@ def _troca(rows, mudancas):
     return out
 
 
-def _olho(rows, a, b, c):
+def _olho(rows, *linhas, x0=20, y0=4):
+    """Troca o bloco do olho da montaria (5 colunas a partir de x0, a partir da linha y0) pelas linhas dadas."""
     out = [list(r) for r in rows]
-    for k, par in zip((5, 6, 7), (a, b, c)):
-        out[k][22], out[k][23] = par
+    for k, t in zip(range(y0, y0 + len(linhas)), linhas):
+        out[k][x0:x0 + 5] = t
     return ["".join(r) for r in out]
 
 
+# boca aberta com a língua de fora (golpe/mirar): queixo cai e a língua pende
 PONEI_BOCA = _troca(PONEI, {
-    10: "...........KmlmmwWWWWWWWWzKKKKK",
-    11: "..KKK...KKKKKmlmwwWWWKKKwwKMMMK",
-    12: ".KmlK.KWWWWWWmlWwwWWWK..KzzzzK.",
-    13: "KmlmKKWWWWWWWWmWwwWWWK...KKKK..",
+    10: "...KK......KmlmmwWWWWWWWzKKKKKK",
+    11: "..KmlK..KKKKKmlmwwWWWKKKKMMMMMK",
+    12: ".KmlmlKWWWWWWmlWwwWWWKKzzzMMPK.",
+    13: "KmlmlKWWWWWWWWmWwwWWWK.KKKKKKK.",
 })
-PONEI_PISCA = _olho(PONEI, "WW", "WW", "KK")
-PONEI_SUSTO = _olho(PONEI, "KK", "KE", "KK")
+PONEI_PISCA = _olho(PONEI, "mWWWW", "WWWWW", "WKKKW", "KWWWK", "WWWWW")     # olho fechado feliz (arco)
+# dor: olho apertado ">" e boca aberta no berro
+PONEI_SUSTO = _troca(_olho(PONEI, "mWWWW", "KKWWW", "WKKWW", "KKWWW", "WWWWW"), {
+    10: "...KK......KmlmmwWWWWWWWzKKKKKK",
+    11: "..KmlK..KKKKKmlmwwWWWKKKKMMMMKK",
+    12: ".KmlmlKWWWWWWmlWwwWWWK..KzzzzK.",
+    13: "KmlmlKWWWWWWWWmWwwWWWK...KKKK..",
+})
 SELA = """
 .KKKKKKK.
 KRPRRRRRK
@@ -88,21 +101,23 @@ KRRRRRRRK
 KWWWWWWWK
 .KrrrrrK.
 """.split()
-# o Doutor sentado; linhas 15-20 do cachecol trocam a cada quadro
+# o Doutor sentado; linhas 15-20 do cachecol trocam a cada quadro. Rosto anime: óculos redondos grandes
+# (armação N) com olhos de 3×3 (branco E atrás, íris verde J com pupila K e reflexo E em cima), cachos com
+# luz j em cima à esquerda e sombra d à direita, bochechas P.
 DOUTOR = """
-....KKK.KKK.....
-...KhjhKjhjK....
-..KhjhhhhhhhKK..
-.KhhhhjhhhhhhhK.
-KhhdhhhhhhhdhhK.
-KhhhhdhhFFFFhK..
+...KKK..KKK.....
+..KjjhKKjjhK....
+.KjhhhhhhhhhhK..
+KjhhhhjhhhhhhhK.
+KhhhhhhhhhhdhdK.
+KhhhhdhhFFFFhdK.
 KhhhhhhFFFFFFK..
-.KhhhfFNNFFFNNK.
-.KhhffNFKNFNFKNf
-.KhhffNFFNNNFFNf
-.KhhffFNNFFFNNFK
-..KhfFFFFFFFFFK.
-..KhfFFFFFMMFK..
+.KhhhfFNNNFNNNK.
+.KhhffNEEJNEEJNf
+.KhhffNEJKFEJKNf
+.KhhffNEJJFEJJNf
+..KhfFFNNNFNNNK.
+..KhfFPFFFMMPK..
 ...KffffFFFFK...
 ....KKKKKKKK....
 .aaaKWWUUaUWWK..
@@ -125,7 +140,11 @@ CACHECOL = [
     ["..aaa", "aaccc", "ccee.", ".eei.", "..in.", "...v."],
     [".aaa.", "accc.", "cceee", ".eii.", "..nn.", "..v.."],
 ]
-DOUTOR_SUSTO_ROSTO = ["..KhfFFFFKMKFK..", "...KffffFKKFK..."]
+# dor: os óculos pulam para a testa, olhos ">_<" bem visíveis e boca de berro em trapézio (lábio M, fundo r);
+# a linha 12 mantém "KMK": trajes.py procura por ela para escolher a cara de susto dos desenhos inteiros
+DOUTOR_SUSTO_ROSTO = {5: "KhhhhdhNNNFNNNK.", 6: "KhhhhhhNFNFNFNK.", 7: ".KhhhfFFFFFFFFK.",
+                      8: ".KhhffFKFFFFFKFf", 9: ".KhhffFFKFFFKFFf", 10: ".KhhffFKFFFFFKFf",
+                      11: "..KhfFPFFKKKPFK.", 12: "..KhfFFFKMKFFK..", 13: "...KfffKrrrrK..."}
 LARG, ALT = 34, 44
 OX, OY = 2, 14           # canto do pônei no canvas (sem balanço)
 _cache = {}
@@ -166,8 +185,8 @@ def _doutor(quadro, susto=False, pal=None, chapeu=False):
                 if x < 4 and rows[15 + k][x] not in "KW":
                     rows[15 + k][x] = ch
         if susto:
-            rows[12] = list(DOUTOR_SUSTO_ROSTO[0])
-            rows[13] = list(DOUTOR_SUSTO_ROSTO[1])
+            for k, t in DOUTOR_SUSTO_ROSTO.items():
+                rows[k] = list(t)
         if chapeu and not traje:
             for k, t in CHAPEU.items():
                 rows[k] = list(t)
@@ -189,31 +208,32 @@ def _doutor(quadro, susto=False, pal=None, chapeu=False):
 _linhas_vivas = []
 
 # ------------------------------------------------------------------ Doutora
-# Doutora de pé: rabo de cavalo com prendedor, jaleco aberto sobre o pijama cirúrgico (U/u, cor da
-# roupa), estetoscópio, mão da frente estendida (segura o bastão) e tamancos.
+# Doutora de pé: rabo de cavalo cheio com laço, franja com luz j, olhos anime 2×3 (reflexo E em cima, brilho J
+# embaixo), bochechas P, jaleco aberto sobre o pijama cirúrgico (U/u, cor da roupa) com sombra w do lado direito,
+# estetoscópio, mão da frente estendida (segura o bastão) e tamancos.
 DOUTORA = """
-.......KKKKKK.......
-.....KKhjjjhhKK.....
-....KhhjjhhhhhhK....
-...KhhjhhhhhhhhhK...
-..KhhhhhhhhhhhhhK...
-.KaahhhhhhhhFFFhK...
+......KKKKKKK.......
+....KKhjjjhhhKK.....
+...KhhjjhhhhhhhK....
+..KhhjhhhhhhhhhhK...
+.KKhhhhhhhhhhhhhK...
+KaaKhhhhhhhhFFFhK...
 KhhKhhhhhhhFFFFFK...
 KhjKhhhhhffFFFFFFK..
-KhhKhhhhffFFNFFFNK..
-.KhKhhhhffFFNFFFNF..
-.KjKhhhhffFPFFFPFK..
-.KhKKhhhfFFFFFFFK...
-..KhKhhhKfFFFMMFK...
+KhhKhhhhffFENFFENK..
+KhjKhhhhffFNNFFNNF..
+KhhKhhhhffFJNFFJNK..
+.KhKKhhhfFPFFFFPK...
+.KhhKhhhKfFFFMMFK...
 ..KK.KhhKKffffFK....
 ......KKKKKKKKK.....
 .....KWWwuUUuwWWK...
-....KWWWwUUUUwWWWK..
-....KWWWWwUUwWWWWKK.
-....KWWWWWwwWWWWWWFK
-....KWWWWWWwWWWWWWFK
-....KWWWWWWsWWWWKKK.
-....KWWWWWWsWWWWK...
+....KWWWwUUUUwWWwK..
+....KWWWWwUUwWWWwKK.
+....KWWWWWwwWWWWwWFK
+....KWWWWWWwWWWWwWFK
+....KWWWWWWsWWWWwKK.
+....KWWWWWWsWWWWwK..
 ....KwWWWWWWWWWwK...
 ....KwwwwwwwwwwwK...
 .....KUUUUUUUUUK....
@@ -226,10 +246,46 @@ KhhKhhhhffFFNFFFNK..
 CORPO_EM_PE = DOUTORA[15:]
 CABECAS = {"doutora": DOUTORA[:15]}
 CORPOS = {}             # corpo próprio (estudantes.py); padrão: jaleco + pijama
-CARAS = {"doutora": {"susto": {11: ".KhKKhhhfFFFFFFFK...", 12: "..KhKhhhKfFFFKMKK...", 13: "..KK.KhhKKfffKKK...."},
-                     "pisca": {8: "KhhKhhhhffFFFFFFFK..", 9: ".KhKhhhhffFFKFFFKF.."}}}
+# caras: dor = olhos ">_<" e boca escancarada; piscada = traço no meio do olho
+CARAS = {"doutora": {"susto": {8: "KhhKhhhhffFNFFFNFK..", 9: "KhjKhhhhffFFNFFFNF..", 10: "KhhKhhhhffFNFFFNFK..",
+                               12: ".KhhKhhhKfFFKMMKK...", 13: "..KK.KhhKKffKKKK...."},
+                     "pisca": {8: "KhhKhhhhffFFFFFFFK..", 9: "KhjKhhhhffFNNFFNNF..", 10: "KhhKhhhhffFFFFFFFK.."}}}
 PAL_DOUTORA = {"h": (58, 36, 52), "j": (110, 70, 96), "F": (232, 178, 138), "f": (196, 132, 96),
-               "M": (196, 70, 90), "P": (246, 140, 130), "a": (240, 70, 110), "B": (60, 64, 84), "N": (40, 26, 36)}
+               "M": (196, 70, 90), "P": (246, 140, 130), "a": (240, 70, 110), "B": (60, 64, 84), "N": (40, 26, 36),
+               "J": (120, 86, 130)}
+
+def _olhos(cab, pos, cor="N", alt=3):
+    """Olhos anime nas cabeças de pé: em cada (linha, coluna) do canto superior esquerdo desenha um olho de 2 colunas
+    por `alt` linhas (reflexo E em cima à esquerda, íris `cor`, brilho J embaixo). Devolve (cabeça, caras) com a
+    piscada (traço no meio) e o susto/dor (olhos ">" apertados e boca escancarada, 1 linha a mais)."""
+    if alt == 3:
+        normal, pisca, susto = ["E" + cor, cor * 2, "J" + cor], ["FF", cor * 2, "FF"], [cor + "F", "F" + cor, cor + "F"]
+    else:
+        normal, pisca, susto = ["E" + cor, cor * 2], ["FF", cor * 2], [cor + "F", "F" + cor]
+
+    def pinta(base, olho):
+        rows = [list(l.ljust(20, ".")) for l in base]
+        for y, x in pos:
+            for k, par in enumerate(olho):
+                rows[y + k][x], rows[y + k][x + 1] = par
+        return ["".join(r) for r in rows]
+
+    cab = pinta(cab, normal)
+    linhas = {pos[0][0] + k for k in range(alt)}
+    caras = {"pisca": {k: l for k, l in enumerate(pinta(cab, pisca)) if k in linhas}}
+    dor = [list(l) for l in pinta(cab, susto)]
+    y = next(k for k, l in enumerate(cab) if "MM" in l)          # boca: abre (K dos lados e embaixo)
+    i = cab[y].index("MM")
+    j = i + len(cab[y][i:]) - len(cab[y][i:].lstrip("M"))
+    for x in (i - 1, j):
+        if dor[y][x] not in ".K":
+            dor[y][x] = "K"
+    for x in range(i - 1, j + 1):
+        if dor[y + 1][x] in "FfdhwW":
+            dor[y + 1][x] = "K"
+    caras["susto"] = {k: "".join(dor[k]) for k in sorted(linhas | {y, y + 1})}
+    return cab, caras
+
 
 # Cirurgião: touca cirúrgica estampada (C/c), máscara abaixada no queixo (w), barba curta
 CABECAS["cirurgiao"] = """
@@ -241,17 +297,17 @@ CABECAS["cirurgiao"] = """
 ..KKKKKKKKKKKKKKK...
 ..KhKFFFFFFFFFFFK...
 ..KhFFFFFFFFFFFFFK..
-..KFFfFFEKFFFEKFFK..
-..KFFfFFEKFFFEKFFF..
-..KhFfFFFFFFFFFFFK..
+..KFFfFFFFFFFFFFFK..
+..KFFfFFFFFFFFFFFF..
+..KhFfFPFFFFFFFPFK..
 ..KhhFFFFFFFMMFFK...
 ...KhhhhhhhhhhhK....
 ...KwwwwwwwwwwwK....
 ....KKKKKKKKKKK.....
 """.split()
-CARAS["cirurgiao"] = {"susto": {11: "..KhhFFFFFFKMKFFK...", 12: "...KhhhhhhhKKKhK...."},
-                      "pisca": {8: "..KFFfFFFFFFFFFFFK..", 9: "..KFFfFFKKFFFKKFFF.."}}
-PAL_CIRURGIAO = {"h": (36, 24, 24), "F": (142, 92, 62), "f": (108, 66, 44), "M": (90, 40, 40),
+CABECAS["cirurgiao"], CARAS["cirurgiao"] = _olhos(CABECAS["cirurgiao"], [(7, 8), (7, 13)])
+PAL_CIRURGIAO = {"h": (36, 24, 24), "F": (142, 92, 62), "f": (108, 66, 44), "M": (90, 40, 40), "N": (28, 20, 24),
+                 "J": (96, 70, 60), "P": (190, 110, 90),
                  "C": (90, 150, 230), "c": (40, 90, 170), "w": (190, 226, 240), "B": (40, 44, 60)}
 # Professor: careca, cabelo e barba brancos (W/w), óculos de meia-lua (N)
 CABECAS["professor"] = """
@@ -263,17 +319,19 @@ CABECAS["professor"] = """
 ..KWWFFFFFFFFFFFK...
 ..KWwFFFFFFFFFFFK...
 ..KWWFFfKNNNKFNNNK..
-..KWwFFfFKKKFFKKKFF.
-..KWWFFFFFFFFFFFFK..
+..KWwFFfFEJKFFEJKFF.
+..KWWFFFFJKKFFJKKK..
 ..KWwWFFFFFFFFFFFK..
 ...KWWWWWWMMWWWWK...
 ...KWWWWWWWWWWWK....
 ....KWWWWWWWWWK.....
 .....KKKKKKKKK......
 """.split()
-CARAS["professor"] = {"susto": {11: "...KWWWWWWKMKWWWK..."}, "pisca": {}}
+CARAS["professor"] = {"susto": {8: "..KWwFFfFEEEFFEEEFF.", 9: "..KWWFFFFEKEFFEKEK..", 11: "...KWWWWWKMMKWWWK...",
+                                12: "...KWWWWWKKKKWWK...."},
+                      "pisca": {8: "..KWwFFfFFFFFFFFFFF.", 9: "..KWWFFFFKKKFFKKKK.."}}
 PAL_PROFESSOR = {"F": (248, 206, 176), "f": (214, 160, 128), "W": (246, 246, 250), "w": (190, 194, 210),
-                 "N": (120, 120, 140), "M": (190, 90, 100), "B": (90, 54, 34)}
+                 "N": (120, 120, 140), "M": (190, 90, 100), "B": (90, 54, 34), "J": (96, 118, 150)}
 # Doutora Cachos: cabelo black power (h/j), pele negra
 CABECAS["cachos"] = """
 ...KKKKKKKKKK.......
@@ -283,19 +341,18 @@ KhhjhhjhhjhhjhhhK...
 KhjhhjhhhhjhhhjhK...
 KhhjhhhhhFFFFFhhK...
 KjhhhhhhFFFFFFFhK...
-KhhjhhhfFFKFFFKFK...
-KhjhhhffFFKFFFKFFK..
+KhhjhhhfFFFFFFFFK...
+KhjhhhffFFFFFFFFFK..
 KhhjhhffFFFFFFFFFK..
-.KhhjhhfPFFFFFPFK...
+.KhhjhhfPFFFFFFPK...
 .KjhhhhhfFFFMMFK....
 ..KhjhhhKffffFK.....
 ...KKhhKKKKKKK......
 .....KKK............
 """.split()
-CARAS["cachos"] = {"susto": {11: ".KjhhhhhfFFKMKFK....", 12: "..KhjhhhKffKKFK....."},
-                   "pisca": {7: "KhhjhhhfFFFFFFFFK...", 8: "KhjhhhffFFKFFFKFFK.."}}
-PAL_CACHOS = {"h": (40, 26, 28), "j": (84, 56, 60), "F": (150, 98, 70), "f": (116, 72, 50),
-              "M": (170, 60, 80), "P": (196, 110, 100), "B": (120, 60, 80)}
+CABECAS["cachos"], CARAS["cachos"] = _olhos(CABECAS["cachos"], [(7, 9), (7, 13)])
+PAL_CACHOS = {"h": (40, 26, 28), "j": (84, 56, 60), "F": (150, 98, 70), "f": (116, 72, 50), "N": (30, 20, 22),
+              "J": (92, 62, 66), "M": (170, 60, 80), "P": (196, 110, 100), "B": (120, 60, 80)}
 
 
 # ---- elenco novo (2026-10-16): cabeças 20×15 no mesmo molde, sobre o corpo comum de jaleco
@@ -308,17 +365,18 @@ CABECAS["ruivo"] = """
 ..KhhhhhhhhhFFFFK...
 ..KhhhhhhhFFFFFFFK..
 ..KhhhhhFFFFFFFFFK..
-..KhhhhfFFNFFFFNFK..
-..KhhhfFFFNFSFFNFF..
-..KhhhfFSFSFFFSFFK..
+..KhhhhfFFFFFFFFFK..
+..KhhhfFFFFFSFFFFF..
 ..KhhhfFFFFFFFFFFK..
+..KhhhfFSFFFSFFFSK..
 ...KhhfFFFFFMMFFK...
 ...KKhKfFFFFFFFK....
 .....KKKfffffKK.....
 .......KKKKKKK......
 """.split()
+CABECAS["ruivo"], CARAS["ruivo"] = _olhos(CABECAS["ruivo"], [(7, 9), (7, 14)])
 PAL_RUIVO = {"h": (200, 90, 40), "j": (240, 146, 76), "F": (250, 214, 184), "f": (222, 162, 124), "S": (196, 118, 78),
-             "M": (190, 80, 80), "N": (40, 30, 30)}
+             "M": (190, 80, 80), "N": (40, 30, 30), "J": (70, 130, 160)}
 # Doutora Tranças: tranças longas atrás com miçangas douradas (a)
 CABECAS["trancas"] = """
 .......KKKKKK.......
@@ -329,16 +387,17 @@ CABECAS["trancas"] = """
 .KhjhjhjhhhhFFFhK...
 KhjhjhjhhhhFFFFFK...
 KjhjhjhhhffFFFFFFK..
-KhjhjhhhffFFNFFFNK..
-KjhjhKhhffFFNFFFNF..
-KhjhjKhhffFPFFFPFK..
-KjhjhKKhfFFFFFFFK...
+KhjhjhhhffFFFFFFFK..
+KjhjhKhhffFFFFFFFF..
+KhjhjKhhffFFFFFFFK..
+KjhjhKKhfFPFFFFPK...
 KaKaKKhhKfFFFMMFK...
 KKKKK.KhKKffffFK....
 ......KKKKKKKKK.....
 """.split()
+CABECAS["trancas"], CARAS["trancas"] = _olhos(CABECAS["trancas"], [(8, 11), (8, 15)])
 PAL_TRANCAS = {"h": (30, 20, 24), "j": (74, 50, 54), "F": (122, 80, 56), "f": (94, 60, 42), "a": (240, 192, 64),
-               "P": (160, 92, 82), "M": (150, 58, 70), "N": (24, 16, 20)}
+               "P": (160, 92, 82), "M": (150, 58, 70), "N": (24, 16, 20), "J": (88, 56, 50)}
 # Doutora Grisalha: coque branco no alto e óculos (N = armação)
 CABECAS["grisalha"] = """
 ......KKKK..........
@@ -350,15 +409,18 @@ CABECAS["grisalha"] = """
 ..KWWwWWWWWFFFFK....
 ..KWWWWWWFFFFFFFK...
 ..KwWWWWfKNNNKNNNK..
-..KWWWWffFKKKFKKKF..
-..KwWWWffFFFFFFFFK..
-..KWWWWfFFFPFFFPK...
+..KWWWWffNEJKNEJKN..
+..KwWWWffNJKKNJKKN..
+..KWWWWfFFPFFFFPK...
 ...KwWWKfFFFMMFK....
 ....KKWKKfffffK.....
 ......KKKKKKKK......
 """.split()
+CARAS["grisalha"] = {"susto": {9: "..KWWWWffNEEENEEEN..", 10: "..KwWWWffNEKENEKEN..", 12: "...KwWWKfFFKMMKK....",
+                               13: "....KKWKKffKKKK....."},
+                     "pisca": {9: "..KWWWWffNFFFNFFFN..", 10: "..KwWWWffNKKKNKKKN.."}}
 PAL_GRISALHA = {"W": (230, 230, 236), "w": (178, 178, 192), "F": (246, 206, 182), "f": (212, 160, 132),
-                "N": (110, 80, 140), "P": (240, 150, 150), "M": (180, 80, 100)}
+                "N": (110, 80, 140), "P": (240, 150, 150), "M": (180, 80, 100), "J": (118, 96, 140)}
 # Doutor Dread: dreadlocks com faixa verde (a) e barba curta (d)
 CABECAS["dread"] = """
 ......KKKKKKKK......
@@ -367,8 +429,8 @@ CABECAS["dread"] = """
 ..KaaaaaaaaaaaaaaK..
 ..KhjhjhjhhhFFFFFK..
 .KhjhjhjhhFFFFFFFFK.
-.KjhjhjhhFFFNFFFNFK.
-.KhjhjhhfFFFNFFFNFF.
+.KjhjhjhhFFFFFFFFFK.
+.KhjhjhhfFFFFFFFFFF.
 .KjhjhjhfFFFFFFFFFK.
 .KhjhjhhfFFFFFFFFK..
 .KjhKhjhfdddFFFddK..
@@ -377,8 +439,9 @@ CABECAS["dread"] = """
 .....KKK.KKKKKK.....
 ....................
 """.split()
+CABECAS["dread"], CARAS["dread"] = _olhos(CABECAS["dread"], [(6, 11), (6, 15)])
 PAL_DREAD = {"h": (34, 24, 20), "j": (96, 66, 42), "a": (60, 170, 90), "F": (132, 88, 62), "f": (102, 66, 46),
-             "d": (40, 28, 24), "M": (150, 64, 64), "N": (20, 14, 12)}
+             "d": (40, 28, 24), "M": (150, 64, 64), "N": (20, 14, 12), "J": (84, 56, 44)}
 # Doutora do Lenço: hijab azul (L/l) emoldurando o rosto
 CABECAS["hijab"] = """
 .......KKKKKK.......
@@ -388,17 +451,18 @@ CABECAS["hijab"] = """
 ..KLLLlLLLLLLLLLK...
 ..KLLLLLLKKKKKKLK...
 .KLLLLLLKFFFFFFKLK..
-.KLLlLLKFFNFFFNFKK..
-.KLLLLLKFFNFFFNFFK..
-.KLLLLLKFFPFFFPFFK..
+.KLLlLLKFFFFFFFFKK..
+.KLLLLLKFFFFFFFFFK..
+.KLLLLLKFPFFFFFPFK..
 .KLLLlLLKFFFMMFFK...
 .KLLLLLLLKffffKLK...
 ..KLLLlLLLKKKKLLK...
 ...KKLLLLLLLLLLK....
 .....KKKKKKKKKK.....
 """.split()
+CABECAS["hijab"], CARAS["hijab"] = _olhos(CABECAS["hijab"], [(7, 9), (7, 13)], alt=2)
 PAL_HIJAB = {"L": (60, 110, 190), "l": (40, 78, 150), "F": (214, 166, 126), "f": (180, 132, 98), "P": (232, 142, 132),
-             "M": (176, 72, 84), "N": (34, 24, 26)}
+             "M": (176, 72, 84), "N": (34, 24, 26), "J": (96, 66, 60)}
 # Doutor Intensivista: careca com brilho (E) e barba cheia (d)
 CABECAS["careca"] = """
 ......KKKKKKK.......
@@ -407,9 +471,9 @@ CABECAS["careca"] = """
 ...KFFFFFFFFFFFK....
 ..KFFFFFFFFFFFFFK...
 ..KfFFFFFFFFFFFFFK..
+..KffFFFFFKKFFFKKK..
 ..KffFFFFFFFFFFFFK..
-..KffFFFFFKNFFFKNK..
-..KffFFFFFFNFFFFNF..
+..KffFFFFFFFFFFFFF..
 ..KfdFFFFFFFFFFFFK..
 ..KfddddFFFFFFFddK..
 ...KdddddddMMMdddK..
@@ -417,8 +481,9 @@ CABECAS["careca"] = """
 .....KKddddddKK.....
 .......KKKKKK.......
 """.split()
+CABECAS["careca"], CARAS["careca"] = _olhos(CABECAS["careca"], [(7, 10), (7, 15)])
 PAL_CARECA = {"F": (204, 142, 102), "f": (164, 106, 72), "E": (242, 196, 156), "d": (62, 46, 38), "M": (150, 70, 70),
-              "N": (30, 22, 20)}
+              "N": (30, 22, 20), "J": (104, 74, 58)}
 
 
 def _em_pe(pid, pal, cara=""):
@@ -429,6 +494,38 @@ def _em_pe(pid, pal, cara=""):
         for k, t in CARAS.get(pid, {}).get(cara, {}).items():
             cab[k] = t.ljust(20, ".")
         rows = cab + CORPOS.get(pid, CORPO_EM_PE)
+        _linhas_vivas.append(rows)
+        _spr[chave] = _s(rows, pal)
+    return _spr[chave]
+
+
+def _pernas_sentado(corpo):
+    """Tronco do corpo de pé (até a barra do jaleco) + colo e perna pendurada do lado do pônei, nas cores da calça
+    e do sapato desse corpo."""
+    k = next(i for i in range(3, len(corpo)) if corpo[i].startswith(".....K"))     # 1ª linha da calça
+    calca = max(set(corpo[k].strip(".K")), key=corpo[k].count)
+    tom = next((c for c in corpo[k + 1].strip(".K") if c != calca), calca)
+    sola = corpo[-2].strip(".").replace("K", "")
+    sapato = (sola[:4] or "BBBB").ljust(4, sola[:1] or "B")
+    P, p = calca, tom
+    return corpo[:6] + corpo[7:k] + [            # sentado o tronco encurta uma linha
+        "....K" + P * 12 + "K..",
+        "....KKKKKKKK" + P * 3 + p + "K...",
+        "...........K" + P * 2 + p + "K....",
+        "...........K" + P * 2 + p + "K....",
+        "..........K" + sapato + sapato[-1] + "K...",
+        "..........KKKKKKK...",
+    ]
+
+
+def _sentado(pid, pal, cara=""):
+    """Personagem que era de pé, agora sentado no pônei: mesma cabeça, tronco do corpo próprio, pernas de montaria."""
+    chave = ("sentado", pid, cara, id(pal))
+    if chave not in _spr:
+        cab = [l.ljust(20, ".") for l in CABECAS[pid]]
+        for k, t in CARAS.get(pid, {}).get(cara, {}).items():
+            cab[k] = t.ljust(20, ".")
+        rows = cab + _pernas_sentado(CORPOS.get(pid, CORPO_EM_PE))
         _linhas_vivas.append(rows)
         _spr[chave] = _s(rows, pal)
     return _spr[chave]
@@ -446,12 +543,12 @@ CAPI = """
 ...................KK..KK......
 ..................KtuKKtuK.....
 .................KTTTTTTTTK....
-................KTTTTTTTTTTK...
-...............KTTTTTKETTTTTK..
-...............KTTTTTKKTTTTTTK.
-...............KTTTTTTTTTTTTTTK
-...............KTTTTTTTTTTTnnnK
-..............KTTTTTTTTTTTnnKnK
+................KTTTTTKKKTTK...
+...............KTTTTTKEEKKTTK..
+...............KTTTTTKEKKKTTTK.
+...............KTTTTTKtKEKTTTTK
+...............KTTTTTTKKKTTnnnK
+..............KTTTTTTTTTTPnnKnK
 .....KKKKKKKKKTTTTTTTTTTTTnnnnK
 ...KKTTTTTTTTTTTTTTTTTTTTKKKKK.
 ..KTTuTTTTTTTTTTTTTTTTTTK......
@@ -463,11 +560,11 @@ KttTTTTTTTTTTTTTTTTTTTTttK.....
 .KttttttttttttttttttttttK......
 ..KKKKKKKKKKKKKKKKKKKKKK.......
 """.split()
-CAPI_BOCA = _troca(CAPI, {11: "..............KTTTTTTTTTTTnnKnK", 12: ".....KKKKKKKKKTTTTTTTTTTTTKKKKK",
-                          13: "...KKTTTTTTTTTTTTTTTTTTTTKMMMK."})
-CAPI_PISCA = _troca(CAPI, {7: "...............KTTTTTTTTTTTTTK.."})
-CAPI_SUSTO = _troca(CAPI, {7: "...............KTTTTTKEKTTTTK..", 8: "...............KTTTTTKKKTTTTTK."})
-PAL_CAPI = {"T": (156, 106, 66), "t": (110, 72, 44), "u": (190, 140, 96), "n": (92, 62, 42), "M": (200, 80, 90)}
+CAPI_BOCA = _troca(CAPI, {12: ".....KKKKKKKKKTTTTTTTTTTTTKKKKK", 13: "...KKTTTTTTTTTTTTTTTTTTTTKMMMK."})
+CAPI_PISCA = _olho(CAPI, "TTTTT", "TTTTT", "TKKKT", "KTTTK", "TTTTT", x0=21, y0=6)       # olho fechado feliz
+CAPI_SUSTO = _olho(CAPI_BOCA, "TTTTT", "KKTTT", "TKKTT", "KKTTT", "TTTTT", x0=21, y0=6)  # olho apertado, boca aberta
+PAL_CAPI = {"T": (156, 106, 66), "t": (110, 72, 44), "u": (190, 140, 96), "n": (92, 62, 42), "M": (200, 80, 90),
+            "P": (214, 122, 96)}
 def _chifre(rows):
     """Chifre dourado na testa do pônei (colunas livres acima da cabeça)."""
     out = [list(r.ljust(31, ".")) for r in rows]
@@ -484,7 +581,31 @@ PAL_UNI = {"m": (176, 120, 255), "l": (96, 214, 240), "z": (255, 226, 240), "Y":
 MONTARIAS = {"ponei": {id(PONEI): PONEI, id(PONEI_BOCA): PONEI_BOCA, id(PONEI_PISCA): PONEI_PISCA, id(PONEI_SUSTO): PONEI_SUSTO},
              "capivara": {id(PONEI): CAPI, id(PONEI_BOCA): CAPI_BOCA, id(PONEI_PISCA): CAPI_PISCA, id(PONEI_SUSTO): CAPI_SUSTO},
              "unicornio": {id(PONEI): UNI, id(PONEI_BOCA): UNI_BOCA, id(PONEI_PISCA): UNI_PISCA, id(PONEI_SUSTO): UNI_SUSTO}}
-PAL_MONTARIA = {"unicornio": PAL_UNI}
+
+
+def _rocinante(rows):
+    """Rocinante: o pônei em pele e osso (costelas à mostra e barriga funda)."""
+    r = [list(l.ljust(31, ".")) for l in rows]
+    for y in range(14, 19):
+        for x in (10, 12, 14, 16, 18):
+            if r[y][x] in "Ww":
+                r[y][x] = "s"
+    for x in range(9, 19):                        # barriga funda
+        r[19][x], r[20][x], r[21][x] = "K", ".", "."
+    return ["".join(l) for l in r]
+
+
+MONTARIAS["rocinante"] = {id(x): _rocinante(x) for x in (PONEI, PONEI_BOCA, PONEI_PISCA, PONEI_SUSTO)}
+PAL_MONTARIA = {"unicornio": PAL_UNI,
+                "rocinante": {"W": (208, 184, 144), "w": (166, 140, 106), "s": (112, 90, 70), "m": (84, 64, 50),
+                              "l": (58, 44, 36), "z": (228, 208, 176), "q": (70, 56, 48)}}
+MONTARIAS["pesadelo"] = MONTARIAS["ponei"]         # o mesmo pônei, nas cores do quadro de Munch
+PAL_MONTARIA["pesadelo"] = {"W": (58, 66, 104), "w": (36, 42, 74), "s": (22, 24, 48), "m": (232, 104, 44),
+                            "l": (176, 36, 44), "z": (92, 96, 130), "q": (20, 20, 40)}
+MONTARIAS["bosch"] = MONTARIAS["unicornio"]         # o unicórnio branco de Bosch, de chifre comprido e sem arco-íris
+PAL_MONTARIA["bosch"] = {"W": (246, 240, 226), "w": (216, 206, 196), "s": (160, 146, 150), "m": (216, 196, 170), "l": (178, 156, 140),
+                         "z": (255, 252, 240), "Y": (240, 226, 196), "y": (176, 156, 140)}
+MONTARIA_TRAJE = {"quixote": "rocinante", "grito": "pesadelo", "caminhante": "bosch"}   # o traje leva a própria montaria
 CHAPEU = {0: "....KKKKKKKK....", 1: "...KYYRRRRYYK...", 2: "KYYYYYYYYYYYYYYK"}
 PAL_INTERIOR = {"h": (44, 32, 30), "j": (80, 60, 52), "d": (30, 20, 18), "F": (206, 146, 104), "f": (166, 106, 74),
                 "Y": (240, 206, 120), "R": (200, 60, 60)}
@@ -529,7 +650,7 @@ PERSONAGENS = {
                    desc="Montado no pônei branco de crina rosa, sobre a nuvem dourada",
                    padrao={"nuvem": "dourada", "bastao": "nenhum", "roupa": "lilas"}),
     "doutora": dict(nome="Doutora", artigo="a", preco=0, tipo="pe", pal=PAL_DOUTORA,
-                    desc="De pé na nuvem lilás, com o bastão de Esculápio na mão",
+                    desc="Montada no pônei, na nuvem lilás, com o bastão de Esculápio na mão",
                     padrao={"nuvem": "lilas", "bastao": "esculapio", "roupa": "verde_agua"}),
     "cirurgiao": dict(nome="Cirurgião", artigo="o", preco=150, tipo="pe", pal=PAL_CIRURGIAO,
                       desc="Touca do centro cirúrgico, máscara no queixo e um bisturi gigante",
@@ -638,6 +759,14 @@ ROUPAS["amarelo_neon"] = dict(nome="Jaqueta neon", preco=0, desc="Amarelo de meg
 ROUPAS["aco"] = dict(nome="Azul-aço", preco=0, desc="Armadura de colono", cor=(74, 104, 164), oculta=True)
 ROUPAS["oliva"] = dict(nome="Verde-oliva", preco=0, desc="Armadura de patrulha", cor=(98, 102, 62), oculta=True)
 ROUPAS["prata"] = dict(nome="Prata", preco=0, desc="Armadura de paladino", cor=(198, 202, 216), oculta=True)
+BASTOES["lanca"] = dict(nome="Lança", preco=0, desc="Lança de cavaleiro andante", oculta=True)
+NUVENS["poeira"] = dict(nome="Nuvem de poeira", preco=0, desc="A poeira da estrada de La Mancha", tons=_tons((222, 186, 128)),
+                        oculta=True)
+NUVENS["rosada"] = dict(nome="Nuvem rosada", preco=0, desc="O céu do Jardim das Delícias", oculta=True,
+                        tons={"1": (255, 240, 240), "2": (248, 200, 212), "3": (214, 140, 176), "4": (140, 104, 170)})
+BASTOES["bordao"] = dict(nome="Bordão", preco=0, desc="O bordão de quem caminha", oculta=True)
+NUVENS["redemoinho"] = dict(nome="Redemoinho", preco=0, desc="As linhas do céu de O Grito", oculta=True,
+                            tons={"1": (250, 204, 92), "2": (238, 120, 48), "3": (190, 52, 44), "4": (84, 32, 62)})
 CATALOGO = {"nuvem": NUVENS, "bastao": BASTOES, "roupa": ROUPAS, "personagem": PERSONAGENS}
 ITENS_VISUAIS = ("nuvem", "bastao", "roupa")
 
@@ -784,6 +913,18 @@ def _grade_bastao(tipo, h=ALT_BASTAO):
             g[y] = list(linha)
         for y, linha in enumerate(("..KnnK..", ".KsssK..", "KsWWssK.", "KsWsssK.", ".KsssK..", "..KKK...", "........")):
             g[h - 7 + y] = list(linha)
+    elif tipo == "lanca":                           # lança de madeira, ponta de ferro e flâmula vermelha
+        haste("B", "b", 6, h)
+        for y, linha in enumerate(("...KK...", "..KWsK..", "..KWsK..", ".KWWssK.", "..KWsK..", "..KKKK..")):
+            g[y] = list(linha)
+        for y, (a, b) in enumerate((("K", "R"), ("R", "R"), ("R", "r"), (".", "r"))):
+            g[7 + y][0], g[7 + y][1] = a, b
+        g[h - 1][2:6] = list("KKKK")
+    elif tipo == "bordao":                          # o bordão de madeira do caminhante, com o nó no alto
+        haste("B", "b", 2, h)
+        for y, linha in enumerate(("..KKKK..", ".KBBBbK.", ".KBBbbK.", "..KKKK..")):
+            g[y] = list(linha)
+        g[h - 1][2:6] = list("KKKK")
     elif tipo == "seringa":
         haste("C", "c", 7, h - 6)
         for y in range(9, h - 6, 3):
@@ -920,7 +1061,7 @@ def nuvem(chave, **kw):
 def _pose(estado, frame):
     """Como a nuvem se deforma e quanto o pônei sobe/desce. `frame` = contador do estado."""
     p = {"bob": 0, "corpo": PONEI, "cach": frame // 4,
-         "nuv": dict(sx=1.0, sy=1.0, onda=0.0, amp=0.0, rabo=(0.0, 0.0)), "voo": 0}
+         "nuv": dict(sx=1.0, sy=1.0, onda=0.0, amp=0.0, rabo=(0.0, 0.0)), "voo": 0, "esq": 1.0}
     n = p["nuv"]
     if estado == "parado":
         f = frame % 40
@@ -934,34 +1075,41 @@ def _pose(estado, frame):
         p["bob"] = (-1, 0, -1, 0)[k]
         n.update(onda=k * math.tau / 4, amp=0.09, rabo=(-3 - k % 2, -1 + k % 2))
         p["cach"] = k // 2
-    elif estado == "abaixar":                            # nuvem achata e o pônei afunda nela
+    elif estado == "abaixar":                            # nuvem achata e o pônei afunda nela (squash)
         k = min(frame, 3)
         n.update(sx=1.0 + 0.06 * k, sy=1.0 - 0.1 * k, onda=frame * 0.4, amp=0.04, rabo=(1, 1))
         p["bob"] = k
+        p["esq"] = 1.0 - 0.06 * k
         p["corpo"] = PONEI_PISCA if (frame // 12) % 5 == 4 else PONEI
     elif estado == "decolar":                            # impulso: espreme e depois estica
         sq = (0.7, 0.8, 1.25, 1.3, 1.2, 1.1)[min(frame, 5)]
         n.update(sx=2 - sq if sq > 1 else 1 + (1 - sq) * 0.8, sy=sq, amp=0.06, onda=frame, rabo=(0, 3 * (sq > 1)))
         p["bob"] = round((1 - sq) * 8) if sq < 1 else 0
+        p["esq"] = 1 + (sq - 1) * 0.3
         p["cach"] = 1
-    elif estado == "pular":
+    elif estado == "pular":                              # estica para cima
         n.update(sx=0.92, sy=1.15, onda=frame * 0.8, amp=0.07, rabo=(-1, 4))   # rabicho escorre para baixo
+        p["esq"] = 1.08
         p["cach"] = 1
-    elif estado == "cair":
+    elif estado == "cair":                               # achata um pouco, de barriga na nuvem
         n.update(sx=1.12, sy=0.88, onda=frame * 0.6, amp=0.08, rabo=(-1, -3))  # infla e o rabicho sobe
+        p["esq"] = 0.95
         p["cach"] = 0
     elif estado == "pousar":                             # amortece a queda
         sq = (0.62, 0.7, 0.82, 0.94, 1.04, 1.0)[min(frame, 5)]
         n.update(sx=1 + (1 - sq) * 0.9, sy=sq, amp=0.05, onda=frame, rabo=(2, 0))
         p["bob"] = max(0, round((1 - sq) * 8))
+        p["esq"] = 1 + (sq - 1) * 0.4
     elif estado == "flutter":
         k = frame % 2
         n.update(sx=(1.06, 0.94)[k], sy=(0.9, 1.1)[k], onda=k * 3, amp=0.12, rabo=(-2, 2 * k))
         p["corpo"] = PONEI_BOCA if k else PONEI
+        p["esq"] = (0.96, 1.04)[k]
         p["cach"] = k
     elif estado == "pound":
         n.update(sx=0.86, sy=1.2, amp=0.1, onda=frame * 1.5, rabo=(3, -4))
         p["bob"] = -1
+        p["esq"] = 1.06
         p["corpo"] = PONEI_PISCA
     elif estado in ("lingua", "mirar"):
         p["corpo"] = PONEI_BOCA
@@ -973,12 +1121,47 @@ def _pose(estado, frame):
     return p
 
 
-MAO_MONTA, MAO_PE = (OX + 1 + 13, OY - 11 + 18), (7 + 18, 2 + 18)   # onde a mão segura o bastão
-EM_PE_XY = (7, 2)
+def _estica(dest, g, esq, anc):
+    """Squash & stretch do grupo montaria + cavaleiro: estica (esq > 1) duplicando linhas inteiras, achata (esq < 1)
+    tirando linhas — sempre as que têm menos contorno K por perto, para a gola, o pescoço e a sela não
+    engrossarem nem sumirem (escalar por vizinho mais próximo duplicava a linha preta do colarinho).
+    `anc` = linha que fica parada (a sela). Desenha o resultado em `dest`."""
+    k_cor = PAL["K"]
+    caixa = g.get_bounding_rect()
+    n = round(ALT * esq) - ALT
+    if n == 0 or not caixa.height:
+        dest.blit(g, (0, 0))
+        return
+    y0, y1 = caixa.top, caixa.bottom - 1
+    custo = {}
+    for y in range(y0, y1 + 1):
+        custo[y] = sum(1 for x in range(LARG) if g.get_at((x, y))[:3] == k_cor and g.get_at((x, y))[3])
+    escolhidas = set()
+    for k in range(abs(n)):
+        alvo = y0 + (y1 - y0) * (k + 0.5) / abs(n)
+        cand = [y for y in range(int(alvo) - 2, int(alvo) + 3) if y0 <= y <= y1 and y not in escolhidas]
+        if cand:
+            escolhidas.add(min(cand, key=lambda y: (custo[y], abs(y - alvo))))
+    ordem = []
+    for y in range(ALT):
+        if y in escolhidas:
+            if n > 0:
+                ordem += [y, y]
+            continue                                   # n < 0: a linha some
+        ordem.append(y)
+    pos_anc = next((i for i, y in enumerate(ordem) if y >= anc), len(ordem))
+    topo = anc - pos_anc
+    for i, y in enumerate(ordem):
+        dest.blit(g, (0, topo + i), (0, y, LARG, 1))
+
+
+MAO_MONTA = (OX + 1 + 13, OY - 11 + 18)            # onde a mão segura o bastão
+SENTADO_DX = -2                                     # corpo de pé (20 colunas) é mais largo que o do Doutor
+MAO_SENTADO = (OX + SENTADO_DX + 18, OY - 11 - 1 + 18)
 
 
 def _mao_xy(pid):
-    return MAO_MONTA if PERSONAGENS[pid]["tipo"] == "monta" else MAO_PE
+    return MAO_MONTA if PERSONAGENS[pid]["tipo"] == "monta" else MAO_SENTADO
 
 
 def heroi(estado, frame, bebe=True, virado=1, visual=None):
@@ -990,36 +1173,42 @@ def heroi(estado, frame, bebe=True, virado=1, visual=None):
     n = p["nuv"]
     chave_n = (round(n["sx"], 2), round(n["sy"], 2), round(n["onda"] % 6.2832, 1), n["amp"],
                tuple(round(v_) for v_ in n["rabo"]), estado == "dor", v["nuvem"])
-    golpe = estado == "lingua" and golpeia(v)
+    # na tela conceito o herói escolhido continua golpeando: quem é de pé gira a lança em vez do bastão
+    golpe = estado == "lingua" and (golpeia(v) or (TRAJE[0] in MONTARIA_TRAJE and golpeia()))
+    esq = round(p["esq"], 2)
     chave = (id(p["corpo"]), p["bob"], p["voo"], p["cach"] % 2, bebe, virado, chave_n,
              v["personagem"], v["bastao"], v["roupa"], frame % 40 >= 37 and estado == "parado", golpe,
-             tuple(sorted(FIGURINO.items())), TRAJE[0])
+             tuple(sorted(FIGURINO.items())), TRAJE[0], esq)
     if chave in _cache:
         return _cache[chave]
     s = pygame.Surface((LARG, ALT), pygame.SRCALPHA)
     # o pônei sobe junto com o topo da nuvem quando ela estica (e desce quando achata)
     b = p["bob"] + p["voo"] - round((p["sy"] - 1) * 9)
+    g = s                                          # montaria + cavaleiro: grupo que estica/achata (squash & stretch)
+    if esq != 1.0:
+        g = pygame.Surface((LARG, ALT), pygame.SRCALPHA)
     bast = bastao(v["bastao"]) if bebe and not golpe else None     # no golpe o jogo desenha o bastão girando
     mx, my = _mao_xy(v["personagem"])
     dados = PERSONAGENS[v["personagem"]]
-    if dados["tipo"] == "monta":
-        capi = dados["montaria"] == "capivara"
-        corpo = MONTARIAS[dados["montaria"]].get(id(p["corpo"]), p["corpo"])
-        pal_m = _pal_capi(pal) if capi else _pal_montaria(dados["montaria"], pal)
-        s.blit(_s(corpo, pal_m), (OX, OY + b))
-        dy = 1 if capi else 0                       # a capivara é mais baixa
-        s.blit(_s(SELA), (OX + 5, OY + 11 + b + dy))
-        if bast:
-            s.blit(bast, (mx - 4, my - 22 + b + dy))
-        if bebe:
+    montaria = MONTARIA_TRAJE.get(TRAJE[0]) or dados.get("montaria", "ponei")   # quem era "de pé" monta o pônei, sentado como o Doutor
+    capi = montaria == "capivara"
+    corpo = MONTARIAS[montaria].get(id(p["corpo"]), p["corpo"])
+    pal_m = _pal_capi(pal) if capi else _pal_montaria(montaria, pal)
+    g.blit(_s(corpo, pal_m), (OX, OY + b))
+    dy = 1 if capi else 0                           # a capivara é mais baixa
+    g.blit(_s(SELA), (OX + 5, OY + 11 + b + dy))
+    if bast:
+        g.blit(bast, (mx - 4, my - 22 + b + dy))
+    if bebe:
+        if dados["tipo"] == "monta":
             dout = _doutor(p["cach"], estado == "dor", pal, dados.get("chapeu", False))
-            s.blit(dout, (OX + 1, OY - 11 + b + dy - (dout.get_height() - 28)))     # traje com chapéu alto sobe
-    elif bebe:
-        cara = "susto" if estado == "dor" else "pisca" if (estado == "parado" and frame % 40 >= 37) else ""
-        if bast:
-            s.blit(bast, (mx - 4, my - 19 + b))
-        dx, dy = EM_PE_XY
-        s.blit(_em_pe(v["personagem"], pal, cara), (dx, dy + b))
+            g.blit(dout, (OX + 1, OY - 11 + b + dy - (dout.get_height() - 28)))     # traje com chapéu alto sobe
+        else:
+            cara = "susto" if estado == "dor" else "pisca" if (estado == "parado" and frame % 40 >= 37) else ""
+            sent = _sentado(v["personagem"], pal, cara)
+            g.blit(sent, (OX + SENTADO_DX, OY - 11 + b + dy - (sent.get_height() - 28)))
+    if g is not s:                                  # estica/achata em torno da sela (o pé do pônei some na nuvem)
+        _estica(s, g, esq, OY + 11 + b + dy)
     nv = nuvem(chave_n, sx=n["sx"], sy=n["sy"], onda=n["onda"], amp=n["amp"], rabo=n["rabo"], dor=estado == "dor",
                estilo=v["nuvem"])
     s.blit(nv, (0, p["voo"]))
@@ -1078,7 +1267,7 @@ def bebe(visual=None):
     v = visual_valido(visual) if visual else VISUAL
     dados = PERSONAGENS[v["personagem"]]
     if dados["tipo"] == "pe":
-        return _em_pe(v["personagem"], _paleta(v))
+        return _sentado(v["personagem"], _paleta(v))
     return _doutor(0, pal=_paleta(v), chapeu=dados.get("chapeu", False))
 
 

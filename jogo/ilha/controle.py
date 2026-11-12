@@ -101,6 +101,28 @@ def perfil_do_sdl(indice):
     return perfil if essenciais <= set(perfil) else None
 
 
+def eixos_direito(indice, joy=None):
+    """Eixos (horizontal, vertical) do analógico direito. Vem do mapa do SDL quando ele
+    conhece o controle (ShanWan/Android: a2/a3; Xbox: a3/a4); senão cai no layout do Xbox.
+    Sem analógico direito -> None (evita ler gatilho, que fica em -1 parado)."""
+    try:
+        from pygame._sdl2 import controller as ctl
+        ctl.init()
+        if ctl.is_controller(indice):
+            m = ctl.Controller(indice).get_mapping()
+            h, v = _sdl_para_binding(m.get("rightx", "")), _sdl_para_binding(m.get("righty", ""))
+            if h and v and h[0] == "a" and v[0] == "a":
+                return h[1], v[1]
+            return None
+    except Exception:
+        pass
+    try:
+        joy = joy or pygame.joystick.Joystick(indice)
+        return (3, 4) if joy.get_numaxes() >= 5 else None
+    except pygame.error:
+        return None
+
+
 def eh_sensor(nome):
     """O SDL do Android expõe o acelerômetro (e às vezes o giroscópio) como joystick: não é controle."""
     n = (nome or "").lower()
@@ -148,7 +170,8 @@ class Pad:
                 mapa, precisa, origem = sdl, False, "reconhecido automaticamente"
             else:
                 mapa, precisa, origem = dict(PADRAO), True, "desconhecido"
-        self.disp[joy.get_instance_id()] = {"joy": joy, "map": mapa, "prev": set(), "rep": {}}
+        self.disp[joy.get_instance_id()] = {"joy": joy, "map": mapa, "prev": set(), "rep": {},
+                                            "dir": eixos_direito(indice, joy)}
         return joy, precisa, origem
 
     def remover(self, instance_id):
@@ -198,6 +221,20 @@ class Pad:
                 if acao in ACOES.get(lg, ()):
                     return True
         return False
+
+    def analogico_direito(self):
+        """(h, v) do analógico direito do primeiro controle que tiver um, em -1..1."""
+        for d in self.disp.values():
+            eixos = d.get("dir")
+            if not eixos:
+                continue
+            joy = d["joy"]
+            try:
+                if max(eixos) < joy.get_numaxes():
+                    return joy.get_axis(eixos[0]), joy.get_axis(eixos[1])
+            except pygame.error:
+                pass
+        return 0.0, 0.0
 
     def neutro(self, joy):
         try:

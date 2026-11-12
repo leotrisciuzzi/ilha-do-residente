@@ -2,7 +2,7 @@
 
 Três fontes:
   - servidor: sessão SM-2 do LousaFPSServer (mesmo progresso do Lousa FPS)
-  - listas:   banco banco de questões local, por matéria/subtema
+  - listas:   banco de questões local, por matéria/subtema
   - provas:   provas reais (PSU-MG, SUS-SP) na ordem original
 """
 import json
@@ -62,6 +62,20 @@ def separar_alternativas(enunciado):
     return corpo, alts
 
 
+def caminho_imagem(caminho):
+    """Os JSONs do banco gravaram o caminho absoluto da máquina onde foram extraídos (/home/<usuário>/...): sem
+    isto nenhuma figura aparecia no PC (usuário casa). Refaz o caminho a partir de BANCO_DIR."""
+    if not caminho or os.path.exists(caminho):
+        return caminho
+    marca = "banco_questoes/"
+    i = caminho.find(marca)
+    if i >= 0:
+        novo = os.path.join(BANCO_DIR, caminho[i + len(marca):])
+        if os.path.exists(novo):
+            return novo
+    return caminho
+
+
 def normalizar(qid, enunciado, alternativas, gabarito, imagens=(), materia=None,
                subtema=None, assunto=None, origem="", prev=0.0, extra=None):
     enunciado = enunciado or ""
@@ -72,13 +86,19 @@ def normalizar(qid, enunciado, alternativas, gabarito, imagens=(), materia=None,
     alts = [(k, limpar(alternativas[k])) for k in LETRAS if k in alternativas]
     q = {
         "id": str(qid), "enunciado": limpar(enunciado), "alts": alts,
-        "gab": gabarito, "imgs": list(imagens or []), "materia": materia or "",
+        "gab": gabarito, "imgs": [caminho_imagem(i) for i in imagens or []], "materia": materia or "",
         "subtema": subtema or "", "assunto": assunto or "", "origem": origem,
         "prev": prev or 0.0,
     }
     if extra:
         q.update(extra)
     return q
+
+
+def chave_questao(q):
+    """Identidade pelo conteúdo (enunciado + alternativas), para achar a mesma questão com ids diferentes."""
+    txt = q["enunciado"][:300] + "|" + "|".join(sorted(t for _, t in q["alts"]))
+    return re.sub(r"\W+", " ", txt.lower()).strip()
 
 
 # ------------------------------------------------------------- fontes locais
@@ -125,37 +145,73 @@ class Banco:
         from .mfc_indicadores import POR_ID as _mid
         from .mfc_idoso import POR_ID as _mso
         from .mfc_etica import POR_ID as _met
-        self.por_id = {**_gaso, **_vm, **_k, **_fc, **_fa, **_ic, **_reu, **_uas, **_udp, **_uvm, **_utr, **_urm, **_uac, **_uen, **_ucg, **_upk, **_unf, **_uha, **_uhm, **_upn, **_unr, **_udm, **_uhp, **_url, **_dia, **_cpn, **_crn, **_cgr, **_cvb, **_mep, **_msu, **_mfc, **_mvg, **_mtr, **_mid, **_mso, **_met}     # erros dos mundos temáticos também entram na "Revisão dos erros"
+        from .mfc_ferramentas import POR_ID as _mff
+        try:                                                    # livro de ECG (ainda fora do APK/web)
+            from .ecgaz_indice import por_id as _livros
+        except ImportError:
+            _livros = dict
+        try:                                                    # Tratado de MFC, volume 2 (idem)
+            from .tratado_indice import por_id as _tratado
+        except ImportError:
+            _tratado = dict
+        self.por_id = {**_gaso, **_vm, **_k, **_fc, **_fa, **_ic, **_reu, **_uas, **_udp, **_uvm, **_utr, **_urm, **_uac, **_uen, **_ucg, **_upk, **_unf, **_uha, **_uhm, **_upn, **_unr, **_udm, **_uhp, **_url, **_dia, **_cpn, **_crn, **_cgr, **_cvb, **_mep, **_msu, **_mfc, **_mvg, **_mtr, **_mid, **_mso, **_met, **_mff, **_livros(), **_tratado()}     # erros dos mundos temáticos também entram na "Revisão dos erros"
         try:
             self._carregar_listas()
         except Exception as e:  # banco ausente não impede o modo servidor
-            self.erro = f"banco banco de questões: {e}"
+            self.erro = f"banco de questões: {e}"
         try:
             self._carregar_provas()
         except Exception as e:
             self.erro = (self.erro or "") + f" provas: {e}"
 
     def _carregar_listas(self):
-        d = json.load(open(BANCO, encoding="utf-8"))
-        for x in d["questoes"]:
+        # Fonte: questoes.db (ilha/banco_questoes.py) quando existe e está em dia com os JSON; senão o JSON, como
+        # antes. Import preguiçoso: os builds (web, APK, Windows) não levam o banco_questoes.py nem o banco.
+        questoes = None
+        try:
+            from . import banco_questoes as bq
+            if bq.fonte_atual(BANCO_DIR) == "db":
+                con = bq.abrir(BANCO_DIR)
+                try:
+                    questoes = bq.questoes_banco(con)
+                finally:
+                    con.close()
+        except Exception:
+            questoes = None
+        if questoes is None:
+            questoes = json.load(open(BANCO, encoding="utf-8"))["questoes"]
+        for x in questoes:
             if x.get("tipo") != "multipla_escolha":
                 continue
             q = normalizar(
                 x["id"], x["enunciado"], x.get("alternativas"), x.get("gabarito"),
                 x.get("imagens_arquivos"), x.get("materia"), x.get("subtema_arquivo"),
-                x.get("assunto"), "banco de questões", x.get("prevalencia_geral_pct", 0))
+                x.get("assunto"), "Ilha do Residente · banco de questões", x.get("prevalencia_geral_pct", 0),
+                {"revisar": True} if x.get("baixa_confianca") else None)   # PDF de extração duvidosa
             if q:
                 self.listas.setdefault(q["materia"], {}).setdefault(q["subtema"], []).append(q)
                 self.por_id[q["id"]] = q
 
     def _carregar_provas(self):
-        provas = json.load(open(PROVAS, encoding="utf-8"))["provas"]
-        try:
-            p25 = json.load(open(PSU25, encoding="utf-8"))
-            provas.append({"nome": "PSU-MG", "ano": p25["ano"], "banca": "PSU-MG",
-                           "questoes": p25["questoes"]})
+        provas = None
+        try:                                     # mesmo esquema de _carregar_listas: .db em dia, senão JSON
+            from . import banco_questoes as bq
+            if bq.fonte_atual(BANCO_DIR) == "db":
+                con = bq.abrir(BANCO_DIR)
+                try:
+                    provas = bq.provas(con)      # já inclui a PSU-MG 2025
+                finally:
+                    con.close()
         except Exception:
-            pass
+            provas = None
+        if provas is None:
+            provas = json.load(open(PROVAS, encoding="utf-8"))["provas"]
+            try:
+                p25 = json.load(open(PSU25, encoding="utf-8"))
+                provas.append({"nome": "PSU-MG", "ano": p25["ano"], "banca": "PSU-MG",
+                               "questoes": p25["questoes"]})
+            except Exception:
+                pass
         for p in provas:
             nome = f"{p['banca']} {p['ano']}"
             key = nome.lower().replace(" ", "-")
@@ -166,7 +222,7 @@ class Banco:
                 q = normalizar(
                     f"{key}-{x['numero']}", x.get("enunciado"), x.get("alternativas"),
                     x.get("gabarito"), x.get("imagens_arquivos"), x.get("materia"),
-                    None, x.get("assunto"), f"{nome} · Q{x['numero']}")
+                    x.get("subtema"), x.get("assunto"), f"{nome} · Q{x['numero']}")   # subtema: Revisão/estatística por tema
                 if q:
                     qs.append(q)
                     self.por_id[q["id"]] = q
@@ -178,7 +234,15 @@ class Banco:
         return sorted(self.listas)
 
     def pool_materia(self, materia):
-        return [q for qs in self.listas.get(materia, {}).values() for q in qs]
+        """Todas as questões da matéria, sem repetir a que o banco põe em mais de um subtema (~1.000 casos)."""
+        vistas, out = set(), []
+        for qs in self.listas.get(materia, {}).values():
+            for q in qs:
+                chave = chave_questao(q)
+                if chave not in vistas:
+                    vistas.add(chave)
+                    out.append(q)
+        return out
 
     def todas(self):
         return list(self.por_id.values())
@@ -231,6 +295,11 @@ class Save:
         return self.d["config"]
 
     def registrar(self, q, acertou):
+        try:                                   # log da função aprendizado (1ª tentativa × revisão); nunca derruba o jogo
+            from .aprendizado import anotar
+            anotar(q, acertou, self.d["q"].get(q["id"]))
+        except Exception:
+            pass
         s = self.d["q"].setdefault(q["id"], {"c": 0, "e": 0, "ult": 0, "int": 0, "prox": 0})
         agora = time.time()
         if acertou:

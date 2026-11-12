@@ -4,7 +4,7 @@ import random
 
 import pygame
 
-from . import art, bonecos, climas, edicao, figurino, heroi, hk, pets
+from . import art, bonecos, cenario_desenho, climas, edicao, figurino, gigantes, heroi, hk, pets
 from .controle import PADEVENT
 from .level import (Nivel, TILE, H, VAZIO, CHAO, PLAT, ESPINHO, BLOCO_OVO,
                     TRONCO, BLOCO_USADO)
@@ -215,6 +215,7 @@ class Gigante(BichoQuestao):
 
     def __init__(self, x, y, idxs, cor):
         super().__init__(x, y, None, cor)
+        self.boneco.chefe = True                    # Traço Ilha: chefe em massa preta (Billy e Mandy)
         self.fila = list(idxs)
         self.invuln = 0
         self.bravo = 0
@@ -368,21 +369,27 @@ class Jogo:
     é chamado no fim (vitória ou game over)."""
 
     def __init__(self, app, questoes, titulo, seed, paleta_idx=0, ao_terminar=None,
-                 contexto="", vidas=3, dificuldade=1.0):
+                 contexto="", vidas=3, dificuldade=1.0, cenario=None):
         self.app, self.audio = app, app.audio
+        self.interior = cenario                          # 'enfermaria' etc.: o cenário não segue o clima (sem Oni)
         self.questoes = questoes
         self.titulo, self.contexto = titulo, contexto
         self.ao_terminar = ao_terminar
         n = len(questoes)
         n_gig = 0 if n < 3 else (2 if n < 8 else 3)
+        chefe = sum(1 for q in questoes if q.get("chefe"))   # questões reais de prova do chefe (mfc_chefes), no fim
+        if chefe and all(q.get("chefe") for q in questoes[n - chefe:]):
+            n_gig = chefe
         self.idx_bichos = list(range(n - n_gig))
         self.idx_gigante = list(range(n - n_gig, n))
         self.nivel = Nivel(seed, max(1, len(self.idx_bichos)), dificuldade)
         self.pal = art.paleta(paleta_idx)
         self.mapa_base = self.mapa = art.render_nivel(self.nivel, self.pal)
-        self.ceu = art.ceu(self.pal, LW, LH)
-        self.camadas = art.fundo(self.pal, LW, LH, seed)
+        self.ceu = cenario_desenho.ceu(LW, LH)
+        self.semente_cenario = seed
+        self.camadas = cenario_desenho.camadas("bosque", LW, LH, seed)
         self.clima = climas.Controle(self, seed)       # céu, cenário tingido e partículas da música que toca
+        self.gigantes = gigantes.Dupla(seed)           # gigantes do fundo: reagem às respostas, um olhando o outro
         rng = random.Random(seed)
         self.nuvens = [(rng.uniform(0, LW * 2), rng.uniform(10, 120), rng.uniform(0.6, 1.3)) for _ in range(7)]
         self.mundo = pygame.Surface((LW, LH))
@@ -576,8 +583,20 @@ class Jogo:
             self.texto(bicho.cx, bicho.y - 10, "+FLOR!", (255, 240, 120))
             self.ganhar_estrela()
             self.alma = min(hk.ALMA_MAX, self.alma + hk.ALMA_QUESTAO)
+            if self.pet:                               # o gato pula de alegria
+                self.pet.reagir("acerto")
+            if not self.interior:                      # o Daidara comemora; o Oni emburra
+                self._gigantes_ativos().acerto()
+                self.audio.tocar("gigante_viva")
+                self.audio.tocar("oni_bufa")
         else:
             self.texto(bicho.cx, bicho.y - 10, "ERROU!", (255, 120, 120))
+            if self.pet:                               # o gato arrepia de susto
+                self.pet.reagir("erro")
+            if not self.interior:                      # o Oni aponta e ri; o Daidara fica triste
+                self._gigantes_ativos().erro()
+                self.audio.tocar("gargalhada")
+                self.audio.tocar("gigante_triste")
             self.ferir(forcado=True, origem=bicho.cx)
         if isinstance(bicho, Gigante):
             bicho.fila.pop(0)
@@ -590,6 +609,8 @@ class Jogo:
                 for _ in range(4):
                     self.particulas_burst(bicho.cx, bicho.y + 20, (255, 200, 220), 14, 3.5)
                 self.texto(bicho.cx, bicho.y, "GIGANTE VENCIDO!", (255, 255, 160))
+                if not self.interior:                  # o Daidara dança, o Oni leva um susto
+                    self._gigantes_ativos().chefe_vencido()
         else:
             bicho.vivo = False
 
@@ -600,6 +621,8 @@ class Jogo:
         if p.invuln and not forcado:
             return
         p.invuln = 120
+        if not forcado and not self.interior:            # machucou fora da questão: risinho do Oni, dó do Daidara
+            self._gigantes_ativos().dano()
         lado = 1 if origem is None or p.cx > origem else -1
         p.vx, p.vy = 2.6 * lado, -3.5
         p.pound = p.dash_t = p.foco = 0
@@ -809,7 +832,7 @@ class Jogo:
             if not self.sombra.vivo:
                 self.sombra = None
         p = self.p
-        alt = 31 if heroi.PERSONAGENS[heroi.VISUAL["personagem"]]["tipo"] == "pe" else 33
+        alt = 34 if heroi.PERSONAGENS[heroi.VISUAL["personagem"]]["tipo"] == "pe" else 33   # sentado no pônei, 1 px acima do Doutor
         cor = figurino.cachecol(self.clima.atual.id)
         self.capa.visivel = cor is not None
         if cor and cor != self.capa.cor:
@@ -1000,6 +1023,9 @@ class Jogo:
         """Bastão girando em volta da mão + rastro do arco."""
         p = self.p
         (hx, hy), bast = self._mao_mundo()
+        tema = figurino.bastao_tema(self.clima.atual.id)
+        if tema:                                 # tela conceito: gira o bastão do tema (a lança do Quixote)
+            bast = heroi.bastao(tema)
         hx, hy = hx - cam[0], hy - cam[1]
         a = _ang_golpe(p.lingua_t)
         if 5 < p.lingua_t <= 14:                 # rastro: do recuo até o ângulo atual
@@ -1189,6 +1215,11 @@ class Jogo:
         self.cam[0] += (alvo_x - self.cam[0]) * k
         self.cam[1] += (alvo_y - self.cam[1]) * (1 if instant else 0.08)
 
+    def camadas_de(self, cid):
+        """Cenário de fundo do clima (climas.Controle chama ao trocar de clima): camadas e quanto o tom tinge."""
+        cena = self.interior or cenario_desenho.cena_do_clima(cid)
+        return cenario_desenho.camadas(cena, LW, LH, self.semente_cenario), cenario_desenho.FORCA_TOM[cena]
+
     # ------------------------------------------------------------ desenho
 
     def draw(self, tela, fonte):
@@ -1201,13 +1232,17 @@ class Jogo:
         if self.clima.draw_ceu(s, cx):
             for nx, ny, esc in self.nuvens:
                 x = (nx - cx * 0.1 - self.tempo * 0.05 * esc) % (LW + 60) - 50
-                art.nuvem(s, x, ny * 0.5, esc * 0.8)
+                cenario_desenho.nuvem_ceu(s, x, ny * 0.5, esc * 0.8)
+        if not self.interior:
+            self._draw_gigantes(s, cx, cy)             # os gigantes moram atrás de todo o cenário (ao ar livre)
         for i, cam in enumerate(self.clima.atual.camadas):
             fator = (0.15, 0.3, 0.5)[i]
             ox = -int(cx * fator) % LW
             oy = int((H * TILE - LH - cy) * fator * 0.4)
             s.blit(cam, (ox - LW, oy))
             s.blit(cam, (ox, oy))
+            self.clima.pos_camada(s, cx, i, oy)
+
         self.clima.draw_meio(s, cx)
         s.blit(self.mapa, (-cx, -cy))
         cam = (cx, cy)
@@ -1217,16 +1252,19 @@ class Jogo:
         for it in self.itens:
             if -20 < it.x - cx < LW + 20:
                 it.draw(s, cam)
+        tema = figurino.tema(self.clima.atual.id)         # tela conceito: os inimigos também mudam
         for e in self.ents:
             if -64 < e.x - cx < LW + 64:
                 pisca = getattr(e, "pisca", 0)
                 if pisca:
                     e.pisca = pisca - 1
-                if pisca % 4 < 2:
+                if pisca % 4 < 2 and not (tema and tema.desenhar(s, cam, e)):
                     e.draw(s, cam)
         if self.sombra:
             self.sombra.draw(s, cam)
         self.clima.pos_mundo(s)                           # gótico: preto e branco (o herói vem depois, no figurino)
+        if self.pet:
+            self.pet.forma = tema.pet if tema else None
         frente = self.pet and self.pet.atacando           # no bote o pet passa na frente do herói
         if self.pet and not self.morte and not frente:
             self.pet.draw(s, cam)
@@ -1280,6 +1318,50 @@ class Jogo:
                 s.fill(cor, (x, y, (3, 2, 1)[fase], 2))
             elif forma == "z":
                 s.blit(art.texto_px("z" if k > 0.5 else "Z", cor), (x, y))
+
+    def _gigantes_ativos(self):
+        """Os gigantes do fundo: o Oni e o Daidara, ou os da tela conceito (figurino.ELENCO)."""
+        tema = figurino.tema(self.clima.atual.id)
+        if tema is None:
+            return self.gigantes
+        if getattr(self, "_duplas", None) is None:
+            self._duplas = {}
+        return self._duplas.setdefault(tema, tema.Dupla())
+
+    def _draw_gigantes(self, s, cx, cy):
+        e = 1.5 if LW >= 300 else 1                    # na tela deitada eles são maiores; no celular em pé, 1×
+        oy = int((H * TILE - LH - cy) * 0.06)          # acompanha a camada do fundo (fator 0,15 × 0,4)
+        dupla = self._gigantes_ativos()
+        dupla.passo(self.p.x - cx, LW)
+        tom = self.clima.atual.cfg.get("tom")
+        ceu = (self.clima.atual.cfg.get("ceu") or ((104, 200, 240), (176, 228, 246)))[-1]
+        args = (climas._mix(tom, (255, 255, 255), 0.35) if tom else None, e, (ceu, 0.3))
+        if LW >= 300:                                  # cabeças inteiras; o peito some nos morros
+            dupla.draw(s, LW, (gigantes.H - 8) * e + oy, *args)
+            return
+        # em pé a tela é alta e os morros do fundo começam lá embaixo: apoia no horizonte da camada do fundo e
+        # apaga o que ficaria abaixo da silhueta dela (no confeitado, o peito aparecia no vão sob as nuvens)
+        topos, med = self._horizonte()
+        if getattr(self, "_tela_gig", None) is None or self._tela_gig.get_size() != (LW, LH):
+            self._tela_gig = pygame.Surface((LW, LH), pygame.SRCALPHA)
+        g = self._tela_gig
+        g.fill((0, 0, 0, 0))
+        dupla.draw(g, LW, med + gigantes.H * e * 0.5 + oy, *args)
+        ox = -int(cx * 0.15) % LW
+        for x in range(LW):
+            g.fill((0, 0, 0, 0), (x, topos[(x - ox) % LW] + oy + 2, 1, LH))
+        s.blit(g, (0, 0))
+
+    def _horizonte(self):
+        """Topo da camada mais distante do clima atual, coluna por coluna, e a mediana (medidos uma vez por camada)."""
+        cam = self.clima.atual.camadas[0] if self.clima.atual.camadas else None
+        if cam is None:
+            return [LH] * LW, int(LH * 0.55)
+        if getattr(self, "_hz", (None,))[0] is not cam:
+            m = pygame.mask.from_surface(cam)
+            topos = [next((y for y in range(LH) if m.get_at((x, y))), LH) for x in range(LW)]
+            self._hz = (cam, topos, sorted(topos)[LW // 2])
+        return self._hz[1], self._hz[2]
 
     def _draw_heroi(self, s, cam):
         p = self.p

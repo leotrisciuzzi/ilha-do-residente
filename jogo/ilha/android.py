@@ -36,6 +36,16 @@ def _pasta_pacotes():
     return os.path.join(data.SAVE_DIR, "pacotes")
 
 
+def _liberados(app, temas):
+    """Os módulos que a conta pode ver (o administrador escolhe no painel do servidor; sem escolha = todos)."""
+    conta = getattr(app, "conta", None)
+    ids = conta.d.get("modulos") if conta is not None and conta.logado else None
+    if ids is None:
+        return temas
+    ok = set(ids)
+    return [t for t in temas if t.id in ok]
+
+
 def _creditos(temas):
     linhas = [f"{edicao.NOME} · versão {edicao.VERSAO}", f"Criado por {edicao.AUTOR}.", "", AVISO, ""]
     for t in temas:
@@ -48,6 +58,9 @@ def _creditos(temas):
 
 def abrir_mundo(app, t):
     """Ao selecionar o tema: primeiro o estilo (com diversão ou sem risadinha), depois os modos."""
+    if getattr(app, "estilo_definido", False):          # já escolhido no Único jogador (ou num tema antes)
+        _abrir_modos(app, t)
+        return
     escolher_estilo(app, t.titulo_mundo[:38], lambda: _abrir_modos(app, t))
 
 
@@ -92,8 +105,9 @@ class MenuAndroid(Menu):
         except ImportError:
             pass
         self.atual = Atualizador(_pasta_pacotes(), edicao.VERSAO, conta=app.conta)
-        self.temas = pacotes.carregar(self.atual.pasta)
-        self.atual.iniciar({t.id: t.versao for t in self.temas})
+        self._todos = pacotes.carregar(self.atual.pasta)
+        self.temas = _liberados(app, self._todos)
+        self.atual.iniciar({t.id: t.versao for t in self._todos})
         self._estado_visto = None
         self._montar()
 
@@ -115,6 +129,7 @@ class MenuAndroid(Menu):
         pct = f" ({round(100 * c['acertos_total'] / c['questoes_total'])}%)" if c["questoes_total"] else ""
         cart = f"Moedas: {c['moedas']:,} · Créditos: {c['creditos']:,} · {c['questoes_total']:,} questões{pct}".replace(",", ".")
         self.subtitulo = " · ".join(x for x in (cart, self._status(), self._sinc()) if x)
+        self.temas = _liberados(app, self._todos)        # o administrador pode mudar os módulos na sincronia
         self.itens = []
         cont = item_continuar(app, self.temas)
         if cont:
@@ -125,18 +140,21 @@ class MenuAndroid(Menu):
         self.itens.append({"label": "Mapa de Estudos", "cor": (110, 200, 255),
                            "info": "Tudo num mapa: o que já estudou, o que dominou, o que pede revisão",
                            "acao": lambda: __import__("ilha.mapa", fromlist=["abrir"]).abrir(app, self.temas)})
-        if any(t.grupo for t in self.temas):        # APK pessoal: um item por estágio do internato
-            cm2 = [t for t in self.temas if t.grupo != "mfc"]
-            mfc = [t for t in self.temas if t.grupo == "mfc"]
-            self.itens += [
-                {"secao": "Internato", "label": ""},
-                {"label": "Internato · Clínica Médica 2", "cor": (255, 210, 120),
-                 "info": _resumo(app, cm2, "Prova, casos da enfermaria, mundos, fluxogramas e ECG"),
-                 "acao": lambda: _abrir_estagio(app, "Internato · Clínica Médica 2", cm2, True)},
-                {"label": "Internato · MFC", "cor": (140, 220, 140),
-                 "info": _resumo(app, mfc, "Medicina de Família e Comunidade: os mundos entram conforme as aulas"),
-                 "acao": lambda: _abrir_estagio(app, "Internato · MFC", mfc, False)},
-            ]
+        if any(t.grupo for t in self.temas):        # APK pessoal: Único jogador → estilo → etapa da formação
+            # APK pessoal: só Single player / Multiplayer / Farol no topo (o Continuar e o Mapa vão para o Single player)
+            self.itens = [
+                {"label": "Single player", "cor": (255, 220, 90),
+                 "info": "Estilo, depois a etapa (ciclos, internato, residência, provas)",
+                 "acao": lambda: escolher_estilo(app, "Single player", lambda: _abrir_formacao(app, self.temas))},
+                {"label": "Multiplayer", "cor": (255, 150, 90),
+                 "info": "Arena contra o computador, com controle na tela (online em desenvolvimento)",
+                 "acao": lambda: _abrir_multiplayer(app, self.temas)},
+                {"label": "Farol", "cor": (190, 170, 255), "info": "As suas estatísticas como lugares: o Mirante",
+                 "acao": lambda: app.push(Menu(app, "Farol", [
+                     {"label": "O Mirante", "cor": (190, 170, 255),
+                      "info": "Um lago à noite cujo céu são as questões que você já respondeu",
+                      "acao": lambda: __import__("ilha.mirante", fromlist=["abrir"]).abrir(app)},
+                     {"label": "Voltar", "cor": (180, 180, 180), "acao": app.pop}], "O que você já estudou, visto de longe"))}]
         else:
             self.itens.append({"secao": "Aprenda um tema a fundo", "label": ""})
             self.itens += _itens_mundos(app, self.temas)
@@ -144,11 +162,13 @@ class MenuAndroid(Menu):
                 self.itens.append({"label": "Nenhum tema ainda", "desab": True,
                                    "info": "Conecte-se à internet e abra o jogo de novo para baixar os temas"})
             self.itens += [{"secao": "Treine o raciocínio", "label": ""}] + _itens_raciocinio(app)
+        if not any(t.grupo for t in self.temas):             # edição pública (Play): mantém o Mirante solto
+            self.itens += [
+                {"secao": "Um espaço à parte", "label": ""},
+                {"label": "O Mirante", "cor": (190, 170, 255),
+                 "info": "Feito pelo Claude: um lago à noite cujo céu são as questões que você já respondeu",
+                 "acao": lambda: __import__("ilha.mirante", fromlist=["abrir"]).abrir(app)}]
         self.itens += [
-            {"secao": "Um espaço à parte", "label": ""},
-            {"label": "O Mirante", "cor": (190, 170, 255),
-             "info": "Feito pelo Claude: um lago à noite cujo céu são as questões que você já respondeu",
-             "acao": lambda: __import__("ilha.mirante", fromlist=["abrir"]).abrir(app)},
             {"secao": "Seu Doutor e ajustes", "label": ""},
             {"label": "Personagem e loja", "info": "Trocar de personagem e comprar nuvens, bastões e roupas com moedas",
              "acao": lambda: abrir_escolha(app), "cor": (255, 170, 210)},
@@ -179,7 +199,8 @@ class MenuAndroid(Menu):
             self.app.toast(f"Versão {b.versao_nova} baixada: feche e abra o jogo para usar")
         if self.atual.mudou:
             self.atual.mudou = False
-            self.temas = pacotes.carregar(self.atual.pasta)
+            self._todos = pacotes.carregar(self.atual.pasta)
+            self.temas = _liberados(self.app, self._todos)
             self.sel = 0
             self._montar()
             self.app.toast("Conteúdo novo: " + ", ".join(self.atual.novos))
@@ -199,7 +220,7 @@ class MenuAndroid(Menu):
         if self.baixador:
             self.baixador.iniciar()
         self.atual.conta = self.app.conta
-        self.atual.iniciar({t.id: t.versao for t in self.temas})
+        self.atual.iniciar({t.id: t.versao for t in self._todos})
 
     def evento(self, e, inp):
         if inp.foi("voltar"):            # padrão do Android: voltar duas vezes (em 2 s) sai do jogo
@@ -212,6 +233,71 @@ class MenuAndroid(Menu):
                 self.app.toast("Toque em voltar de novo para sair")
             return
         super().evento(e, inp)
+
+
+def _abrir_multiplayer(app, temas):
+    from .arena import tela as arena_tela
+    arena_tela.TEMAS_EXTERNOS[:] = temas                 # as questões do duelo vêm dos pacotes baixados
+    app.push(Menu(app, "Multiplayer", [
+        {"label": "Arena contra o computador (beta)", "cor": (255, 150, 90),
+         "info": "Direcional e botões na tela; escolha o personagem e toque A",
+         "acao": lambda: arena_tela.abrir(app)},
+        _em_desenvolvimento("Arena online"),
+        {"label": "Voltar", "cor": (180, 180, 180), "acao": app.pop}], "Luta com magias e duelo de questões"))
+
+
+def _em_desenvolvimento(nome):
+    return {"label": f"{nome} (em desenvolvimento)", "desab": True}
+
+
+def _abrir_formacao(app, temas):
+    """Mesma árvore do PC (menus.abrir_formacao). No celular não há banco de questões reais: Provas e as
+    especialidades da Residência ficam em desenvolvimento."""
+    from .jornada import REINOS
+    from .menus import ESTILOS
+    cm2 = [t for t in temas if t.grupo != "mfc"]
+    mfc = [t for t in temas if t.grupo == "mfc"]
+    est = ESTILOS.get(app.save.config.get("estilo", "jogo"), "Com diversão")
+
+    def internato2():
+        app.push(Menu(app, "Internato 2", [
+            {"label": "Clínica Médica 2", "cor": (255, 210, 120),
+             "info": _resumo(app, cm2, "Prova, casos da enfermaria, mundos, fluxogramas e ECG"),
+             "acao": lambda: _abrir_estagio(app, "Clínica Médica 2", cm2, True)},
+            {"label": "MFC", "cor": (140, 220, 140),
+             "info": _resumo(app, mfc, "Medicina de Família e Comunidade por prevalência"),
+             "acao": lambda: _abrir_estagio(app, "MFC", mfc, False)},
+            _em_desenvolvimento("Ginecologia e Obstetrícia"), _em_desenvolvimento("Clínica Cirúrgica"),
+            _em_desenvolvimento("Pediatria"),
+            {"label": "Voltar", "cor": (180, 180, 180), "acao": app.pop}], "Os estágios do internato 2"))
+
+    def residencia():
+        app.push(Menu(app, "Residência médica", [*[_em_desenvolvimento(r) for r in REINOS],
+                                                  {"label": "Voltar", "cor": (180, 180, 180), "acao": app.pop}],
+                      "Cada especialidade vai virar um conjunto de mundos"))
+
+    def provas():
+        app.push(Menu(app, "Provas", [_em_desenvolvimento(n) for n in ("Santa Casa", "USP", "ENARE / ENAMED")]
+                      + [{"label": "Voltar", "cor": (180, 180, 180), "acao": app.pop}],
+                      "No PC já há USP, ENARE e ENAMED; no celular entram depois"))
+
+    cont = item_continuar(app, temas)
+    app.push(Menu(app, "Single player", [
+        *([cont] if cont else []),
+        _em_desenvolvimento("Ciclo básico"), _em_desenvolvimento("Ciclo clínico"), _em_desenvolvimento("Internato 1"),
+        {"label": "Internato 2", "cor": (255, 210, 120), "acao": internato2,
+         "info": "CM 2 e MFC prontos · GO, Cirurgia e Pediatria depois"},
+        {"label": "Residência médica", "cor": (250, 140, 160), "acao": residencia,
+         "info": "As especialidades da prova de residência"},
+        {"label": "Provas", "cor": (240, 160, 110), "acao": provas, "info": "Santa Casa, USP, ENARE/ENAMED"},
+        {"secao": "Acompanhe", "label": ""},
+        {"label": "Mapa de Estudos", "cor": (110, 200, 255),
+         "info": "Tudo num mapa: o que já estudou, o que dominou, o que pede revisão",
+         "acao": lambda: __import__("ilha.mapa", fromlist=["abrir"]).abrir(app, temas)},
+        {"label": f"Estilo: {est} (trocar)", "cor": (200, 200, 200),
+         "info": "Com diversão = jogo normal · Sem risadinha = só as questões",
+         "acao": lambda: (app.pop(), escolher_estilo(app, "Single player", lambda: _abrir_formacao(app, temas)))},
+        {"label": "Voltar", "cor": (180, 180, 180), "acao": app.pop}], f"Estilo: {est} · escolha a etapa"))
 
 
 def _resumo(app, temas, padrao):

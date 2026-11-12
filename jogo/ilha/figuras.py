@@ -891,6 +891,12 @@ def figura(nome, largura=None):
     ("base:arg1:arg2…", argumentos em texto), usada pelos casos gerados do Treino."""
     from .figuras_vm import FIGURAS_VM, PARAMETRICAS
     FIGURAS.update(FIGURAS_VM)
+    try:                                                # figuras do livro de ECG (ainda fora do APK/web)
+        from .figuras_ecg import FIGURAS_ECG, PARAM_ECG
+        FIGURAS.update(FIGURAS_ECG)
+        PARAMETRICAS.update(PARAM_ECG)
+    except ImportError:
+        pass
     base, *args = nome.split(":")
     if nome not in FIGURAS and not (args and base in PARAMETRICAS):
         return None

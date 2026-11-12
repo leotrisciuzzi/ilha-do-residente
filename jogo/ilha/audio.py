@@ -19,6 +19,7 @@ SR = 44100
 _RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PASTA_MUSICAS = os.path.join(_RAIZ, "musicas")
 PASTA_PESSOAIS = os.path.join(_RAIZ, "musicas_pessoais")
+PASTA_FPS = os.path.join(_RAIZ, "musicas_fps")      # sinfonias de Beethoven do FPS (tools/partituras_fps.py)
 PASTA_EFEITOS = os.path.join(_RAIZ, "efeitos")      # gerados por tools/exportar_efeitos.py
 MUSICA_FIM = pygame.event.custom_type()
 VOL_MUSICA, VOL_ABAIXADO = 0.45, 0.15
@@ -73,9 +74,12 @@ class Audio:
         self.ok = False
         self.mudo = mudo
         self.sons = {}
+        self._variacoes = {}
         self.musica = None
         self.faixas = self._rodizio()
         self.faixa_i = -1
+        self.trilha_atual = "ilha"        # "fps": só as sinfonias do FPS (trilha())
+        self._trilhas = {}
         self.tocando = False
         self.atual = None                 # caminho da faixa tocando (a fase escolhe o clima por ela)
         self.abaixado = False
@@ -107,6 +111,8 @@ class Audio:
         except OSError:
             creditos = ""
         base.sort(key=lambda f: os.path.splitext(os.path.basename(f))[0] + " —" not in creditos)
+        from .climas import ESTREIA, de_faixa
+        base.sort(key=lambda f: de_faixa(Audio.nome(f)) != ESTREIA)   # estável: só a estreia vem para a frente
         if not base or not pessoais:
             return base + pessoais
         out = []
@@ -115,6 +121,24 @@ class Audio:
             if i % 4 == 3:
                 out.append(pessoais[(i // 4) % len(pessoais)])
         return out
+
+    def trilha(self, qual):
+        """Troca a lista de faixas: "ilha" (o rodízio de sempre) ou "fps" (as sinfonias do FPS, embaralhadas).
+        Cada lista guarda a sua posição; sem arquivos em musicas_fps/, o FPS fica com o rodízio da Ilha."""
+        if qual == self.trilha_atual:
+            return
+        self._trilhas[self.trilha_atual] = (self.faixas, self.faixa_i)
+        if qual not in self._trilhas:
+            if qual == "fps":
+                fx = glob.glob(os.path.join(PASTA_FPS, "*.ogg")) + glob.glob(os.path.join(PASTA_FPS, "*.mp3"))
+                random.shuffle(fx)
+                if not fx:
+                    return
+                self._trilhas[qual] = (fx, -1)
+            else:
+                return
+        self.faixas, self.faixa_i = self._trilhas[qual]
+        self.trilha_atual = qual
 
     def _gerar(self):
         if np is None:
@@ -150,6 +174,11 @@ class Audio:
         s["cuspe"] = _snd(_tom(260, 0.1, "ruido", 0.18) + _tom(180, 0.1, "sin", 0.2, glide=90))
         s["miau"] = _snd(np.concatenate([_tom(620, 0.07, "tri", 0.22, glide=900),        # bote do pet: "miau!" curto
                                          _tom(900, 0.12, "tri", 0.2, glide=520)]))
+        from . import sons_arena                                           # arena: golpes em camadas, magias, torcida…
+        s.update(sons_arena.gerar(_snd))
+        chuva = np.random.default_rng(3).standard_normal(SR * 2) * 0.05
+        chuva = np.convolve(chuva, np.ones(6) / 6, mode="same")          # ruído suave = chuva fina
+        s["chuva"] = _snd(chuva)
         self.musica = None if self.faixas else _snd(self._compor())
 
     def _compor(self):
@@ -174,9 +203,24 @@ class Audio:
         L = min(len(m), len(bx))
         return (m[:L] + bx[:L]) * 0.8
 
-    def tocar(self, nome):
-        if self.ok and not self.mudo and nome in self.sons:
-            self.sons[nome].play()
+    def tocar(self, nome, pan=None, vol=1.0):
+        """Toca um efeito; se houver variações (nome_1, nome_2…), sorteia uma. pan de −1 (esquerda) a 1 (direita)
+        e vol de 0 a 1 ajustam o canal em que caiu. Devolve o canal (ou None)."""
+        if not self.ok or self.mudo:
+            return None
+        var = self._variacoes.get(nome)
+        if var is None:
+            var = self._variacoes[nome] = [k for k in (f"{nome}_{i}" for i in range(1, 6)) if k in self.sons]
+        if var:
+            nome = random.choice(var)
+        if nome not in self.sons:
+            return None
+        canal = self.sons[nome].play()
+        if canal is not None and (pan is not None or vol != 1.0):
+            p = max(-1.0, min(1.0, pan or 0.0))
+            v = max(0.0, min(1.0, vol))
+            canal.set_volume(v * min(1.0, 1 - p), v * min(1.0, 1 + p))
+        return canal
 
     @staticmethod
     def nome(caminho):

@@ -12,7 +12,14 @@ import math
 
 import pygame
 
-from . import heroi, trajes
+from . import grito, heroi, jardim, quixote, trajes
+
+# telas conceito em que o ELENCO inteiro muda, não só a roupa: o herói (seja qual for o escolhido) vira o personagem do
+# tema, com bastão e nuvem próprios; o pet troca de forma (pets.Pet.forma) e os inimigos também (game: quixote.desenhar).
+# A próxima tela conceito entra aqui. Hitbox e comportamento não mudam.
+ELENCO = {"lamancha": dict(heroi="doutor", bastao="lanca", nuvem="poeira", tema=quixote),
+          "grito": dict(heroi="doutor", bastao="nenhum", nuvem="redemoinho", tema=grito),
+          "jardim": dict(heroi="doutor", bastao="bordao", nuvem="rosada", tema=jardim)}
 
 # clima → roupa (para quem não tem traje), nuvem e cores da paleta (valem para todos)
 FIGURINO = {
@@ -32,7 +39,7 @@ FIGURINO = {
 CACHECOL_TRAJE = {"parka": (240, 240, 250), "sobretudo": (236, 140, 40), "cure": (18, 14, 22), "safari": None,
                   "guarda": None, "praia": None, "bombeiro": None, "magico": None, "quimono": None, "pijama": None,
                   "mineiro": None, "capa_chuva": None, "astronauta": None, "escafandro": None,
-                  "frota": None, "samurai": None, "neon": None, "fuzileiro": None, "patrulheiro": None,
+                  "frota": None, "samurai": None, "neon": None, "fuzileiro": None, "patrulheiro": None, "quixote": None, "grito": None, "caminhante": None,
                   "paladino": (44, 72, 180)}                      # a capa azul do paladino voa atrás
 CACHECOL_CLIMA = {"chuva": (248, 204, 40), "tempestade": (248, 204, 40), "neve": (240, 240, 250),
                   "aurora": (120, 230, 170), "outono": (236, 140, 40), "gotico": (18, 14, 22),
@@ -46,12 +53,29 @@ def _monta():
 
 def traje(cid):
     """Nome do traje do clima para o personagem atual (só quem monta tem trajes por enquanto)."""
+    if ELENCO.get(cid, {}).get("heroi") in heroi.PERSONAGENS:
+        return trajes.POR_CLIMA.get(cid)
     return trajes.POR_CLIMA.get(cid) if _monta() else None
+
+
+def tema(cid):
+    """O módulo do elenco da tela conceito (desenhar, Dupla, pet), ou None nos climas de sempre."""
+    return ELENCO.get(cid, {}).get("tema")
+
+
+def bastao_tema(cid):
+    """O bastão que o tema põe na mão (None = quem golpeia continua com o próprio)."""
+    b = ELENCO.get(cid, {}).get("bastao")
+    return None if b == "nenhum" else b
 
 
 def visual(cid):
     f = FIGURINO.get(cid, {})
     v = dict(heroi.VISUAL)
+    e = ELENCO.get(cid)
+    if e and e["heroi"] in heroi.PERSONAGENS:
+        v.update(personagem=e["heroi"], bastao=e["bastao"], nuvem=e["nuvem"])
+        return v
     if not traje(cid) and f.get("roupa") in heroi.ROUPAS:
         v["roupa"] = f["roupa"]
     if f.get("nuvem") in heroi.NUVENS:

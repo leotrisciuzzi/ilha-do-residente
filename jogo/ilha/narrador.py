@@ -61,14 +61,15 @@ def falado(texto):
     return t.strip(" ,")
 
 
-def _nome(texto):
-    h = hashlib.sha1(f"{VOZ}|{VELOCIDADE}|{TOM}|{falado(texto)}".encode()).hexdigest()[:20]
+def _nome(texto, voz=None):
+    voz, vel, tom = voz or (VOZ, VELOCIDADE, TOM)
+    h = hashlib.sha1(f"{voz}|{vel}|{tom}|{falado(texto)}".encode()).hexdigest()[:20]
     return h + ".mp3"
 
 
-def arquivo(texto):
-    """Caminho do áudio já gerado (embutido ou em cache) ou None."""
-    n = _nome(texto)
+def arquivo(texto, voz=None):
+    """Caminho do áudio já gerado (embutido ou em cache) ou None. voz = (nome, velocidade, tom); None = a narradora."""
+    n = _nome(texto, voz)
     for pasta in (EMBUTIDA, _pasta_cache()):
         c = os.path.join(pasta, n)
         if os.path.exists(c) and os.path.getsize(c) > 0:
@@ -80,21 +81,22 @@ def pode_gerar():
     return edge_tts is not None
 
 
-async def _gerar_um(texto, destino):
+async def _gerar_um(texto, destino, voz=None):
+    nome, vel, tom = voz or (VOZ, VELOCIDADE, TOM)
     tmp = destino + ".tmp"
-    await edge_tts.Communicate(falado(texto), VOZ, rate=VELOCIDADE, pitch=TOM).save(tmp)
+    await edge_tts.Communicate(falado(texto), nome, rate=vel, pitch=tom).save(tmp)
     os.replace(tmp, destino)
 
 
-def gerar(texto):
+def gerar(texto, voz=None):
     """Gera (bloqueante) e devolve o caminho; None se não der (sem edge-tts ou sem internet)."""
-    c = arquivo(texto)
+    c = arquivo(texto, voz)
     if c or not pode_gerar():
         return c
     os.makedirs(_pasta_cache(), exist_ok=True)
-    destino = os.path.join(_pasta_cache(), _nome(texto))
+    destino = os.path.join(_pasta_cache(), _nome(texto, voz))
     try:
-        asyncio.run(_gerar_um(texto, destino))
+        asyncio.run(_gerar_um(texto, destino, voz))
         return destino
     except Exception:
         return None

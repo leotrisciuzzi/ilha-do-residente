@@ -4,7 +4,7 @@ import zlib
 
 import pygame
 
-from . import art, data
+from . import art, data, edicao
 from .ui import (carteira_txt, titulo_px, Menu, Mensagem, Carregando, EntradaTexto, Estado, painel, sombra,
                  quebrar, W, H, TINTA, AMARELO, VERDE, VERMELHO)
 from .personagens import abrir_escolha
@@ -43,61 +43,28 @@ def _carregar_banco(app):
 
 class MenuPrincipal(Menu):
     def __init__(self, app):
-        super().__init__(app, "Ilha do Residente", [], "O Doutor montado no pônei branco × questões de residência")
+        fps = getattr(app, "estilo_forcado", None) == "fps"
+        super().__init__(app, "Ilha do Residente FPS" if fps else "Ilha do Residente", [],
+                         "Primeira pessoa: atire nos bichos-questão antes que o plantão acabe" if fps else
+                         "O Doutor montado no pônei branco × questões de residência")
         self._montar()
 
     def _montar(self):
         app = self.app
         self.subtitulo = carteira_txt(app.save)
         pronto = app.banco is not None
-        esp = "" if pronto else "  (carregando banco…)"
-        n_err = len(app.save.erradas(app.banco)) if pronto else 0
         from .conta_ui import item_menu
         conta = item_menu(app)                         # servidor da Ilha: progresso igual em todos os aparelhos
-        from . import dia
         self.itens = [
-            {"label": "Mundo do Dia" + esp, "arcoiris": pronto, "cor": (255, 120, 200),
-             "info": dia.resumo_menu(app), "acao": lambda: dia.abrir(app), "desab": not pronto},
-            {"label": "Mapa de Estudos", "cor": (110, 200, 255),
-             "info": "Tudo num mapa por especialidade: o que já estudou, o que dominou, o que pede revisão",
-             "acao": lambda: __import__("ilha.mapa", fromlist=["abrir"]).abrir(app)},
-            {"secao": "Siga a sua agenda", "label": ""},
-            {"label": "Cronograma de Estudos" + esp, "info": "Sua agenda do Lousa: um mundo por tema, uma fase por videoaula",
-             "acao": lambda: abrir_cronograma(app), "desab": not pronto, "cor": (255, 180, 80)},
-            {"secao": "Internato", "label": ""},
-            {"label": "Internato · Clínica Médica 2", "cor": (255, 210, 120),
-             "info": "Tudo o que foi estudado de clínica: prova de CM, casos da enfermaria, mundos dos temas, "
-                     "farmacologia, fluxogramas e ECG",
-             "acao": lambda: abrir_internato(app)},
-            {"label": "Internato · MFC", "cor": (140, 220, 140),
-             "info": abrir_mfc_info(app), "acao": lambda: abrir_mfc(app)},
-            {"secao": "Questões reais de prova", "label": ""},
-            {"label": "Castelos das Provas" + esp, "info": "PSU-MG e SUS-SP reais, na ordem da prova, 8 questões por castelo",
-             "acao": lambda: abrir_provas(app), "desab": not pronto, "cor": (240, 160, 110)},
-            {"label": "Ilhas das Listas" + esp, "info": "Banco banco de questões: uma ilha por matéria, uma fase por subtema",
-             "acao": lambda: abrir_listas(app), "desab": not pronto, "cor": (140, 220, 120)},
-            {"label": "Mistão por prevalência" + esp, "info": "Questões de todas as matérias, pesadas pelo que mais cai",
-             "acao": lambda: abrir_mistao(app), "desab": not pronto, "cor": (200, 160, 250)},
-            {"secao": "Revise", "label": ""},
-            {"label": "Revisão dos erros" + esp, "info": f"{n_err} questões cuja última resposta foi errada",
-             "acao": lambda: abrir_revisao(app), "desab": not pronto or not n_err, "cor": (250, 120, 150)},
-            {"label": "Sessão do Lousa FPS", "info": "Mesma revisão SM-2 e progresso do LousaFPSServer: um tema por fase",
-             "acao": lambda: abrir_servidor(app), "cor": (120, 200, 255)},
-            {"label": "Estatísticas", "info": "Acertos por matéria e recordes", "acao": lambda: app.push(Estatisticas(app)),
-             "desab": not pronto, "cor": (255, 220, 100)},
-            {"secao": "Um espaço à parte", "label": ""},
-            {"label": "O Mirante", "cor": (190, 170, 255),
-             "info": "Feito pelo Claude: um lago à noite cujo céu são as questões que você já respondeu",
-             "acao": lambda: __import__("ilha.mirante", fromlist=["abrir"]).abrir(app)},
-            {"label": "O Recife", "cor": (110, 210, 230),
-             "info": "Feito pelo Claude: nade no fundo do mar; cada coral é um mundo seu, branco onde você errou",
-             "acao": lambda: __import__("ilha.recife", fromlist=["abrir"]).abrir(app)},
-            {"label": "O Trem da Madrugada", "cor": (240, 180, 120),
-             "info": "Feito pelo Claude: quatro vagões, malas com os seus mundos e o dia nascendo pela janela",
-             "acao": lambda: __import__("ilha.trem", fromlist=["abrir"]).abrir(app)},
-            {"label": "As Ilhas do Céu", "cor": (255, 190, 200),
-             "info": "Feito pelo Claude: pule e plane entre ilhas flutuantes, uma por mundo estudado",
-             "acao": lambda: __import__("ilha.ilhas_ceu", fromlist=["abrir"]).abrir(app)},
+            {"label": "Single player", "cor": AMARELO,
+             "info": "Estilo, depois a etapa (ciclos, internato, residência, provas) e as revisões",
+             "acao": lambda: abrir_unico_jogador(app)},
+            {"label": "Multiplayer", "cor": (255, 150, 90),
+             "info": "Arena: luta com magias e duelo de questões (2 jogadores no mesmo PC; online em desenvolvimento)",
+             "acao": lambda: abrir_multiplayer(app)},
+            {"label": "Farol", "cor": (190, 170, 255),
+             "info": "As suas estatísticas: em números e em lugares feitos delas (Mirante, Recife, Trem, Ilhas do Céu)",
+             "acao": lambda: abrir_farol(app)},
             {"secao": "Seu Doutor e ajustes", "label": ""},
             {"label": "Personagem e loja", "info": "Trocar de personagem e comprar nuvens, bastões e roupas com moedas",
              "acao": lambda: abrir_escolha(app), "cor": (255, 170, 210)},
@@ -108,12 +75,6 @@ class MenuPrincipal(Menu):
              "cor": (255, 255, 255)},
             {"label": "Sair", "acao": lambda: setattr(app, "rodando", False), "cor": (180, 180, 180)},
         ]
-        cont = item_continuar(app, TEMAS + FARMACOS + INTERNATO_CM2 + INTERNATO_MFC)
-        if cont:
-            self.itens.insert(1, cont)                 # o Mundo do Dia fica sempre em primeiro
-            alvo = cont["label"] + cont.get("info", "")
-            if alvo != getattr(self, "_cont", None):      # destino novo: já deixa selecionado
-                self._cont, self.sel, self._ysel = alvo, 0, 0.0
         self.sel = min(self.sel, len(self.itens) - 1)
         self._pular_desab(1)
         self._pronto = pronto
@@ -294,13 +255,13 @@ def _gaso_roteiro(G):
 
 
 GASO = Tema("gaso", "Gasometria", "gaso", "gasometria", "gaso_treino", "gaso_bancas", "gaso-treino", 4, (90, 220, 210),
-            "Questões reais com gasometria: provas PSU-MG/SUS-SP + banco banco de questões",
+            "Questões reais com gasometria: provas PSU-MG/SUS-SP + banco de questões",
             _gaso_roteiro, lambda G: _gaso_roteiro(G) + [G.MODULOS[7]["aula"][0], G.MODULOS[7]["aula"][1]])
 VENT = Tema("vm", "Ventilação Mecânica", "vm", "ventilacao", "vent_treino", "vent_bancas", "vm-treino", 5, (150, 190, 255),
-            "Questões reais de ventilação, VNI, via aérea, SDRA e desmame: provas + banco banco de questões",
+            "Questões reais de ventilação, VNI, via aérea, SDRA e desmame: provas + banco de questões da Ilha",
             lambda V: V.ROTEIRO, lambda V: V.ROTEIRO + [V.MODULOS[8]["aula"][1], V.MODULOS[4]["aula"][1]])
 HIPERK = Tema("k", "Hipercalemia", "k", "hipercalemia", "hiperk_treino", "hiperk_bancas", "k-treino", 3, (255, 150, 120),
-              "Questões reais de hipercalemia: distúrbios do potássio, ECG, lise, adrenal — provas + banco banco de questões",
+              "Questões reais de hipercalemia: distúrbios do potássio, ECG, lise, adrenal — provas + banco de questões da Ilha",
               lambda K: K.ROTEIRO, lambda K: K.ROTEIRO + [K.MODULOS[7]["aula"][0], K.MODULOS[8]["aula"][0]])
 IC = Tema("ic", "Insuficiência Cardíaca", "ic", "insuf_cardiaca", "ic_treino", "ic_bancas", "ic-treino", 2, (230, 110, 110),
           "Questões reais de IC: aguda e choque, crônica e dispositivos, diagnóstico, Chagas e periparto",
@@ -321,62 +282,62 @@ FARMACOS = [FARMA_CV, FARMA_ATB]
 
 # Internato · Clínica Médica 2: mundos pequenos feitos das aulas (asma, DPOC, VM), num submenu próprio
 INTERNATO_ASMA = Tema("uas", "Asma", "uas", "internato_asma", "internato_asma_treino", "internato_asma_bancas", "uas-treino", 1,
-                   (120, 200, 255), "Questões reais de asma: provas + banco banco de questões (adulto, crise, grave, pediatria)",
+                   (120, 200, 255), "Questões reais de asma: provas + banco de questões da Ilha (adulto, crise, grave, pediatria)",
                    lambda A: A.ROTEIRO, lambda A: A.ROTEIRO + [A.MODULOS[3]["aula"][0]])
 INTERNATO_DPOC = Tema("udp", "DPOC", "udp", "internato_dpoc", "internato_dpoc_treino", "internato_dpoc_bancas", "udp-treino", 9,
-                   (170, 210, 140), "Questões reais de DPOC: provas + banco banco de questões (estável, exacerbação, avançada)",
+                   (170, 210, 140), "Questões reais de DPOC: provas + banco de questões da Ilha (estável, exacerbação, avançada)",
                    lambda D: D.ROTEIRO, lambda D: D.ROTEIRO + [D.MODULOS[1]["aula"][1], D.MODULOS[3]["aula"][1]])
 INTERNATO_VM = Tema("uvm", "VM", "uvm", "internato_vm", "internato_vm_treino", "vent_bancas", "uvm-treino", 5,
-                 (150, 190, 255), "Questões reais de ventilação, VNI, SDRA, curvas e desmame: provas + banco banco de questões",
+                 (150, 190, 255), "Questões reais de ventilação, VNI, SDRA, curvas e desmame: provas + banco de questões da Ilha",
                  lambda V: V.ROTEIRO, lambda V: V.ROTEIRO + [V.MODULOS[2]["aula"][1], V.MODULOS[4]["aula"][1]])
 INTERNATO_TRANSF = Tema("utr", "Transfusão", "utr", "internato_transf", "internato_transf_treino", "internato_transf_bancas", "utr-treino", 3,
-                     (240, 120, 120), "Questões reais de hemoterapia: provas + banco banco de questões (indicação, plaquetas e plasma, reações)",
+                     (240, 120, 120), "Questões reais de hemoterapia: provas + banco de questões da Ilha (indicação, plaquetas e plasma, reações)",
                      lambda T: T.ROTEIRO, lambda T: T.ROTEIRO + [T.MODULOS[3]["aula"][1], T.MODULOS[4]["aula"][0]])
 INTERNATO_REUM = Tema("urm", "Reumato: LES, gota, esclerodermia", "urm", "internato_reum", "internato_reum_treino", "internato_reum_bancas", "urm-treino", 7,
-                   (250, 180, 90), "Questões reais de lúpus, SAF, gota, esclerodermia, Sjögren, mãos e osso: provas + banco banco de questões",
+                   (250, 180, 90), "Questões reais de lúpus, SAF, gota, esclerodermia, Sjögren, mãos e osso: provas + banco de questões da Ilha",
                    lambda R: R.ROTEIRO, lambda R: R.ROTEIRO + [R.MODULOS[3]["aula"][0], R.MODULOS[5]["aula"][1]])
 INTERNATO_FA = Tema("uac", "FA: CHA2DS2-VASc e anticoagulação", "uac", "internato_fa", "internato_fa_treino", "internato_fa_bancas", "uac-treino", 11,
-                 (255, 150, 200), "Questões reais de anticoagulação na FA: provas + banco banco de questões (escore, droga, cardioversão)",
+                 (255, 150, 200), "Questões reais de anticoagulação na FA: provas + banco de questões da Ilha (escore, droga, cardioversão)",
                  lambda F: F.ROTEIRO, lambda F: F.ROTEIRO + [F.MODULOS[1]["aula"][0], F.MODULOS[2]["aula"][0]])
 INTERNATO_ENDO = Tema("uen", "Endócrino: as questões da prova", "uen", "internato_endo", "internato_endo_treino", "internato_endo_bancas",
                    "uen-treino", 13, (130, 220, 200),
-                   "Questões reais de DM2, remédios do DM, tireoide, Cushing e acromegalia: provas + banco banco de questões",
+                   "Questões reais de DM2, remédios do DM, tireoide, Cushing e acromegalia: provas + banco de questões da Ilha",
                    lambda E: E.ROTEIRO, lambda E: E.ROTEIRO + [E.MODULOS[2]["aula"][0], E.MODULOS[5]["aula"][0]])
 INTERNATO_COG = Tema("ucg", "Avaliação cognitiva: MEEM, MoCA e BBRC", "ucg", "internato_cognicao", "internato_cognicao_treino",
                   "internato_cognicao_bancas", "ucg-treino", 4, (190, 160, 255),
-                  "Questões reais de demências, CCL, rastreio cognitivo e delirium: provas + banco banco de questões",
+                  "Questões reais de demências, CCL, rastreio cognitivo e delirium: provas + banco de questões da Ilha",
                   lambda G: G.ROTEIRO, lambda G: G.ROTEIRO + [G.MODULOS[3]["aula"][0], G.MODULOS[5]["aula"][0]])
 INTERNATO_PK = Tema("upk", "Doença de Parkinson: ON/OFF, UPDRS e remédios", "upk", "internato_parkinson", "internato_parkinson_treino",
                  "internato_parkinson_bancas", "upk-treino", 10, (120, 210, 230),
-                 "Questões reais de Parkinson, parkinsonismo e tremor: provas + banco banco de questões",
+                 "Questões reais de Parkinson, parkinsonismo e tremor: provas + banco de questões da Ilha",
                  lambda P: P.ROTEIRO, lambda P: P.ROTEIRO + [P.MODULOS[6]["aula"][0], P.MODULOS[3]["aula"][2]])
 # A prova de CM do internato (out/2026): um mundo por especialidade, montado dos relatos das turmas anteriores
 INTERNATO_NEFRO = Tema("unf", "Nefro: DRC, IRA, ITU e cálculo", "unf", "internato_nefro", "internato_nefro_treino",
                     "internato_nefro_bancas", "unf-treino", 3, (110, 190, 250),
-                    "Questões reais de DRC, IRA, glomerulopatias, ITU, nefrolitíase e potássio: provas + banco banco de questões",
+                    "Questões reais de DRC, IRA, glomerulopatias, ITU, nefrolitíase e potássio: provas + banco de questões da Ilha",
                     lambda N: N.ROTEIRO, lambda N: N.ROTEIRO + [N.MODULOS[3]["aula"][0], N.MODULOS[7]["aula"][1]])
 INTERNATO_HAS = Tema("uha", "HAS e cardio da prova", "uha", "internato_has", "internato_has_treino", "internato_has_bancas", "uha-treino",
-                  2, (240, 110, 110), "Questões reais de HAS, IC, SCA, síndrome metabólica e ECG: provas + banco banco de questões",
+                  2, (240, 110, 110), "Questões reais de HAS, IC, SCA, síndrome metabólica e ECG: provas + banco de questões da Ilha",
                   lambda H: H.ROTEIRO, lambda H: H.ROTEIRO + [H.MODULOS[2]["aula"][0], H.MODULOS[5]["aula"][1]])
 INTERNATO_HEMATO = Tema("uhm", "Hemato: anemias, leucemia e TEV", "uhm", "internato_hemato", "internato_hemato_treino",
                      "internato_hemato_bancas", "uhm-treino", 12, (230, 90, 120),
-                     "Questões reais de anemias, leucemias, mieloma, TVP/TEP e hemostasia: provas + banco banco de questões",
+                     "Questões reais de anemias, leucemias, mieloma, TVP/TEP e hemostasia: provas + banco de questões da Ilha",
                      lambda H: H.ROTEIRO, lambda H: H.ROTEIRO + [H.MODULOS[1]["aula"][0], H.MODULOS[4]["aula"][0]])
 INTERNATO_PNEUMO = Tema("upn", "Pneumo e sepse da prova", "upn", "internato_pneumo", "internato_pneumo_treino", "internato_pneumo_bancas",
                      "upn-treino", 9, (140, 210, 170),
-                     "Questões reais de pneumonia, sepse e choque, DPOC e semiologia: provas + banco banco de questões",
+                     "Questões reais de pneumonia, sepse e choque, DPOC e semiologia: provas + banco de questões da Ilha",
                      lambda P: P.ROTEIRO, lambda P: P.ROTEIRO + [P.MODULOS[3]["aula"][1], P.MODULOS[4]["aula"][0]])
 INTERNATO_NEURO = Tema("unr", "Neuro: epilepsia, AVE e demência", "unr", "internato_neuro", "internato_neuro_treino",
                     "internato_neuro_bancas", "unr-treino", 4, (170, 150, 255),
-                    "Questões reais de epilepsia, AVE, demências e Parkinson: provas + banco banco de questões",
+                    "Questões reais de epilepsia, AVE, demências e Parkinson: provas + banco de questões da Ilha",
                     lambda N: N.ROTEIRO, lambda N: N.ROTEIRO + [N.MODULOS[1]["aula"][0], N.MODULOS[3]["aula"][0]])
 INTERNATO_DERMATO = Tema("udm", "Dermato da prova", "udm", "internato_dermato", "internato_dermato_treino", "internato_dermato_bancas",
                       "udm-treino", 8, (240, 170, 120),
-                      "Questões reais de câncer de pele, hanseníase, bolhosas e infecções: provas + banco banco de questões",
+                      "Questões reais de câncer de pele, hanseníase, bolhosas e infecções: provas + banco de questões da Ilha",
                       lambda D: D.ROTEIRO, lambda D: D.ROTEIRO + [D.MODULOS[1]["aula"][1], D.MODULOS[3]["aula"][1]])
 INTERNATO_HEPATO = Tema("uhp", "Hepato: PBE, varizes e hepatite B", "uhp", "internato_hepato", "internato_hepato_treino",
                      "internato_hepato_bancas", "uhp-treino", 6, (200, 200, 110),
-                     "Questões reais de cirrose, PBE, HDA varicosa e hepatites: provas + banco banco de questões",
+                     "Questões reais de cirrose, PBE, HDA varicosa e hepatites: provas + banco de questões da Ilha",
                      lambda H: H.ROTEIRO, lambda H: H.ROTEIRO + [H.MODULOS[0]["aula"][1], H.MODULOS[2]["aula"][1]])
 INTERNATO_RELATOS = Tema("url", "Prova: os relatos, questão a questão", "url", "internato_relatos", "internato_relatos_treino",
                       "internato_relatos_bancas", "url-treino", 14, (255, 220, 90),
@@ -432,7 +393,244 @@ MFC_IDOSO = Tema("mso", "Saúde do idoso", "mso", "mfc_idoso", "mfc_idoso_treino
 MFC_ETICA = Tema("met", "Ética médica e prescrição", "met", "mfc_etica", "mfc_etica_treino", "mfc_etica_bancas",
                  "met-treino", 14, (255, 170, 210), "Questões reais de sigilo, recusa terapêutica, receituário e fim de vida",
                  lambda M: M.ROTEIRO, lambda M: M.ROTEIRO + [M.MODULOS[1]["aula"][0], M.MODULOS[2]["aula"][0]])
-INTERNATO_MFC = [MFC_EPIDEMIO, MFC_SUS, MFC_CONSULTA, MFC_VIGILANCIA, MFC_INDICADORES, MFC_TRABALHADOR, MFC_IDOSO, MFC_ETICA]
+# Fora da ordem por prevalência: o que o Tratado de MFC ensina e o estágio cobra (revisão de 10/11/2026, docs/MFC_TRATADO.md)
+MFC_FERRAMENTAS = Tema("mff", "Caixa de ferramentas do MFC", "mff", "mfc_ferramentas", "mfc_ferramentas_treino",
+                       "mfc_ferramentas_bancas", "mff-treino", 11, (250, 220, 140),
+                       "Questões reais de SOAP, acolhimento, atenção domiciliar, PTS e apoio matricial",
+                       lambda M: M.ROTEIRO, lambda M: M.ROTEIRO + [M.MODULOS[3]["aula"][1], M.MODULOS[4]["aula"][0]])
+INTERNATO_MFC = [MFC_EPIDEMIO, MFC_SUS, MFC_CONSULTA, MFC_VIGILANCIA, MFC_INDICADORES, MFC_TRABALHADOR, MFC_IDOSO, MFC_ETICA,
+              MFC_FERRAMENTAS]
+
+
+# Santa Casa (nov/2026): um mundo por grande área, montado do mapa da prova (ilha/sca_mapa.py, sca_base.py).
+# O mesmo módulo serve de conteúdo, treino (os itens "Aprenda junto") e bancas.
+def _sca(chave, nome, mod, pref, paleta, cor, desc):
+    return Tema(chave, nome, pref, mod, mod, mod, f"{pref}-treino", paleta, cor, desc,
+                lambda M: M.ROTEIRO, lambda M: M.ROTEIRO)
+
+
+SCA_PREV = _sca("sca-prev", "Preventiva da Santa Casa", "sca_prev", "sap", 9, (140, 220, 140),
+                "Questões do banco inteiro nos subtemas de Preventiva que a Santa Casa cobra")
+SCA_GO = _sca("sca-go", "GO da Santa Casa", "sca_go", "sgo", 3, (250, 140, 190),
+              "Questões do banco inteiro nos subtemas de GO que a Santa Casa cobra")
+SCA_PED = _sca("sca-ped", "Pediatria da Santa Casa", "sca_ped", "spe", 1, (120, 200, 255),
+               "Questões do banco inteiro nos subtemas de Pediatria que a Santa Casa cobra")
+SCA_CIR = _sca("sca-cir", "Cirurgia da Santa Casa", "sca_cir", "sci", 6, (255, 170, 90),
+               "Questões do banco inteiro nos subtemas de Cirurgia que a Santa Casa cobra")
+SCA_CM = _sca("sca-cm", "Clínica da Santa Casa", "sca_cm", "scm", 2, (230, 120, 120),
+              "Questões do banco inteiro nos subtemas de Clínica que a Santa Casa cobra")
+SANTA_CASA = [SCA_PREV, SCA_GO, SCA_PED, SCA_CIR, SCA_CM]
+SCA_DESC = {"sca-prev": "Aulas próprias: leis e gestão do SUS, indicadores, epidemiologia, APS, prevenção, ética, vigilância",
+            "sca-go": "Vitalidade fetal e Doppler, hipertensão, sangramentos, contracepção, amenorreia, colo e mama",
+            "sca-ped": "Neonato, aleitamento, exantemas e vacinas, vias aéreas, Kawasaki e febre reumática, crescimento",
+            "sca-cir": "Cabeça e pescoço, trauma, pré-operatório, vias biliares, hérnias, abdome agudo, ortopedia",
+            "sca-cm": "Gastro e fígado, hemato, infecto, endócrino, pulmão, coração, rim, reumato, neuro, derma"}
+
+
+# ------------------------------------------------------------------ único jogador: estilo → etapa da formação
+
+def _em_desenvolvimento(nome):
+    return {"label": f"{nome} (em desenvolvimento)", "desab": True}
+
+
+def _item_lembretes(app):
+    """Item com sino: agenda dos blocos, revisão dos conceitos e tema de hoje (ilha/lembretes.py)."""
+    from . import lembretes
+    return lembretes.item_menu(app)
+
+
+def abrir_unico_jogador(app):
+    """Único jogador: primeiro o estilo (vale para todos os mundos abertos daqui), depois a etapa da formação."""
+    escolher_estilo(app, "Single player", lambda: abrir_formacao(app))
+
+
+def abrir_formacao(app):
+    """As etapas da formação, no mesmo nível: ciclos, internatos, residência e provas; embaixo, o que acompanha o
+    estudo (Mundo do Dia, Mapa, Cronograma) e as revisões."""
+    from . import dia
+    menu = Menu(app, "Single player", [], "")
+
+    def montar():
+        pronto = app.banco is not None
+        esp = "" if pronto else "  (carregando banco…)"
+        n_err = len(app.save.erradas(app.banco)) if pronto else 0
+        est = ESTILOS.get(getattr(app, "estilo_forcado", None) or app.save.config.get("estilo", "jogo"), "Com diversão")
+        menu.subtitulo = f"Estilo: {est} · escolha a etapa"
+        try:                                        # livro de ECG: ainda fora do APK/web
+            from . import livros
+        except ImportError:
+            livros = None
+        cont = item_continuar(app, TEMAS + FARMACOS + INTERNATO_CM2 + INTERNATO_MFC + SANTA_CASA + (livros.TODOS if livros else []))
+        menu.itens = [*([cont] if cont else []),
+                      _em_desenvolvimento("Ciclo básico"),
+                      _em_desenvolvimento("Ciclo clínico"),
+                      _em_desenvolvimento("Internato 1"),
+                      {"label": "Internato 2", "cor": (255, 210, 120), "acao": lambda: abrir_internato2(app),
+                       "info": "Clínica Médica 2 e MFC prontos; GO, Cirúrgica e Pediatria em desenvolvimento"},
+                      {"label": "Residência médica", "cor": (250, 140, 160), "acao": lambda: abrir_residencia(app),
+                       "info": "As especialidades da prova de residência, mais as listas e o mistão do banco de questões"},
+                      {"label": "Provas", "cor": (240, 160, 110), "acao": lambda: abrir_provas_menu(app),
+                       "info": "Santa Casa, USP, ENARE/ENAMED e outras provas reais, na ordem original"},
+                      *([{"label": "Livros", "cor": (255, 140, 140), "acao": lambda: livros.abrir(app),
+                          "info": " e ".join(L.curto for L in livros.LIVROS) + ": o livro inteiro, capítulo por capítulo"}] if livros else []),
+                      {"secao": "Acompanhe e revise", "label": ""},
+                      _item_lembretes(app),
+                      {"label": "Mundo do Dia" + esp, "arcoiris": pronto, "cor": (255, 120, 200),
+                       "info": dia.resumo_menu(app), "acao": lambda: dia.abrir(app), "desab": not pronto},
+                      {"label": "Cronograma dos blocos" + esp, "cor": (140, 220, 140), "desab": not pronto,
+                       "info": "Internato: MFC → GO → Pediatria → Cirurgia, tema a tema, pela sua agenda",
+                       "acao": lambda: __import__("ilha.lembretes", fromlist=["abrir_blocos"]).abrir_blocos(app)},
+                      {"label": "Mapa de Estudos", "cor": (110, 200, 255),
+                       "info": "Tudo num mapa por especialidade: o que já estudou, o que dominou, o que pede revisão",
+                       "acao": lambda: __import__("ilha.mapa", fromlist=["abrir"]).abrir(app)},
+                      {"label": "Cronograma de Estudos" + esp, "cor": (255, 180, 80), "desab": not pronto,
+                       "info": "Sua agenda do Lousa: um mundo por tema, uma fase por videoaula",
+                       "acao": lambda: abrir_cronograma(app)},
+                      {"label": "Revisão dos erros" + esp, "info": f"{n_err} questões cuja última resposta foi errada",
+                       "acao": lambda: abrir_revisao(app), "desab": not pronto or not n_err, "cor": (250, 120, 150)},
+                      {"label": "Sessão do Lousa FPS", "cor": (120, 200, 255),
+                       "info": "Mesma revisão SM-2 e progresso do LousaFPSServer: um tema por fase",
+                       "acao": lambda: abrir_servidor(app)},
+                      {"secao": "", "label": ""},
+                      {"label": f"Estilo: {est} (trocar)", "cor": (200, 200, 200),
+                       "info": "Com diversão = jogo normal · Sem risadinha = só as questões · FPS = primeira pessoa",
+                       "acao": lambda: (app.pop(), abrir_unico_jogador(app))},
+                      {"label": "Voltar", "cor": (180, 180, 180), "acao": app.pop}]
+        menu._pronto = pronto
+        menu.sel = min(menu.sel, len(menu.itens) - 1)
+        menu._pular_desab(1)
+
+    upd = menu.update
+
+    def update(inp):
+        if menu._pronto != (app.banco is not None):
+            montar()
+        upd(inp)
+    menu.update = update
+    menu.ao_voltar = montar
+    montar()
+    app.push(menu)
+
+
+def abrir_multiplayer(app):
+    app.push(Menu(app, "Multiplayer", [
+        {"label": "Arena local · 2 jogadores (beta)", "cor": (255, 150, 90),
+         "info": "No mesmo PC, teclado dividido ou dois controles; Enter começa e quem não confirmar vira computador",
+         "acao": lambda: __import__("ilha.arena", fromlist=["abrir"]).abrir(app)},
+        _em_desenvolvimento("Arena online"),
+        {"label": "Voltar", "cor": (180, 180, 180), "acao": app.pop},
+    ], "Luta em plataforma com magias e duelo de questões"))
+
+
+def abrir_farol(app):
+    """Farol: as estatísticas, em números e fantasiadas de lugar."""
+    pronto = app.banco is not None
+    app.push(Menu(app, "Farol", [
+        {"label": "Estatísticas" + ("" if pronto else "  (carregando banco…)"), "cor": (255, 220, 100),
+         "info": "Acertos por matéria e recordes", "acao": lambda: app.push(Estatisticas(app)), "desab": not pronto},
+        {"secao": "As estatísticas como lugares", "label": ""},
+        {"label": "O Mirante", "cor": (190, 170, 255),
+         "info": "Um lago à noite cujo céu são as questões que você já respondeu",
+         "acao": lambda: __import__("ilha.mirante", fromlist=["abrir"]).abrir(app)},
+        {"label": "O Recife", "cor": (110, 210, 230),
+         "info": "Nade no fundo do mar; cada coral é um mundo seu, branco onde você errou",
+         "acao": lambda: __import__("ilha.recife", fromlist=["abrir"]).abrir(app)},
+        {"label": "O Trem da Madrugada", "cor": (240, 180, 120),
+         "info": "Quatro vagões, malas com os seus mundos e o dia nascendo pela janela",
+         "acao": lambda: __import__("ilha.trem", fromlist=["abrir"]).abrir(app)},
+        {"label": "As Ilhas do Céu", "cor": (255, 190, 200),
+         "info": "Pule e plane entre ilhas flutuantes, uma por mundo estudado",
+         "acao": lambda: __import__("ilha.ilhas_ceu", fromlist=["abrir"]).abrir(app)},
+        {"label": "Voltar", "cor": (180, 180, 180), "acao": app.pop},
+    ], "O que você já estudou, visto de longe"))
+
+
+def abrir_internato2(app):
+    app.push(Menu(app, "Internato 2", [
+        {"label": "Clínica Médica 2", "cor": (255, 210, 120), "acao": lambda: abrir_internato(app),
+         "info": "Tudo o que foi estudado de clínica: prova de CM, casos da enfermaria, mundos dos temas, "
+                 "farmacologia, fluxogramas e ECG"},
+        {"label": "MFC", "cor": (140, 220, 140), "info": abrir_mfc_info(app), "acao": lambda: abrir_mfc(app)},
+        _em_desenvolvimento("Ginecologia e Obstetrícia"),
+        _em_desenvolvimento("Clínica Cirúrgica"),
+        _em_desenvolvimento("Pediatria"),
+        {"label": "Voltar", "cor": (180, 180, 180), "acao": app.pop},
+    ], "Os estágios do internato 2"))
+
+
+def abrir_residencia(app):
+    """Residência médica: as especialidades do Mapa de Estudos (em desenvolvimento) e o que já existe do banco."""
+    from .jornada import REINOS
+    pronto = app.banco is not None
+    esp = "" if pronto else "  (carregando banco…)"
+    itens = [
+        {"secao": "Já disponível", "label": ""},
+        {"label": "Ilhas das Listas" + esp, "info": "Banco de questões da Ilha: uma ilha por matéria, uma fase por subtema",
+         "acao": lambda: abrir_listas(app), "desab": not pronto, "cor": (140, 220, 120)},
+        {"label": "Mistão por prevalência" + esp, "info": "Questões de todas as matérias, pesadas pelo que mais cai",
+         "acao": lambda: abrir_mistao(app), "desab": not pronto, "cor": (200, 160, 250)},
+        {"label": "Clínica Médica por prevalência", "cor": (255, 120, 120),
+         "info": "Questões reais 2024–2026 (SUS-SP, USP, UNIFESP, ENARE, ENAMED): o que mais cai primeiro",
+         "acao": lambda: abrir_clinica(app)},
+        {"secao": "Especialidades", "label": ""},
+        *[_em_desenvolvimento(r) for r in REINOS],
+        {"label": "Voltar", "cor": (180, 180, 180), "acao": app.pop}]
+    app.push(Menu(app, "Residência médica", itens, "Cada especialidade vai virar um conjunto de mundos"))
+
+
+PROVAS_GRUPOS = [("USP", ("USP",), "USP-SP"), ("ENARE / ENAMED", ("ENARE", "ENAMED"), "ENARE e ENAMED")]
+
+
+def abrir_provas_menu(app):
+    pronto = app.banco is not None
+    esp = "" if pronto else "  (carregando banco…)"
+
+    def grupo(bancas):
+        return [p for p in (app.banco.provas if pronto else []) if p["nome"].split()[0].startswith(bancas)]
+    usadas = tuple(b for _, bs, _ in PROVAS_GRUPOS for b in bs) + ("SCA",)
+    itens = [{"label": "Santa Casa", "cor": (120, 220, 200), "acao": lambda: abrir_santa_casa(app),
+              "info": "A sua prova: 5 mundos por grande área, tema a tema, e as provas de 2020 a 2026"}]
+    for nome, bancas, desc in PROVAS_GRUPOS:
+        ps = grupo(bancas)
+        itens.append({"label": nome + esp, "cor": (240, 160, 110), "desab": not ps,
+                      "info": f"{desc}: " + ", ".join(p["nome"] for p in ps),
+                      "acao": (lambda nome=nome, bancas=bancas: abrir_provas(app, bancas, nome))})
+    outras = [p for p in (app.banco.provas if pronto else []) if not p["nome"].split()[0].startswith(usadas)]
+    itens += [{"label": "Outras provas reais" + esp, "cor": (200, 170, 140), "desab": not outras,
+               "info": ", ".join(sorted({p["nome"].split()[0] for p in outras})) + ": na ordem original",
+               "acao": lambda: abrir_provas(app, None, "Outras provas reais", excluir=usadas)},
+              {"label": "Voltar", "cor": (180, 180, 180), "acao": app.pop}]
+    app.push(Menu(app, "Provas", itens, "Provas reais, na ordem original, 8 questões por castelo"))
+
+
+def abrir_santa_casa(app):
+    """Santa Casa: os 5 mundos (um por grande área, do que mais cai ao que menos cai em cada um) e as provas
+    completas na ordem original."""
+    menu = Menu(app, "Santa Casa", [], "Tudo o que a Santa Casa cobrou de 2020 a 2026, e o que vem junto")
+
+    def montar():
+        pronto = app.banco is not None
+        menu.barra = progresso_prova(app, SANTA_CASA, "Santa Casa")
+        menu.itens = [
+            {"label": "▶ Estudar o que falta", "cor": AMARELO, "acao": lambda: _proximo_da_prova(app, SANTA_CASA),
+             "info": "Abre o primeiro módulo, na ordem dos mundos, com questão ainda não dominada"},
+            {"secao": "Por grande área (ordem dos blocos do internato)", "label": ""}]
+        for i, t in enumerate(SANTA_CASA, 1):
+            tot = len(t.C.todas())
+            ok = sum(_dominadas(app, m) for m in t.C.MODULOS)
+            menu.itens.append({"label": f"{i}. Mundo da {t.nome}", "cor": t.cor, "acao": (lambda t=t: abrir_tema(app, t)),
+                               "info": SCA_DESC[t.chave], "dir": f"{ok}/{tot}", "prog": ok / tot if tot else 0})
+        menu.itens += [
+            {"secao": "", "label": ""},
+            {"label": "Provas completas" + ("" if pronto else "  (carregando banco…)"), "cor": (240, 160, 110),
+             "desab": not pronto, "info": "2020, 2021, 2024, 2025, 2026 e a complementar de 2026, na ordem original",
+             "acao": lambda: abrir_provas(app, ("SCA",), "Santa Casa")},
+            {"label": "Voltar", "cor": (180, 180, 180), "acao": app.pop}]
+        menu._pular_desab(0)
+
+    menu.ao_voltar = montar
+    montar()
+    app.push(menu)
 
 
 def abrir_temas_hard(app):
@@ -550,7 +748,8 @@ MFC_DESC = {"mep": "23% das questões de Preventiva: desenhos de estudo, RR/OR/N
             "mtr": "9%: acidente de trabalho e CAT, Schilling, PAIR, benzeno, NR-1 (2026), PCMSO, material biológico",
             "mid": "10%: incidência × prevalência, letalidade, mortalidade infantil e materna, Leavell e Clark, Rose",
             "mso": "6%: Katz × Lawton, IVCF-20, Fried, quedas, Beers 2023, Estatuto da Pessoa Idosa",
-            "met": "Sigilo, recusa terapêutica, prontuário, receituário da Portaria 344, ortotanásia × eutanásia"}
+            "met": "Sigilo, recusa terapêutica, prontuário, receituário da Portaria 344, ortotanásia × eutanásia",
+            "mff": "Tratado: SOAP e CIAP-2, demora permitida, acolhimento, AD1–AD3, APGAR e PRACTICE, PTS, entrevista motivacional"}
 
 
 def abrir_mfc_info(app):
@@ -752,13 +951,15 @@ def abrir_reumatologia(app):
     abrir_tema(app, REUMATO)
 
 
-ESTILOS = {"jogo": "Com diversão", "questoes": "Sem risadinha"}
+ESTILOS = {"jogo": "Com diversão", "questoes": "Sem risadinha", "fps": "FPS"}
 
 
 def escolher_estilo(app, titulo, depois):
     """Ao abrir um tema: 'Com diversão' (o jogo normal, com fase) ou 'Sem risadinha' (só as questões, uma atrás da
     outra, com comentário). Fica salvo em save.config['estilo'] e vale para as fases abertas a partir dali."""
     def escolher(estilo):
+        app.estilo_definido = True
+        app.estilo_forcado = None                       # escolha no menu vale mais que o --fps do atalho
         app.save.config["estilo"] = estilo
         app.save.salvar()
         app.pop()
@@ -770,19 +971,26 @@ def escolher_estilo(app, titulo, depois):
         {"label": "Sem risadinha", "cor": (120, 190, 255), "acao": lambda: escolher("questoes"),
          "info": "Só as questões: uma atrás da outra na tela, com o comentário, sem a fase"},
     ], titulo)
-    menu.sel = 1 if app.save.config.get("estilo") == "questoes" else 0
+    if not edicao.ANDROID:                              # Ilha do Residente FPS (fps.py usa numpy: só no computador)
+        menu.itens.append({"label": "FPS", "cor": (255, 90, 200), "acao": lambda: escolher("fps"),
+                           "info": "Mesma fase em primeira pessoa: atire nos bichos-questão antes que o plantão acabe"})
+    est = getattr(app, "estilo_forcado", None) or app.save.config.get("estilo")
+    menu.sel = min(len(menu.itens) - 1, {"questoes": 1, "fps": 2}.get(est, 0))
     app.push(menu)
 
 
 def _estilo_item(app, t, reabrir):
-    est = app.save.config.get("estilo", "jogo")
+    est = getattr(app, "estilo_forcado", None) or app.save.config.get("estilo", "jogo")
     return {"label": f"Estilo: {ESTILOS.get(est, 'Com diversão')} (trocar)", "cor": (200, 200, 200),
-            "info": "Com diversão = jogo normal · Sem risadinha = só as questões",
-            "acao": lambda: (app.pop(), reabrir(app, t))}
+            "info": "Com diversão = jogo normal · Sem risadinha = só as questões · FPS = primeira pessoa",
+            "acao": lambda: (app.pop(), setattr(app, "estilo_definido", False), reabrir(app, t))}
 
 
 def abrir_tema(app, t):
     """Ao selecionar o tema: primeiro o estilo (com diversão ou sem risadinha), depois os três modos."""
+    if getattr(app, "estilo_definido", False):          # já escolhido no Único jogador (ou num tema antes)
+        _abrir_modos(app, t)
+        return
     escolher_estilo(app, f"Mundo da {t.nome}", lambda: _abrir_modos(app, t))
 
 
@@ -965,6 +1173,10 @@ def item_continuar(app, temas):
 
 
 def jogar_modulo(app, t, k):
+    try:                                   # aula animada (ilha/aula_animada.py); fora das listas do APK/web
+        from .aula_animada import habilitada as _animada
+    except ImportError:
+        _animada = lambda pref, mid: False
     app.save.d["continuar"] = t.chave      # o "▶ Continuar" do menu principal volta aqui
     C = t.C
     m = C.MODULOS[k]
@@ -972,11 +1184,14 @@ def jogar_modulo(app, t, k):
         qs = list(m["questoes"])           # 1ª passada: o módulo inteiro, na ordem didática
     else:
         qs = data.escolher(m["questoes"], POR_FASE, app.save)
+    if m.get("chefe"):                     # o gigante cobra 2 questões reais de prova do mesmo tema (mfc_chefes)
+        qs = qs + data.escolher(m["chefe"], 2, app.save)
     prox = (lambda: jogar_modulo(app, t, k + 1)) if k + 1 < len(C.MODULOS) else (lambda: prova_tema(app, t))
     app.jogar(qs, f"{t.nome} · {m['titulo']}", f"{t.pref}:{m['id']}", f"{t.nome} {m['nivel']}-{k + 1}",
               t.paleta + m["nivel"] * 5, proxima=prox, repetir=lambda: jogar_modulo(app, t, k),
               briefing={"titulo": f"{t.nome} {m['nivel']}-{k + 1} · {m['titulo']}", "materia": C.MATERIA,
-                        "pilulas": m["aula"], "cabecalho": "Aula antes da fase"})
+                        "pilulas": m["aula"], "cabecalho": "Aula antes da fase",
+                        "animada": _animada(t.pref, m["id"]) and (t.pref, m["id"])})
 
 
 def prova_tema(app, t):
@@ -1119,15 +1334,18 @@ def abrir_materia(app, materia, idx):
 
 # ------------------------------------------------------------------ provas
 
-def abrir_provas(app):
+def abrir_provas(app, bancas=None, titulo="Castelos das Provas", excluir=()):
     itens = []
     for i, p in enumerate(app.banco.provas):
+        banca = p["nome"].split()[0]
+        if (bancas and not banca.startswith(bancas)) or (excluir and banca.startswith(excluir)):
+            continue
         c, e = app.save.resumo(p["questoes"])
         n = len(p["questoes"])
         pct = f" · {round(100 * c / (c + e))}% de acerto" if c + e else ""
         itens.append({"label": p["nome"], "info": f"{n} questões · {c + e} respondidas{pct}",
                       "cor": art.paleta(20 + i)["acento"], "acao": (lambda p=p, i=i: abrir_prova(app, p, 20 + i))})
-    app.push(Menu(app, "Castelos das Provas", itens, "Provas reais, na ordem original"))
+    app.push(Menu(app, titulo, itens, "Provas reais, na ordem original"))
 
 
 def abrir_prova(app, prova, idx):

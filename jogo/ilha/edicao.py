@@ -8,8 +8,13 @@ import os
 STEAM = False
 ANDROID = False
 VESTIBULANDO = False
+LANCAMENTO = False    # Ilha do Lançamento: edição de marketing (livro "A Fórmula do Lançamento")
+CARDIO = False        # Cardio: APK pessoal só com o livro "Eletrocardiograma de A a Z" (cardio.py)
+NEURALWAVES = False   # Ilha do Residente - Neuralwaves: a edição pessoal + coroa de EEG (ilha/neuro)
 NOME = "Ilha do Residente"
-VERSAO = "1.40.0"
+VERSAO = "2.22.0"
+VERSAO_CARDIO = "1.0.0"       # edição Cardio (APK com.../ilhadoecg)
+VERSAO_LANCAMENTO = "1.0.0"   # Ilha do Lançamento (versão própria, APK com.../ilhadolancamento)
 AUTOR = "Leonardo Trisciuzzi"
 LICENCA = (f"© 2026 {AUTOR}. Código: licença MIT. Conteúdo didático: CC BY-NC 4.0 "
            "(use e compartilhe citando o autor, sem fins comerciais).")
@@ -122,6 +127,66 @@ def ativar_vestibulando():
     os.makedirs(pasta, exist_ok=True)
     from . import estudantes
     estudantes.ativar()          # elenco de estudantes no lugar dos médicos
+
+
+def ativar_lancamento(pasta_android=None):
+    """Ilha do Lançamento (PC e Android): mundos de marketing do livro "A Fórmula do Lançamento" no mesmo motor, com as
+    restrições da edição de venda, save próprio e elenco de lançadores. No Android, chame ativar_android(dados) antes e
+    passe a mesma pasta (o save fica no armazenamento do app)."""
+    global LANCAMENTO, NOME, VERSAO
+    if not pasta_android:
+        ativar_steam()
+    LANCAMENTO = True
+    VERSAO = VERSAO_LANCAMENTO
+    NOME = "Ilha do Lançamento"
+    from . import data, controle
+    if pasta_android:
+        pasta = pasta_android
+    elif os.name == "nt":
+        pasta = os.path.join(os.environ.get("APPDATA") or os.path.expanduser("~"), "IlhaDoLancamento")
+    else:
+        base = os.environ.get("XDG_DATA_HOME") or os.path.join(os.path.expanduser("~"), ".local", "share")
+        pasta = os.path.join(base, "ilha-do-lancamento")
+    data.SAVE_DIR = pasta
+    data.SAVE_FILE = os.path.join(pasta, "save.json")
+    data.CACHE_DIR = os.path.join(pasta, "cache_imagens")
+    controle.ARQ = os.path.join(pasta, "controles.json")
+    os.makedirs(pasta, exist_ok=True)
+    from . import lancadores
+    lancadores.ativar()          # elenco de lançadores no lugar dos médicos
+
+
+def ativar_cardio(pasta_android=None):
+    """Edição Cardio (PC e Android): só os 17 mundos do livro "Eletrocardiograma de A a Z", um único personagem (o
+    cardiologista no jeep) e o coração anatômico de pet. No Android, chame ativar_android(dados) antes e passe a mesma
+    pasta; no PC, o save fica em ~/.local/share/ilha-do-ecg."""
+    global CARDIO, NOME, VERSAO
+    if not pasta_android:
+        ativar_steam()
+    CARDIO = True
+    VERSAO = VERSAO_CARDIO
+    NOME = "ECG de A a Z"
+    from . import data, controle
+    if pasta_android:
+        pasta = pasta_android
+    else:
+        base = os.environ.get("XDG_DATA_HOME") or os.path.join(os.path.expanduser("~"), ".local", "share")
+        pasta = os.path.join(base, "ilha-do-ecg")
+    data.SAVE_DIR = pasta
+    data.SAVE_FILE = os.path.join(pasta, "save.json")
+    data.CACHE_DIR = os.path.join(pasta, "cache_imagens")
+    controle.ARQ = os.path.join(pasta, "controles.json")
+    os.makedirs(pasta, exist_ok=True)
+    from . import cardio_arte
+    cardio_arte.ativar()
+
+
+def ativar_neuralwaves():
+    """Ilha do Residente - Neuralwaves (beta): a edição pessoal inteira (mesmo save, banco, telas e servidor, como
+    o FPS), mais a coroa de EEG. O que é do cérebro fica em ilha/neuro e no neuralwaves.db, ao lado do save."""
+    global NEURALWAVES, NOME
+    NEURALWAVES = True
+    NOME = "Ilha do Residente - Neuralwaves"
 
 
 def no_steam_deck():

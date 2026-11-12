@@ -29,10 +29,13 @@ from .rig import (K, Corrente, Modelo, Mola, Passada, bola, claro, corda, escuro
 BAC = ((255, 214, 226), (244, 150, 180), (204, 96, 140))
 BAC_BRAVO = ((255, 176, 168), (236, 84, 84), (176, 40, 56))
 OURO = (250, 200, 60)
-CASCA, CASCA2, CASCA_LUZ = (46, 40, 60), (30, 26, 42), (78, 70, 98)
+# casca roxo-azulada (assets/estilo/GUIA_DE_ESTILO.md: escuro nunca é preto; o contorno preto tem de aparecer)
+CASCA, CASCA2, CASCA_LUZ = (84, 72, 136), (58, 48, 102), (124, 112, 182)
 OSSO, OSSO2 = (228, 220, 204), (164, 156, 150)
+# chefes (Traço Ilha: Billy e Mandy): massa preta chapada, osso, toque de vermelho
+MASSA, MASSA2, MASSA_LUZ, VERMELHO = (30, 24, 38), (16, 12, 22), (64, 54, 80), (210, 36, 48)
 OLHO_M, OLHO_MIOLO, INFEC = (255, 140, 40), (255, 236, 170), (236, 110, 36)
-KM = (14, 10, 22)
+KM = (8, 6, 14)
 
 _asas = {}
 
@@ -682,6 +685,7 @@ class BichoQuestao(Modelo):
         self.pelo = [Mola(0, 0.25, 0.7) for _ in range(9)]
         self.passos = Passada(4.0)
         self.bravo = False
+        self.chefe = False                                      # o Gigante: massa preta, osso e vermelho
 
     def olho_base(self):
         return self.OX + 1, self.OY - 10
@@ -701,8 +705,12 @@ class BichoQuestao(Modelo):
 
     def pinta(self, c, e):
         ox, oy = self.OX, self.OY
-        cor = (232, 72, 72) if self.bravo else self.cor
-        esc = escuro(cor, 0.45)
+        if self.chefe:
+            cor = (70, 16, 26) if self.bravo else MASSA
+            esc = MASSA2
+        else:
+            cor = (232, 72, 72) if self.bravo else self.cor
+            esc = escuro(cor, 0.45)
         sq = self.sq.v
         girar(c, self.placa, (4, 15), (ox - 8, oy - 9), 12 + self.pend.v * 25)  # placa atrás, legível
         for i in range(2):                                      # pés
@@ -720,10 +728,12 @@ class BichoQuestao(Modelo):
             bx, by = ox + lado * 4, cy - ry + 1
             a = math.radians(-90 + lado * 20) + self.chifres[i].v * 0.25
             pt = (bx + math.cos(a) * 4, by + math.sin(a) * 4)
-            haste(c, (bx, by), pt, 2, esc)
-            bola(c, pt[0], pt[1], 1.4, 1.4, claro(cor, 0.4), luz=False)
+            haste(c, (bx, by), pt, 2, OSSO if self.chefe else esc)
+            bola(c, pt[0], pt[1], 1.4, 1.4, OSSO if self.chefe else claro(cor, 0.4), luz=False)
         ex, ey = ox + 1, cy - 1.5                               # olho único (ciclope)
-        olho(c, ex, ey, 4, self.olhos, cor_iris=(40, 30, 50), bravo=False)
+        if self.chefe:                                          # faixa vermelha na testa, como chefe de Billy e Mandy
+            c.fill(VERMELHO, (int(ox - 6), int(cy - ry * 0.65), 13, 1))
+        olho(c, ex, ey, 4, self.olhos, cor_iris=VERMELHO if self.chefe else (40, 30, 50), bravo=False)
         if self.bravo:
             pygame.draw.line(c, K, (int(ex - 5), int(ey - 6)), (int(ex + 4), int(ey - 3)), 2)
         my = cy + ry * 0.55                                     # boca com dentinhos
@@ -733,7 +743,7 @@ class BichoQuestao(Modelo):
 
 
 # =====================================================================================================================
-#                                     monstros (contorno quase preto, máscara de osso, olhos que brilham)
+#                                     monstros (casca roxo-azulada, contorno preto, máscara de osso, olhos que brilham)
 # =====================================================================================================================
 
 class _Monstro(Modelo):
@@ -955,16 +965,16 @@ class Colosso(_Monstro):
             bob = -2 * (e.timer - 40) / 10
         for i in range(2):                                      # pernas grossas que pisam
             dx, alt = self.passos.pe(i, 2, 4, 3)
-            perna(c, (ox - 5 + i * 10, oy - 17 + bob), (ox - 6 + i * 11 + dx, oy - 2 - alt), 8, 8, 5, CASCA2, dobra=1)
-            c.fill(CASCA2, (int(ox - 10 + i * 11 + dx), int(oy - 3 - alt), 9, 3))
+            perna(c, (ox - 5 + i * 10, oy - 17 + bob), (ox - 6 + i * 11 + dx, oy - 2 - alt), 8, 8, 5, MASSA2, dobra=1)
+            c.fill(MASSA2, (int(ox - 10 + i * 11 + dx), int(oy - 3 - alt), 9, 3))
         cx, cy = ox - 1, oy - 30 + bob
         a2 = math.radians(160 + math.sin(self.passos.fase) * 15)   # braço de trás
-        haste(c, (cx - 10, cy - 4), (cx - 10 + math.cos(a2) * 9, cy - 4 + math.sin(a2) * -9 + 12), 4, CASCA2)
-        bola(c, cx, cy, 16, 15, CASCA)
+        haste(c, (cx - 10, cy - 4), (cx - 10 + math.cos(a2) * 9, cy - 4 + math.sin(a2) * -9 + 12), 4, MASSA2)
+        bola(c, cx, cy, 16, 15, MASSA)
         for k in range(3):                                      # placas da armadura que respiram
             y = cy - 6 + k * 6 + math.sin(self.t * 0.05 + k) * 0.4
-            pygame.draw.arc(c, CASCA2, (int(cx - 14), int(y - 4), 28, 10), 3.5, 5.9, 1)
-        bola(c, cx - 5, cy - 7, 6, 3.5, CASCA_LUZ, luz=False)
+            pygame.draw.arc(c, MASSA2, (int(cx - 14), int(y - 4), 28, 10), 3.5, 5.9, 1)
+        bola(c, cx - 5, cy - 7, 6, 3.5, MASSA_LUZ, luz=False)
         for k, (dx, dy) in enumerate(((-6, 4), (7, 9), (0, 12))):   # infecção escorrendo
             pygame.draw.circle(c, INFEC, (int(cx + dx), int(cy + dy)), 2)
             gota = (self.t * 0.3 + k * 7) % 8
@@ -973,7 +983,7 @@ class Colosso(_Monstro):
         a = self.maca.v                                         # braço com maça
         omb = (cx + 9, cy - 6)
         mx, my = omb[0] + math.cos(a) * 15, omb[1] + math.sin(a) * 15
-        haste(c, omb, (mx, my), 4, CASCA2)
+        haste(c, omb, (mx, my), 4, MASSA2)
         for k in range(6):
             b = k * math.pi / 3 + a
             haste(c, (mx, my), (mx + math.cos(b) * 7.5, my + math.sin(b) * 7.5), 1, OSSO2)
@@ -1142,7 +1152,7 @@ class Feiticeiro(_Monstro):
     def pinta(self, c, e):
         ox, oy = self.OX, self.OY
         bob = math.sin(self.t * 0.08) * 1.2
-        manto, manto2 = (54, 34, 74), (90, 60, 120)
+        manto, manto2 = (92, 56, 128), (132, 92, 170)
         barra = [self.pontos(b) for b in self.barra] if self.barra else []
         base = [(ox - 8, oy + 8), (ox + 8, oy + 8)]
         for b in barra:                                         # barra esfarrapada (tecido com física)

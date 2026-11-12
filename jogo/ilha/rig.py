@@ -152,7 +152,8 @@ class Olhos:
 # ===================================================================== desenho das peças
 
 def esfera(rx, ry, cor, luz=True):
-    """Elipse sombreada (luz de cima à esquerda) pronta para colar; rx, ry em px inteiros. Fica em cache."""
+    """Elipse de desenho (luz de cima à esquerda) pronta para colar: dois tons com corte duro (sombra embaixo à
+    direita) e, nas grandes, uma mancha clara chapada; sem brilho branco (guia de estilo). Fica em cache."""
     rx, ry = max(1, int(round(rx))), max(1, int(round(ry)))
     ch = (rx, ry, tuple(cor), luz)
     s = _esferas.get(ch)
@@ -165,9 +166,9 @@ def esfera(rx, ry, cor, luz=True):
         pygame.draw.ellipse(s, sombra, (0, 0, w, h))
         if luz and rx >= 2 and ry >= 2:
             pygame.draw.ellipse(s, meio, (0, 0, w - max(1, rx // 3), h - max(1, ry // 3)))
-            if rx >= 3 and ry >= 3:
-                pygame.draw.ellipse(s, clara, (max(1, rx // 3), max(1, ry // 4), max(2, rx // 2), max(2, ry // 2)))
-                s.set_at((max(1, rx // 2), max(1, ry // 3)), (255, 255, 255))
+            if rx >= 4 and ry >= 4:
+                pygame.draw.ellipse(s, mix(meio, clara, 0.6), (max(1, rx // 3), max(1, ry // 4), max(2, rx // 2),
+                                                                max(2, ry // 3)))
         else:
             pygame.draw.ellipse(s, meio, (0, 0, w, h - 1))
         if len(cor) == 4:
@@ -206,9 +207,17 @@ def ik(quadril, pe, l1, l2, dobra=1):
 
 
 def perna(c, quadril, pe, l1, l2, larg, cor, dobra=1, pata=None):
+    """Perna de macarrão "al dente" (guia de estilo): o joelho vem da cinemática inversa, mas a perna é uma curva
+    macia que passa por ele (nunca quina), da mesma grossura até o pé."""
     j = ik(quadril, pe, l1, l2, dobra)
-    haste(c, quadril, j, larg, cor)
-    haste(c, j, pe, max(1, larg - 1), cor)
+    ctl = (2 * j[0] - (quadril[0] + pe[0]) / 2, 2 * j[1] - (quadril[1] + pe[1]) / 2)    # a curva passa pelo joelho
+    pts = []
+    for i in range(7):
+        t = i / 6
+        a, b, d = (1 - t) ** 2, 2 * (1 - t) * t, t * t
+        pts.append((a * quadril[0] + b * ctl[0] + d * pe[0], a * quadril[1] + b * ctl[1] + d * pe[1]))
+    for i in range(6):
+        haste(c, pts[i], pts[i + 1], larg if i < 3 else max(1, larg - (1 if larg > 2 else 0)), cor)
     if pata:
         pw = pata
         pygame.draw.line(c, cor, (int(pe[0] - pw // 2), int(pe[1])), (int(pe[0] + pw - pw // 2), int(pe[1])), max(1, larg - 1))

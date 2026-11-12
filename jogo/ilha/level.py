@@ -93,12 +93,12 @@ class Nivel:
                         self.tiles[py - 3][px + 4 + k] = PLAT
                     self.add("estrela", px + 5, (py - 3) * TILE - 14)
             elif tipo == "espinhos":
+                # os espinhos do chão saíram (pedido do dono em 11/11/2026: ficavam meio escondidos e quebravam a
+                # fluidez). O trecho fica plano, do mesmo tamanho, para o resto da fase continuar igual.
                 n = rng.randint(6, 9)
                 for _ in range(n):
                     self._col(x, h)
                     x += 1
-                for k in range(2):
-                    self.tiles[H - h - 1][ini + 2 + k] = ESPINHO
             elif tipo == "tronco":
                 n = rng.randint(7, 10)
                 for _ in range(n):
